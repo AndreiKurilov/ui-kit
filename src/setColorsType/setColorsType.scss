@@ -1,0 +1,187 @@
+.setColorsType {
+  position: absolute;
+  width: 1440px;
+  height: 900px;
+  background: #FFFFFF;
+  // background: rgb(59, 3, 148);
+  top: 50px;
+  left: 50px;
+}
+.setColorsType__blockName {
+  position: absolute;
+  top: -21px;
+  font-family: "Montserrat-regular";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  color: rgba(8, 8, 15, 0.25);
+}
+.setColorsType__commonLogoCircle {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+.setColorsType__containerOne {
+  position: absolute;
+  margin-top: 145px;
+  margin-left: 150px;
+  width: 274px;
+}
+.setColorsType__blockSquareTitle {
+  height: 70;
+  margin-bottom: 20px;
+  display: flex;
+}
+.setColorsType__square {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+}
+.setColorsType__title {
+  margin: auto;
+  padding-left: 40px;
+  width: 164px;
+  height: 57px;
+  font-family: "Quicksand-Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
+  color: #1F2041;
+}
+.setColorsType__square_darkShade100 {
+  background: #1F2041;
+}
+.setColorsType__square_darkShade75 {
+  background: rgba(31, 32, 65, 0.75);
+}
+.setColorsType__square_darkShade50 {
+  background: rgba(31, 32, 65, 0.50);
+}
+.setColorsType__square_darkShade25 {
+  background: rgba(31, 32, 65, 0.25);
+}
+.setColorsType__square_darkShade5 {
+  background: rgba(31, 32, 65, 0.05);
+}
+.setColorsType__square_purple {
+  background: #BC9CFF;
+}
+.setColorsType__square_green {
+  background: #6FCF97;
+}
+.setColorsType__title_purple {
+  width: 140px;
+  margin-left: 0px;
+}
+.setColorsType__title_green {
+  max-width: 130px;
+  margin-left: 0px;
+}
+.setColorsType__containerTwo {
+  position: absolute;
+  margin-top: 145px;
+  margin-left: 846px;
+  width: 402px;
+}
+.setColorsType__blockFontSize {
+  height: 60;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-start;
+}
+.setColorsType__font-H1 {
+  width: 29px;
+  height: 30px;
+  font-family: "Montserrat-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.25);
+  margin-right: 30px;
+  margin-left: 8px;
+}
+.setColorsType__size-H1 {
+  height: 60px;
+  font-family: "Quicksand-Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #1F2041;
+}
+.setColorsType__font-H2 {
+  width: 27px;
+  height: 24px;
+  font-family: "Montserrat-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 23px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.25);
+  margin-right: 30px;
+  margin-left: 10px;
+}
+.setColorsType__size-H2 {
+  height: 48px;
+  font-family: "Quicksand-Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1F2041;
+}
+.setColorsType__font-H3 {
+  width: 17px;
+  height: 15px;
+  font-family: "Montserrat-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+  margin-right: 30px;
+  margin-left: 19px;
+}
+.setColorsType__size-H3 {
+  height: 15px;
+  font-family: "Montserrat-Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+.setColorsType__font-Body {
+  width: 37px;
+  height: 24px;
+  font-family: "Montserrat-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.25);
+  margin-right: 30px;
+}
+.setColorsType__size-Body {
+  height: 48px;
+  font-family: "Montserrat-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.setColorsType__blockFontSize_margin-bottom {
+  margin-bottom: 47px;
+}
+.setColorsType__blockFontSize_width {
+  width: 380px;
+}

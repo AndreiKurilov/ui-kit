@@ -1,0 +1,37 @@
+.footerTwo {
+  background: #FFFFFF; 
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  height: inherit;
+}
+.footerTwo__logoCircle {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 667px;
+}
+.footerTwo__logoTitle {
+  position: absolute;
+  margin-top: 112px;
+  margin-left: 720px;
+}
+.footerTwo__text {
+  position: absolute;
+  width: 560px;
+  height: 48px;
+  margin-top: 157px;
+  margin-left: 440px;
+  display: flex;
+}
+.footerTwo__text_position {
+  font-family: "Montserrat-regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  text-align: center;
+}
+.footerTwo__icons {
+  position: absolute;
+  margin-top: 235px;
+  margin-left: 664px;
+}

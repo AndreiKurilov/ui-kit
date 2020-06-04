@@ -1,0 +1,42 @@
+.formElements {
+  position: absolute;
+  width: 1440px;
+  height: 1853px;
+  background: #FFFFFF;
+  // background: blue;
+  // background: rgb(52, 52, 150);
+  top: 1000px;
+  left: 50px;
+}
+.formElements__blockName {
+  position: absolute;
+  top: -21px;
+  font-family: "Montserrat-regular";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  color: rgba(8, 8, 15, 0.25);
+}
+.formElements__commonLogoCircle {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+.formElements__dropdownEmail {
+  position: absolute;
+  left: 141px;
+  top: 143px;
+  width: 267px;
+}
+// .formElements__dropdownHover {
+//   position: absolute;
+//   left: 141px;
+//   top: 227px;
+//   width: 320px;
+// }
+// .formElements__dropdownDefault {
+//   position: absolute;
+//   left: 141px;
+//   top: 331.44px;
+//   width: 320px;
+// }

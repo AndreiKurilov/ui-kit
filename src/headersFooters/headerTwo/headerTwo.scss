@@ -1,0 +1,30 @@
+.headerTwo {
+  background: #FFFFFF; 
+  display: flex;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  align-items: center;
+  height: inherit;
+}
+.headerTwo__logoCircle {
+  margin-left: 140px;
+}
+.headerTwo__logoTitle {
+  margin-top: 3.5px;
+  margin-left: 12.5px;
+  margin-right: 350px;
+}
+.headerTwo__restangle {
+  width: 1px;
+  height: 30px;
+  margin-left: 13px;
+}
+.headerTwo__guestName {
+  margin-left: 30px;
+  justify-content: end;
+  margin-right: 140px;;
+  font-family: "Montserrat-regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(31, 32, 65, 0.5);
+}
