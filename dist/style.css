@@ -681,6 +681,26 @@ input::-webkit-input-placeholder {
   border-radius: 4px;
   outline: none; }
 
+.checkboxButtons__nameBlock {
+  font-family: "Montserrat-bold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  margin-bottom: 17.12px; }
+
+.checkboxButtons__container {
+  display: block;
+  margin-bottom: 13px;
+  cursor: pointer;
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5); }
+
+.checkboxButtons__input {
+  text-align: end; }
+
 .formElements {
   position: absolute;
   width: 1440px;
@@ -708,6 +728,13 @@ input::-webkit-input-placeholder {
   left: 141px;
   top: 143px;
   width: 267px; }
+
+.formElements__checkboxButtons {
+  position: absolute;
+  left: 587px;
+  top: 143px;
+  width: 222px;
+  height: 129.12px; }
 
 .color1 {
   background: #E5E5E5;
