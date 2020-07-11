@@ -2,15 +2,21 @@
   .formElements__blockName Form Elements
   .formElements__commonLogoCircle
     include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
-  .formElements__dropdownEmail
-    include ./commonBlocks/dropdown/dropdown
-    +dropdown({formName: 'text field', default: 'default'})
+  //- .formElements__dropdownEmail
+  //-   include ./commonBlocks/dropdown/dropdown
+  //-   +dropdown({formName: 'text field', default: 'default'})
 
   .formElements__checkboxButtons 
     include ./commonBlocks/checkboxButtons/checkboxButtons
     +checkboxButtons({nameOption: 'Можно курить'})
     +checkboxButtons({nameOption: 'Можно с питомцами'})
     +checkboxButtons({nameOption: 'Можно пригласить гостей (до 10 человек)'})
+
+  .formElements__radioButtons 
+    include ./commonBlocks/radioButtons/radioButtons
+    +radioButtons({nameOptionOne: 'Мужчина', nameOptionTwo: 'Женщина'})
+
+
 
 
 
