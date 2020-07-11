@@ -6,8 +6,13 @@
     include ./commonBlocks/dropdown/dropdown
     +dropdown({formName: 'text field', default: 'default'})
 
-  .formElements__checkboxButtons
+  .formElements__checkboxButtons 
     include ./commonBlocks/checkboxButtons/checkboxButtons
+    +checkboxButtons({nameOption: 'Можно курить'})
+    +checkboxButtons({nameOption: 'Можно с питомцами'})
+    +checkboxButtons({nameOption: 'Можно пригласить гостей (до 10 человек)'})
+
+
 
   //- .formElements__dropdownHover
   //-   include ./commonBlocks/dropdown/dropdown

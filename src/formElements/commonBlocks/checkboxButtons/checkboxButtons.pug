@@ -1,8 +1,13 @@
-.checkboxButtons 
-  .checkboxButtons__nameBlock Checkbox buttons
-  label.checkboxButtons__container Можно курить
-    input(type="checkbox")
-  label.checkboxButtons__container Можно с питомцами
-    input(type="checkbox")
-  label.checkboxButtons__container Можно пригласить гостей (до 10 человек)
-    input(type="checkbox")
+.checkboxButtons__nameBlock Checkbox buttons
+mixin checkboxButtons(options)
+  label.checkboxButtons__labelStyle
+    input(type="checkbox").checkboxButtons__inputStyle
+    .checkboxButtons__customCheckbox= options.nameOption
+  
+
+
+
+
+
+
+  
