@@ -866,6 +866,51 @@ input::-webkit-input-placeholder {
 .toggle__customToggle::before {
   border: 1px solid #BC9CFF; }
 
+.likeButton__nameBlock {
+  font-family: "Montserrat-bold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  margin-bottom: 16px;
+  user-select: none; }
+
+.likeButton__labelStyle {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.likeButton__inputStyle {
+  opacity: 0;
+  position: absolute;
+  height: 0;
+  width: 0; }
+
+.likeButton__favoriteGray {
+  width: 9px;
+  height: 8px;
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+  user-select: none; }
+
+.likeButton__counter {
+  position: absolute;
+  width: 6px;
+  height: 13px;
+  margin-top: 3px;
+  margin-left: 22px;
+  font-family: "Montserrat-regular";
+  font-size: 10px;
+  line-height: 12px;
+  color: rgba(31, 32, 65, 0.25); }
+
 .formElements {
   position: absolute;
   width: 1440px;
@@ -914,6 +959,13 @@ input::-webkit-input-placeholder {
   top: 404.56px;
   width: 260px;
   height: 89px; }
+
+.formElements__likeButton {
+  position: absolute;
+  left: 587px;
+  top: 534px;
+  width: 89.72px;
+  height: 51px; }
 
 .color1 {
   background: #E5E5E5;

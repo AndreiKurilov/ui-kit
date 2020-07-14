@@ -1,0 +1,17 @@
+.likeButton__nameBlock Like button
+
+mixin likeButton
+  -
+    var count = 0;
+    function func() {
+      var plusButton = document.getElementsByClassName("likeButton__counter");
+      if (document.onclick = plusButton) {
+        count++;
+        console.log(count);
+      }
+    };
+
+  label.likeButton__labelStyle
+    //- input(type="checkbox").likeButton__inputStyle
+    img.likeButton__favoriteGray(src="./img/favoriteGray.png")
+    .likeButton__counter= count
