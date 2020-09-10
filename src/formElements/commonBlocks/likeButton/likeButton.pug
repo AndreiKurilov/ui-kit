@@ -1,17 +1,23 @@
 .likeButton__nameBlock Like button
 
-mixin likeButton
-  -
-    var count = 0;
-    function func() {
-      var plusButton = document.getElementsByClassName("likeButton__counter");
-      if (document.onclick = plusButton) {
-        count++;
-        console.log(count);
-      }
-    };
-
+mixin likeButton(options)
+  script.
+    function countOne() {
+      let counter = document.querySelector(".likeButton__counter");
+      counter.innerHTML++;
+    }
   label.likeButton__labelStyle
-    //- input(type="checkbox").likeButton__inputStyle
-    img.likeButton__favoriteGray(src="./img/favoriteGray.png")
-    .likeButton__counter= count
+    input(type="checkbox" onclick="countOne()").likeButton__inputStyle
+    img.likeButton__imgLocation(src=options.src)
+    .likeButton__counter= 0
+
+mixin likeButtonBlue(options)
+  script.
+    function countTwo() {
+      let counter = document.querySelector(".likeButton__counter__blue");
+      counter.innerHTML++;
+    }
+  label.likeButton__labelStyle.likeButton__labelStyle__blue
+    input(type="checkbox" onclick="countTwo()").likeButton__inputStyle
+    img.likeButton__imgLocation(src=options.src)
+    .likeButton__counter__blue= 0
