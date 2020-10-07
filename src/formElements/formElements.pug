@@ -1,7 +1,7 @@
 .formElements
-  .formElements__blockName Form Elements
-  .formElements__commonLogoCircle
-    include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
+  //- .formElements__blockName Form Elements
+  //- .formElements__commonLogoCircle
+  //-   include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
   //- .formElements__dropdownEmail
   //-   include ./commonBlocks/dropdown/dropdown
   //-   +dropdown({formName: 'text field', default: 'default'})
@@ -20,13 +20,15 @@
   //-   include ./commonBlocks/toggle/toggle
   //-   +toggle({nameOption: 'Получать спецпредложения'})
   
-  .formElements__likeButton
-    include ./commonBlocks/likeButton/likeButton
-    +likeButton({src: "./img/imgColorGray.png"})
-    +likeButtonBlue({src: "./img/imgColorBlue.png"})
+  //- .formElements__likeButton
+  //-   include ./commonBlocks/likeButton/likeButton
+  //-   +likeButton({src: "./img/imgColorGray.png"})
+  //-   +likeButtonBlue({src: "./img/imgColorBlue.png"})
 
-
-
+  .formElements__rateButton
+    include ./commonBlocks/rateButton/rateButton
+    +rateButton
+    //- +rateButton
 
   //- .formElements__dropdownHover
   //-   include ./commonBlocks/dropdown/dropdown

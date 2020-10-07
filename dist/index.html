@@ -7,32 +7,32 @@
   <link href="style.css" rel="stylesheet"></head>
   <body class="color1">
     <div class="formElements">
-      <div class="formElements__blockName">Form Elements</div>
-      <div class="formElements__commonLogoCircle">
-<div class="commonLogoCircle"><img class="commonLogoCircle__circle" src="./img/commomLogoCircle__circle.png"><img class="commonLogoCircle__vector1" src="./img/commonLogoCircle__vector1.png"><img class="commonLogoCircle__vector2" src="./img/commonLogoCircle__vector2.png"></div>
-      </div>
-      <div class="formElements__likeButton">
-        <div class="likeButton__nameBlock">Like button</div>
-                <script>
-                  function countOne() {
-                    let counter = document.querySelector(".likeButton__counter");
-                    counter.innerHTML++;
-                  }
-                </script>
-                <label class="likeButton__labelStyle">
-                  <input class="likeButton__inputStyle" type="checkbox" onclick="countOne()"><img class="likeButton__imgLocation" src="./img/imgColorGray.png">
-                  <div class="likeButton__counter">0</div>
-                </label>
-                <script>
-                  function countTwo() {
-                    let counter = document.querySelector(".likeButton__counter__blue");
-                    counter.innerHTML++;
-                  }
-                </script>
-                <label class="likeButton__labelStyle likeButton__labelStyle__blue">
-                  <input class="likeButton__inputStyle" type="checkbox" onclick="countTwo()"><img class="likeButton__imgLocation" src="./img/imgColorBlue.png">
-                  <div class="likeButton__counter__blue">0</div>
-                </label>
+      <div class="formElements__rateButton">
+        <div class="rateButton__nameBlock">Rate button</div>
+                <div class="rateButton__wrapper">
+                  <input class="rateButton__inputStyle" type="radio" name="stars" value="5" id="5stars">
+                  <label class="rateButton__labelStyle" for="5stars">5 Stars</label>
+                  <input class="rateButton__inputStyle" type="radio" name="stars" value="4" id="4stars" checked>
+                  <label class="rateButton__labelStyle" for="4stars">4 Stars</label>
+                  <input class="rateButton__inputStyle" type="radio" name="stars" value="3" id="3stars">
+                  <label class="rateButton__labelStyle" for="3stars">3 Stars</label>
+                  <input class="rateButton__inputStyle" type="radio" name="stars" value="2" id="2stars">
+                  <label class="rateButton__labelStyle" for="2stars">2 Stars</label>
+                  <input class="rateButton__inputStyle" type="radio" name="stars" value="1" id="1star">
+                  <label class="rateButton__labelStyle" for="1star">1 Star</label>
+                </div>
+                <div class="rateButton__wrapper">
+                  <input class="rateButton__inputStyle" type="radio" name="starsTwo" value="5" id="5stars" checked>
+                  <label class="rateButton__labelStyle" for="5stars">5 Stars</label>
+                  <input class="rateButton__inputStyle" type="radio" name="starsTwo" value="4" id="4stars">
+                  <label class="rateButton__labelStyle" for="4stars">4 Stars</label>
+                  <input class="rateButton__inputStyle" type="radio" name="starsTwo" value="3" id="3stars">
+                  <label class="rateButton__labelStyle" for="3stars">3 Stars</label>
+                  <input class="rateButton__inputStyle" type="radio" name="starsTwo" value="2" id="2stars">
+                  <label class="rateButton__labelStyle" for="2stars">2 Stars</label>
+                  <input class="rateButton__inputStyle" type="radio" name="starsTwo" value="1" id="1star">
+                  <label class="rateButton__labelStyle" for="1star">1 Star</label>
+                </div>
       </div>
     </div>
   <script type="text/javascript" src="bundle.js"></script></body>

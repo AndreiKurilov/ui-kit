@@ -39,6 +39,11 @@
   src: url(fonts/montserrat-regular.eot?#iefix) format("embedded-opentype"), url(fonts/montserrat-regular.svg) format("svg"), url(fonts/montserrat-regular.ttf) format("truetype"), url(fonts/montserrat-regular.woff) format("woff");
   /* Modern Browsers */ }
 
+@font-face {
+  font-family: 'Material-Icons';
+  src: url(fonts/Material-Icons.eot);
+  src: url(fonts/Material-Icons.eot#iefix) format("embedded-opentype"), url(fonts/Material-Icons.ttf) format("truetype"), url(fonts/Material-Icons.woff) format("woff"), url(fonts/Material-Icons.svg#Material-Icons) format("svg"); }
+
 .setColorsType {
   position: absolute;
   width: 1440px;
@@ -928,6 +933,53 @@ input::-webkit-input-placeholder {
   user-select: none;
   color: #BC9CFF; }
 
+.rateButton__nameBlock {
+  font-family: "Montserrat-bold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  margin-bottom: 16px;
+  user-select: none; }
+
+.rateButton__wrapper {
+  display: inline-block;
+  margin-right: 20px; }
+
+.rateButton__inputStyle {
+  display: none;
+  margin: 0; }
+
+.rateButton__labelStyle {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 5px; }
+
+.rateButton__labelStyle:before {
+  content: "\e907";
+  color: #BC9CFF;
+  font-family: 'Material-Icons';
+  font-size: 20.4px;
+  cursor: pointer; }
+
+.rateButton__inputStyle:checked ~
+.rateButton__labelStyle:before {
+  content: "\73"; }
+
+.rateButton__labelStyle:hover:before, .rateButton__labelStyle:hover ~ .rateButton__labelStyle:before {
+  content: "\73"; }
+
+.rateButton__inputStyle:checked ~
+.rateButton__labelStyle:hover:before,
+.rateButton__inputStyle:checked ~
+.rateButton__labelStyle:hover ~
+.rateButton__labelStyle:before {
+  content: "\e907"; }
+
 .formElements {
   position: absolute;
   width: 1440px;
@@ -983,6 +1035,12 @@ input::-webkit-input-placeholder {
   top: 534px;
   width: 89.72px;
   height: 51px; }
+
+.formElements__rateButton {
+  position: absolute;
+  left: 587px;
+  top: 625px;
+  height: 55px; }
 
 .color1 {
   background: #E5E5E5;
