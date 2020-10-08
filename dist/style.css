@@ -695,9 +695,16 @@ input::-webkit-input-placeholder {
   margin-bottom: 16.56px; }
 
 .checkboxButtons__labelStyle {
+  display: block;
   position: relative;
   margin-bottom: 10.56px;
-  display: block; }
+  padding-left: 29.74px;
+  cursor: pointer;
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  user-select: none; }
 
 .checkboxButtons__inputStyle {
   opacity: 0;
@@ -705,15 +712,7 @@ input::-webkit-input-placeholder {
   height: 0;
   width: 0; }
 
-.checkboxButtons__customCheckbox {
-  cursor: pointer;
-  font-family: "Montserrat-regular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.5);
-  padding-left: 29.74px; }
-
-.checkboxButtons__customCheckbox::before {
+.checkboxButtons__labelStyle:before {
   content: "";
   position: absolute;
   top: -1px;
@@ -725,25 +724,24 @@ input::-webkit-input-placeholder {
   box-sizing: border-box;
   border-radius: 4px; }
 
-.checkboxButtons__customCheckbox::after {
+.checkboxButtons__labelStyle:after {
   content: "";
   position: absolute;
   display: none;
-  width: 7px;
-  height: 5px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  width: 6px;
+  height: 4px;
   transform: rotate(-45deg);
-  border-left: 2px solid;
-  border-bottom: 2px solid;
+  border-left: 2px solid #BC9CFF;
+  border-bottom: 2px solid #BC9CFF;
   left: 5.5px;
-  top: 4px; }
+  top: 5px; }
 
 .checkboxButtons__inputStyle:checked +
-.checkboxButtons__customCheckbox::after {
+.checkboxButtons__labelStyle:after {
   display: block; }
 
 .checkboxButtons__inputStyle:checked +
-.checkboxButtons__customCheckbox::before {
+.checkboxButtons__labelStyle:before {
   border: 1px solid #BC9CFF; }
 
 .radioButtons__nameBlock {

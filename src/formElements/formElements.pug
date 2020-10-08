@@ -6,11 +6,9 @@
   //-   include ./commonBlocks/dropdown/dropdown
   //-   +dropdown({formName: 'text field', default: 'default'})
 
-  //- .formElements__checkboxButtons 
-  //-   include ./commonBlocks/checkboxButtons/checkboxButtons
-  //-   +checkboxButtons({nameOption: 'Можно курить'})
-  //-   +checkboxButtons({nameOption: 'Можно с питомцами'})
-  //-   +checkboxButtons({nameOption: 'Можно пригласить гостей (до 10 человек)'})
+  .formElements__checkboxButtons 
+    include ./commonBlocks/checkboxButtons/checkboxButtons
+    +checkboxButtons
 
   //- .formElements__radioButtons 
   //-   include ./commonBlocks/radioButtons/radioButtons
@@ -25,10 +23,10 @@
   //-   +likeButton({src: "./img/imgColorGray.png"})
   //-   +likeButtonBlue({src: "./img/imgColorBlue.png"})
 
-  .formElements__rateButton
-    include ./commonBlocks/rateButton/rateButton
-    +rateButton
-    //- +rateButton
+  //- .formElements__rateButton
+  //-   include ./commonBlocks/rateButton/rateButton
+  //-   +rateButton
+  //-   //- +rateButton
 
   //- .formElements__dropdownHover
   //-   include ./commonBlocks/dropdown/dropdown
