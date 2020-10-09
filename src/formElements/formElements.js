@@ -5,4 +5,5 @@ import './commonBlocks/radioButtons/radioButtons.js';
 import './commonBlocks/toggle/toggle.js';
 import './commonBlocks/likeButton/likeButton.js';
 import './commonBlocks/rateButton/rateButton.js';
+import './commonBlocks/richCheckboxButtons/richCheckboxButtons.js';
 import './formElements.scss';

@@ -7,14 +7,16 @@
   <link href="style.css" rel="stylesheet"></head>
   <body class="color1">
     <div class="formElements">
-      <div class="formElements__checkboxButtons"> 
-        <div class="checkboxButtons__nameBlock">Checkbox buttons</div>
-                <input class="checkboxButtons__inputStyle" type="checkbox" id="checkBut">
-                <label class="checkboxButtons__labelStyle" for="checkBut">Можно курить</label>
-                <input class="checkboxButtons__inputStyle" type="checkbox" id="checkBut1" checked>
-                <label class="checkboxButtons__labelStyle" for="checkBut1">Можно с питомцами</label>
-                <input class="checkboxButtons__inputStyle" type="checkbox" id="checkBut2" checked>
-                <label class="checkboxButtons__labelStyle" for="checkBut2">Можно пригласить гостей (до 10 человек)</label>
+      <div class="formElements__richCheckboxButtons"> 
+        <div class="richCheckboxButtons__nameBlock">Rich checkbox buttons</div>
+                <input class="richCheckboxButtons__input" type="checkbox" id="richCheckButOne">
+                <label class="richCheckboxButtons__label" for="richCheckButOne">Широкий коридор 
+                  <div class="richCheckboxButtons__labelDescription richCheckboxButtons__labelDescriptionSize">Ширина коридоров в номере не менее 91 см.</div>
+                </label>
+                <input class="richCheckboxButtons__input" type="checkbox" id="richCheckButTwo">
+                <label class="richCheckboxButtons__label" for="richCheckButTwo">Помощник для инвалидов 
+                  <div class="richCheckboxButtons__labelDescription">На 1 этаже вас встретит специалист и проводит до номера.</div>
+                </label>
       </div>
     </div>
   <script type="text/javascript" src="bundle.js"></script></body>

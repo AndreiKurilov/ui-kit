@@ -1,0 +1,1 @@
+import './richCheckboxButtons.scss';
