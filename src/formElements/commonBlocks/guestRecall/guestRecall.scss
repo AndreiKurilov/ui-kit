@@ -1,0 +1,49 @@
+.guestRecall__name {
+  font-family: "Montserrat-bold";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  width: 220px;
+  height: 48px;
+  padding-left: 57.6px;
+  margin-bottom: 10px;
+}
+.guestRecall__likeButton {
+  display: inline-block;
+}
+.guestRecall__data, .guestRecall__text {
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  display: inline-block;
+}
+.guestRecall__name:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 47.67px;
+  height: 48px;
+  background-color: #E5E5E5;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+  border-radius: 32px;
+}
+
+
+
+// .richCheckboxButtons__label:after {
+//   content: "";
+//   position: absolute;
+//   display: none;
+//   width: 6px;
+//   height: 4px;
+//   // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+//   transform: rotate(-45deg);
+//   border-left: 2px solid #BC9CFF;
+//   border-bottom: 2px solid #BC9CFF;
+//   left: 5.5px;
+//   top: 5px;
+// }

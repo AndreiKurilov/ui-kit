@@ -164,6 +164,17 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/formElements/commonBlocks/guestRecall/guestRecall.scss":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/formElements/commonBlocks/guestRecall/guestRecall.scss ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/formElements/commonBlocks/guestRecall/guestRecall.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
+
+/***/ }),
+
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/formElements/commonBlocks/likeButton/likeButton.scss":
 /*!*************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/formElements/commonBlocks/likeButton/likeButton.scss ***!
@@ -465,6 +476,29 @@ eval("var api = __webpack_require__(/*! ../../../../node_modules/style-loader/di
 
 /***/ }),
 
+/***/ "./src/formElements/commonBlocks/guestRecall/guestRecall.js":
+/*!******************************************************************!*\
+  !*** ./src/formElements/commonBlocks/guestRecall/guestRecall.js ***!
+  \******************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _guestRecall_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./guestRecall.scss */ \"./src/formElements/commonBlocks/guestRecall/guestRecall.scss\");\n/* harmony import */ var _guestRecall_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_guestRecall_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/formElements/commonBlocks/guestRecall/guestRecall.js?");
+
+/***/ }),
+
+/***/ "./src/formElements/commonBlocks/guestRecall/guestRecall.scss":
+/*!********************************************************************!*\
+  !*** ./src/formElements/commonBlocks/guestRecall/guestRecall.scss ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./guestRecall.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/formElements/commonBlocks/guestRecall/guestRecall.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/formElements/commonBlocks/guestRecall/guestRecall.scss?");
+
+/***/ }),
+
 /***/ "./src/formElements/commonBlocks/likeButton/likeButton.js":
 /*!****************************************************************!*\
   !*** ./src/formElements/commonBlocks/likeButton/likeButton.js ***!
@@ -588,7 +622,7 @@ eval("var api = __webpack_require__(/*! ../../../../node_modules/style-loader/di
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _headersFooters_commonBlocks_commonLogoCircle_commonLogoCircle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle.js */ \"./src/headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle.js\");\n/* harmony import */ var _commonBlocks_dropdown_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./commonBlocks/dropdown/dropdown.js */ \"./src/formElements/commonBlocks/dropdown/dropdown.js\");\n/* harmony import */ var _commonBlocks_checkboxButtons_checkboxButtons_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./commonBlocks/checkboxButtons/checkboxButtons.js */ \"./src/formElements/commonBlocks/checkboxButtons/checkboxButtons.js\");\n/* harmony import */ var _commonBlocks_radioButtons_radioButtons_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./commonBlocks/radioButtons/radioButtons.js */ \"./src/formElements/commonBlocks/radioButtons/radioButtons.js\");\n/* harmony import */ var _commonBlocks_toggle_toggle_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./commonBlocks/toggle/toggle.js */ \"./src/formElements/commonBlocks/toggle/toggle.js\");\n/* harmony import */ var _commonBlocks_likeButton_likeButton_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./commonBlocks/likeButton/likeButton.js */ \"./src/formElements/commonBlocks/likeButton/likeButton.js\");\n/* harmony import */ var _commonBlocks_rateButton_rateButton_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./commonBlocks/rateButton/rateButton.js */ \"./src/formElements/commonBlocks/rateButton/rateButton.js\");\n/* harmony import */ var _commonBlocks_richCheckboxButtons_richCheckboxButtons_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./commonBlocks/richCheckboxButtons/richCheckboxButtons.js */ \"./src/formElements/commonBlocks/richCheckboxButtons/richCheckboxButtons.js\");\n/* harmony import */ var _formElements_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./formElements.scss */ \"./src/formElements/formElements.scss\");\n/* harmony import */ var _formElements_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_formElements_scss__WEBPACK_IMPORTED_MODULE_8__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/formElements/formElements.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _headersFooters_commonBlocks_commonLogoCircle_commonLogoCircle_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle.js */ \"./src/headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle.js\");\n/* harmony import */ var _commonBlocks_dropdown_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./commonBlocks/dropdown/dropdown.js */ \"./src/formElements/commonBlocks/dropdown/dropdown.js\");\n/* harmony import */ var _commonBlocks_checkboxButtons_checkboxButtons_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./commonBlocks/checkboxButtons/checkboxButtons.js */ \"./src/formElements/commonBlocks/checkboxButtons/checkboxButtons.js\");\n/* harmony import */ var _commonBlocks_radioButtons_radioButtons_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./commonBlocks/radioButtons/radioButtons.js */ \"./src/formElements/commonBlocks/radioButtons/radioButtons.js\");\n/* harmony import */ var _commonBlocks_toggle_toggle_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./commonBlocks/toggle/toggle.js */ \"./src/formElements/commonBlocks/toggle/toggle.js\");\n/* harmony import */ var _commonBlocks_likeButton_likeButton_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./commonBlocks/likeButton/likeButton.js */ \"./src/formElements/commonBlocks/likeButton/likeButton.js\");\n/* harmony import */ var _commonBlocks_rateButton_rateButton_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./commonBlocks/rateButton/rateButton.js */ \"./src/formElements/commonBlocks/rateButton/rateButton.js\");\n/* harmony import */ var _commonBlocks_richCheckboxButtons_richCheckboxButtons_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./commonBlocks/richCheckboxButtons/richCheckboxButtons.js */ \"./src/formElements/commonBlocks/richCheckboxButtons/richCheckboxButtons.js\");\n/* harmony import */ var _commonBlocks_guestRecall_guestRecall_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./commonBlocks/guestRecall/guestRecall.js */ \"./src/formElements/commonBlocks/guestRecall/guestRecall.js\");\n/* harmony import */ var _formElements_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./formElements.scss */ \"./src/formElements/formElements.scss\");\n/* harmony import */ var _formElements_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_formElements_scss__WEBPACK_IMPORTED_MODULE_9__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/formElements/formElements.js?");
 
 /***/ }),
 
