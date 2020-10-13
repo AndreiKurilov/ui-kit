@@ -18,12 +18,14 @@
   //-   include ./commonBlocks/toggle/toggle
   //-   +toggle({nameOption: 'Получать спецпредложения'})
   
-  //- .formElements__likeButton
-  //-   include ./commonBlocks/likeButton/likeButton
-  //-   +likeButton({src: "./img/imgColorGray.png"})
-  //-   +likeButtonBlue({src: "./img/imgColorBlue.png"})
+  .formElements__likeButton
+    .formElements__likeButtonNameBlock Like button
+    include ./commonBlocks/likeButton/likeButtonGrey/likeButtonGrey
+    +likeButtonGrey
+    include ./commonBlocks/likeButton/likeButtonColor/likeButtonColor
+    +likeButtonColor
 
-  //- .formElements__rateButton
+    //- .formElements__rateButton
   //-   include ./commonBlocks/rateButton/rateButton
   //-   +rateButton
   //-   //- +rateButton
@@ -39,6 +41,6 @@
   //-   include ./commonBlocks/richCheckboxButtons/richCheckboxButtons
   //-   +richCheckboxButtons
 
-  .formElements__guestRecall
-    include ./commonBlocks/guestRecall/guestRecall
-    +guestRecall
+  //- .formElements__guestRecall
+  //-   include ./commonBlocks/guestRecall/guestRecall
+  //-   +guestRecall
