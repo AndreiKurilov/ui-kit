@@ -7,28 +7,23 @@
   <link href="style.css" rel="stylesheet"></head>
   <body class="color1">
     <div class="formElements">
-      <div class="formElements__likeButton">
-        <div class="formElements__likeButtonNameBlock">Like button</div>
-                <script>
-                  function countOne() {
-                    let counter = document.querySelector(".likeButtonGrey__counter");
-                    counter.innerHTML++;
-                  }
-                </script>
-                <label class="likeButtonGrey__label">
-                  <input class="likeButtonGrey__input" type="checkbox" onclick="countOne()">
-                  <div class="likeButtonGrey__counter">0</div>
-                </label>
-                <script>
-                  function count() {
-                    let counter = document.querySelector(".likeButtonColor__counter");
-                    counter.innerHTML++;
-                  }
-                </script>
-                <label class="likeButtonColor__label">
-                  <input class="likeButtonColor__input" type="checkbox" onclick="count()">
-                  <div class="likeButtonColor__counter">0</div>
-                </label>
+      <div class="formElements__guestRecall">
+                <div class="guestRecall__name">Мурад Сарафанов 
+                  <div class="guestRecall__data">5 дней назад</div>
+                </div>
+                <div class="guestRecall__likeButtonColor">
+                            <script>
+                              function count() {
+                                let counter = document.querySelector(".likeButtonColor__counter");
+                                counter.innerHTML++;
+                              }
+                            </script>
+                            <label class="likeButtonColor__label">
+                              <input class="likeButtonColor__input" type="checkbox" onclick="count()">
+                              <div class="likeButtonColor__counter">0</div>
+                            </label>
+                </div>
+                <div class="guestRecall__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</div>
       </div>
     </div>
   <script type="text/javascript" src="bundle.js"></script></body>
