@@ -8,4 +8,5 @@ import './commonBlocks/likeButton/likeButtonGrey/likeButtonGrey.js'
 import './commonBlocks/rateButton/rateButton.js';
 import './commonBlocks/richCheckboxButtons/richCheckboxButtons.js';
 import './commonBlocks/guestRecall/guestRecall.js';
+import './commonBlocks/bulletList/bulletList.js';
 import './formElements.scss';
