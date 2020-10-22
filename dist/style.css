@@ -1057,6 +1057,33 @@ input::-webkit-input-placeholder {
 .richCheckboxButtons__label:before {
   border: 1px solid #BC9CFF; }
 
+.button__link {
+  font-family: "Montserrat-bold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #BC9CFF;
+  margin-right: 20px;
+  z-index: 1; }
+  .button__link:hover {
+    color: rgba(31, 32, 65, 0.5); }
+
+.button__linkHover {
+  color: rgba(31, 32, 65, 0.5); }
+
+.button__colored {
+  width: 99px;
+  height: 44px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  display: flex; }
+  .button__colored > .button__link {
+    margin: auto;
+    color: #FFFFFF; }
+
 .guestRecall__name {
   font-family: "Montserrat-bold";
   font-size: 14px;
@@ -1199,6 +1226,13 @@ input::-webkit-input-placeholder {
   top: 1196px;
   width: 260px;
   height: 145px; }
+
+.formElements__buttons {
+  position: absolute;
+  width: 218px;
+  height: 195px;
+  left: 979px;
+  top: 231px; }
 
 .formElements__guestRecall {
   position: absolute;

@@ -1,0 +1,11 @@
+mixin buttonLink(name, options)
+  -
+    var butLink = "button__link"
+    butLink += options.linkHover ? " button__linkHover" : ""
+  
+  a(href="#" onclick="return false" class = butLink)= options[title, linkHover]
+
+    //- | Click me
+
+
+

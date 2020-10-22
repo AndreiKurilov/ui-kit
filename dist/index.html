@@ -1,18 +1,20 @@
-<!DOCTYPE html><!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  <link href="style.css" rel="stylesheet"></head>
-  <body class="color1">
-    <div class="formElements">
-      <div class="formElements__bulletList">
-                <div class="bulletList__naneBlock">Bullet list</div>
-                <div class="bulletList__style">Нельзя с питомцами</div>
-                <div class="bulletList__style">Без вечеринок и мероприятий</div>
-                <div class="bulletList__style">Время прибытия — после 13:00, а выезд до 12:00</div>
-      </div>
-    </div>
-  <script type="text/javascript" src="bundle.js"></script></body>
-</html>
+Html Webpack Plugin:
+<pre>
+  TypeError: Cannot read property 'linkHover' of undefined
+  
+  - loader.js:8 Object.pug_interp [as buttonLink]
+    [index.pug?.]/[html-webpack-plugin]/lib/loader.js:8:20
+  
+  - loader.js:13 eval
+    [index.pug?.]/[html-webpack-plugin]/lib/loader.js:13:25
+  
+  - loader.js:15 template
+    [index.pug?.]/[html-webpack-plugin]/lib/loader.js:15:134
+  
+  - index.js:284 Promise.resolve.then
+    [ui-kit]/[html-webpack-plugin]/index.js:284:18
+  
+  - next_tick.js:68 process._tickCallback
+    internal/process/next_tick.js:68:7
+  
+</pre>
