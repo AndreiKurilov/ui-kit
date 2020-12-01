@@ -1057,32 +1057,65 @@ input::-webkit-input-placeholder {
 .richCheckboxButtons__label:before {
   border: 1px solid #BC9CFF; }
 
-.button__link {
+.button-form {
+  display: inline-block; }
+
+.button {
   font-family: "Montserrat-bold";
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-  text-decoration: none;
-  color: #BC9CFF;
-  margin-right: 20px;
-  z-index: 1; }
-  .button__link:hover {
-    color: rgba(31, 32, 65, 0.5); }
-
-.button__linkHover {
-  color: rgba(31, 32, 65, 0.5); }
-
-.button__colored {
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border: none;
+  padding: 0px;
+  outline: none;
+  cursor: pointer;
   width: 99px;
   height: 44px;
   border-radius: 22px;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  box-sizing: border-box;
-  margin-bottom: 30px;
-  display: flex; }
-  .button__colored > .button__link {
-    margin: auto;
-    color: #FFFFFF; }
+  position: relative;
+  z-index: 0; }
+  .button:hover {
+    opacity: 0.5; }
+
+.button_color_white {
+  color: #BC9CFF; }
+
+.button_color_white::before {
+  content: '';
+  width: 95px;
+  height: 40px;
+  border-radius: 20px;
+  position: absolute;
+  margin-top: -12.5px;
+  margin-left: 2px;
+  z-index: -1;
+  display: block;
+  background: #FFFFFF; }
+
+.button_hover {
+  opacity: 0.5;
+  margin-left: 15px;
+  margin-bottom: 30px; }
+
+.buttonLink {
+  color: #BC9CFF;
+  background: transparent;
+  width: 61px;
+  height: 15px; }
+  .buttonLink:hover {
+    opacity: 1;
+    color: rgba(31, 32, 65, 0.5); }
+
+.buttonLink_hover {
+  color: rgba(31, 32, 65, 0.5);
+  width: 61px;
+  height: 15px;
+  margin-left: 20px;
+  background: transparent; }
+  .buttonLink_hover:hover {
+    opacity: 1; }
 
 .guestRecall__name {
   font-family: "Montserrat-bold";
@@ -1233,6 +1266,14 @@ input::-webkit-input-placeholder {
   height: 195px;
   left: 979px;
   top: 231px; }
+  .formElements__buttons .formElements__buttonsTitle {
+    font-family: "Montserrat-bold";
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    display: block;
+    margin-bottom: 15px; }
 
 .formElements__guestRecall {
   position: absolute;

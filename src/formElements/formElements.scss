@@ -97,6 +97,15 @@
   height: 195px;
   left: 979px;
   top: 231px;
+  .formElements__buttonsTitle {
+    font-family: "Montserrat-bold";
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    display: block;
+    margin-bottom: 15px;
+  }
 }
 .formElements__guestRecall {
   position: absolute;

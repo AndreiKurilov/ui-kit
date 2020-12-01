@@ -42,13 +42,14 @@
   //-   +richCheckboxButtons
 
   .formElements__buttons
-    include ./commonBlocks/buttons/buttons
-    +buttonLink({title: 'Click me', linkHover: " "})
-    //- +buttonLink({name: "Click me", linkHover: " "})
-    //- +buttonLinkHover
-    //- +buttonColored
-    //- +buttons({button: " "})
-    //- +buttons({link: " "})
+    .formElements__buttonsTitle Buttons
+    include ./commonBlocks/buttons/button/button
+    +button({title: 'Click me'})
+    +button({title: 'Click me', hover: true})
+    +button({title: 'Click me', colorWhite: true})
+    +button({title: 'Click me', colorWhite: true, hover: true})
+    +button({title: 'Click me', link: true})
+    +button({title: 'Click me', hoverLink: true})
 
   //- .formElements__guestRecall
   //-   include ./commonBlocks/guestRecall/guestRecall

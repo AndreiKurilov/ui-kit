@@ -1,20 +1,33 @@
-Html Webpack Plugin:
-<pre>
-  TypeError: Cannot read property 'linkHover' of undefined
-  
-  - loader.js:8 Object.pug_interp [as buttonLink]
-    [index.pug?.]/[html-webpack-plugin]/lib/loader.js:8:20
-  
-  - loader.js:13 eval
-    [index.pug?.]/[html-webpack-plugin]/lib/loader.js:13:25
-  
-  - loader.js:15 template
-    [index.pug?.]/[html-webpack-plugin]/lib/loader.js:15:134
-  
-  - index.js:284 Promise.resolve.then
-    [ui-kit]/[html-webpack-plugin]/index.js:284:18
-  
-  - next_tick.js:68 process._tickCallback
-    internal/process/next_tick.js:68:7
-  
-</pre>
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link href="style.css" rel="stylesheet"></head>
+  <body class="color1">
+    <div class="formElements">
+      <div class="formElements__buttons">
+        <div class="formElements__buttonsTitle">Buttons</div>
+                <form class="button-form" action="#">
+                  <button class="button" type="button" onclick="return false">Click me</button>
+                </form>
+                <form class="button-form" action="#">
+                  <button class="button button_hover" type="button" onclick="return false">Click me</button>
+                </form>
+                <form class="button-form" action="#">
+                  <button class="button button_color_white" type="button" onclick="return false">Click me</button>
+                </form>
+                <form class="button-form" action="#">
+                  <button class="button button_color_white button_hover" type="button" onclick="return false">Click me</button>
+                </form>
+                <form class="button-form" action="#">
+                  <button class="button buttonLink" type="button" onclick="return false">Click me</button>
+                </form>
+                <form class="button-form" action="#">
+                  <button class="button buttonLink_hover" type="button" onclick="return false">Click me</button>
+                </form>
+      </div>
+    </div>
+  <script type="text/javascript" src="bundle.js"></script></body>
+</html>
