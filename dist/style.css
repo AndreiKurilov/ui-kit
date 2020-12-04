@@ -1113,9 +1113,20 @@ input::-webkit-input-placeholder {
   width: 61px;
   height: 15px;
   margin-left: 20px;
+  margin-bottom: 30.44px;
   background: transparent; }
   .buttonLink_hover:hover {
     opacity: 1; }
+
+.button_default {
+  width: 320px;
+  height: 44px; }
+  .button_default::after {
+    content: "\e901";
+    font-family: 'Material-Icons';
+    position: absolute;
+    margin-left: 65px;
+    font-size: 15px; }
 
 .guestRecall__name {
   font-family: "Montserrat-bold";

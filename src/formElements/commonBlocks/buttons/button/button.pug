@@ -5,6 +5,7 @@ mixin button (options)
     if (options.hover == true) {button += ' button_hover'}
     if (options.link == true) {button += ' buttonLink'}
     if (options.hoverLink == true) {button += ' buttonLink_hover'}
+    if (options.default == true) {button += ' button_default'}
 
   form(action="#").button-form
     button(type='button' onclick='return false' class = button)= options.title
