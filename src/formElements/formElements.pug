@@ -1,10 +1,10 @@
 .formElements
-  //- .formElements__blockName Form Elements
-  //- .formElements__commonLogoCircle
-  //-   include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
-  //- .formElements__dropdownEmail
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({formName: 'text field', default: 'default'})
+  .formElements__blockName Form Elements
+  .formElements__commonLogoCircle
+    include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
+  .formElements__dropdownEmail
+    include ./commonBlocks/dropdown/dropdown
+    +dropdown({formName: 'text field', default: 'default'})
 
   //- .formElements__checkboxButtons 
   //-   include ./commonBlocks/checkboxButtons/checkboxButtons
@@ -41,17 +41,23 @@
   //-   include ./commonBlocks/richCheckboxButtons/richCheckboxButtons
   //-   +richCheckboxButtons
 
-  .formElements__buttons
-    .formElements__buttonsTitle Buttons
-    include ./commonBlocks/buttons/button/button
-    +button({title: 'Click me'})
-    +button({title: 'Click me', hover: true})
-    +button({title: 'Click me', colorWhite: true})
-    +button({title: 'Click me', colorWhite: true, hover: true})
-    +button({title: 'Click me', link: true})
-    +button({title: 'Click me', hoverLink: true})
-    +button({title: 'Перейти к оплате', default: true})
+  //- .formElements__buttons
+  //-   .formElements__buttonsTitle Buttons
+  //-   include ./commonBlocks/buttons/button/button
+  //-   +button({title: 'Click me'})
+  //-   +button({title: 'Click me', hover: true})
+  //-   +button({title: 'Click me', colorWhite: true})
+  //-   +button({title: 'Click me', colorWhite: true, hover: true})
+  //-   +button({title: 'Click me', link: true})
+  //-   +button({title: 'Click me', hoverLink: true})
+  //-   +button({title: 'Перейти к оплате', default: true})
     
+  .formElements__pagination
+    .formElements__paginationTitle Pagination
+    include ./commonBlocks/pagination/pagination
+    +pagination({})
+
+  
   //- .formElements__guestRecall
   //-   include ./commonBlocks/guestRecall/guestRecall
   //-   +guestRecall

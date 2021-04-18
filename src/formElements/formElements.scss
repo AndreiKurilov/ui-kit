@@ -107,6 +107,22 @@
     margin-bottom: 15px;
   }
 }
+.formElements__pagination {
+  position: absolute;
+  width: 241px;
+  height: 106px;
+  left: 979px;
+  top: 540px;
+  .formElements__paginationTitle {
+    font-family: "Montserrat-bold";
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    display: block;
+    margin-bottom: 15px;
+  }
+}
 .formElements__guestRecall {
   position: absolute;
   left: 587px;

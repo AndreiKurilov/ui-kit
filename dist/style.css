@@ -1128,6 +1128,44 @@ input::-webkit-input-placeholder {
     margin-left: 65px;
     font-size: 15px; }
 
+.pagination {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 10.56px; }
+
+.pagination-style {
+  font-family: "Montserrat-regular";
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(31, 32, 65, 0.5);
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer; }
+  .pagination-style:hover, .pagination-style.active {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px; }
+
+.table {
+  display: none;
+  padding: 15px;
+  border: 1px solid black; }
+
+.pagination__results {
+  width: 229px;
+  height: 24px;
+  font-family: "Montserrat-regular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  margin: 0 auto; }
+
 .guestRecall__name {
   font-family: "Montserrat-bold";
   font-size: 14px;
@@ -1278,6 +1316,21 @@ input::-webkit-input-placeholder {
   left: 979px;
   top: 231px; }
   .formElements__buttons .formElements__buttonsTitle {
+    font-family: "Montserrat-bold";
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    display: block;
+    margin-bottom: 15px; }
+
+.formElements__pagination {
+  position: absolute;
+  width: 241px;
+  height: 106px;
+  left: 979px;
+  top: 540px; }
+  .formElements__pagination .formElements__paginationTitle {
     font-family: "Montserrat-bold";
     font-size: 12px;
     line-height: 15px;
