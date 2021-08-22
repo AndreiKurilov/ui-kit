@@ -30,12 +30,12 @@
     //- +rateButton
     //- +rateButton
 
-  //- .formElements__dropdownHover
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({leftWord: 'text field', rightWord: 'hover / focus', title: 'This is pretty awesome', borderDark: true, colorDark: true})
-  //- .formElements__dropdownDefault
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({leftWord: 'dropdown', rightWord: 'default', title: 'Сколько гостей', colorDark: true, arrow: true})
+  .formElements__dropdownHover
+    include ./commonBlocks/dropdown/dropdown
+    +dropdown({leftWord: 'text field', rightWord: 'hover / focus', title: 'This is pretty awesome', borderDark: true, colorDark: true})
+  .formElements__dropdownDefault
+    include ./commonBlocks/dropdown/dropdown
+    +dropdown({leftWord: 'dropdown', rightWord: 'default', title: 'Сколько гостей', colorDark: true, arrow: true})
 
   //- .formElements__richCheckboxButtons 
   //-   include ./commonBlocks/richCheckboxButtons/richCheckboxButtons
@@ -52,10 +52,10 @@
   //-   +button({title: 'Click me', hoverLink: true})
   //-   +button({title: 'Перейти к оплате', default: true})
     
-  .formElements__pagination
-    .formElements__paginationTitle Pagination
-    include ./commonBlocks/pagination/pagination
-    +pagination({})
+  //- .formElements__pagination
+  //-   .formElements__paginationTitle Pagination
+  //-   include ./commonBlocks/pagination/pagination
+  //-   +pagination({})
 
   
   //- .formElements__guestRecall

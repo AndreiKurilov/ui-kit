@@ -7,19 +7,51 @@ mixin pagination(options)
     //- let table = document.querySelector('.table');
     let pagination = document.querySelector('.pagination');
     let pagResults = document.querySelector('.pagination__results');
-    let results = 50;
+    let results = 80;
     let notesOnPage = 12;
     let countOfPages = Math.ceil(results / notesOnPage);
+    let numberOfPages = 5;
 
     //- creating pagination
-    let items = [];
-    for (let i = 1; i <= countOfPages; i++) {
+
+    function createPagination (i) {
       let li = document.createElement('li');
       li.innerHTML = i;
       pagination.appendChild(li);
-      li.classList.add('pagination-style');
+      li.classList.add('pagination__item');
       items.push(li);
     }
+
+    function createArrowRight () { 
+      let arrowRight = document.createElement('div');
+      pagination.append(arrowRight);
+      arrowRight.classList.add('pagination__arrowRight')
+      items[4].innerHTML = countOfPages;
+      items[3].innerHTML = '...';
+      //- items[3].onclick = null;
+      arrowRight.addEventListener("click", function(){
+        if (items.indexOf(items[i]) <= 1) {
+          showPage(items[i+1]);
+        }
+      });
+    }
+
+    let items = [];
+    if (countOfPages <= numberOfPages) {
+      for (let i = 1; i <= countOfPages; i++) {
+        let k = i;
+        createPagination (k);
+      }
+    }
+      
+    if (countOfPages > numberOfPages ) {
+      for (let i = 1; i <= numberOfPages; i++) {
+        let k = i;
+        createPagination (k);
+      }
+      createArrowRight ();
+    }
+    
     showPage(items[0]);
 
     //- add addEventListener to pagination item 
@@ -29,13 +61,7 @@ mixin pagination(options)
       });
     }
 
-    //- for (let item of items) {
-    //-   item.addEventListener("click", function() {
-    //-     showPage());
-    //-   }
-    //-   );
-    //- }
-
+    
     function showPage(item) {
       let active = document.querySelector('.active');
       if (active) {
@@ -43,7 +69,10 @@ mixin pagination(options)
       }
       active = item;
       item.classList.add('active');
+      createText (item);
+    }
 
+    function createText (item) {
       let pageNum = +item.innerHTML;
       let start = (pageNum - 1) * notesOnPage;
       let end = start + notesOnPage;
@@ -52,6 +81,15 @@ mixin pagination(options)
       };
       pagResults.innerHTML = `${start+1} - ${end} из ${results}+ вариантов аренды`;
     }
+
+
+
+
+
+
+
+
+
 
 
     //- let notes = users.slice(start, end);
