@@ -1,7 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
+// window.$ = require('jquery')(window);
+// var $ = require("jquery")(window);
+// var $ = jQuery = require('jquery')(window);
 
 module.exports = {
   entry: './index.js',
@@ -25,17 +29,18 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery'
-    }),
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    })
   ],
   module: {
     rules: [
         {
-            test: /\.pug$/,
-            loader: 'pug-loader',
-            options: {
-                pretty: true
-            }
+          test: /\.pug$/,
+          loader: 'pug-loader',
+          options: {
+              pretty: true
+          }
         },
         {
           test: /\.scss$/,

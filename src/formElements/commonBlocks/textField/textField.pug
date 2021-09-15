@@ -1,0 +1,19 @@
+mixin textField(options)
+  -
+    var textFieldLowerBlock = 'textField__lower-block'
+    textFieldLowerBlock += options.borderDark ? ' textField__lower-block_border-dark' : ''
+    textFieldLowerBlock += options.colorDark ? ' textField__lower-block_color-dark' : ''
+    
+  
+  //- div(class = textFieldLowerBlock)= options.title
+  //-   if options.arrow
+  //-     .textField__lower-block_arrow
+  //-       img.textField__lower-block_expand-more(src="./img/textField__expand-more.png")
+
+  form
+    .textField__upper-block
+      .textField__formName= options.formName
+      .textField__default= options.default
+    .textField__lower-block
+      input.textField__input-email(type="email", placeholder="Email")
+      input.textField__input-submit(type="submit" value="")

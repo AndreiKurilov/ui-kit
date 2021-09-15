@@ -2,10 +2,33 @@
   .formElements__blockName Form Elements
   .formElements__commonLogoCircle
     include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
-  .formElements__dropdownEmail
-    include ./commonBlocks/dropdown/dropdown
-    +dropdown({formName: 'text field', default: 'default'})
+  .formElements__textFieldEmail
+    include ./commonBlocks/textField/textField
+    +textField({formName: 'text field', default: 'default'})
 
+  //- .formElements__checkboxButtons 
+  //-   include ./commonBlocks/checkboxButtons/checkboxButtons
+  //-   +checkboxButtons
+
+  //- .formElements__radioButtons 
+  //-   include ./commonBlocks/radioButtons/radioButtons
+  //-   +radioButtons({nameOptionOne: 'Мужчина', nameOptionTwo: 'Женщина'})
+
+  //- .formElements__toggle 
+  //-   include ./commonBlocks/toggle/toggle
+  //-   +toggle({nameOption: 'Получать спецпредложения'})
+  
+  //- .formElements__likeButton
+  //-   .formElements__likeButtonNameBlock Like button
+  //-   include ./commonBlocks/likeButton/likeButtonGrey/likeButtonGrey
+  //-   +likeButtonGrey
+  //-   include ./commonBlocks/likeButton/likeButtonColor/likeButtonColor
+  //-   +likeButtonColor
+
+  //-   .formElements__rateButton
+  //-   include ./commonBlocks/rateButton/rateButton
+  //-   +rateButton
+  //-   +rateButton
 
   //- .formElements__dropdownHover
   //-   include ./commonBlocks/dropdown/dropdown
@@ -13,3 +36,32 @@
   //- .formElements__dropdownDefault
   //-   include ./commonBlocks/dropdown/dropdown
   //-   +dropdown({leftWord: 'dropdown', rightWord: 'default', title: 'Сколько гостей', colorDark: true, arrow: true})
+
+  //- .formElements__richCheckboxButtons 
+  //-   include ./commonBlocks/richCheckboxButtons/richCheckboxButtons
+  //-   +richCheckboxButtons
+
+  //- .formElements__buttons
+  //-   .formElements__buttonsTitle Buttons
+  //-   include ./commonBlocks/buttons/button/button
+  //-   +button({title: 'Click me'})
+  //-   +button({title: 'Click me', hover: true})
+  //-   +button({title: 'Click me', colorWhite: true})
+  //-   +button({title: 'Click me', colorWhite: true, hover: true})
+  //-   +button({title: 'Click me', link: true})
+  //-   +button({title: 'Click me', hoverLink: true})
+  //-   +button({title: 'Перейти к оплате', default: true})
+    
+  //- .formElements__pagination
+  //-   .formElements__paginationTitle Pagination
+  //-   include ./commonBlocks/pagination/pagination
+  //-   +pagination({})
+
+  
+  //- .formElements__guestRecall
+  //-   include ./commonBlocks/guestRecall/guestRecall
+  //-   +guestRecall
+
+  //- .formElements__bulletList
+  //-   include ./commonBlocks/bulletList/bulletList
+  //-   +bulletList

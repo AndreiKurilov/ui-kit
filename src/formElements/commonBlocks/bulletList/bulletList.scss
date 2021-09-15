@@ -1,0 +1,26 @@
+.bulletList__naneBlock {
+  font-family: "Montserrat-bold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  margin-bottom: 16px;
+}
+.bulletList__style {
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  list-style: none;
+  margin-left: 20.86px;
+}
+.bulletList__style:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  margin-top: 7.5px;
+  width: 10.43px;
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(31, 32, 65, 0.25);
+}

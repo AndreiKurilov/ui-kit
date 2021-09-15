@@ -22,3 +22,11 @@
   url("./montserrat-regular/montserrat-regular.ttf") format("truetype"), /* Safari, Android, iOS */
   url("./montserrat-regular/montserrat-regular.woff") format("woff"); /* Modern Browsers */
 }
+@font-face {
+  font-family: 'Material-Icons';
+  src:  url('./materialIcons/Material-Icons.eot?nyqhm7');
+  src:  url('./materialIcons/Material-Icons.eot?nyqhm7#iefix') format('embedded-opentype'),
+    url('./materialIcons/Material-Icons.ttf?nyqhm7') format('truetype'),
+    url('./materialIcons/Material-Icons.woff?nyqhm7') format('woff'),
+    url('./materialIcons/Material-Icons.svg?nyqhm7#Material-Icons') format('svg');
+}

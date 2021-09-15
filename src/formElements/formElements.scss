@@ -22,7 +22,7 @@
   left: 30px;
   top: 30px;
 }
-.formElements__dropdownEmail {
+.formElements__textFieldEmail {
   position: absolute;
   left: 141px;
   top: 143px;
@@ -40,3 +40,100 @@
 //   top: 331.44px;
 //   width: 320px;
 // }
+.formElements__checkboxButtons {
+  position: absolute;
+  left: 587px;
+  top: 143px;
+  width: 222px;
+  height: 129.12px;
+}
+.formElements__radioButtons {
+  position: absolute;
+  left: 587px;
+  top: 313px;
+  width: 220.74px;
+  height: 55px;
+}
+.formElements__toggle {
+  position: absolute;
+  left: 587px;
+  top: 404.56px;
+  width: 260px;
+  height: 89px;
+}
+.formElements__likeButton {
+  position: absolute;
+  left: 587px;
+  top: 534px;
+  width: 89.72px;
+  height: 51px;
+}
+.formElements__likeButtonNameBlock {
+  font-family: "Montserrat-bold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  user-select: none;
+  margin-bottom: 16px;
+}
+.formElements__rateButton {
+  position: absolute;
+  left: 587px;
+  top: 625px;
+  // width: 259.74px;
+  height: 55px;
+}
+.formElements__richCheckboxButtons {
+  position: absolute;
+  left: 587px;
+  top: 1196px;
+  width: 260px;
+  height: 145px;
+}
+.formElements__buttons {
+  position: absolute;
+  width: 218px;
+  height: 195px;
+  left: 979px;
+  top: 231px;
+  .formElements__buttonsTitle {
+    font-family: "Montserrat-bold";
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+.formElements__pagination {
+  position: absolute;
+  width: 241px;
+  height: 106px;
+  left: 979px;
+  top: 540px;
+  .formElements__paginationTitle {
+    font-family: "Montserrat-bold";
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+.formElements__guestRecall {
+  position: absolute;
+  left: 587px;
+  top: 1574px;
+  width: 711px;
+  height: 133px;
+}
+.formElements__bulletList {
+  position: absolute;
+  left: 979px;
+  top: 1196px;
+  width: 260px;
+  height: 147px;
+}
