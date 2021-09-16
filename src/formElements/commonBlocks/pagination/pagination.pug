@@ -82,29 +82,21 @@ mixin pagination(options)
       pagResults.innerHTML = `${start+1} - ${end} из ${results}+ вариантов аренды`;
     }
 
+        //- add
 
-
-
-
-
-
-
-
-
-
-    //- let notes = users.slice(start, end);
-    //- table.innerHTML = '';
-    //- for (let note of notes) {
-    //-   let tr = document.createElement('tr');
-    //-   table.appendChild(tr);
+    let notes = users.slice(start, end);
+    table.innerHTML = '';
+    for (let note of notes) {
+      let tr = document.createElement('tr');
+      table.appendChild(tr);
       
-    //-   createCell(note.name, tr);
-    //-   createCell(note.surname, tr);
-    //-   createCell(note.age, tr);
-    //- }
+      createCell(note.name, tr);
+      createCell(note.surname, tr);
+      createCell(note.age, tr);
+    }
     
-    //- function createCell(text, tr) {
-    //-   let td = document.createElement('td');
-    //-   td.innerHTML = text;
-    //-   tr.appendChild(td);
-    //- }
+    function createCell(text, tr) {
+      let td = document.createElement('td');
+      td.innerHTML = text;
+      tr.appendChild(td);
+    }
