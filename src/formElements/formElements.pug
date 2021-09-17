@@ -1,14 +1,14 @@
 .formElements
   .formElements__blockName Form Elements
-  .formElements__commonLogoCircle
-    include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
+  //- .formElements__commonLogoCircle
+  //-   include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
   .formElements__textFieldEmail
     include ./commonBlocks/textField/textField
-    +textField({formName: 'text field', default: 'default'})
+    +textField({name: 'text field', default: 'default'})
 
-  .formElements__checkboxButtons 
-    include ./commonBlocks/checkboxButtons/checkboxButtons
-    +checkboxButtons
+  //- .formElements__checkboxButtons 
+  //-   include ./commonBlocks/checkboxButtons/checkboxButtons
+  //-   +checkboxButtons
 
   //- .formElements__radioButtons 
   //-   include ./commonBlocks/radioButtons/radioButtons
