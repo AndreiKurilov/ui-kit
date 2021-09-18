@@ -6,28 +6,14 @@ mixin textField(options)
     
   
 
-  form
-    //- .textField
-    label(for="email").textField__name= options.name
-    .textField__lower-block
-      input.textField__input-email(id='email' type="email", placeholder="Email")
-      input.textField__input-submit(type="submit" value="") 
-
-
-    //- .textField__default= options.default
-
-  //- .textField__upper-block
-  //-   .textField__formName= options.formName
-  //-   .textField__default= options.default
-  //- form
-  //-   .textField__lower-block
-  //-     input.textField__input-email(type="email", placeholder="Email")
-  //-     input.textField__input-submit(type="submit" value="") 
+  form.textField__form
+    label(for="email")
+      .textField__label= options.label
+      .textField__default= options.default
+    .textField__input
+      input.textField__email(id='email' type="email", placeholder="Email")
+      button.textField__submit(type="submit")
 
 
 
-
-  //- div(class = textFieldLowerBlock)= options.title
-  //-   if options.arrow
-  //-     .textField__lower-block_arrow
-  //-       img.textField__lower-block_expand-more(src="./img/textField__expand-more.png")
+ 
