@@ -12,7 +12,8 @@ mixin textField(options)
       .textField__default= options.default
     .textField__input
       input.textField__email(id='email' type="email", placeholder="Email")
-      button.textField__submit(type="submit")
+      if (options.button)
+        button(type="submit").textField__submit
 
 
 
