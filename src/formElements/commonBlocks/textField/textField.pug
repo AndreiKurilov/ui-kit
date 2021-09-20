@@ -6,15 +6,19 @@ mixin textField(options)
     
   
 
+  //- form.textField__form
+  //-   label(for="email")
+  //-     .textField__label= options.label
+  //-     .textField__default= options.default
+  //-   .textField__input
+  //-     input.textField__email(id='email' type="email", placeholder="Email")
+  //-     if (options.button)
+  //-       button(type="submit").textField__submit
+
   form.textField__form
     label(for="email")
-      .textField__label= options.label
-      .textField__default= options.default
     .textField__input
       input.textField__email(id='email' type="email", placeholder="Email")
-      if (options.button)
-        button(type="submit").textField__submit
-
-
+      button(type="submit").textField__submit
 
  
