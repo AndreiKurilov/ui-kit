@@ -16,31 +16,33 @@
   line-height: 15px;
   text-transform: uppercase;
   color: rgba(31, 32, 65, 0.5);
-  padding-right: 1px;
   float: right;
 }
 .textField__input {
   height: 44px;
+  width: 320px;
   box-sizing: border-box;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   display: flex;
-  width: 267px;
+  &:hover {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+  };
 }
-input::-webkit-input-placeholder {
-  font-family: "Montserrat-regular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.25);
-} 
 .textField__email {
   border: 0px;
   padding: 0;
   padding-left: 15px;
   border-radius: 4px;
-  outline-color: rgba(31, 32, 65, 0.5);
   outline: none;
+  width: 320px;
+  &:focus {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-radius: 4px;
+    
+  };
 }
+
 
 .textField__submit {
   width: 44px;
@@ -55,23 +57,30 @@ input::-webkit-input-placeholder {
 }
 
 // .textField__lower-block_border-dark {
-//   border: 1px solid rgba(31, 32, 65, 0.5);
+  //   border: 1px solid rgba(31, 32, 65, 0.5);
 // }
 
 // .textField__lower-block_color-dark {
-//   color: rgba(31, 32, 65, 0.75);
-// }
+  //   color: rgba(31, 32, 65, 0.75);
+  // }
 
-
-// .textField__lower-block_expand-more {
-//   width: 12px;
+  
+  // .textField__lower-block_expand-more {
+    //   width: 12px;
 //   height: 7px;
 //   margin: auto;
 // }
 
 // .textField__lower-block_arrow {
-//   width: 44px;
-//   height: 44px;
-//   line-height: 24px;
-//   margin-left: auto;
-// }
+  //   width: 44px;
+  //   height: 44px;
+  //   line-height: 24px;
+  //   margin-left: auto;
+  // }
+  
+  input[type='email'] {
+    font-family: "Montserrat-regular";
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+  } 
