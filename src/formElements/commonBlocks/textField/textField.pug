@@ -15,10 +15,12 @@ mixin textField(options)
   //-     if (options.button)
   //-       button(type="submit").textField__submit
 
-  form.textField__form
+  form
     label(for="email")
+      .textField__label= options.label
+      .textField__default= options.default
     .textField__input
-      input.textField__email(id='email' type="email", placeholder="Email")
-      button(type="submit").textField__submit
+      input(id='email' type="email", placeholder="Email").textField__email
+      //- button(type="submit")
 
  
