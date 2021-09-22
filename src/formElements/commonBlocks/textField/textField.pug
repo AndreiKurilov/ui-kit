@@ -4,16 +4,17 @@ mixin textField(options)
     textFieldLowerBlock += options.borderDark ? ' textField__lower-block_border-dark' : ''
     textFieldLowerBlock += options.colorDark ? ' textField__lower-block_color-dark' : ''
     
-  
+    //- var formFocused = document.querySelector("textField__input");
 
-  //- form.textField__form
-  //-   label(for="email")
-  //-     .textField__label= options.label
-  //-     .textField__default= options.default
-  //-   .textField__input
-  //-     input.textField__email(id='email' type="email", placeholder="Email")
-  //-     if (options.button)
-  //-       button(type="submit").textField__submit
+
+    //- formFocused.addEventListener("focus", function() {
+    //-   this.classList.add('textField__input_focused');
+    //- }, true);
+
+    //- formFocused.addEventListener("blur", function() {
+    //- this.classList.remove('textField__input_focused');
+    //- }, true);
+
 
   form
     label(for="email")
@@ -21,6 +22,13 @@ mixin textField(options)
       .textField__default= options.default
     .textField__input
       input(id='email' type="email", placeholder="Email").textField__email
-      //- button(type="submit")
-
+      if (options.button)
+        button(type="submit").textField__submit
  
+
+  //- form.textField__form
+  //-   label(for="email")
+  //-     .textField__label= options.label
+  //-     .textField__default= options.default
+  //-   .textField__input
+  //-     input.textField__email(id='email' type="email", placeholder="Email")
