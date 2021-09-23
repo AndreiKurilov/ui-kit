@@ -25,13 +25,15 @@
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   display: flex;
-  &:hover {
+  // align-items: center;
+  &:hover,
+  &:focus-within {
     border: 1px solid rgba(31, 32, 65, 0.5);
   };
 }
-.textField__input_focused {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
+// .textField__input:focus-within {
+//   border: 1px solid rgba(31, 32, 65, 0.5);
+// }
 
 .textField__email {
   border: 0px;
@@ -40,20 +42,40 @@
   border-radius: 4px;
   outline: none;
   width: 320px;
+  // align-items: center;
 }
 
 
 .textField__submit {
   width: 44px;
-  border: 0px; 
-  background: url(img/textField_arrow.png) no-repeat;
-  background-size: 20px 20px;
-  background-position: center center;
-  padding: 0px;
-  margin-left: auto;
+  // height: 44px;
+  border: 0px;
   border-radius: 4px;
-  outline: none;
+  background-color: #FFFFFF;
+  // align-items: center;
+  padding: 0px;
 }
+.textField__submit::before {
+  font-family: 'Material-Icons';
+  content: "\e901";
+  color: #BC9CFF;
+  font-size: 24px;
+  // line-height: 44px;
+  position: absolute;
+  // bottom: 50%;
+  margin-top: -12px;
+  // margin-left: 5px;
+  user-select: none;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+
+  // height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 // .textField__lower-block_border-dark {
   //   border: 1px solid rgba(31, 32, 65, 0.5);
