@@ -1,6 +1,3 @@
-.textField__form {
-  display: block;
-}
 .textField__label {
   font-family: "Montserrat-Bold";
   font-size: 12px;
@@ -25,16 +22,17 @@
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   display: flex;
-  // align-items: center;
   &:hover,
   &:focus-within {
     border: 1px solid rgba(31, 32, 65, 0.5);
   };
 }
-// .textField__input:focus-within {
-//   border: 1px solid rgba(31, 32, 65, 0.5);
-// }
-
+input[type='email'] {
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+} 
 .textField__email {
   border: 0px;
   padding: 0;
@@ -42,40 +40,26 @@
   border-radius: 4px;
   outline: none;
   width: 320px;
-  // align-items: center;
 }
-
-
 .textField__submit {
-  width: 44px;
-  // height: 44px;
+  width: 42px;
   border: 0px;
   border-radius: 4px;
   background-color: #FFFFFF;
-  // align-items: center;
   padding: 0px;
+  display: flex;
+  align-items: center;
 }
 .textField__submit::before {
   font-family: 'Material-Icons';
   content: "\e901";
   color: #BC9CFF;
   font-size: 24px;
-  // line-height: 44px;
-  position: absolute;
-  // bottom: 50%;
-  margin-top: -12px;
-  // margin-left: 5px;
-  user-select: none;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-
-  // height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
+// .textField__input:focus-within {
+//   border: 1px solid rgba(31, 32, 65, 0.5);
+// }
 
 // .textField__lower-block_border-dark {
   //   border: 1px solid rgba(31, 32, 65, 0.5);
@@ -99,9 +83,3 @@
   //   margin-left: auto;
   // }
   
-  input[type='email'] {
-    font-family: "Montserrat-regular";
-    font-size: 14px;
-    line-height: 18px;
-    color: rgba(31, 32, 65, 0.75);
-  } 
