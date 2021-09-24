@@ -2,11 +2,15 @@
   .formElements__blockName Form Elements
   //- .formElements__commonLogoCircle
   //-   include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
-  .formElements__textFieldEmail
+  .formElements__textFieldDefault
     include ./commonBlocks/textField/textField
-    +textField({label: 'text field', default: 'default', button: ' '})
-    +textField({label: 'text field', default: 'default'})
-
+    +textField({label: 'text field', default: 'default', typeInput: 'email', placeholderInput: 'Email'})
+  .formElements__textFieldHover
+    include ./commonBlocks/textField/textField
+    +textField({label: 'text field', default: 'hover/focus', typeInput: 'text', placeholderInput: 'text'})
+  
+  
+  
   //- .formElements__checkboxButtons 
   //-   include ./commonBlocks/checkboxButtons/checkboxButtons
   //-   +checkboxButtons
