@@ -3,25 +3,15 @@ mixin textField(options)
     var textFieldLowerBlock = 'textField__lower-block'
     textFieldLowerBlock += options.borderDark ? ' textField__lower-block_border-dark' : ''
     textFieldLowerBlock += options.colorDark ? ' textField__lower-block_color-dark' : ''
-    
-    //- var formFocused = document.querySelector("textField__input");
-
-
-    //- formFocused.addEventListener("focus", function() {
-    //-   this.classList.add('textField__input_focused');
-    //- }, true);
-
-    //- formFocused.addEventListener("blur", function() {
-    //- this.classList.remove('textField__input_focused');
-    //- }, true);
-
+    let typeInput = options.typeInput;
+    let placeholderInput = options.placeholderInput;
 
   form
-    label(for="email")
+    label(for="textField")
       .textField__label= options.label
       .textField__default= options.default
     .textField__input
-      input(id='email' type="email", placeholder="Email").textField__email 
+      input(id='textField' type=typeInput, placeholder=placeholderInput).textField__email
       if (options.button)
         button(type="submit").textField__submit
  
