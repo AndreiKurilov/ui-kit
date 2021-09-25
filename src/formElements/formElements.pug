@@ -3,11 +3,13 @@
   //- .formElements__commonLogoCircle
   //-   include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
   .formElements__textFieldDefault
+    .textField__default default
     include ./commonBlocks/textField/textField
-    +textField({label: 'text field', default: 'default', typeInput: 'email', placeholderInput: 'Email'})
+    +textField({label: 'text field', typeInput: 'email', placeholderInput: 'Email'})
   .formElements__textFieldHover
+    .textField__hover hover/focus
     include ./commonBlocks/textField/textField
-    +textField({label: 'text field', default: 'hover/focus', typeInput: 'text', placeholderInput: 'text'})
+    +textField({label: 'text field', typeInput: 'text', placeholderInput: 'text', borderDark: ' '})
   
   
   
