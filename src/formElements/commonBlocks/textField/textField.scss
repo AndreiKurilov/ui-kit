@@ -7,14 +7,6 @@
   margin-bottom: 5px;
   display: inline-block;
 }
-.textField__default {
-  font-family: "Montserrat-regular";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: rgba(31, 32, 65, 0.5);
-  float: right;
-}
 .textField__input {
   height: 44px;
   width: 320px;
@@ -56,10 +48,9 @@ input[type='email'] {
   color: #BC9CFF;
   font-size: 24px;
 }
-
-// .textField__input:focus-within {
-//   border: 1px solid rgba(31, 32, 65, 0.5);
-// }
+.textField__input_border-dark {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
 
 // .textField__lower-block_border-dark {
   //   border: 1px solid rgba(31, 32, 65, 0.5);
