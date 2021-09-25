@@ -1,24 +1,15 @@
 mixin textField(options)
   -
-    var textFieldLowerBlock = 'textField__lower-block'
-    textFieldLowerBlock += options.borderDark ? ' textField__lower-block_border-dark' : ''
+    let textFieldInput = 'textField__input';
+    textFieldInput += options.borderDark ? ' textField__input_border-dark' : '';
     textFieldLowerBlock += options.colorDark ? ' textField__lower-block_color-dark' : ''
+
     let typeInput = options.typeInput;
     let placeholderInput = options.placeholderInput;
 
   form
-    label(for="textField")
-      .textField__label= options.label
-      .textField__default= options.default
-    .textField__input
+    label(for="textField").textField__label= options.label
+    div(class = textFieldInput)
       input(id='textField' type=typeInput, placeholder=placeholderInput).textField__email
       if (options.button)
         button(type="submit").textField__submit
- 
-
-  //- form.textField__form
-  //-   label(for="email")
-  //-     .textField__label= options.label
-  //-     .textField__default= options.default
-  //-   .textField__input
-  //-     input.textField__email(id='email' type="email", placeholder="Email")
