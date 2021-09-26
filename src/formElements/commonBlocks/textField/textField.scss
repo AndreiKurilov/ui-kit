@@ -1,7 +1,7 @@
 .textField__label {
   font-family: "Montserrat-Bold";
   font-size: 12px;
-  line-height: 12px;
+  // line-height: 12px;
   text-transform: uppercase;
   color: #1F2041;
   margin-bottom: 5px;
@@ -19,12 +19,9 @@
     border: 1px solid rgba(31, 32, 65, 0.5);
   };
 }
-input[type='email'] {
-  font-family: "Montserrat-regular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-} 
+.textField__input_border-dark {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
 .textField__email {
   border: 0px;
   padding: 0;
@@ -32,6 +29,16 @@ input[type='email'] {
   border-radius: 4px;
   outline: none;
   width: 320px;
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.textField__email[type='text']::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.75);
+}
+.textField__email[type='text']::-moz-placeholder {
+  color: rgba(31, 32, 65, 0.75);
 }
 .textField__submit {
   width: 42px;
@@ -48,29 +55,3 @@ input[type='email'] {
   color: #BC9CFF;
   font-size: 24px;
 }
-.textField__input_border-dark {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
-
-// .textField__lower-block_border-dark {
-  //   border: 1px solid rgba(31, 32, 65, 0.5);
-// }
-
-// .textField__lower-block_color-dark {
-  //   color: rgba(31, 32, 65, 0.75);
-  // }
-
-  
-  // .textField__lower-block_expand-more {
-    //   width: 12px;
-//   height: 7px;
-//   margin: auto;
-// }
-
-// .textField__lower-block_arrow {
-  //   width: 44px;
-  //   height: 44px;
-  //   line-height: 24px;
-  //   margin-left: auto;
-  // }
-  
