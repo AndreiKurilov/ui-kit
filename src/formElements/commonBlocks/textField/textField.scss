@@ -33,6 +33,12 @@
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
+  &[type='data']::-webkit-input-placeholder {
+    text-transform: uppercase;
+  }
+  &[type='data']::-moz-placeholder {
+    text-transform: uppercase;
+  }
 }
 .textField__email[type='text']::-webkit-input-placeholder {
   color: rgba(31, 32, 65, 0.75);
