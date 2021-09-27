@@ -10,7 +10,10 @@
     .textField__hover hover/focus
     include ./commonBlocks/textField/textField
     +textField({label: 'text field', typeInput: 'text', placeholderInput: 'This is pretty awesome', borderDark: true})
-  
+  .formElements__textFieldMasked
+    include ./commonBlocks/textField/textField
+    +textField({label: 'masked text field', typeInput: 'data', placeholderInput: 'дд.мм.гггг'})
+
   
   //- .formElements__checkboxButtons 
   //-   include ./commonBlocks/checkboxButtons/checkboxButtons
