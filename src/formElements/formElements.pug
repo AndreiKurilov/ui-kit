@@ -5,14 +5,14 @@
   .formElements__textFieldDefault
     .textField__default default
     include ./commonBlocks/textField/textField
-    +textField({label: 'text field', typeInput: 'email', placeholderInput: 'Email'})
+    +textField({label: 'text field', idInput: 'email', typeInput: 'email', placeholderInput: 'Email'})
   .formElements__textFieldHover
     .textField__hover hover/focus
     include ./commonBlocks/textField/textField
-    +textField({label: 'text field', typeInput: 'text', placeholderInput: 'This is pretty awesome', borderDark: true})
+    +textField({label: 'text field', idInput: 'text', typeInput: 'text', placeholderInput: 'This is pretty awesome', borderDark: true})
   .formElements__textFieldMasked
     include ./commonBlocks/textField/textField
-    +textField({label: 'masked text field', typeInput: 'data', placeholderInput: 'дд.мм.гггг'})
+    +textField({label: 'masked text field', idInput: "date", typeInput: "date", placeholderInput: 'дд.мм.гггг'})
 
   
   //- .formElements__checkboxButtons 
