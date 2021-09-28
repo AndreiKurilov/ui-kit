@@ -7,7 +7,7 @@
   margin-bottom: 5px;
   display: inline-block;
 }
-.textField__input {
+.textField__block {
   height: 44px;
   width: 320px;
   box-sizing: border-box;
@@ -19,10 +19,10 @@
     border: 1px solid rgba(31, 32, 65, 0.5);
   };
 }
-.textField__input_border-dark {
+.textField__block_border-dark {
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
-.textField__email {
+.textField__input {
   border: 0px;
   padding: 0;
   padding-left: 15px;
@@ -33,19 +33,31 @@
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
-  &[type='data']::-webkit-input-placeholder {
-    text-transform: uppercase;
-  }
-  &[type='data']::-moz-placeholder {
-    text-transform: uppercase;
-  }
 }
-.textField__email[type='text']::-webkit-input-placeholder {
+input[type='text']::-webkit-input-placeholder {
   color: rgba(31, 32, 65, 0.75);
 }
-.textField__email[type='text']::-moz-placeholder {
-  color: rgba(31, 32, 65, 0.75);
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
+input[type="date"]::-webkit-datetime-edit-text {
+  color: rgba(31, 32, 65, 0.25);
+}
+input[type="date"]::-webkit-datetime-edit-day-field {
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+}
+input[type="date"]::-webkit-datetime-edit-month-field {
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+}
+input[type="date"]::-webkit-datetime-edit-year-field {
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.25);
+}
+// input[type="date"]:focus {
+//   color: rgba(31, 32, 65, 0.75);
+// }
 .textField__submit {
   width: 42px;
   border: 0px;
