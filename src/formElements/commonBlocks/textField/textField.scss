@@ -9,11 +9,12 @@
 }
 .textField__block {
   height: 44px;
-  width: 320px;
+  // width: 320px;
   box-sizing: border-box;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   display: flex;
+  justify-content: space-between;
   &:hover,
   &:focus-within {
     border: 1px solid rgba(31, 32, 65, 0.5);
@@ -28,7 +29,7 @@
   padding-left: 15px;
   border-radius: 4px;
   outline: none;
-  width: 320px;
+  // width: 320px;
   font-family: "Montserrat-regular";
   font-size: 14px;
   line-height: 18px;
@@ -65,11 +66,12 @@ input[type="date"]::-webkit-datetime-edit-year-field {
   background-color: #FFFFFF;
   padding: 0px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .textField__submit::before {
   font-family: 'Material-Icons';
   content: "\e901";
   color: #BC9CFF;
-  font-size: 24px;
+  font-size: 20px;
 }
