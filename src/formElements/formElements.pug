@@ -2,17 +2,17 @@
   .formElements__blockName Form Elements
   //- .formElements__commonLogoCircle
   //-   include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
-  //- .formElements__textFieldDefault
-  //-   .textField__default default
-  //-   include ./commonBlocks/textField/textField
-  //-   +textField({label: 'text field', idInput: 'email', typeInput: 'email', placeholderInput: 'Email'})
-  //- .formElements__textFieldHover
-  //-   .textField__hover hover/focus
-  //-   include ./commonBlocks/textField/textField
-  //-   +textField({label: 'text field', idInput: 'text', typeInput: 'text', placeholderInput: 'This is pretty awesome', borderDark: true})
-  //- .formElements__textFieldMasked
-  //-   include ./commonBlocks/textField/textField
-  //-   +textField({label: 'masked text field', idInput: "date", typeInput: "date", placeholderInput: 'дд.мм.гггг'})
+  .formElements__textFieldDefault
+    .textField__default default
+    include ./commonBlocks/textField/textField
+    +textField({label: 'text field', idInput: 'email', typeInput: 'email', placeholderInput: 'Email'})
+  .formElements__textFieldHover
+    .textField__hover hover/focus
+    include ./commonBlocks/textField/textField
+    +textField({label: 'text field', idInput: 'text', typeInput: 'text', placeholderInput: 'This is pretty awesome', borderDark: true})
+  .formElements__textFieldMasked
+    include ./commonBlocks/textField/textField
+    +textField({label: 'masked text field', idInput: "date", typeInput: "date", placeholderInput: 'дд.мм.гггг'})
   .formElements__textFieldSubscription
     include ./commonBlocks/textField/textField
     +textField({label: 'subscription text field', idInput: 'emailSub', typeInput: 'email', placeholderInput: 'Email', button: true})
