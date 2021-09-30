@@ -9,7 +9,6 @@
 }
 .textField__block {
   height: 44px;
-  // width: 320px;
   box-sizing: border-box;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -27,9 +26,10 @@
   border: 0px;
   padding: 0;
   padding-left: 15px;
+  padding-right: 10px;
   border-radius: 4px;
   outline: none;
-  // width: 320px;
+  width: 100%;
   font-family: "Montserrat-regular";
   font-size: 14px;
   line-height: 18px;
@@ -56,9 +56,10 @@ input[type="date"]::-webkit-datetime-edit-year-field {
   text-transform: uppercase;
   color: rgba(31, 32, 65, 0.25);
 }
-// input[type="date"]:focus {
-//   color: rgba(31, 32, 65, 0.75);
-// }
+input[type="date"]::-webkit-datetime-edit-year-field:focus {
+  color: rgba(31, 32, 65, 0.75);
+  cursor: pointer;
+}
 .textField__submit {
   width: 42px;
   border: 0px;
