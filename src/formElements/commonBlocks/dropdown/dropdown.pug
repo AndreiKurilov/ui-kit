@@ -1,19 +1,27 @@
 mixin dropdown(options)
   -
-    var dropdownLowerBlock = 'dropdown__lower-block'
-    dropdownLowerBlock += options.borderDark ? ' dropdown__lower-block_border-dark' : ''
-    dropdownLowerBlock += options.colorDark ? ' dropdown__lower-block_color-dark' : ''
+    //- var dropdownLowerBlock = 'dropdown__lower-block'
+    //- dropdownLowerBlock += options.borderDark ? ' dropdown__lower-block_border-dark' : ''
+    //- dropdownLowerBlock += options.colorDark ? ' dropdown__lower-block_color-dark' : ''
     
-  
+  .dropdown
+    button(type="button").dropdown__btn
+    li.dropdown__menu
+      ul.dropdown__item
+      ul.dropdown__item
+      ul.dropdown__item
+
+
+
   //- div(class = dropdownLowerBlock)= options.title
   //-   if options.arrow
   //-     .dropdown__lower-block_arrow
   //-       img.dropdown__lower-block_expand-more(src="./img/dropdown__expand-more.png")
 
-  form
-    .dropdown__upper-block
-      .dropdown__formName= options.formName
-      .dropdown__default= options.default
-    .dropdown__lower-block
-      input.dropdown__input-email(type="email", placeholder="Email")
-      input.dropdown__input-submit(type="submit" value="")
+
+  //- .dropdown__upper-block
+  //-   .dropdown__formName= options.formName
+  //-   .dropdown__default= options.default
+  //- .dropdown__lower-block
+  //-   input.dropdown__input-email(type="email", placeholder="Email")
+  //-   input.dropdown__input-submit(type="submit" value="")
