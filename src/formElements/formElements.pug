@@ -17,12 +17,12 @@
   //-   include ./commonBlocks/textField/textField
   //-   +textField({label: 'subscription text field', idInput: 'emailSub', typeInput: 'email', placeholderInput: 'Email', button: true})
   .formElements__dropdownBeds
+    .dropdown__default default 
     include ./commonBlocks/dropdown/dropdown
-    +dropdown
-    //- ({label: 'subscription text field', idInput: 'emailSub', typeInput: 'email', placeholderInput: 'Email', button: true})
-  .formElements__dropdownGuests
-    include ./commonBlocks/dropdown/dropdown
-    +dropdown
+    +dropdown({title: 'dropdown'})
+  //- .formElements__dropdownGuests
+  //-   include ./commonBlocks/dropdown/dropdown
+  //-   +dropdown({title: 'dropdown'})
 
   
   //- .formElements__checkboxButtons 
