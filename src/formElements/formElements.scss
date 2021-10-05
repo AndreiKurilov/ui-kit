@@ -72,6 +72,11 @@
   left: 140px;
   top: 876px;
 }
+.dropdown__default {
+  position: absolute;
+  left: 210px;
+  @include default-hover-style;
+}
 .formElements__dropdownGuests {
   position: absolute;
   width: 320px;
