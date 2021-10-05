@@ -5,6 +5,7 @@ mixin dropdown(options)
     //- dropdownLowerBlock += options.colorDark ? ' dropdown__lower-block_color-dark' : ''
     
   .dropdown
+    .dropdown__title= options.title
     button(type="button").dropdown__btn
     li.dropdown__menu
       ul.dropdown__item
