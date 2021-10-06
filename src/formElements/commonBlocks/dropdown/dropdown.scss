@@ -18,15 +18,9 @@
   color: rgba(31, 32, 65, 0.5);
   padding-right: 1px;
   margin-left: auto;
-
 }
-input::-webkit-input-placeholder {
-  font-family: "Montserrat-regular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.25);
-} 
 .dropdown__btn {
+  display: flex;
   height: 44px;
   box-sizing: border-box;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -34,10 +28,10 @@ input::-webkit-input-placeholder {
   padding: 0px;
   width: 100%;
   background-color: #FFFFFF;
-  display: flex;
   justify-content: flex-end;
   align-items: center;
-  
+  user-select: none;
+  cursor: pointer;
 }
 .dropdown__btn::after {
   font-family: 'Material-Icons';
@@ -45,7 +39,26 @@ input::-webkit-input-placeholder {
   content: "\e902";
   font-size: 12px;
   margin-right: 16px;
-  
+}
+// .dropdown__btn:checked ~ .dropdown__select
+// {
+//   display: block;
+// }
+.dropdown__select {
+  display: none;
+  position: absolute;
+  // top: 2.5rem;
+  left: 0;
+  right: 0;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  height: 117,56px;
+  // overflow-y: auto;
+  border-radius: 4px;
+}
+.dropdown__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .dropdown__item {
   color: black;
@@ -53,32 +66,3 @@ input::-webkit-input-placeholder {
   text-decoration: none;
   display: block;
 }
-
-.dropdown__input-email {
-  width: 223px;
-  border: 0px;
-  padding: 0;
-  padding-left: 15px;
-  border-radius: 4px;
-  outline-color: rgba(31, 32, 65, 0.5);
-}
-
-// .dropdown__input-submit {
-//   width: 44px;
-//   border: 0px; 
-//   background: url(img/dropdown_arrow.png) no-repeat;
-//   background-size: 20px 20px;
-//   background-position: center center;
-//   padding: 0px;
-//   margin-left: auto;
-//   border-radius: 4px;
-//   outline: none;
-// }
-
-// .dropdown__lower-block_border-dark {
-//   border: 1px solid rgba(31, 32, 65, 0.5);
-// }
-
-// .dropdown__lower-block_color-dark {
-//   color: rgba(31, 32, 65, 0.75);
-// }
