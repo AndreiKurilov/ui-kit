@@ -4,17 +4,30 @@ mixin dropdown(options)
     //- dropdownLowerBlock += options.borderDark ? ' dropdown__lower-block_border-dark' : ''
     //- dropdownLowerBlock += options.colorDark ? ' dropdown__lower-block_color-dark' : ''
     
+  //- .dropdown
+  //-   .dropdown__title= options.title
+  //-   input(type='checkbox' value="2 спальни, 2 кровати..."  name='number_of_beds').dropdown__btn
+  //-   .dropdown__select
+  //-     li.dropdown__items 
+  //-       ul.dropdown__item 1
+  //-       ul.dropdown__item 2
+  //-       ul.dropdown__item 3
+
   .dropdown
     .dropdown__title= options.title
-    button(type="button").dropdown__btn
-    li.dropdown__menu
-      ul.dropdown__item
-      ul.dropdown__item
-      ul.dropdown__item
+    select(name="dd" value='').dropdown__btn
+      option(value="").dropdown__item 2 спальни, 2 кровати...
+      option(value="1").dropdown__item
+        .dropdown__bedRooms спальни
+        .dropdown__minis -
+        .dropdown__quantity 2
+        .dropdown__plus +
+      option(value="2").dropdown__item 2
+      option(value="3").dropdown__item 3
 
 
 
-  //- div(class = dropdownLowerBlock)= options.title
-  //-   if options.arrow
-  //-     .dropdown__lower-block_arrow
-  //-       img.dropdown__lower-block_expand-more(src="./img/dropdown__expand-more.png")
+      //- li.dropdown__items 
+      //-   ul.dropdown__item 1
+      //-   ul.dropdown__item 2
+      //-   ul.dropdown__item 3
