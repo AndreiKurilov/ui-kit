@@ -52,6 +52,13 @@
   left: 228px;
   @include default-hover-style;
 }
+.formElements__dropdownGuestsDefault {
+  position: absolute;
+  width: 320px;
+  height: 64.44px;
+  left: 141px;
+  top: 311px;
+}
 .formElements__textFieldMasked {
   position: absolute;
   left: 141px;
