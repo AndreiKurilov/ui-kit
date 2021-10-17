@@ -32,10 +32,15 @@
   //- .formElements__textFieldSubscription
   //-   include ./commonBlocks/textField/textField
   //-   +textField({label: 'subscription text field', idInput: 'emailSub', typeInput: 'email', placeholderInput: 'Email', button: true})
-  .formElements__dropdownBeds
+  .formElements__dropdownBedsDefault
     .dropdown__default default 
     include ./commonBlocks/dropdown/dropdown
     +dropdown({idDropdown: 'dropdown', label: 'dropdown'})
+  .formElements__dropdownBedsExpanded
+    .dropdown__expanded expanded
+    include ./commonBlocks/dropdown/dropdown
+    +dropdown({idDropdown: 'dropdown', label: 'dropdown'})
+
   //- .formElements__dropdownGuests
   //-   .dropdown__default default 
   //-   include ./commonBlocks/dropdown/dropdown
