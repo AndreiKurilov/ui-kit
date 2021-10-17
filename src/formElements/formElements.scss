@@ -93,7 +93,7 @@
   left: 140px;
   top: 712px;
 }
-.formElements__dropdownBeds {
+.formElements__dropdownBedsDefault {
   position: absolute;
   width: 266px;
   height: 64px;
@@ -103,6 +103,18 @@
 .dropdown__default {
   position: absolute;
   left: 210px;
+  @include default-hover-style;
+}
+.formElements__dropdownBedsExpanded {
+  position: absolute;
+  width: 266px;
+  height: 181.56px;
+  left: 140px;
+  top: 960px;
+}
+.dropdown__expanded {
+  position: absolute;
+  left: 195px;
   @include default-hover-style;
 }
 .formElements__dropdownGuests {
