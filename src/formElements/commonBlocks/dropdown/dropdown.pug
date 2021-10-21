@@ -2,16 +2,29 @@ mixin dropdown(options)
   -
     let idDropdown = options.idDropdown
         
+    //- .dropdown
+    //-   label(for=idDropdown).dropdown__label= options.label
+    //-   .dropdown__select
+    //-     select(id=idDropdown)
+    //-       .dropdown__item
+    //-         option(disabled selected) 2 спальни, 2 кровати...
+    //-       option(value="1").dropdown__item
+    //-         .dropdown__bedRooms спальни
+    //-         .dropdown__minis -
+    //-         .dropdown__quantity 2
+    //-         .dropdown__plus +
+    //-       option(value="2").dropdown__item 2
+    //-       option(value="3").dropdown__item 3
+
+
   .dropdown
-    label(for=idDropdown).dropdown__label= options.label
-    .dropdown__select
-      select(id=idDropdown)
-        .dropdown__item
-          option(disabled selected) 2 спальни, 2 кровати...
-        option(value="1").dropdown__item
-          .dropdown__bedRooms спальни
-          .dropdown__minis -
-          .dropdown__quantity 2
-          .dropdown__plus +
-        option(value="2").dropdown__item 2
-        option(value="3").dropdown__item 3
+    .dropdown__label= options.label
+    .dropdown__block
+    .dropdown__expand
+      .dropdown__item
+        .dropdown__numberOfBedrooms спальни
+        .dropdown__minus
+        .dropdown__number
+        .dropdown__plus
+
+        
