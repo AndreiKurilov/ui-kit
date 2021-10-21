@@ -8,31 +8,76 @@
   text-transform: uppercase;
   margin-bottom: 5px;
 }
-select {
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  line-height: inherit;
-  outline: none;
-  padding-left: 15px;
-}
-.dropdown__select {
-  display: flex;
+// select {
+//   appearance: none;
+//   background-color: transparent;
+//   border: none;
+//   margin: 0;
+//   width: 100%;
+//   height: 100%;
+//   font-family: inherit;
+//   font-size: inherit;
+//   cursor: inherit;
+//   line-height: inherit;
+//   outline: none;
+//   padding-left: 15px;
+// }
+// .dropdown__select {
+//   display: flex;
+//   height: 44px;
+//   box-sizing: border-box;
+//   border: 1px solid rgba(31, 32, 65, 0.25);
+//   border-radius: 4px;
+//   padding: 0px;
+//   width: 100%;
+//   background-color: #FFFFFF;
+//   justify-content: flex-end;
+//   align-items: center;
+//   user-select: none;
+//   cursor: pointer;
+//   font-family: "Montserrat-regular";
+//   color: rgba(31, 32, 65, 0.75);
+//   font-size: 14px;
+//   &:hover,
+//   &:focus-within {
+//     border: 1px solid rgba(31, 32, 65, 0.5);
+//   };
+// }
+// .dropdown__select::after {
+//   font-family: 'Material-Icons';
+//   color: rgba(31, 32, 65, 0.75);
+//   content: "\e902";
+//   font-size: 12px;
+//   margin-right: 12px;
+//   position: absolute;
+// }
+// .dropdown__items {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
+// .dropdown__item {
+//   height: 44px;
+// }
+// option {
+//   width: 100%;
+// }
+// .dropdown__bedRooms {
+//   margin-left: 20px;
+// }
+
+.dropdown__block {
+  position: relative;
+  display: inline-block;
   height: 44px;
   box-sizing: border-box;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  padding: 0px;
+  border-radius: 4px 4px 0 0;
+  // padding: 0px;
   width: 100%;
   background-color: #FFFFFF;
-  justify-content: flex-end;
-  align-items: center;
+  // justify-content: flex-end;
+  // align-items: center;
   user-select: none;
   cursor: pointer;
   font-family: "Montserrat-regular";
@@ -43,25 +88,21 @@ select {
     border: 1px solid rgba(31, 32, 65, 0.5);
   };
 }
-.dropdown__select::after {
-  font-family: 'Material-Icons';
-  color: rgba(31, 32, 65, 0.75);
-  content: "\e902";
-  font-size: 12px;
-  margin-right: 12px;
+.dropdown__expand {
+  display: none;
   position: absolute;
-}
-.dropdown__items {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  height: 117.56px;
+  box-sizing: border-box;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+  margin-top: -5px;
 }
 .dropdown__item {
-  height: 44px;
+  display: flex;
 }
-option {
-  width: 100%;
+.dropdown:hover .dropdown__expand {
+  display: block;
+  border-top: transparent;
 }
-.dropdown__bedRooms {
-  margin-left: 20px;
-}
+
