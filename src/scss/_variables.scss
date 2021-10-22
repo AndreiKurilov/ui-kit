@@ -1,5 +1,9 @@
-$font-family: "Montserrat-Bold";
-$font-size: 12px;
-$line-height: 15px;
-$color: #1F2041;
-// $text-transform: uppercase;
+@mixin font-style {
+  font: {
+    family: "Montserrat-Bold";
+    size: 12px;
+    height: 15px;
+  }
+  color: #1F2041;
+  text-transform: uppercase;
+}
