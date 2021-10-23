@@ -1,21 +1,6 @@
 mixin dropdown(options)
   -
     let idDropdown = options.idDropdown
-        
-    //- .dropdown
-    //-   label(for=idDropdown).dropdown__label= options.label
-    //-   .dropdown__select
-    //-     select(id=idDropdown)
-    //-       .dropdown__item
-    //-         option(disabled selected) 2 спальни, 2 кровати...
-    //-       option(value="1").dropdown__item
-    //-         .dropdown__bedRooms спальни
-    //-         .dropdown__minis -
-    //-         .dropdown__quantity 2
-    //-         .dropdown__plus +
-    //-       option(value="2").dropdown__item 2
-    //-       option(value="3").dropdown__item 3
-
 
   .dropdown
     .dropdown__label= options.label
@@ -23,8 +8,13 @@ mixin dropdown(options)
     .dropdown__expand
       .dropdown__item
         .dropdown__numberOfBedrooms спальни
-        .dropdown__minus
+        button.dropdown__minus
         .dropdown__number
-        .dropdown__plus
+        button.dropdown__plus
 
-        
+  script.
+    let minus = document.querySelector('.dropdown__minus');
+    let numberBeds = document.querySelector('.dropdown__number');
+    let nB = numberBeds.textContent;
+    nB = 0
+    minus.addEventListener("click", () => (numberBeds--))
