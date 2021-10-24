@@ -97,6 +97,8 @@
 }
 .dropdown__item {
   display: flex;
+  justify-content: space-between;
+  margin-top: 5.56px;
 }
 .dropdown:hover .dropdown__expand {
   display: block;
@@ -116,6 +118,7 @@
   box-sizing: border-box;
   display: flex;
   background-color: transparent;
+  cursor: pointer;
   // justify-content: center;
   // align-items: center;
   // text-align: center;
@@ -129,9 +132,36 @@
   font-size: 18px;
   color: rgba(31, 32, 65, 0.5);
   margin: auto;
-  width: auto;
-  height: auto;
+  // width: auto;
+  // height: auto;
+  line-height: 25px;
+  text-align: center;
 }
 .dropdown__number {
-  width: 20px;
+  width: 32px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 30px;
+}
+.dropdown__wrapper {
+  display: flex;
+  margin-right: 7px;
+}
+.dropdown__disabled {
+  cursor: auto;
+}
+.dropdown__plus::before {
+  // position: absolute;
+  content: '+';
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  margin: auto;
+  // width: auto;
+  // height: auto;
+  line-height: 25px;
+  text-align: center;
 }
