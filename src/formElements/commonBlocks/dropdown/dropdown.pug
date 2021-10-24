@@ -8,13 +8,39 @@ mixin dropdown(options)
     .dropdown__expand
       .dropdown__item
         .dropdown__numberOfBedrooms спальни
-        button.dropdown__minus
-        .dropdown__number
-        button.dropdown__plus
+        .dropdown__wrapper
+          button.dropdown__minus
+          .dropdown__number
+          button.dropdown__plus
 
   script.
     let minus = document.querySelector('.dropdown__minus');
+    let plus = document.querySelector('.dropdown__plus');
+    
+    plus.setAttribute("disabled", '');
+    plus.classList.add('dropdown__disabled')
+    
     let numberBeds = document.querySelector('.dropdown__number');
-    let nB = numberBeds.textContent;
-    nB = 0
-    minus.addEventListener("click", () => (numberBeds--))
+    let numberDefault = 2;
+    numberBeds.innerText = numberDefault;
+    minus.addEventListener("click", function() {
+      numberDefault --;
+      if (numberDefault == 1) {
+        minus.setAttribute("disabled", '');
+        minus.classList.add('dropdown__disabled')
+        plus.removeAttribute("disabled");
+        plus.classList.remove('dropdown__disabled')
+      }
+      numberBeds.innerText = numberDefault;
+    })
+
+    plus.addEventListener("click", function() {
+      numberDefault ++;
+      if (numberDefault == 2) {
+        plus.setAttribute("disabled", '');
+        plus.classList.add('dropdown__disabled')
+        minus.removeAttribute("disabled");
+        minus.classList.remove('dropdown__disabled')
+      }
+      numberBeds.innerText = numberDefault;
+    })
