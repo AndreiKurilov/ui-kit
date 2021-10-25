@@ -34,12 +34,12 @@
   left: 141px;
   top: 143px;
   width: 320px;
-}
-.textField__default {
-  position: absolute;
-  left: 264px;
-  // top: 7px;
-  @include default-hover-style;
+  & .textField__default {
+    position: absolute;
+    left: 264px;
+    // top: 7px;
+    @include default-hover-style;
+  }
 }
 .formElements__textFieldHover {
   position: absolute;
@@ -99,11 +99,11 @@
   height: 64px;
   left: 140px;
   top: 876px;
-}
-.dropdown__default {
-  position: absolute;
-  left: 210px;
-  @include default-hover-style;
+  & .dropdown__defaultState {
+    position: absolute;
+    left: 210px;
+    @include default-hover-style;
+  }
 }
 .formElements__dropdownBedsExpanded {
   position: absolute;
