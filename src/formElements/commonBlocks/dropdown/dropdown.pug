@@ -4,7 +4,7 @@ mixin dropdown(options)
 
   .dropdown
     .dropdown__label= options.label
-    .dropdown__block
+    .dropdown__default
     .dropdown__expand
       .dropdown__item
         .dropdown__numberOfBedrooms спальни
@@ -15,14 +15,19 @@ mixin dropdown(options)
 
   script.
     let minus = document.querySelector('.dropdown__minus');
-    let plus = document.querySelector('.dropdown__plus');
     
+    let plus = document.querySelector('.dropdown__plus');
     plus.setAttribute("disabled", '');
     plus.classList.add('dropdown__disabled')
     
     let numberBeds = document.querySelector('.dropdown__number');
+    
     let numberDefault = 2;
     numberBeds.innerText = numberDefault;
+    
+    let textDefault = document.querySelector('.dropdown__default');
+    textDefault.innerText = `${numberDefault} спальни,`;
+
     minus.addEventListener("click", function() {
       numberDefault --;
       if (numberDefault == 1) {
@@ -32,6 +37,8 @@ mixin dropdown(options)
         plus.classList.remove('dropdown__disabled')
       }
       numberBeds.innerText = numberDefault;
+      textDefault.innerText = `${numberDefault} спальня,`;
+
     })
 
     plus.addEventListener("click", function() {
@@ -43,4 +50,5 @@ mixin dropdown(options)
         minus.classList.remove('dropdown__disabled')
       }
       numberBeds.innerText = numberDefault;
+      textDefault.innerText = `${numberDefault} спальни,`;
     })
