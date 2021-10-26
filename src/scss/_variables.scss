@@ -1,4 +1,4 @@
-@mixin font-style {
+@mixin font-montserrat-bold {
   font: {
     family: "Montserrat-Bold";
     size: 12px;
@@ -7,3 +7,15 @@
   color: #1F2041;
   text-transform: uppercase;
 }
+
+@mixin font-montserrat-regular {
+  font: {
+    family: "Montserrat-regular";
+    size: 14px;
+    // height: 15px;
+  }
+  color: rgba(31, 32, 65, 0.75);
+  // text-transform: uppercase;
+}
+
+ 
