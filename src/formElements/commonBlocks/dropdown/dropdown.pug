@@ -14,6 +14,23 @@ mixin dropdown(options)
           button.dropdown__plus
 
   script.
+    let dropDefault = document.querySelector('.dropdown__default');
+    let dropExpand = document.querySelector('.dropdown__expand');
+
+    dropDefault.addEventListener("click", function() {
+      dropExpand.classList.add('dropdown__expand_visible');
+      dropDefault.classList.add('dropdown__default_border-dark');
+    })
+
+    window.addEventListener("click", function(e) {
+      if (!e.target.matches('.dropdown *')) {
+        if (dropExpand.classList.contains('dropdown__expand_visible')) {
+          dropExpand.classList.remove('dropdown__expand_visible');
+          dropDefault.classList.remove('dropdown__default_border-dark');
+        }
+      }
+    })
+
     let minus = document.querySelector('.dropdown__minus');
     
     let plus = document.querySelector('.dropdown__plus');
