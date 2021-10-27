@@ -18,4 +18,25 @@
   // text-transform: uppercase;
 }
 
- 
+@mixin block-default {
+  position: relative;
+  display: flex;
+  height: 44px;
+  box-sizing: border-box;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  width: 100%;
+  background-color: #FFFFFF;
+  user-select: none;
+  cursor: pointer;
+  padding-left: 15px;
+  // line-height: 44px;
+  justify-content: space-between;
+  align-items: center;
+  &::after {
+    font-family: 'Material-Icons';
+    content: '\e902';
+    // margin: auto;
+    margin-right: 15px;
+  }
+}
