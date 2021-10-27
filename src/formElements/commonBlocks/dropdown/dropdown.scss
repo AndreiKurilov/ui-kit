@@ -1,52 +1,48 @@
 @import '../../../scss/_variables';
 
+
+
 .dropdown__label {
   @include font-montserrat-bold;
   margin-bottom: 5px;
 }
 
 .dropdown__default {
-  position: relative;
-  display: inline-block;
-  height: 44px;
-  box-sizing: border-box;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  @include block-default;
   border-radius: 4px 4px 0 0;
-  // padding: 0px;
-  width: 100%;
-  background-color: #FFFFFF;
-  // justify-content: flex-end;
-  // align-items: center;
-  user-select: none;
-  cursor: pointer;
   @include font-montserrat-regular;
-  &:hover,
-  &:focus-within {
-    border: 1px solid rgba(31, 32, 65, 0.5);
-  };
-  padding-left: 15px;
-  line-height: 44px;
 }
+
+.dropdown__default_border-dark {
+   border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+
+
+
 .dropdown__expand {
-  // display: none;
+  display: none;
   position: absolute;
   height: 117.56px;
   box-sizing: border-box;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 0 0 4px 4px;
   width: 100%;
-  // margin-top: -5px;
+  margin-top: -1px;
   @include font-montserrat-bold;
+}
+.dropdown__expand_visible {
+  display: block;
 }
 .dropdown__item {
   display: flex;
   justify-content: space-between;
   margin-top: 5.56px;
 }
-.dropdown:hover .dropdown__expand {
-  display: block;
-  border-top: transparent;
-}
+// .dropdown:hover .dropdown__expand {
+//   display: block;
+//   border-top: transparent;
+// }
 .dropdown__numberOfBedrooms {
   margin-left: 15px;
   margin-top: 11.56px;
