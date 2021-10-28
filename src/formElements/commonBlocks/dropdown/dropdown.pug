@@ -1,17 +1,18 @@
 mixin dropdown(options)
   -
     let idDropdown = options.idDropdown
+    let itemTitleOne = options.itemTitleOne
 
   .dropdown
     .dropdown__label= options.label
     .dropdown__default
     .dropdown__expand
       .dropdown__item
-        .dropdown__numberOfBedrooms спальни
-        .dropdown__wrapper
-          button.dropdown__minus
+        .dropdown__item-title-one= options.itemTitleOne
+        .dropdown__btns
+          button.dropdown__btn-minus
           .dropdown__number
-          button.dropdown__plus
+          button.dropdown__btn-plus
 
   script.
     let dropDefault = document.querySelector('.dropdown__default');
@@ -31,9 +32,9 @@ mixin dropdown(options)
       }
     })
 
-    let minus = document.querySelector('.dropdown__minus');
+    let minus = document.querySelector('.dropdown__btn-minus');
     
-    let plus = document.querySelector('.dropdown__plus');
+    let plus = document.querySelector('.dropdown__btn-plus');
     plus.setAttribute("disabled", '');
     plus.classList.add('dropdown__disabled')
     
