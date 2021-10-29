@@ -1,7 +1,5 @@
 @import '../../../scss/_variables';
 
-
-
 .dropdown__label {
   @include font-montserrat-bold;
   margin-bottom: 5px;
@@ -18,19 +16,13 @@
 }
 
 .dropdown__expand {
-  display: none;
-  position: absolute;
-  height: 117.56px;
-  box-sizing: border-box;
-  border: $border__dark;
-  border-radius: 0 0 4px 4px;
-  width: 100%;
-  margin-top: -1px;
+  @include block-expand;
   @include font-montserrat-bold;
 }
 
 .dropdown__expand_visible {
   display: block;
+  border-top: transparent;
 }
 
 .dropdown__item {
@@ -40,7 +32,8 @@
   margin-top: 5.56px;
 }
 
-.dropdown__item-title-one {
+.dropdown__item-title-one,
+.dropdown__item-title-two {
   margin-left: 15px;
 }
 
@@ -51,53 +44,25 @@
 
 .dropdown__btn-minus,
 .dropdown__btn-plus {
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 15px;
-  box-sizing: border-box;
-  display: flex;
-  background-color: transparent;
-  cursor: pointer;
-  // justify-content: center;
-  // align-items: center;
-  // text-align: center;
+  @include dropdown-btn;
 }
-.dropdown__btn-minus::after {
-  // position: absolute;
+
+.dropdown__btn-minus::before {
   content: '-';
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  color: rgba(31, 32, 65, 0.5);
-  margin: auto;
-  // width: auto;
-  // height: auto;
-  line-height: 25px;
-  text-align: center;
+  margin-top: -2px;
 }
+
 .dropdown__number {
   width: 32px;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   line-height: 30px;
+  user-select: none;
 }
+
+.dropdown__btn-plus::before {
+  content: '+';
+}
+
 .dropdown__disabled {
   cursor: auto;
-}
-.dropdown__btn-plus::before {
-  // position: absolute;
-  content: '+';
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  color: rgba(31, 32, 65, 0.5);
-  margin: auto;
-  // width: auto;
-  // height: auto;
-  line-height: 25px;
-  text-align: center;
 }
