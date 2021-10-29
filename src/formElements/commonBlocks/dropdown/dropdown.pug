@@ -2,6 +2,7 @@ mixin dropdown(options)
   -
     let idDropdown = options.idDropdown
     let itemTitleOne = options.itemTitleOne
+    let itemTitleTwo = options.itemTitleTwo
 
   .dropdown
     .dropdown__label= options.label
@@ -13,6 +14,13 @@ mixin dropdown(options)
           button.dropdown__btn-minus
           .dropdown__number
           button.dropdown__btn-plus
+      .dropdown__item
+        .dropdown__item-title-two= options.itemTitleTwo
+        .dropdown__btns
+          button.dropdown__btn-minus
+          .dropdown__number
+          button.dropdown__btn-plus
+
 
   script.
     let dropDefault = document.querySelector('.dropdown__default');
@@ -56,7 +64,6 @@ mixin dropdown(options)
       }
       numberBeds.innerText = numberDefault;
       textDefault.innerText = `${numberDefault} спальня,`;
-
     })
 
     plus.addEventListener("click", function() {
