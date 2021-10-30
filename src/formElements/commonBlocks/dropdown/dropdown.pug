@@ -14,17 +14,21 @@ mixin dropdown(options)
           button.dropdown__btn-minus
           .dropdown__number
           button.dropdown__btn-plus
-      .dropdown__item
-        .dropdown__item-title-two= options.itemTitleTwo
-        .dropdown__btns
-          button.dropdown__btn-minus
-          .dropdown__number
-          button.dropdown__btn-plus
+      //- .dropdown__item
+      //-   .dropdown__item-title-two= options.itemTitleTwo
+      //-   .dropdown__btns
+      //-     button.dropdown__btn-minus
+      //-     .dropdown__number
+      //-     button.dropdown__btn-plus
 
 
   script.
     let dropDefault = document.querySelector('.dropdown__default');
     let dropExpand = document.querySelector('.dropdown__expand');
+
+    function isDefault(block) {
+      
+    }
 
     dropDefault.addEventListener("click", function() {
       dropExpand.classList.add('dropdown__expand_visible');
@@ -39,13 +43,14 @@ mixin dropdown(options)
         }
       }
     })
+    
+
 
     let minus = document.querySelector('.dropdown__btn-minus');
     
     let plus = document.querySelector('.dropdown__btn-plus');
-    plus.setAttribute("disabled", '');
-    plus.classList.add('dropdown__disabled')
-    
+    isDisabled(plus);
+
     let numberBeds = document.querySelector('.dropdown__number');
     
     let numberDefault = 2;
@@ -54,26 +59,54 @@ mixin dropdown(options)
     let textDefault = document.querySelector('.dropdown__default');
     textDefault.innerText = `${numberDefault} спальни,`;
 
+    function isDisabled (btn) {
+      btn.setAttribute("disabled", '');
+      btn.classList.add('dropdown__disabled');
+    }
+
+    function isActivated (btn) {
+      btn.removeAttribute("disabled", '');
+      btn.classList.remove('dropdown__disabled');
+    }
+
+
     minus.addEventListener("click", function() {
       numberDefault --;
       if (numberDefault == 1) {
-        minus.setAttribute("disabled", '');
-        minus.classList.add('dropdown__disabled')
-        plus.removeAttribute("disabled");
-        plus.classList.remove('dropdown__disabled')
+        isDisabled(minus);
+        isActivated(plus);
       }
       numberBeds.innerText = numberDefault;
       textDefault.innerText = `${numberDefault} спальня,`;
     })
+    
 
     plus.addEventListener("click", function() {
       numberDefault ++;
       if (numberDefault == 2) {
-        plus.setAttribute("disabled", '');
-        plus.classList.add('dropdown__disabled')
-        minus.removeAttribute("disabled");
-        minus.classList.remove('dropdown__disabled')
+        isDisabled(plus);
+        isActivated(minus);
       }
       numberBeds.innerText = numberDefault;
       textDefault.innerText = `${numberDefault} спальни,`;
     })
+
+    //- let itemOne = document.querySelector('.dropdown__item');
+
+    //- class ChangeNumber {
+    //-   constructor(btnOne, btnTwo) {
+    //-     this.btnOne = btnOne;
+    //-     this.btnTwo = btnTwo;
+    //-   }
+
+    //-   isDisabled() {
+    //-     this.btnOne.setAttribute("disabled", '');
+    //-     this.btnTwo.setAttribute("disabled", '');
+
+    //-   }
+
+
+
+    //- }
+
+    //- let itemOne = new ChangeNumber(minus, plus)
