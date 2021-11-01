@@ -59,15 +59,16 @@ mixin dropdown(options)
     isDisabled(plus);
 
     let numberBedrooms = document.querySelector('.dropdown__numberFirst');
-    //- let numberBeds = document.querySelector('.dropdown__numberSecond');
     
     let numberDefaultFirst = 2;
     numberBedrooms.innerText = numberDefaultFirst;
-    //- let numberDefaultSecond = 2;
-    //- numberBeds.innerText = numberDefaultSecond;
-    
     let textDefault = document.querySelector('.dropdown__default');
     textDefault.innerText = `${numberDefaultFirst} спальни,`;
+
+
+    //- let numberBeds = document.querySelector('.dropdown__numberSecond');
+    //- let numberDefaultSecond = 2;
+    //- numberBeds.innerText = numberDefaultSecond;
     //- textDefault.innerText = `${numberDefaultFirst} спальни, ${numberDefaultSecond} кровати...`;
 
     function isDisabled (btn) {
@@ -80,29 +81,32 @@ mixin dropdown(options)
       btn.classList.remove('dropdown__disabled');
     }
 
+    let dropdownBtns = document.querySelector('.dropdown__btns');
+    
+    dropdownBtns.addEventListener("click", function() {
+      let target = event.target;
+      
+      if(target == minus) {
+        numberDefaultFirst --;
+        if (numberDefaultFirst == 1) {
+          isDisabled(minus);
+          isActivated(plus);
+        }
+      }
 
-    minus.addEventListener("click", function() {
-      numberDefaultFirst --;
-      if (numberDefaultFirst == 1) {
-        isDisabled(minus);
-        isActivated(plus);
+      if(target == plus) {
+        numberDefaultFirst ++;
+        if (numberDefaultFirst == 2) {
+          isDisabled(plus);
+          isActivated(minus);
+        }
       }
       numberBedrooms.innerText = numberDefaultFirst;
-      //- numberBeds.innerText = numberDefaultSecond;
       textDefault.innerText = `${numberDefaultFirst} спальня,`;
     })
     
 
-    plus.addEventListener("click", function() {
-      numberDefaultFirst ++;
-      if (numberDefaultFirst == 2) {
-        isDisabled(plus);
-        isActivated(minus);
-      }
-      numberBedrooms.innerText = numberDefaultFirst;
-      //- numberBeds.innerText = numberDefaultSecond;
-      textDefault.innerText = `${numberDefaultFirst} спальни,`;
-    })
+      
     
 
 
