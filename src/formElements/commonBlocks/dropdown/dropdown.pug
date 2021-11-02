@@ -1,25 +1,14 @@
 mixin dropdown(options)
   -
-    let idDropdown = options.idDropdown
-    let itemTitleOne = options.itemTitleOne
-    let itemTitleTwo = options.itemTitleTwo
+    let idDropdown = options.idDropdown;
 
   .dropdown
     .dropdown__label= options.label
     .dropdown__default
     .dropdown__expand
-      .dropdown__item
-        .dropdown__item-title-one= options.itemTitleOne
-        .dropdown__btns
-          button.dropdown__btn-minus
-          .dropdown__numberFirst
-          button.dropdown__btn-plus
-      //- .dropdown__item
-      //-   .dropdown__item-title-two= options.itemTitleTwo
-      //-   .dropdown__btns
-      //-     button.dropdown__btn-minus
-      //-     .dropdown__numberSecond
-      //-     button.dropdown__btn-plus
+      +item({itemTitle: 'спальни', number: numberAmenities})
+      +item({itemTitle: 'кровати', number: numberAmenities})
+      +item({itemTitle: 'ванные комнаты'})
 
 
   script.
@@ -37,13 +26,7 @@ mixin dropdown(options)
     }
 
     dropDefault.addEventListener("click", isExpanded);
-    //- dropDefault.addEventListener("click", function(e) {
-    //-   e.stopPropagation();
-    //-   if(dropDefault.classList.contains('dropdown__default_border-dark')) {
-    //-     isDefault();
-    //-   }
-    //- });
-
+    
     document.addEventListener("click", function(e) {
       if (!e.target.matches('.dropdown *')) {
         if (dropExpand.classList.contains('dropdown__expand_visible')) {
@@ -53,23 +36,35 @@ mixin dropdown(options)
     })
     
 
-    let minus = document.querySelector('.dropdown__btn-minus');
-    
-    let plus = document.querySelector('.dropdown__btn-plus');
+mixin item(options)
+  -
+    let itemTitle = options.itemTitle;
+
+  .item
+    .item__title= options.itemTitle
+    .item__btns
+      button.item__btn-minus
+      .item__number= options.number
+      button.item__btn-plus
+
+  script.
+
+    let minus = document.querySelector('.item__btn-minus');
+    let plus = document.querySelector('.item__btn-plus');
     isDisabled(plus);
 
-    let numberBedrooms = document.querySelector('.dropdown__numberFirst');
+    let numberAmenities = document.querySelector('.item__number');
     
-    let numberDefaultFirst = 2;
-    numberBedrooms.innerText = numberDefaultFirst;
+    let numberDefault = 2;
+    numberAmenities.innerText = numberDefault;
+
     let textDefault = document.querySelector('.dropdown__default');
-    textDefault.innerText = `${numberDefaultFirst} спальни,`;
+    textDefault.innerText = `${numberDefault} спальни,`;
 
 
     //- let numberBeds = document.querySelector('.dropdown__numberSecond');
     //- let numberDefaultSecond = 2;
     //- numberBeds.innerText = numberDefaultSecond;
-    //- textDefault.innerText = `${numberDefaultFirst} спальни, ${numberDefaultSecond} кровати...`;
 
     function isDisabled (btn) {
       btn.setAttribute("disabled", '');
@@ -81,29 +76,30 @@ mixin dropdown(options)
       btn.classList.remove('dropdown__disabled');
     }
 
-    let dropdownBtns = document.querySelector('.dropdown__btns');
+    let itemBtns = document.querySelector('.item__btns');
     
-    dropdownBtns.addEventListener("click", function() {
+    itemBtns.addEventListener("click", function() {
       let target = event.target;
       
       if(target == minus) {
-        numberDefaultFirst --;
-        if (numberDefaultFirst == 1) {
+        numberDefault --;
+        if (numberDefault == 1) {
           isDisabled(minus);
           isActivated(plus);
         }
       }
 
       if(target == plus) {
-        numberDefaultFirst ++;
-        if (numberDefaultFirst == 2) {
+        numberDefault ++;
+        if (numberDefault == 2) {
           isDisabled(plus);
           isActivated(minus);
         }
       }
-      numberBedrooms.innerText = numberDefaultFirst;
-      textDefault.innerText = `${numberDefaultFirst} спальня,`;
+      numberAmenities.innerText = numberDefault;
+      textDefault.innerText = `${numberDefault} спальня,`;
     })
+    //- textDefault.innerText = `${numberDefaultFirst} спальни, ${numberDefaultSecond} кровати...`;
     
 
       
