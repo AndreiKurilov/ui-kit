@@ -25,10 +25,6 @@
   border-top: transparent;
 }
 
-.dropdown__disabled {
-  cursor: auto;
-}
-
 .item {
   display: flex;
   justify-content: space-between;
@@ -64,4 +60,8 @@
 
 .item__btn-plus::before {
   content: '+';
+}
+
+.dropdown__disabled {
+  cursor: auto;
 }
