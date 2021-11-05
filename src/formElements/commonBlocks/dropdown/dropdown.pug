@@ -4,11 +4,11 @@ mixin dropdown(options)
 
   .dropdown
     .dropdown__label= options.label
-    .dropdown__default
+    .dropdown__default= options.titleDefault
     .dropdown__expand
-      +item({itemTitle: 'спальни', number: numberAmenities})
-      //- +item({itemTitle: 'кровати', number: numberAmenities})
-      //- +item({itemTitle: 'ванные комнаты'})
+      +item({itemTitle: 'спальни', number: 2})
+      +item({itemTitle: 'кровати', number: 2})
+      +item({itemTitle: 'ванные комнаты', number: 0})
 
 
   script.
@@ -39,33 +39,18 @@ mixin dropdown(options)
 mixin item(options)
   -
     let itemTitle = options.itemTitle;
-
+    
   .item
     .item__title= options.itemTitle
     .item__btns
       button.item__btn-minus
       .item__number= options.number
+        span.item__numberFirst
+        span.item__numberSecond
+        span.item__numberThird
       button.item__btn-plus
 
   script.
-
-    let minus = document.querySelector('.item__btn-minus');
-    let plus = document.querySelector('.item__btn-plus');
-    isDisabled(plus);
-
-    let numberAmenities = document.querySelector('.item__number');
-    
-    let numberDefault = 2;
-    numberAmenities.innerText = numberDefault;
-
-    let textDefault = document.querySelector('.dropdown__default');
-    textDefault.innerText = `${numberDefault} спальни,`;
-
-
-    //- let numberBeds = document.querySelector('.dropdown__numberSecond');
-    //- let numberDefaultSecond = 2;
-    //- numberBeds.innerText = numberDefaultSecond;
-
     function isDisabled (btn) {
       btn.setAttribute("disabled", '');
       btn.classList.add('dropdown__disabled');
@@ -76,9 +61,21 @@ mixin item(options)
       btn.classList.remove('dropdown__disabled');
     }
 
+    
     let itemBtns = document.querySelector('.item__btns');
     
     itemBtns.addEventListener("click", function() {
+
+      let minus = document.querySelector('.item__btn-minus');
+      let plus = document.querySelector('.item__btn-plus');
+      isDisabled(plus);
+
+      let numberDefault = 2
+
+      //- let numberAmenities = document.querySelector('.item__number');
+
+      let textDefault = document.querySelector('.dropdown__default');
+
       let target = event.target;
       
       if(target == minus) {
@@ -96,13 +93,28 @@ mixin item(options)
           isActivated(minus);
         }
       }
-      numberAmenities.innerText = numberDefault;
-      textDefault.innerText = `${numberDefault} спальня,`;
-    })
+
+      let itemNumberFirst = document.querySelector('.item__numberFirst');
+      let itemNumberSecond = document.querySelector('.item__numberSecond');
+      let itemNumberThird = document.querySelector('.item__numberThird');
+
+
+
+      itemNumberFirst = numberDefault;
+      itemNumberSecond = numberDefault;
+      itemNumberThird = numberDefault;
+
+      //- numberAmenities.innerText = numberDefault;
+      textDefault.innerText = `${itemNumberFirst} спальня, ${itemNumberSecond} кровати`;
     //- textDefault.innerText = `${numberDefaultFirst} спальни, ${numberDefaultSecond} кровати...`;
+    })
+    
     
 
       
+
+
+
     
 
 
