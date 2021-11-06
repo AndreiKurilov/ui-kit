@@ -1,0 +1,46 @@
+.colors__block {
+  margin-bottom: 20px;
+  display: flex;
+}
+.colors__colorSample {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  // background: #1F2041;
+}
+.colors__title {
+  margin-left: 40px;
+}
+.colors__titleLetters,
+.colors__titleCode
+{
+  
+  height: 50%;
+  font-family: "Quicksand-Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
+  color: #1F2041;
+}
+// .colors__darkShade100 {
+//   background: rgba(31, 32, 65, 1);
+// }
+// .colors__darkShade75 {
+//   background: rgba(31, 32, 65, 0.75);
+// }
+// .colors__darkShade50 {
+//   background: rgba(31, 32, 65, 0.50);
+// }
+// .colors__darkShade25 {
+//   background: rgba(31, 32, 65, 0.25);
+// }
+// .colors__darkShade5 {
+//   background: rgba(31, 32, 65, 0.05);
+// }
+// .colors__purple {
+//   background: #BC9CFF;
+// }
+// .colors__green {
+//   background: #6FCF97;
+// }
