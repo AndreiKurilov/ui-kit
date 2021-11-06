@@ -1,0 +1,10 @@
+mixin color(options)
+  -
+    let colorsColorSample = 'colors__colorSample'
+
+  .colors__block
+    div(class = colorsColorSample)= options.color
+    .colors__title
+      .colors__titleLetters= options.titleLetters
+      .colors__titleCode= options.titleCode
+  
