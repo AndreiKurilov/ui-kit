@@ -1,57 +1,25 @@
-//- mixin color(options)
-//-   -
-
-.setColorsType
-  //- .setColorsType__blockName Colors & Type
-  //- .setColorsType__commonLogoCircle
-  //-   include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
-  
+mixin type(options)
   -
-    let titleLetters = ['Dark Shade 100%', 'Dark Shade 75%'];
+    //- let titleLetters = ['Dark Shade 100%', 'Dark Shade 75%'];
 
-    let titleCode = ['#1F2041', '#1F2041']
+    //- let titleCode = ['#1F2041', '#1F2041']
   
-  .setColorsType__colors
+  .setColorsType__types
     each item in titleLetters
-      li= (.colors__block
-            .colors__colorSample= options.color
-            .colors__title
-              .colors__titleLetters= titleLetters[i]
-              .colors__titleCode= titleCode[i])
+      .types__block
+        .types__colorSample= options.color
+        .types__title
+          typess__titleLetters= titleLetters[i]
+          .types__titleCode= titleCode[i]
 
 
 
-    //- .setColorsType__blockSquareTitle
-    //-   .setColorsType__square.setColorsType__square_darkShade100
-    //-   .setColorsType__title Dark Shade 100% #1F2041
-    //- .setColorsType__blockSquareTitle
-    //-   .setColorsType__square.setColorsType__square_darkShade75
-    //-   .setColorsType__title Dark Shade 75% #1F2041
-    //- .setColorsType__blockSquareTitle
-  //-     .setColorsType__square.setColorsType__square_darkShade50
-  //-     .setColorsType__title Dark Shade 50% #1F2041
-  //-   .setColorsType__blockSquareTitle
-  //-     .setColorsType__square.setColorsType__square_darkShade25
-  //-     .setColorsType__title Dark Shade 25% #1F2041
-  //-   .setColorsType__blockSquareTitle
-  //-     .setColorsType__square.setColorsType__square_darkShade5
-  //-     .setColorsType__title Dark Shade 5% #1F2041
-  //-   .setColorsType__blockSquareTitle
-  //-     .setColorsType__square.setColorsType__square_purple
-  //-     .setColorsType__title.setColorsType__title_purple Purple #BC9CFF
-  //-   .setColorsType__blockSquareTitle
-  //-     .setColorsType__square.setColorsType__square_green
-  //-     .setColorsType__title.setColorsType__title_green Green #6FCF97
-  //- .setColorsType__containerTwo
-  //-   .setColorsType__blockFontSize
-  //-     .setColorsType__font-H1 H1
-  //-     .setColorsType__size-H1 This one is the sub-section or widget title
-  //-   .setColorsType__blockFontSize
-  //-     .setColorsType__font-H2 H2
-  //-     .setColorsType__size-H2 Next one is the item title inside widgets
-  //-   .setColorsType__blockFontSize.setColorsType__blockFontSize_margin-bottom
-  //-     .setColorsType__font-H3 H3
-  //-     .setColorsType__size-H3 This is a label or CTA text
-  //-   .setColorsType__blockFontSize.setColorsType__blockFontSize_width
-  //-     .setColorsType__font-Body Body
-  //-     .setColorsType__size-Body This is the body text which is used for most of the design, like paragraphs, lists, etc.
+    
+//- H1
+//- This one is the sub-section or widget title
+//- H2
+//- Next one is the item title inside widgets
+//- H3
+//- This is a label or CTA text
+//- Body
+//- This is the body text which is used for most of the design, like paragraphs, lists, etc.
