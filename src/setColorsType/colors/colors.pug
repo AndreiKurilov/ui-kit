@@ -1,6 +1,9 @@
 mixin color(options)
   -
     let colorsColorSample = 'colors__colorSample'
+    colorsColorSample += options.color ? ' colors__darkShade100' : ''
+
+    //- titleClassName += options.isBusiness ? " title-business" : ""
 
   .colors__block
     div(class = colorsColorSample)= options.color
