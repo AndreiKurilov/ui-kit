@@ -1,0 +1,68 @@
+@mixin font-montserrat-bold {
+  font: {
+    family: "Montserrat-Bold";
+    size: 12px;
+    height: 15px;
+  }
+  color: #1F2041;
+  text-transform: uppercase;
+}
+
+@mixin font-montserrat-regular {
+  font: {
+    family: "Montserrat-regular";
+    size: 14px;
+    // height: 15px;
+  }
+  color: rgba(31, 32, 65, 0.75);
+  // text-transform: uppercase;
+}
+
+@mixin block-default {
+  position: relative;
+  display: flex;
+  height: 44px;
+  box-sizing: border-box;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  width: 100%;
+  background-color: #FFFFFF;
+  user-select: none;
+  cursor: pointer;
+  padding-left: 15px;
+  // line-height: 44px;
+  justify-content: space-between;
+  align-items: center;
+  &::after {
+    font-family: 'Material-Icons';
+    content: '\e902';
+    margin-right: 15px;
+  }
+}
+
+@mixin block-expand {
+  display: none;
+  position: absolute;
+  height: $height__expand;
+  box-sizing: border-box;
+  border: $border__dark;
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+}
+
+@mixin dropdown-btn {
+  width: 30px;
+  height: 30px;
+  border: $border__light;
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  &::before {
+    @include font-montserrat-regular;
+    font-size: 18px;
+    color: rgba(31, 32, 65, 0.5);
+    display: block;
+  }
+}
