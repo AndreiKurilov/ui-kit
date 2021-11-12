@@ -1,4 +1,5 @@
-@import '../../../scss/_variables';
+@import '../../../scss/variables';
+@import '../../../scss/mixins';
 
 .dropdown__label {
   @include font-montserrat-bold;
