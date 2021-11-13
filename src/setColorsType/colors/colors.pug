@@ -1,13 +1,11 @@
-mixin color(options)
-  -
-    let colorsColorSample = 'colors__colorSample'
-    colorsColorSample += options.color ? ' colors__darkShade100' : ''
-
-    //- titleClassName += options.isBusiness ? " title-business" : ""
-
-  .colors__block
-    div(class = colorsColorSample)= options.color
-    .colors__title
-      .colors__titleLetters= options.titleLetters
-      .colors__titleCode= options.titleCode
-  
+mixin colors( colorSamples=[] )
+  ul.colors
+    each colorSample in colorSamples
+      li.colors__wrap
+        - const sampleClass = 'colors__' + colorSample.color;
+        div&attributes({
+          class: ["colors__sample", sampleClass]
+        })
+        .colors__description
+          .colors__title #{colorSample.colorTitle}
+          .colors__code #{colorSample.colorCode}
