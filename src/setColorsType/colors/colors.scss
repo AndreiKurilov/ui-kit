@@ -1,46 +1,63 @@
-.colors__block {
-  margin-bottom: 20px;
-  display: flex;
-}
-.colors__colorSample {
-  width: 70px;
-  height: 70px;
-  border-radius: 6px;
-  // background: #1F2041;
-}
-.colors__title {
-  margin-left: 40px;
-}
-.colors__titleLetters,
-.colors__titleCode
-{
+@import '../../scss/variables.scss';
+
+.colors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__wrap {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__sample {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+
+  &__description {
+    margin-left: 40px;
+  }
+
+  &__title,
+  &__code {
+    font-family: "Montserrat-Bold";
+    font-size: 19px;
+    line-height: 28px;
+    color: $color--main;
+  }
   
-  height: 50%;
-  font-family: "Quicksand-Bold";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 29px;
-  color: #1F2041;
-}
-.colors__darkShade100 {
-  background: rgba(31, 32, 65, 1);
-}
-.colors__darkShade75 {
-  background: rgba(31, 32, 65, 0.75);
-}
-.colors__darkShade50 {
-  background: rgba(31, 32, 65, 0.50);
-}
-.colors__darkShade25 {
-  background: rgba(31, 32, 65, 0.25);
-}
-.colors__darkShade5 {
-  background: rgba(31, 32, 65, 0.05);
-}
-.colors__purple {
-  background: #BC9CFF;
-}
-.colors__green {
-  background: #6FCF97;
+  &__code {
+    font-family: $mainFont;
+  }
+
+  &__darkShade100 {
+    background: $color--main;
+  }
+
+  &__darkShade75 {
+    background: $color--darkShade75;
+  }
+
+  &__darkShade50 {
+    background: $color--darkShade50;
+  }
+
+  &__darkShade25 {
+    background: $color--darkShade25;
+  }
+
+  &__darkShade5 {
+    background: $color--darkShade5;
+  }
+
+  &__purple {
+    background: $color--designMain;
+  }
+
+  &__green {
+    background: $color--designSecond;
+  }
 }
