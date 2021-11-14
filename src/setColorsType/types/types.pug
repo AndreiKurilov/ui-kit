@@ -1,25 +1,9 @@
-mixin type(options)
-  -
-    //- let titleLetters = ['Dark Shade 100%', 'Dark Shade 75%'];
-
-    //- let titleCode = ['#1F2041', '#1F2041']
-  
-  .setColorsType__types
-    each item in titleLetters
-      .types__block
-        .types__colorSample= options.color
-        .types__title
-          typess__titleLetters= titleLetters[i]
-          .types__titleCode= titleCode[i]
-
-
-
-    
-//- H1
-//- This one is the sub-section or widget title
-//- H2
-//- Next one is the item title inside widgets
-//- H3
-//- This is a label or CTA text
-//- Body
-//- This is the body text which is used for most of the design, like paragraphs, lists, etc.
+mixin types( typeSamples=[] )
+  ul.types
+    each typeSample in typeSamples
+      -const typeClass = 'types__' + typeSample.typeTitle;
+      li&attributes({
+          class: ["types__wrap", typeClass]
+        })
+        .types__title #{typeSample.typeTitle}
+        .types__textExample #{typeSample.typeExample}
