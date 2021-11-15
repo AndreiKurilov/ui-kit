@@ -3,68 +3,33 @@
   width: 1440px;
   height: 900px;
   background: #FFFFFF;
-  // background: rgb(59, 3, 148);
   top: 50px;
   left: 50px;
 }
-// .setColorsType__blockName {
-//   position: absolute;
-//   top: -21px;
-//   font-family: "Montserrat-regular";
-//   font-weight: bold;
-//   font-style: normal;
-//   font-size: 15px;
-//   color: rgba(8, 8, 15, 0.25);
-// }
-// .setColorsType__commonLogoCircle {
-//   position: absolute;
-//   left: 30px;
-//   top: 30px;
-// }
+.setColorsType__blockName {
+  position: absolute;
+  top: -21px;
+  font-family: "Montserrat-regular";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 15px;
+  color: rgba(8, 8, 15, 0.25);
+}
+.setColorsType__commonLogoCircle {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
 .setColorsType__colors {
   position: absolute;
   margin-top: 145px;
   margin-left: 150px;
-  width: 274px;
+  // width: 274px;
 }
 
-.colors__darkShade100 {
-  background: rgba(31, 32, 65, 1);
-}
-.colors__darkShade75 {
-  background: rgba(31, 32, 65, 0.75);
-}
-.colors__darkShade50 {
-  background: rgba(31, 32, 65, 0.50);
-}
-.colors__darkShade25 {
-  background: rgba(31, 32, 65, 0.25);
-}
-.colors__darkShade5 {
-  background: rgba(31, 32, 65, 0.05);
-}
-.colors__purple {
-  background: #BC9CFF;
-}
-.colors__green {
-  background: #6FCF97;
-}
-
-.setColorsType__title_purple {
-  width: 140px;
-  margin-left: 0px;
-}
-.setColorsType__title_green {
-  max-width: 130px;
-  margin-left: 0px;
-}
-
-
-
-
-.setColorsType__containerTwo {
+.setColorsType__types {
   position: absolute;
   margin-top: 145px;
   margin-left: 846px;
-  width: 402px;
+  width: 444px;
 }
