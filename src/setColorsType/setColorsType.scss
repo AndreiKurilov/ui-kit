@@ -1,30 +1,30 @@
+@import '../scss/variables.scss';
+
 .setColorsType {
   position: absolute;
   width: 1440px;
   height: 900px;
-  background: #FFFFFF;
   top: 50px;
   left: 50px;
+  background: #FFFFFF;
 }
 .setColorsType__blockName {
   position: absolute;
   top: -21px;
-  font-family: "Montserrat-regular";
-  font-weight: bold;
-  font-style: normal;
+  font-family: $mainFont;
   font-size: 15px;
-  color: rgba(8, 8, 15, 0.25);
+  color: $color--darkShade25;
 }
 .setColorsType__commonLogoCircle {
   position: absolute;
   left: 30px;
   top: 30px;
 }
+
 .setColorsType__colors {
   position: absolute;
   margin-top: 145px;
   margin-left: 150px;
-  // width: 274px;
 }
 
 .setColorsType__types {
