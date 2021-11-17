@@ -1,25 +1,25 @@
 @import '../../../scss/variables';
 @import '../../../scss/mixins';
 
-.dropdown__label {
-  @include font-montserrat-bold;
-  margin-bottom: 5px;
-}
+// .dropdown__label {
+//   @include font-montserrat-bold;
+//   margin-bottom: 5px;
+// }
 
-.dropdown__default {
-  @include block-default;
-  border-radius: 4px 4px 0 0;
-  @include font-montserrat-regular;
-}
+// .dropdown__default {
+//   @include block-default;
+//   border-radius: 4px 4px 0 0;
+//   @include font-montserrat-regular;
+// }
 
 .dropdown__default_border-dark {
    border: $border__dark;
 }
 
-.dropdown__expand {
-  @include block-expand;
-  @include font-montserrat-bold;
-}
+// .dropdown__expand {
+//   @include block-expand;
+//   @include font-montserrat-bold;
+// }
 
 .dropdown__expand_visible {
   display: block;
