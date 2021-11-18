@@ -1,1 +1,0 @@
-import './likeButtonGrey.scss';
