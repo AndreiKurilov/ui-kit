@@ -1,3 +1,4 @@
+// colors
 $color--main: #1F2041;
 $color--darkShade75: rgba(31, 32, 65, 0.75);
 $color--darkShade50: rgba(31, 32, 65, 0.50);
@@ -7,6 +8,13 @@ $color--designMain: #BC9CFF;
 $color--designSecond: #6FCF97;
 
 
-$border__dark: 1px solid rgba(31, 32, 65, 0.5);
-$border__light: 1px solid rgba(31, 32, 65, 0.25);
+// fonts
+$mainFont: "Montserrat-regular";
+$mainFontBold: "Montserrat-Bold";
+$mainFont--size: 14px;
+
+
+// borders
+$border__dark: 1px solid $color--darkShade50;
+$border__light: 1px solid $color--darkShade25;
 $height__expand: 117.56px;
