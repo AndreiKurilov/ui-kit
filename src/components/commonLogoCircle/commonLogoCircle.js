@@ -1,0 +1,1 @@
+import './commonLogoCircle.scss';

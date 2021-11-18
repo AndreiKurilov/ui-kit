@@ -1,0 +1,23 @@
+@import '../../scss/variables.scss';
+
+
+.nav {
+  display: flex;
+ 
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 20px;
+    font-family: $mainFont;
+    font-size: $mainFont--size;
+    line-height: 17px;
+    color: $color--darkShade50;
+  }
+
+}

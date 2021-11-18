@@ -1,0 +1,36 @@
+mixin navigation( navList=[] )
+  nav.nav
+    ul.nav__list
+      each navItem in navList
+        li.nav__item
+          a.nav__link #{navItem.name}
+
+          //- a&attributes({
+          //-   class: ["nav__link", activeLinkClass ] 
+          //- }) #{navItem.name}
+          //- if navigationItem.dropdown
+          //-   .navigation__dropdown.navigation__dropdown_visibility-hidden
+             
+
+
+
+        //- -
+        //-   const activeLinkClass = navigationItem.active ? "navigation__link_active" : ""
+        //-   const itemArrowModifier = navigationItem.dropdown ? "navigation__item_with-arrow-down" : ""
+        //-   const dropdownId = navigationItem.dropdown ? "navigation-dropdown-item" : ""
+
+
+//- mixin navigation({ navList=[] })
+//-   nav.navigation
+//-     ul.navigation__list
+//-       each navItem in navList
+//-         li.navigation__item
+//-           a&attributes({
+//-             class: ["navigation__link", activeLinkClass ],
+//-             href: navigationItem.url,
+//-             tabindex: "0",
+//-             "data-type": "link-dropdown", 
+//-           }) #{navigationItem.name}
+//-           if navigationItem.dropdown
+//-             .navigation__dropdown.navigation__dropdown_visibility-hidden
+//-               +links({ linksList: navigationItem.subMenuItems || [] })

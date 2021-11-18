@@ -1,0 +1,16 @@
+.header
+  .header__logo
+    include ../logoCircle/logoCircle
+    .header__logoCircle
+    include ../logoTitle/logoTitle
+    .header__logoTitle
+  .header__wrapper
+    include ../nav/nav
+    .header__nav
+      - let navList = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения']
+      +navigation([{name: navList[0]}, {name: navList[1]}, {name: navList[2]}, {name: navList[3]}, {name: navList[4]}])
+    .header__container
+      include ../buttonLogin/buttonLogin
+      .header__buttonLogin
+      include ../buttonRegister/buttonRegister
+      .header__buttonRegister

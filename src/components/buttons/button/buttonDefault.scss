@@ -1,0 +1,11 @@
+.button_default {
+  width: 320px;
+  height: 44px;
+  &::after {
+    content: "\e901";
+    font-family: 'Material-Icons';
+    position: absolute;
+    margin-left: 65px;
+    font-size: 15px;
+  }
+}

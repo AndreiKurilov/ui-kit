@@ -1,0 +1,1 @@
+import './logoTitle.scss';

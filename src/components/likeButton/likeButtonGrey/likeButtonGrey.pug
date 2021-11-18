@@ -1,0 +1,9 @@
+mixin likeButtonGrey
+  script.
+    function countOne() {
+      let counter = document.querySelector(".likeButtonGrey__counter");
+      counter.innerHTML++;
+    }
+  label.likeButtonGrey__label
+    input(type="checkbox" onclick="countOne()").likeButtonGrey__input
+    .likeButtonGrey__counter= 0

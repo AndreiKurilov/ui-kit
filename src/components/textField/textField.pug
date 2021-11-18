@@ -1,0 +1,18 @@
+mixin textField(options)
+  -
+    let idInput = options.idInput
+
+    let typeInput = options.typeInput;
+    
+    let placeholderInput = options.placeholderInput;
+    
+    let textFieldBlock = 'textField__block';
+    
+    textFieldBlock += options.borderDark ? ' textField__block_border-dark' : '';
+
+  form
+    label(for=idInput).textField__label= options.label
+    div(class = textFieldBlock)
+      input(id=idInput type=typeInput placeholder=placeholderInput).textField__input
+      if (options.button)
+        button(type="submit").textField__submit

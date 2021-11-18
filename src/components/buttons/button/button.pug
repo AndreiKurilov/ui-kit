@@ -1,0 +1,11 @@
+mixin button (options) 
+  -
+    let button = 'button'
+    if (options.colorWhite == true) {button += ' button_color_white'}
+    if (options.hover == true) {button += ' button_hover'}
+    if (options.link == true) {button += ' buttonLink'}
+    if (options.hoverLink == true) {button += ' buttonLink_hover'}
+    if (options.default == true) {button += ' button_default'}
+
+  form(action="#").button-form
+    button(type='button' onclick='return false' class = button)= options.title
