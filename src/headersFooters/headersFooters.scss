@@ -8,46 +8,28 @@
   top: 50px;
   left: 3030px;
 }
-.headersFooters__blockName {
-  position: absolute;
-  top: -17px;
-  font-family: "Montserrat-regular";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 14px;
-  color: rgba(8, 8, 15, 0.25);
-}
-.headersFooters__commonLogoCircle {
-  position: absolute;
-  left: 30px;
-  top: 30px;
-  // background:  #E5E5E5;
-}
+// .headersFooters__blockName {
+//   position: absolute;
+//   top: -17px;
+//   font-family: "Montserrat-regular";
+//   font-weight: normal;
+//   font-style: normal;
+//   font-size: 14px;
+//   color: rgba(8, 8, 15, 0.25);
+// }
 .headersFooters__header {
   position: absolute;
+  // position: relative;
   width: 1440px;
   height: 70px;
   left: 0px;
   top: 150px;
 }
-.headersFooters__headerTwo {
-  position: absolute;
-  width: 1440px;
-  height: 70px;
-  left: 0px;
-  top: 260px;
-}
-.headersFooters__footer {
-  position: absolute;
-  width: 1440px;
-  height: 443px;
-  left: 0px;
-  top: 370px;
-}
-.headersFooters__footerTwo {
-  position: absolute;
-  width: 1440px;
-  height: 367px;
-  left: 0px;
-  top: 853px;
-}
+
+// .headersFooters__footer {
+//   position: absolute;
+//   width: 1440px;
+//   height: 443px;
+//   left: 0px;
+//   top: 370px;
+// }
