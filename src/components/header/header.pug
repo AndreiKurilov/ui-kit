@@ -1,9 +1,8 @@
 .header
   .header__logo
-    include ../logoCircle/logoCircle
-    .header__logoCircle
-    include ../logoTitle/logoTitle
-    .header__logoTitle
+    include ../logo/logo
+    //- +logo({type: 'colorless'})
+    +logo({type: 'colorWithText'})
   .header__wrapper
     include ../nav/nav
     .header__nav
