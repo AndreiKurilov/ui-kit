@@ -18,3 +18,8 @@ $mainFont--size: 14px;
 $border__dark: 1px solid $color--darkShade50;
 $border__light: 1px solid $color--darkShade25;
 $height__expand: 117.56px;
+
+
+// gradients
+$primaryGradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$secondGradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
