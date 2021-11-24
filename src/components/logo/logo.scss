@@ -1,0 +1,20 @@
+@import '../../scss/variables.scss';
+
+
+.logo {
+
+  &__link {
+    line-height: 0;
+    vertical-align: middle;
+  }
+ 
+  &__colorless {
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  &__colorWithText {
+    min-width: 106px;
+  }
+
+}
