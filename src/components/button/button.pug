@@ -1,0 +1,9 @@
+mixin button(options)
+  -
+    let btnClass = 'button';
+    //- btnClass += options.disabled ? ' button_hover' : '';
+    //- btnClass += options.isWhite ? ' button::before' : '';
+
+
+  button(class = btnClass)
+    span.button__before= options.btnTitle
