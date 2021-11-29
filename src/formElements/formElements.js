@@ -7,7 +7,6 @@ import '../components/likeButton/likeButtonColor/likeButtonColor.js';
 import '../components/likeButton/likeButtonGrey/likeButtonGrey.js'
 import '../components/rateButton/rateButton.js';
 import '../components/richCheckboxButtons/richCheckboxButtons.js';
-import '../components/buttons/button/button.js';
 import '../components/pagination/pagination.js';
 import '../components/guestRecall/guestRecall.js';
 import '../components/bulletList/bulletList.js';
