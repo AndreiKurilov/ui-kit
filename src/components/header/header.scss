@@ -7,8 +7,6 @@
   // adaptive??????
   height: 100%; 
   
-
-
   &__logo {
     display: flex;
     align-items: center;
@@ -38,7 +36,7 @@
     
   }
 
-// .header__buttonRegister {
-//   
-// }
+  &__buttonRegister {
+    width: 196px;
+  }
 }
