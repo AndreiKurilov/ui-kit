@@ -10,7 +10,7 @@
     .header__btns
       .header__buttonLogin
         include ../button/button
-        +button({btnTitle: 'войти'})
+        +button({isWhite: true, btnTitle: 'войти'})
       .header__buttonRegister
         include ../button/button
-        +button({btnTitle: 'зарегистрироваться'})
+        +button({default: true, arrow: true, btnTitle: 'зарегистрироваться'})
