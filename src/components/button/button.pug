@@ -1,9 +1,14 @@
 mixin button(options)
   -
     let btnClass = 'button';
-    //- btnClass += options.disabled ? ' button_hover' : '';
-    //- btnClass += options.isWhite ? ' button::before' : '';
+    btnClass += options.default ? ' button__default' : '';
+    btnClass += options.isWhite ? ' button__white' : '';
 
 
-  button(class = btnClass)
-    span.button__before= options.btnTitle
+  button.button
+    if options.default
+      span(class = btnClass)= options.btnTitle
+      if options.arrow
+        span.button__arrow
+    else
+      span(class = btnClass)= options.btnTitle
