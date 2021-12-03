@@ -15,21 +15,11 @@
   border: none;
   outline: none;
   cursor: pointer;
-  color: #FFFFFF;
   padding: 2px;
-  
-  // &:hover:not(.button__default) {
-  //   opacity: 0.5;
-  // }
-
-  // &:hover:not(.button__white) {
-  //   opacity: 0.5;
-  // }
-
-  
   
   &__default {
     padding: 12px 12px 13px 11px;
+    color: #FFFFFF;
   }
 
   &__white {
@@ -38,15 +28,12 @@
     border-radius: 50px;
     padding: 12px 12px 13px 11px;
     color: $color--designMain;
-    // text-align: center;
-    // vertical-align: middle;
   }
   
-  &:hover:not(span) {
+  &:not(span):hover {
     opacity: 0.5;
   }
-  
-  
+
   &__arrow {
     padding-right: 8px;
     
@@ -56,11 +43,4 @@
       content: '\e901';
     }
   }
-}
-
-.button:hover 
-> .button__white:hover {
-  opacity: 1;
-  // color: $color--designMain;
-
 }
