@@ -8,7 +8,7 @@ mixin button(options)
   button.button
     if options.default
       span(class = btnClass)= options.btnTitle
-      if options.arrow
-        span.button__arrow
-    else
+    if options.arrow
+      span.button__arrow
+    if options.isWhite
       span(class = btnClass)= options.btnTitle
