@@ -1,14 +1,16 @@
 mixin button(options)
   -
-    let btnClass = 'button';
-    btnClass += options.default ? ' button__default' : '';
-    btnClass += options.isWhite ? ' button__white' : '';
+    let btnMainClass = 'button';
+    btnMainClass += options.btnModifier ? ' button_modifier' : '';
+    let btnSpanClass = 'span';
+    btnSpanClass += options.isDefault ? ' span__default' : '';
+    btnSpanClass += options.isWhite ? ' span__white' : '';
 
 
-  button.button
-    if options.default
-      span(class = btnClass)= options.btnTitle
+  button(class = btnMainClass)
+    if options.isDefault
+      span(class = btnSpanClass)= options.btnTitle
     if options.isWhite
-      span(class = btnClass)= options.btnTitle
+      span(class = btnSpanClass)= options.btnTitle
     if options.arrow
       span.button__arrow
