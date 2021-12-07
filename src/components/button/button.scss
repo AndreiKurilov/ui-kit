@@ -15,29 +15,15 @@
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 2px;
-
-  &__default {
-    padding: 7.5px 12px 7.5px 11px;
-    color: #FFFFFF;
+  padding: 0px;
+  
+  &_modifier {
+    padding: 2px;
   }
   
-  &:hover .button__default {
-    // opacity: 0.5;
+  &:hover {
     background: $primaryGradient_50;
   }
-
-
-  &__white {
-    background: #FFFFFF;
-    padding: 7.5px 12px 7.5px 11px;
-    color: $color--designMain;
-  }
-  
-  &:hover:not(.button__white) {
-    background: $primaryGradient_50;
-  }
-  
 
   &__arrow {
     padding-right: 8px;
@@ -47,5 +33,21 @@
       font-family: $materialIcons;
       content: '\e901';
     }
+  }
+}
+
+.span {
+  display: inline;
+  
+  &__default {
+    padding: 9.5px 20px;
+    color: #FFFFFF;
+  }
+  
+  &__white {
+    border-radius: 50px;
+    background: #FFFFFF;
+    padding: 7.5px 18.5px;
+    color: $color--designMain;
   }
 }
