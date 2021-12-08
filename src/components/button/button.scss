@@ -34,20 +34,20 @@
       content: '\e901';
     }
   }
-}
-
-.span {
-  display: inline;
   
-  &__default {
-    padding: 9.5px 20px;
-    color: #FFFFFF;
-  }
-  
-  &__white {
-    border-radius: 50px;
-    background: #FFFFFF;
-    padding: 7.5px 18.5px;
-    color: $color--designMain;
+  .btnSpanClass {
+    display: inline;
+    
+    &__default {
+      padding: 9.5px 20px;
+      color: #FFFFFF;
+    }
+    
+    &__white {
+      border-radius: 50px;
+      background: #FFFFFF;
+      padding: 7.5px 18.5px;
+      color: $color--designMain;
+    }
   }
 }
