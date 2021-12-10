@@ -18,6 +18,19 @@
     font-size: $mainFont--size;
     line-height: 17px;
     color: $color--darkShade50;
+    display: flex;
+    cursor: pointer;
   }
+  
+  &__dropdown::after {
+    color: $color--darkShade50;
+    cursor: pointer;
+    line-height: 17px;
+    font-family: $materialIcons;
+    content: '\e902';
+    margin-left: 8px;
+    padding-top: 3px;
+  }
+  
 
 }
