@@ -23,13 +23,12 @@
   }
   
   &__dropdown::after {
+    content: '\e902';
+    font-family: $materialIcons;
     color: $color--darkShade50;
     cursor: pointer;
-    line-height: 17px;
-    font-family: $materialIcons;
-    content: '\e902';
     margin-left: 8px;
-    padding-top: 3px;
+    padding-top: 4px;
   }
   
 
