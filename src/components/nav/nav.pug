@@ -1,4 +1,4 @@
-mixin navigation( navList=[] )
+mixin navigation( navList, servicesList )
   nav.nav
     ul.nav__list
       each navItem in navList
@@ -6,3 +6,9 @@ mixin navigation( navList=[] )
           a.nav__link #{navItem.name}
           if navItem.dropdown
             span.nav__dropdown
+            ul.nav__servicesList
+              each servicesItem in servicesList
+                li.nav__servicesItem
+                  a.nav__servicesLink #{servicesList.name}
+
+          
