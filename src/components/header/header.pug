@@ -8,15 +8,21 @@
       - let navList = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения'];
       - let servicesList = ['Работа или отдых', 'Развлечения', 'Условия отмены'];
       - let agreementsList = ['Общие положения', 'Правила и условия', 'Разрешение споров'];
-      +navigation([
-        {name: navList[0]}, 
-        {name: navList[1],
-         dropdown: true}, 
-        {name: navList[2]}, 
-        {name: navList[3]}, 
-        {name: navList[4],
-         dropdown: true} 
-        ])
+      +navigation({
+        navList: [
+          {name: navList[0]}, 
+          {name: navList[1], dropdown: true,
+          servicesList: [
+            {name: servicesList[0]},
+            {name: servicesList[1]},
+            {name: servicesList[2]}
+            ]
+          }, 
+          {name: navList[2]}, 
+          {name: navList[3]}, 
+          {name: navList[4], dropdown: true} 
+        ]
+      })
     .header__btns
       .header__buttonLogin
         include ../button/button
@@ -24,3 +30,4 @@
       .header__buttonRegister
         include ../button/button
         +button({isDefault: true, btnTitle: 'зарегистрироваться'})
+
