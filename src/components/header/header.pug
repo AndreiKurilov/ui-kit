@@ -10,9 +10,9 @@
       - let agreementsList = ['Общие положения', 'Правила и условия', 'Разрешение споров'];
       +navigation(
          [
-          {name: navList[0], url: "./error-page.html"}, 
+          {name: navList[0], url: "./error-page.html", isActived: true}, 
           {name: navList[1], dropdown: true,
-          servicesList: [
+          optionsList: [
             {name: servicesList[0], url: "./error-page.html"},
             {name: servicesList[1], url: "./error-page.html"},
             {name: servicesList[2], url: "./error-page.html"}
@@ -21,7 +21,7 @@
           {name: navList[2], url: "./error-page.html"}, 
           {name: navList[3], url: "./error-page.html"}, 
           {name: navList[4], dropdown: true,
-          servicesList: [
+          optionsList: [
             {name: agreementsList[0], url: "./error-page.html"},
             {name: agreementsList[1], url: "./error-page.html"},
             {name: agreementsList[2], url: "./error-page.html"}
@@ -36,4 +36,3 @@
       .header__buttonRegister
         include ../button/button
         +button({isDefault: true, btnTitle: 'зарегистрироваться'})
-
