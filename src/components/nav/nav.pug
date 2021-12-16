@@ -1,12 +1,24 @@
-mixin navigation( navList)
+mixin navigation( navList )
   nav.nav
     ul.nav__list
       each navItem in navList
-        li.nav__item
-          a.nav__link #{navItem.name}
+       - const itemWithArrow = navItem.dropdown ? "nav__item_withArrow" : ""
+        li(class=itemWithArrow, class=['nav__item'])
+          if navItem.isActived
+            a&attributes({
+            class: ['nav__link', 'nav__link_active'],
+            href: navItem.url
+            }) #{navItem.name}
+          else 
+            a&attributes({
+            class: 'nav__link',
+            href: navItem.url
+            }) #{navItem.name}
           if navItem.dropdown
-            span.nav__dropdown
-            ul.nav__servicesList
-              each servicesItem in navItem.servicesList
-                li.nav__servicesItem
-                  a.nav__servicesLink #{servicesItem.name}
+            ul.nav__optionsList
+              each optionsItem in navItem.optionsList
+                li.nav__optionsItem
+                  a&attributes({
+                    class: 'nav__optionsLink',
+                    href: optionsItem.url
+                  }) #{optionsItem.name}
