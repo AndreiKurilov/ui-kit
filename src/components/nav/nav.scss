@@ -5,7 +5,7 @@
   display: flex;
  
   &__list,
-  &__servicesList {
+  &__optionsList {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -15,42 +15,51 @@
 
   &__item {
     margin-right: 20px;
-    font-family: $mainFont;
-    font-size: $mainFont--size;
-    line-height: 17px;
-    color: $color--darkShade50;
-    display: flex;
     cursor: pointer;
     position: relative;
   }
   
-  &__dropdown::after {
+  &__link, 
+  &__optionsLink {
+    font-family: $mainFont;
+    font-size: $mainFont--size;
+    line-height: 17px;
+    color: $color--darkShade50;
+    text-decoration: none;
+  }
+  
+  &__link_active {
+    font-family: $mainFontBold;
+    color: $color--darkShade75;
+  }
+
+  &__item_withArrow::after {
     content: '\e902';
     font-family: $materialIcons;
     color: $color--darkShade50;
+    // font-size: $mainFont--size;
+    font-size: 13px;
     cursor: pointer;
     margin-left: 8px;
-    padding-top: 4px;
+    line-height: 10px;
   }
   
-  &__servicesList {
+  &__optionsList {
     display: none;
     background: #FFFFFF;
     position: absolute;
-    margin-top: 30px;
+    // margin-top: 30px;
     min-width: 140px;
     border-radius: 5px;
     // right: 5%;
   }
 
-  &__item:hover &__servicesList {
+  &__item:hover &__optionsList {
     display: block;
   }
-  
-  &__servicesItem {
-    margin-bottom: 20px;
+
+  &__optionsItem {
+    margin-bottom: 10px;
     padding: 6px 12px;
-
   }
-
 }
