@@ -2,16 +2,11 @@ mixin navigation( navList )
   nav.nav
     ul.nav__list
       each navItem in navList
-       - const itemWithArrow = navItem.dropdown ? "nav__item_withArrow" : ""
+        - const itemWithArrow = navItem.dropdown ? "nav__item_withArrow" : "";
         li(class=itemWithArrow, class=['nav__item'])
-          if navItem.isActived
-            a&attributes({
-            class: ['nav__link', 'nav__link_active'],
-            href: navItem.url
-            }) #{navItem.name}
-          else 
-            a&attributes({
-            class: 'nav__link',
+          - const itemIsActived = navItem.isActived ? 'nav__link_active': '';
+          a&attributes({
+            class: ['nav__link', itemIsActived],
             href: navItem.url
             }) #{navItem.name}
           if navItem.dropdown
