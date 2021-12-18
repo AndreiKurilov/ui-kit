@@ -1,3 +1,5 @@
+@import '../../scss/variables.scss';
+
 .header {
   display: flex;
   background: #FFFFFF; 
@@ -14,7 +16,6 @@
   }
 
   &__nav {
-    margin-right: 20px;
     display: flex;
     align-items: center;
   }
@@ -39,5 +40,15 @@
   &__buttonRegister {
     width: 196px;
     height: 34px;
+  }
+
+  &__isLogged {
+    font-family: $mainFont;
+    font-size: $mainFont--size;
+    // line-height: 17px;
+    line-height: 30px;
+    color: $color--darkShade50;
+    border-left: 1px solid rgba(31, 32, 65, 0.1);
+    padding-left: 20px;
   }
 }
