@@ -1,38 +1,39 @@
-.header
-  .header__logo
-    include ../logo/logo
-    +logo('colorWithText')
-  .header__wrapper
-    include ../nav/nav
-    .header__nav
-      - let navList = ['О нас', 'Услуги', 'Вакансии', 'Новости', 'Соглашения'];
-      - let servicesList = ['Работа или отдых', 'Развлечения', 'Условия отмены'];
-      - let agreementsList = ['Общие положения', 'Правила и условия', 'Разрешение споров'];
-      +navigation(
-         [
-          {name: navList[0], url: "./error-page.html", isActived: true}, 
-          {name: navList[1], dropdown: true,
-          optionsList: [
-            {name: servicesList[0], url: "./error-page.html"},
-            {name: servicesList[1], url: "./error-page.html"},
-            {name: servicesList[2], url: "./error-page.html"}
+mixin header ({ isLogged=false, userName="" }) 
+  .header
+    .header__logo
+      include ../logo/logo
+      +logo('colorWithText')
+    .header__wrapper
+      include ../nav/nav
+      .header__nav
+        +navigation(
+          [
+            {name: 'О нас', url: "./error-page.html", isActived: true}, 
+            {name: 'Услуги', dropdown: true,
+            optionsList: [
+              {name: 'Работа или отдых', url: "./error-page.html"},
+              {name: 'Развлечения', url: "./error-page.html"},
+              {name: 'Условия отмены', url: "./error-page.html"}
+            ]
+            }, 
+            {name: 'Вакансии', url: "./error-page.html"}, 
+            {name: 'Новости', url: "./error-page.html"}, 
+            {name: 'Соглашения', dropdown: true,
+            optionsList: [
+              {name: 'Общие положения', url: "./error-page.html"},
+              {name: 'Правила и условия', url: "./error-page.html"},
+              {name: 'Разрешение споров', url: "./error-page.html"}
+            ]
+            } 
           ]
-          }, 
-          {name: navList[2], url: "./error-page.html"}, 
-          {name: navList[3], url: "./error-page.html"}, 
-          {name: navList[4], dropdown: true,
-          optionsList: [
-            {name: agreementsList[0], url: "./error-page.html"},
-            {name: agreementsList[1], url: "./error-page.html"},
-            {name: agreementsList[2], url: "./error-page.html"}
-          ]
-          } 
-        ]
-      )
-    .header__btns
-      .header__buttonLogin
-        include ../button/button
-        +button({btnModifier: true, isWhite: true, btnTitle: 'войти'})
-      .header__buttonRegister
-        include ../button/button
-        +button({isDefault: true, btnTitle: 'зарегистрироваться'})
+        )
+      if isLogged
+        .header__isLogged #{userName}
+      else
+        .header__btns
+          .header__buttonLogin
+            include ../button/button
+            +button({btnModifier: true, isWhite: true, btnTitle: 'войти'})
+          .header__buttonRegister
+            include ../button/button
+            +button({isDefault: true, btnTitle: 'зарегистрироваться'})
