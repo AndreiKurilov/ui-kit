@@ -17,15 +17,20 @@
 //   font-size: 14px;
 //   color: rgba(8, 8, 15, 0.25);
 // }
-.headersFooters__header {
+.headersFooters__headerLogin {
   position: absolute;
-  // position: relative;
   width: 1440px;
   height: 70px;
   left: 0px;
   top: 150px;
 }
-
+.headersFooters__headerIsLogged {
+  position: absolute;
+  width: 1440px;
+  height: 70px;
+  left: 0px;
+  top: 250px;
+}
 // .headersFooters__footer {
 //   position: absolute;
 //   width: 1440px;
