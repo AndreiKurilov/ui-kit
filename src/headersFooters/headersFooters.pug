@@ -1,7 +1,11 @@
+include ../components/header/header
+
 .headersFooters
   //- .headersFooters__blockName Headers & Footers
-  .headersFooters__header
-    include ../components/header/header
+  .headersFooters__headerLogin
+    +header({})
+  .headersFooters__headerIsLogged
+    +header({isLogged: true, userName: 'Юлий Цезарь'})
     //- .headersFooters__footer
   //-   include footer/footer
   
