@@ -10,10 +10,11 @@ mixin navigation( navList )
             href: navItem.url
             }) #{navItem.name}
           if navItem.dropdown
-            ul.nav__optionsList
-              each optionsItem in navItem.optionsList
-                li.nav__optionsItem
-                  a&attributes({
-                    class: 'nav__optionsLink',
-                    href: optionsItem.url
-                  }) #{optionsItem.name}
+            .nav__dropdown 
+              ul.nav__optionsList
+                each optionsItem in navItem.optionsList
+                  li.nav__optionsItem
+                    a&attributes({
+                      class: 'nav__optionsLink',
+                      href: optionsItem.url
+                    }) #{optionsItem.name}
