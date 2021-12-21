@@ -8,7 +8,7 @@ mixin navigation( navList )
           a&attributes({
             class: ['nav__link', itemIsActived],
             href: navItem.url
-            }) #{navItem.name}
+          }) #{navItem.name}
           if navItem.dropdown
             .nav__dropdown 
               ul.nav__optionsList
