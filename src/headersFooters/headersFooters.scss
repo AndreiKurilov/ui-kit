@@ -3,11 +3,10 @@
   width: 1440px;
   height: 1350px;
   background: #F4F4F6;
-  // background: rgb(52, 52, 150);
-  // margin: 70px;
   top: 50px;
   left: 3030px;
 }
+
 // .headersFooters__blockName {
 //   position: absolute;
 //   top: -17px;
@@ -17,24 +16,27 @@
 //   font-size: 14px;
 //   color: rgba(8, 8, 15, 0.25);
 // }
-.headersFooters__headerLogin {
-  position: absolute;
-  width: 1440px;
-  height: 70px;
-  left: 0px;
-  top: 150px;
-}
-.headersFooters__headerIsLogged {
-  position: absolute;
-  width: 1440px;
-  height: 70px;
-  left: 0px;
-  top: 250px;
-}
-// .headersFooters__footer {
+
+// .headersFooters__headerLogin {
 //   position: absolute;
 //   width: 1440px;
-//   height: 443px;
+//   height: 70px;
 //   left: 0px;
-//   top: 370px;
+//   top: 150px;
 // }
+
+// .headersFooters__headerIsLogged {
+//   position: absolute;
+//   width: 1440px;
+//   height: 70px;
+//   left: 0px;
+//   top: 250px;
+// }
+
+.headersFooters__footer {
+  position: absolute;
+  width: 1440px;
+  height: 443px;
+  left: 0px;
+  top: 360px;
+}
