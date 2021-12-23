@@ -1,37 +1,14 @@
-.footer
-  .footer__logoCircle
-    include ../commonBlocks/logoCircle/logoCircle
-  .footer__logoTitle
-    include ../commonBlocks/logoTitle/logoTitle
-  .footer__text-one.footer__text_font Lorem ipsum dolor sit
-    | amet consectetur adipiscing elit aliquam
-    | eget nullam pellentesque aliquam
-    | curabitur cociis.
-  .footer__ul
-    ul.footer_li-style
-      li.footer_font-style Navigation
-      li.footer_li-style_padding-top About Us
-      li.footer_li-style_padding-top-two News
-      li.footer_li-style_padding-top-two Support
-      li.footer_li-style_padding-top-two Products
-    ul.footer_li-style.footer__aboutus_padding
-      li.footer_font-style.footer_font-style-two About us
-      li.footer_li-style_padding-top Who we are
-      li.footer_li-style_padding-top-two Our team
-      li.footer_li-style_padding-top-two Careers
-      li.footer_li-style_padding-top-two Investors
-    ul.footer_li-style.footer__support_padding-right
-      li.footer_font-style.footer_font-style-two Support
-      li.footer__docum_letter-spacing Documentation
-      li.footer_li-style_padding-top-two Community
-      li.footer_li-style_padding-top-two Get in Touch
-    .footer_font-style.footer__subscribe_letter-spacing Subscribe to our newsletter
-  .footer__text-two.footer__text_font Receive our latest news and 
-    | promotions in your inbox!
-  form.footer__form
-    input.footer__form-input(type="email", placeholder="Your email address")
-    img.footer__form-arrow(src="./img/footerInputArrow.png")
-  .footer__copyrightBar
-    .footer__text-three Copyright © 2018 Toxin UI Kit. All rights reserved.
-    .footer__icons
-      include ../commonBlocks/icons/icons
+include ../logo/logo
+
+mixin footer ({}) 
+  footer.footer
+    .footer__logo
+      +logo('colorWithText')
+    .footer__wrapper
+      //- include ../nav/nav
+      .footer__nav
+        //- +navigation(
+  
+  
+
+    //- Copyright © 2018 Toxin UI Kit. All rights reserved.
