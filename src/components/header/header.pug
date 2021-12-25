@@ -6,8 +6,9 @@ mixin header ({ isLogged=false, userName="" })
     .header__wrapper
       include ../nav/nav
       .header__nav
-        +navigation(
-          [
+        +navigation({
+          listStyleNone: true,
+          navList: [
             {name: 'О нас', url: "./error-page.html", isActived: true}, 
             {name: 'Услуги', dropdown: true,
             optionsList: [
@@ -26,7 +27,7 @@ mixin header ({ isLogged=false, userName="" })
             ]
             } 
           ]
-        )
+        })
       if isLogged
         .header__isLogged #{userName}
       else
