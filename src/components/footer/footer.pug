@@ -1,14 +1,44 @@
 include ../logo/logo
+//- include ../linksList/linksList
+include ../nav/nav
 
-mixin footer ({}) 
+mixin footer ({footerPromo=''}) 
   footer.footer
-    .footer__logo
-      +logo('colorWithText')
-    .footer__wrapper
-      //- include ../nav/nav
-      .footer__nav
-        //- +navigation(
-  
-  
-
-    //- Copyright © 2018 Toxin UI Kit. All rights reserved.
+    .footer__container
+      section.footer__logo
+        +logo('colorWithText')
+        p.footer__promo #{footerPromo}
+      section.footer__wrapper
+        .footer__nav
+           +navigation({
+            navList: [
+            {name: 'навигация', url: "./error-page.html", isActived: true, isHeading: true}, 
+            {name: 'О нас', url: "./error-page.html"}, 
+            {name: 'Новости', url: "./error-page.html"}, 
+            {name: 'Служба поддержки', url: "./error-page.html"}, 
+            {name: 'Услуги', url: "./error-page.html"} 
+           ]})
+        .footer__aboutUs
+          +navigation({
+            navList: [
+            {name: 'o нас', url: "./error-page.html", isActived: true, isHeading: true}, 
+            {name: 'О сервисе', url: "./error-page.html"}, 
+            {name: 'Наша команда', url: "./error-page.html"}, 
+            {name: 'Вакансии', url: "./error-page.html"}, 
+            {name: 'Инвесторы', url: "./error-page.html"} 
+           ]})
+        .footer__support
+          +navigation({
+            navList: [
+            {name: 'служба поддержки', url: "./error-page.html", isActived: true, isHeading: true}, 
+            {name: 'Соглашения', url: "./error-page.html"}, 
+            {name: 'Сообщества', url: "./error-page.html"}, 
+            {name: 'Связь с нами', url: "./error-page.html"} 
+           ]})
+        .footer__subscribe
+          .footer__subscribeHeading Подписка
+          .footer__subscribeText Получайте специальные предложения и новости сервиса
+          .footer__subscribeEmail
+    .footer__blockCopyright
+      .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
+      .footer__social
