@@ -47,6 +47,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
+    margin-top: 0px;
     margin-bottom: 21px;
   }
 
@@ -66,11 +67,13 @@
 
   &__blockCopyright {
     display: flex;
+    margin-left: 140px;
+    margin-right: 140px;
+    align-items: center;
     justify-content: space-between;
   }
 
   &__copyright {
-    margin-left: 140px;
     margin-top: 26px;
     font-family: $mainFont;
     font-size: $mainFont--size;
