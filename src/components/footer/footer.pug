@@ -1,6 +1,8 @@
 include ../logo/logo
 //- include ../linksList/linksList
 include ../nav/nav
+include ../socialIcons/socialIcons
+
 
 mixin footer ({footerPromo=''}) 
   footer.footer
@@ -39,6 +41,12 @@ mixin footer ({footerPromo=''})
           p.footer__subscribeHeading Подписка
           p.footer__subscribeText Получайте специальные предложения и новости сервиса
           .footer__subscribeEmail
-    .footer__blockCopyright
+    .footer__copyrightBar
       .footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
       .footer__social
+        +socialIcons({
+          socialIcons: [
+          { title: "twitter", link: "https://twitter.com" },
+          { title: "facebook", link: "https://facebook.com" },
+          { title: "instagram", link: "https://instagram.com" }
+        ]})
