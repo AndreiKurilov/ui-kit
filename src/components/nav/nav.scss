@@ -4,17 +4,24 @@
   display: flex;
  
   &__list {
-    list-style: none;
     margin: 0;
     padding: 0;
+  }
+  
+  &__list_style-none {
     display: flex;
   }
   
   &__item {
-    margin-right: 20px;
     cursor: pointer;
     display: flex;
     position: relative;
+    margin-bottom: 20px;
+  }
+  
+  &__item_margin-bottom {
+    margin-right: 20px;
+    margin-bottom: 0;
   }
   
   &__link, 
@@ -33,20 +40,28 @@
   &__link_active {
     font-family: $mainFontBold;
     color: $color--darkShade75;
+    font-size: 12px;
     
     &:hover{
       color: $color--main;
     }
   }
     
+  &__link_heading {
+    text-transform: uppercase;
+    color: $color--main;
+    pointer-events: none;
+    cursor: default;
+  }
+
   &__item_withArrow::after {
-    content: '\e902';
+    content: '\e905';
     font-family: $materialIcons;
     color: $color--darkShade50;
-    font-size: 13px;
+    font-size: 8px;
     cursor: pointer;
     margin-left: 7px;
-    margin-top: 3px;
+    margin-top: 5.5px;
   }
   
   &__dropdown {
