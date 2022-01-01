@@ -1,0 +1,9 @@
+mixin socialIcons({ socialIcons })
+  .socialIcons
+    each socialIcon in socialIcons
+      - const socialTitle = "socialIcons__link_" + socialIcon.title
+      a&attributes({
+        class: ["socialIcons__link", socialTitle], 
+        href: `${socialIcon.link}`,
+        target: "_blank"
+      })
