@@ -1,0 +1,39 @@
+@import '../../scss/variables.scss';
+
+.socialIcons {
+  &__link {
+    background-image: $primaryGradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // color: transparent;
+    font-family: $materialIcons;
+    font-size: 24px;
+    
+    
+    
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    
+    &_twitter::before {
+      content: '\e901';
+    }
+    &_facebook::before {
+      content: '\e902';
+    }
+    &_instagram::before {
+      content: '\e903';
+    }
+  }
+}
+
+
+// &:focus {
+  //   border: $colorBorder;
+  //   border-radius: 4px;
+  //   outline: none;
+  //   box-shadow: 0 0 2px $designColor_main;
+  // }
+  
+  
