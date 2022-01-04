@@ -67,14 +67,12 @@
 
   &__copyrightBar {
     display: flex;
-    margin-left: 140px;
-    margin-right: 140px;
     align-items: center;
     justify-content: space-between;
+    padding: 23px 140px;
   }
 
   &__copyright {
-    margin-top: 26px;
     font-family: $mainFont;
     font-size: $mainFont--size;
     line-height: 17px;
