@@ -1,0 +1,16 @@
+include ../logo/logo
+include ../socialIcons/socialIcons
+
+mixin footerMobile () 
+  footer.footerMobile
+    .footerMobile__wrapper
+      +logo('colorWithText')
+      .footerMobile__copyright Copyright © 2018 Toxin отель. Все права защищены.
+      .footerMobile__social
+        +socialIcons({
+          socialIcons: [
+          { title: "twitter", link: "https://twitter.com" },
+          { title: "facebook", link: "https://facebook.com" },
+          { title: "instagram", link: "https://instagram.com" }
+          ]
+        })
