@@ -1,10 +1,11 @@
 .headersFooters {
-  position: absolute;
-  width: 1440px;
-  height: 1350px;
-  background: #F4F4F6;
-  top: 50px;
-  left: 3030px;
+  // position: absolute;
+  // width: 1440px;
+  // height: 1350px;
+  // background: #F4F4F6;
+  // top: 50px;
+  // left: 3030px;
+  height: 100%;
 }
 
 // .headersFooters__blockName {
@@ -25,13 +26,13 @@
   top: 140px;
 }
 
-// .headersFooters__headerIsLogged {
-//   position: absolute;
-//   width: 1440px;
-//   height: 70px;
-//   left: 0px;
-//   top: 250px;
-// }
+.headersFooters__headerIsLogged {
+  position: absolute;
+  width: 1440px;
+  height: 70px;
+  left: 0px;
+  top: 250px;
+}
 
 .headersFooters__footer {
   position: absolute;
