@@ -4,38 +4,41 @@ include ../button/button
 
 mixin header ({ isLogged=false, userName="" }) 
   .header
-    .header__container
-      .header__logo
-        +logo('colorWithText')
-      .header__wrapper
-        .header__nav
-          +navigation({
-            listStyleNone: true,
-            navList: [
-              {name: 'О нас', url: "./error-page.html", isActived: true}, 
-              {name: 'Услуги', dropdown: true,
-              optionsList: [
-                {name: 'Работа или отдых', url: "./error-page.html"},
-                {name: 'Развлечения', url: "./error-page.html"},
-                {name: 'Условия отмены', url: "./error-page.html"}
+    .header__body
+      .header__container
+        .header__logo
+          +logo('colorWithText')
+        .header__menu-burger
+          span.header__menu-burger-icon
+        .header__wrapper
+          .header__nav
+            +navigation({
+              listStyleNone: true,
+              navList: [
+                {name: 'О нас', url: "./error-page.html", isActived: true}, 
+                {name: 'Услуги', dropdown: true,
+                optionsList: [
+                  {name: 'Работа или отдых', url: "./error-page.html"},
+                  {name: 'Развлечения', url: "./error-page.html"},
+                  {name: 'Условия отмены', url: "./error-page.html"}
+                ]
+                }, 
+                {name: 'Вакансии', url: "./error-page.html"}, 
+                {name: 'Новости', url: "./error-page.html"}, 
+                {name: 'Соглашения', dropdown: true,
+                optionsList: [
+                  {name: 'Общие положения', url: "./error-page.html"},
+                  {name: 'Правила и условия', url: "./error-page.html"},
+                  {name: 'Разрешение споров', url: "./error-page.html"}
+                ]
+                } 
               ]
-              }, 
-              {name: 'Вакансии', url: "./error-page.html"}, 
-              {name: 'Новости', url: "./error-page.html"}, 
-              {name: 'Соглашения', dropdown: true,
-              optionsList: [
-                {name: 'Общие положения', url: "./error-page.html"},
-                {name: 'Правила и условия', url: "./error-page.html"},
-                {name: 'Разрешение споров', url: "./error-page.html"}
-              ]
-              } 
-            ]
-          })
-        if isLogged
-          .header__isLogged #{userName}
-        else
-          .header__btns
-            .header__buttonLogin
-              +button({btnModifier: true, isWhite: true, btnTitle: 'войти'})
-            .header__buttonRegister
-              +button({isDefault: true, btnTitle: 'зарегистрироваться'})
+            })
+          if isLogged
+            .header__isLogged #{userName}
+          else
+            .header__btns
+              .header__buttonLogin
+                +button({btnModifier: true, isWhite: true, btnTitle: 'войти'})
+              .header__buttonRegister
+                +button({isDefault: true, btnTitle: 'зарегистрироваться'})
