@@ -88,10 +88,9 @@
 
   &__wrapper {
     display: flex;
+    align-items: center;
 
     @media (max-width: 1050px) {
-      // display: none;
-    
       position: fixed;
       top: 0;
       left: -100%;
@@ -101,7 +100,7 @@
       flex-direction: column;
       justify-content: space-evenly;
       background-color: 
-      $color--darkShade25;
+      $color--darkShade75;
       transition: 0.2s;
       }
     
