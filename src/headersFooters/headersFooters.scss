@@ -1,51 +1,17 @@
 .headersFooters {
-  // position: absolute;
-  // width: 1440px;
-  // height: 1350px;
-  // background: #F4F4F6;
-  // top: 50px;
-  // left: 3030px;
-  height: 100%;
-}
+  &__logo {
+    margin: 30px 0 62px 30px;
+  }
 
-// .headersFooters__blockName {
-//   position: absolute;
-//   top: -17px;
-//   font-family: "Montserrat-regular";
-//   font-weight: normal;
-//   font-style: normal;
-//   font-size: 14px;
-//   color: rgba(8, 8, 15, 0.25);
-// }
+  &__headerLogin {
+    margin-bottom: 40px;
+  }
 
-.headersFooters__headerLogin {
-  position: absolute;
-  width: 1440px;
-  height: 70px;
-  left: 0px;
-  top: 140px;
-}
+  &__footer {
+    margin: 40px 0px 40px;
+  }
 
-.headersFooters__headerIsLogged {
-  position: absolute;
-  width: 1440px;
-  height: 70px;
-  left: 0px;
-  top: 250px;
-}
-
-.headersFooters__footer {
-  position: absolute;
-  width: 1440px;
-  height: 443px;
-  left: 0px;
-  top: 360px;
-}
-
-.headersFooters__footerMobile {
-  position: absolute;
-  width: 768px;
-  height: 367px;
-  left: 336px;
-  top: 843px;
+  &__footerMobile {
+    margin: 0 auto 140px;
+  }
 }
