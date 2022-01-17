@@ -99,50 +99,45 @@
       height: 100%;
       flex-direction: column;
       justify-content: space-evenly;
-      background-color: 
-      $color--darkShade75;
+      background-color: #e6e6e6;
       transition: 0.2s;
-      }
+    }
     
     &.active {
       display: block;
       left: 0px;
+      transition: 0.5s;
     }
-
-
-
-
-
-
-
-
-
-
   }
-
-
-
-
-
-
-
-
-
 
   &__nav {
     display: flex;
     align-items: center;
+
+    @media (max-width: 1050px) {
+      margin: 20px auto;
+      flex-direction: column;
+    }
+
   }
 
   &__btns {
     display: flex;
     align-items: center;
+
+    @media (max-width: 1050px) {
+      flex-direction: column;
+    }
   }
 
   &__buttonLogin {
     width: 87px;
     height: 34px;
     margin-right: 20px;
+
+    @media (max-width: 1050px) {
+      margin: 20px auto;
+    }
   }
 
   &__buttonRegister {
