@@ -6,6 +6,10 @@
   &__list {
     margin: 0;
     padding: 0;
+
+    @media (max-width: 1050px) {
+      flex-direction: column;
+    }
   }
   
   &__list_style-none {
@@ -17,11 +21,16 @@
     display: flex;
     position: relative;
     margin-bottom: 20px;
-  }
-  
-  &__item_margin-bottom {
-    margin-right: 20px;
-    margin-bottom: 0;
+
+    &_margin-bottom {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+    
+    @media (max-width: 1050px) {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
   }
   
   &__link, 
