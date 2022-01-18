@@ -40,6 +40,13 @@
       height: 34px;
       cursor: pointer;
     }
+
+    &.active {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      z-index: 3;
+    }
   
     .header__menu-burger-icon {
       position: absolute;
@@ -67,7 +74,7 @@
       }
 
       &.active {
-        background-color: #FFFFFF;
+        background-color: #e6e6e6;
       }
     
       &.active::before{
@@ -100,7 +107,7 @@
       flex-direction: column;
       justify-content: space-evenly;
       background-color: #e6e6e6;
-      transition: 0.2s;
+      transition: 0.5s;
     }
     
     &.active {
