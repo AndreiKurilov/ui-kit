@@ -6,14 +6,30 @@
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   height: 100%;
 
-  &__container {
+  &__body {
+    min-width: 320px;
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+
+    @media (max-width: 768px) {
+      border-bottom: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
   }
 
   &__logo {
     margin-top: 100px;
     margin-left: 140px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin: 120px auto 20px;
+    }
   }
 
   &__promo {
@@ -23,22 +39,50 @@
     font-size: $mainFont--size;
     line-height: 24px;
     color: $color--darkShade75;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__wrapper {
     margin-top: 104px;
     margin-left: 40px;
     display: flex;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    @media (max-width: 1250px) {
+      display: none;
+    }
   }
 
   &__aboutUs {
     margin-left: 57px;
     margin-right: 92px;
+
+    @media (max-width: 1250px) {
+      display: none;
+    }
+  }
+
+  &__support {
+    @media (max-width: 1250px) {
+      display: none;
+    }
   }
 
   &__subscribe {
     margin-left: 51px;
     max-width: 260px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__subscribeHeading {
@@ -66,10 +110,21 @@
   }
 
   &__copyrightBar {
+    min-width: 320px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 23px 140px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 0px;
+    }
   }
 
   &__copyright {
@@ -77,5 +132,20 @@
     font-size: $mainFont--size;
     line-height: 17px;
     color: $color--darkShade75;
+    
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+
+    @media (max-width: 470px) {
+      text-align: center;
+      padding: 0 20px;
+    }
+  }
+
+  &__social {
+    @media (max-width: 768px) {
+      margin: 25px auto 120px;
+    }
   }
 }
