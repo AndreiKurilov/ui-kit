@@ -1,78 +1,26 @@
-.textField__label {
-  font-family: "Montserrat-Bold";
-  font-size: 12px;
-  // line-height: 12px;
-  text-transform: uppercase;
-  color: #1F2041;
-  margin-bottom: 5px;
-  display: inline-block;
-}
-.textField__block {
-  height: 44px;
-  box-sizing: border-box;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  &:hover,
-  &:focus-within {
-    border: 1px solid rgba(31, 32, 65, 0.5);
-  };
-}
-.textField__block_border-dark {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
-.textField__input {
-  border: 0px;
-  padding: 0;
-  padding-left: 15px;
-  padding-right: 10px;
-  border-radius: 4px;
-  outline: none;
-  width: 100%;
-  font-family: "Montserrat-regular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.75);
-}
-input[type='text']::-webkit-input-placeholder {
-  color: rgba(31, 32, 65, 0.75);
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-}
-input[type="date"]::-webkit-datetime-edit-text {
-  color: rgba(31, 32, 65, 0.25);
-}
-input[type="date"]::-webkit-datetime-edit-day-field {
-  text-transform: uppercase;
-  color: rgba(31, 32, 65, 0.25);
-}
-input[type="date"]::-webkit-datetime-edit-month-field {
-  text-transform: uppercase;
-  color: rgba(31, 32, 65, 0.25);
-}
-input[type="date"]::-webkit-datetime-edit-year-field {
-  text-transform: uppercase;
-  color: rgba(31, 32, 65, 0.25);
-}
-input[type="date"]::-webkit-datetime-edit-year-field:focus {
-  color: rgba(31, 32, 65, 0.75);
-  cursor: pointer;
-}
-.textField__submit {
-  width: 42px;
-  border: 0px;
-  border-radius: 4px;
-  background-color: #FFFFFF;
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.textField__submit::before {
-  font-family: 'Material-Icons';
-  content: "\e901";
-  color: #BC9CFF;
-  font-size: 20px;
+@import '../../scss/variables.scss';
+
+.textField {
+
+  &__input {
+
+    &_small {
+      width: 150px;
+    }
+
+    &_middle {
+      width: 266px;
+    }
+
+    &_big {
+      width: 320px;
+    }
+  }
+
+  &__input {
+    height: 44px;
+  }
+
+
+
 }
