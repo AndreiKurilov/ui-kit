@@ -1,229 +1,25 @@
-@mixin default-hover-style {
-  font-family: "Montserrat-regular";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: rgba(31, 32, 65, 0.5);
-}
+
+
 .formElements {
-  position: absolute;
-  width: 1440px;
-  height: 1853px;
-  background: #FFFFFF;
-  // background: blue;
-  // background: rgb(52, 52, 150);
-  top: 1000px;
-  left: 50px;
-}
-.formElements__blockName {
-  position: absolute;
-  top: -21px;
-  font-family: "Montserrat-regular";
-  font-weight: bold;
-  font-style: normal;
-  font-size: 15px;
-  color: rgba(8, 8, 15, 0.25);
-}
-.formElements__commonLogoCircle {
-  position: absolute;
-  left: 30px;
-  top: 30px;
-}
-.formElements__textFieldDefault {
-  position: absolute;
-  left: 141px;
-  top: 143px;
-  width: 320px;
-  & .textField__default {
-    position: absolute;
-    left: 264px;
-    // top: 7px;
-    @include default-hover-style;
+
+  &__logo {
+    margin: 30px 0 62px 30px
   }
-}
-.formElements__textFieldHover {
-  position: absolute;
-  left: 141px;
-  top: 227px;
-  width: 320px;
-}
-.textField__hover {
-  position: absolute;
-  left: 228px;
-  @include default-hover-style;
-}
-.formElements__dropdownGuestsDefault {
-  position: absolute;
-  width: 320px;
-  height: 64.44px;
-  left: 141px;
-  top: 311px;
-}
-.formElements__textFieldMasked {
-  position: absolute;
-  left: 141px;
-  top: 395px;
-  width: 320px;
-}
-.formElements__dropdownDateDefault {
-  position: absolute;
-  width: 150px;
-  height: 65px;
-  left: 141px;
-  top: 502px;
-}
-.formElements__dropdownDate {
-  position: absolute;
-  width: 150px;
-  height: 65px;
-  left: 311px;
-  top: 502px;
-}
-.formElements__dropdownFilterDate {
-  position: absolute;
-  width: 266px;
-  height: 64px;
-  left: 141px;
-  top: 607px;
-}
-.formElements__textFieldSubscription {
-  position: absolute;
-  width: 267px;
-  // height: 64px;
-  left: 140px;
-  top: 712px;
-}
-.formElements__dropdownBedsDefault {
-  position: absolute;
-  width: 266px;
-  height: 64px;
-  left: 140px;
-  top: 876px;
-  & .dropdown__defaultState {
-    position: absolute;
-    left: 210px;
-    @include default-hover-style;
+
+  &__textFields {
+    margin-left: 141px;
   }
-}
-.formElements__dropdownBedsExpanded {
-  position: absolute;
-  width: 266px;
-  height: 181.56px;
-  left: 140px;
-  top: 960px;
-}
-.dropdown__expanded {
-  position: absolute;
-  left: 195px;
-  @include default-hover-style;
-}
-.formElements__dropdownGuests {
-  position: absolute;
-  width: 320px;
-  height: 221.56px;
-  left: 587px;
-  top: 876px;
-}
-// .formElements__dropdownHover {
-//   position: absolute;
-//   left: 141px;
-//   top: 227px;
-//   width: 320px;
-// }
-.formElements__checkboxButtons {
-  position: absolute;
-  left: 587px;
-  top: 143px;
-  width: 222px;
-  height: 129.12px;
-}
-.formElements__radioButtons {
-  position: absolute;
-  left: 587px;
-  top: 313px;
-  width: 220.74px;
-  height: 55px;
-}
-.formElements__toggle {
-  position: absolute;
-  left: 587px;
-  top: 404.56px;
-  width: 260px;
-  height: 89px;
-}
-.formElements__likeButton {
-  position: absolute;
-  left: 587px;
-  top: 534px;
-  width: 89.72px;
-  height: 51px;
-}
-.formElements__likeButtonNameBlock {
-  font-family: "Montserrat-bold";
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041;
-  user-select: none;
-  margin-bottom: 16px;
-}
-.formElements__rateButton {
-  position: absolute;
-  left: 587px;
-  top: 625px;
-  // width: 259.74px;
-  height: 55px;
-}
-.formElements__richCheckboxButtons {
-  position: absolute;
-  left: 587px;
-  top: 1196px;
-  width: 260px;
-  height: 145px;
-}
-.formElements__buttons {
-  position: absolute;
-  width: 218px;
-  height: 195px;
-  left: 979px;
-  top: 231px;
-  .formElements__buttonsTitle {
-    font-family: "Montserrat-bold";
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #1F2041;
-    display: block;
-    margin-bottom: 15px;
+  
+  &__textFieldDefault, 
+  &__textFieldHover, 
+  &__dropdownDefault
+  {
+    width: 320px;
   }
-}
-.formElements__pagination {
-  position: absolute;
-  width: 241px;
-  height: 106px;
-  left: 979px;
-  top: 540px;
-  .formElements__paginationTitle {
-    font-family: "Montserrat-bold";
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: #1F2041;
-    display: block;
-    margin-bottom: 15px;
+
+  &__textFieldHover {
+    margin: 20px 0;
   }
-}
-.formElements__guestRecall {
-  position: absolute;
-  left: 587px;
-  top: 1574px;
-  width: 711px;
-  height: 133px;
-}
-.formElements__bulletList {
-  position: absolute;
-  left: 979px;
-  top: 1196px;
-  width: 260px;
-  height: 147px;
+
+
 }
