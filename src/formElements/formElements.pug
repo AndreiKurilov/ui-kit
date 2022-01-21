@@ -1,7 +1,25 @@
+include ../components/logo/logo
+include ../components/heading/heading
+include ../components/textField/textField
+
+
+
+
 .formElements
-  .formElements__blockName Form Elements
-  //- .formElements__commonLogoCircle
-  //-   include ../headersFooters/commonBlocks/commonLogoCircle/commonLogoCircle
+  .formElements__logo
+    +logo('colorless')
+  section.formElements__textFields
+    .formElements__textFieldDefault
+      +heading({title: "text field", state: "default"})
+      +textField({type: "email", placeholder: "Email"})
+    .formElements__textFieldHover
+      +heading({title: "text field", state: "hover/focus"})
+      +textField({type: "email", isFocused: true, value: "This is pretty awesome"})
+    .formElements__dropdownDefault
+      +heading({title: "dropdown"})
+      +textField({value: "Сколько гостей"})
+
+  
   //- .formElements__textFieldDefault
   //-   .textField__default default
   //-   include ./commonBlocks/textField/textField
@@ -31,10 +49,10 @@
   //- .formElements__textFieldSubscription
   //-   include ./commonBlocks/textField/textField
   //-   +textField({label: 'subscription text field', idInput: 'emailSub', typeInput: 'email', placeholderInput: 'Email', button: true})
-  .formElements__dropdownBedsDefault
-    .dropdown__defaultState default 
-    include ./commonBlocks/dropdown/dropdown
-    +dropdown({idDropdown: 'dropdown', label: 'dropdown', titleDefault: '2 спальни, 2 кровати...'})
+  //- .formElements__dropdownBedsDefault
+  //-   .dropdown__defaultState default 
+  //-   include ../components/dropdown/dropdown
+  //-   +dropdown({idDropdown: 'dropdown', label: 'dropdown', titleDefault: '2 спальни, 2 кровати...'})
   //- .formElements__dropdownBedsExpanded
   //-   .dropdown__expanded expanded
   //-   include ./commonBlocks/dropdown/dropdown
