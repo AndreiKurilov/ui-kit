@@ -1,3 +1,4 @@
+import '../components/heading/heading.js';
 import '../components/dropdown/dropdown.js';
 import '../components/textField/textField.js';
 import '../components/checkboxButtons/checkboxButtons.js';
