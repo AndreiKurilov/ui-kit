@@ -95,7 +95,6 @@
 
   &__wrapper {
     display: flex;
-    align-items: center;
 
     @media (max-width: 1050px) {
       position: fixed;
@@ -111,7 +110,6 @@
     }
     
     &.active {
-      display: block;
       left: 0px;
       transition: 0.5s;
     }
