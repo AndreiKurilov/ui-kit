@@ -123,8 +123,22 @@
       margin: 20px auto;
       flex-direction: column;
     }
-
   }
+
+  &__isLogged {
+    font-family: $mainFont;
+    font-size: $mainFont--size;
+    line-height: 30px;
+    color: $color--darkShade50;
+    border-left: 1px solid rgba(31, 32, 65, 0.1);
+    padding-left: 20px;
+
+    @media (max-width: 1050px) {
+      margin: 20px auto;
+    }
+  }
+
+
 
   &__btns {
     display: flex;
@@ -150,12 +164,4 @@
     height: 34px;
   }
 
-  &__isLogged {
-    font-family: $mainFont;
-    font-size: $mainFont--size;
-    line-height: 30px;
-    color: $color--darkShade50;
-    border-left: 1px solid rgba(31, 32, 65, 0.1);
-    padding-left: 20px;
-  }
 }
