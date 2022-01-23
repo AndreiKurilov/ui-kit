@@ -8,13 +8,7 @@ mixin header ({ isLogged=false, userName="" })
       .header__container
         .header__logo
           +logo('colorWithText')
-        script.
-          document.querySelector('.header__menu-burger').addEventListener ('click', function(){
-            document.querySelector('.header__menu-burger-icon').classList.toggle('active');
-            document.querySelector('.header__wrapper').classList.toggle('active');
-            document.querySelector('.header__menu-burger').classList.toggle('active');
-          })
-        .header__menu-burger
+        .header__menu-burger.js-menu-burger
           span.header__menu-burger-icon
         .header__wrapper
           .header__nav
