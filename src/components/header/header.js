@@ -3,13 +3,28 @@ import '../nav/nav.js';
 import '../button/button.js';
 import './header.scss';
 
-const menuBurgerItem = document.querySelectorAll(".js-menu-burger");
-if( menuBurgerItem.length > 0) {
-  menuBurgerItem.forEach((item) => {
-    item.addEventListener ('click', function(){
-      document.querySelector('.header__menu-burger').classList.toggle('active');
-      document.querySelector('.header__menu-burger-icon').classList.toggle('active');
-      document.querySelector('.header__wrapper').classList.toggle('active');
-    })
-  })
+class burgerMenu {
+  constructor(selector) {
+    this.selector = selector;
+    this.addListener();
+  }
+  
+  addListener() {
+    this.selector.addEventListener('click', () =>
+    this.selector.classList.toggle('active'));
+  }
+
+  // addListener() {
+  //   this.selector.addEventListener('click', this.toggleActived.bind(this));
+  // }
+    
+  // toggleActived() {
+  //   this.selector.classList.toggle('active');
+  // }
+}
+
+const burgerMenuItems = document.querySelectorAll('.header__menu-burger');
+
+if (burgerMenuItems.length > 0) {
+  burgerMenuItems.forEach((selector) => new burgerMenu(selector));
 }
