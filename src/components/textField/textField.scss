@@ -1,26 +1,46 @@
 @import '../../scss/variables.scss';
 
-.textField {
+::-webkit-input-placeholder {
+  color: $color--darkShade25;
+}
 
-  &__input {
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
 
-    &_small {
-      width: 150px;
-    }
-
-    &_middle {
-      width: 266px;
-    }
-
-    &_big {
-      width: 320px;
-    }
+input[type=date] {
+  text-transform: uppercase;
+  color: $color--darkShade25;
+  
+  &:hover,
+  &:focus {
+    color: $color--darkShade75;
   }
+}
 
+.textField {
   &__input {
     height: 44px;
+    padding: 0 0 0 15px;
+    box-sizing: border-box;
+    border: 1px solid $color--darkShade25;
+    border-radius: 4px;
+    width: 100%;
+    outline: none;
+    
+    font-family: $mainFont;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color--darkShade75;
+    text-overflow: ellipsis;
+    
+    &:hover,
+    &:focus {
+      border: 1px solid $color--darkShade50;
+    }
+    
+    &_isFocused {
+      border: 1px solid $color--darkShade50;
+    }
   }
-
-
-
 }
