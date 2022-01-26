@@ -1,4 +1,15 @@
-mixin textField({ type="", placeholder="", size=""})
+mixin textField({ type="", placeholder="", isFocused=false, value="" })
+  -
+    const inputFocused = isFocused ? "textField__input_isFocused" : "";
+    const textUppercase = isUppercase ? "textField__input_isUppercase" : "";
+
+    const inputAttributes = {
+    class: ['textField__input', inputFocused, textUppercase],
+    type: type,
+    placeholder: placeholder,
+    value: value
+    }
+
   .textField
-    input.textField__input
+    input&attributes(inputAttributes)
       
