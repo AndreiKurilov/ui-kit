@@ -1,16 +1,24 @@
-mixin textField({ size="", type="", placeholder="", isFocused=false, value="" })
+mixin textField({ type="", placeholder="", value="", isFocused=false, isUppercase=false, withButton=false, buttonSubscribed=false })
   -
-    const sizeField = `textField_size_${size}`;
-    const inputFocused = isFocused ? "textField__input_isFocused" : "";
+    const focused = isFocused ? "textField_isFocused" : "";
     const textUppercase = isUppercase ? "textField__input_isUppercase" : "";
+    const inputWithButton = withButton ? "textField__input_withButton" : "";
 
     const inputAttributes = {
-    class: ['textField__input', inputFocused, textUppercase],
-    type: type,
-    placeholder: placeholder,
-    value: value
+      class: ['textField__input', textUppercase, inputWithButton],
+      type: type,
+      placeholder: placeholder,
+      value: value
     }
 
-  .textField(class=sizeField)
+    const buttonAttributes = {
+      class: ["textField__buttonSubscribed"],
+      type: "submit",
+      name: "subscribe"
+    }
+
+  .textField(class=focused)
     input&attributes(inputAttributes)
+    if (buttonSubscribed)
+       button&attributes(buttonAttributes)
       
