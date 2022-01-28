@@ -20,31 +20,28 @@ input[type=date] {
 }
 
 .textField {
-  &_size {
-    &_big {
-      // max-width: 320px;
-      width: 320px;
-    }
-
-    &_middle {
-      // max-width: 266px;
-      width: 266px;
-    }
-
-    &_small {
-      // max-width: 150px;
-      width: 150px;
-    }
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 1px solid $color--darkShade25;
+  border-radius: 4px;
+  
+  &_isFocused {
+    border: 1px solid $color--darkShade50;
   }
-
+  
+  &:hover,
+  &:focus {
+    border: 1px solid $color--darkShade50;
+  }
+  
   &__input {
-    height: 44px;
+    height: 42px;
     padding: 0 0 0 15px;
-    box-sizing: border-box;
-    border: 1px solid $color--darkShade25;
-    border-radius: 4px;
     width: 100%;
     outline: none;
+    border: none;
+    border-radius: 4px;
     
     font-family: $mainFont;
     font-size: 14px;
@@ -52,13 +49,27 @@ input[type=date] {
     color: $color--darkShade75;
     text-overflow: ellipsis;
     
-    &:hover,
-    &:focus {
-      border: 1px solid $color--darkShade50;
+    &_withButton {
+      width: 221px;
     }
-    
-    &_isFocused {
-      border: 1px solid $color--darkShade50;
+  }
+
+  &__buttonSubscribed {
+    border: none;
+    outline: none;
+    width: 43px;
+    padding: 0px;
+    border-radius: 0 4px 4px 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: $primaryGradient;
+    color: transparent;
+
+    &::after {
+      content: "\e904";
+      font-family: $materialIcons;
+      font-size: 16px;
+      cursor: pointer;
     }
   }
 }
