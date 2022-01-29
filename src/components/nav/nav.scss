@@ -29,6 +29,7 @@
     
     @media (max-width: 1050px) {
       justify-content: center;
+      margin-right: 0px;
       margin-bottom: 20px;
     }
   }
@@ -86,7 +87,7 @@
     background: #FFFFFF;
     list-style-type: none;
     border-radius: 5px;
-    box-shadow: 0 0 20px $color--darkShade25;
+    box-shadow: 0 5px 20px $color--darkShade25;
   }
 
   &__item:hover &__dropdown {
