@@ -1,0 +1,12 @@
+mixin checkbox({})
+  -
+    const optionsList = ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"];
+
+  .checkbox
+    ul.checkbox__list
+      each option in optionsList
+        li.checkbox__item
+          label.checkbox__label
+            input(type="checkbox").checkbox__input
+            span.checkbox__box
+            span.checkbox__title #{optionsList[0]}
