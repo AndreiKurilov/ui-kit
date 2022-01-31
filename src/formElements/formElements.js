@@ -1,7 +1,7 @@
 import '../components/heading/heading.js';
 import '../components/dropdown/dropdown.js';
 import '../components/textField/textField.js';
-import '../components/checkboxButtons/checkboxButtons.js';
+import '../components/checkbox/checkbox.js';
 import '../components/radioButtons/radioButtons.js';
 import '../components/toggle/toggle.js';
 import '../components/likeButton/likeButtonColor/likeButtonColor.js';
