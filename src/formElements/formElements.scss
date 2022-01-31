@@ -1,6 +1,7 @@
 
 
 .formElements {
+  // display: flex;
 
   &__logo {
     margin: 30px 0 62px 30px
@@ -8,12 +9,6 @@
 
   &__textFields {
     margin-left: 141px;
-  }
-  
-  &__textFieldDefault, 
-  &__textFieldHover, 
-  &__dropdownDefault
-  {
     width: 320px;
   }
 
@@ -21,5 +16,39 @@
     margin: 20px 0;
   }
 
+  &__maskedTextField {
+    margin: 20px 0 40px 0;
+  }
 
+  &__dateDropdowns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__dateDropdownDefault,
+  &__dateDropdown {
+    width: 150px;
+  }
+
+  &__filterDateDropdown,
+  &__subscriptionTextField {
+    width: 266px;
+  }
+
+  &__filterDateDropdown {
+    margin: 40px 0;
+  }
+
+  &__subscriptionTextField {
+    margin-bottom: 100px;
+  }
+  
+  &__checkboxRadioButtons {
+    margin-left: 126px;
+    width: 260px;
+  }
+
+  &__checkbox {
+    margin-bottom: 200px;
+  }
 }
