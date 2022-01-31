@@ -1,8 +1,7 @@
 include ../components/logo/logo
 include ../components/heading/heading
 include ../components/textField/textField
-
-
+include ../components/checkbox/checkbox
 
 
 .formElements
@@ -10,16 +9,43 @@ include ../components/textField/textField
     +logo('colorless')
   section.formElements__textFields
     .formElements__textFieldDefault
-      +heading({title: "text field", state: "default"})
-      +textField({type: "email", placeholder: "Email"})
+      +heading({ title: "text field", state: "default" })
+      +textField({ type: "email", placeholder: "Email" })
     .formElements__textFieldHover
-      +heading({title: "text field", state: "hover/focus"})
-      +textField({type: "email", isFocused: true, value: "This is pretty awesome"})
+      +heading({ title: "text field", state: "hover/focus" })
+      +textField({ type: "email", isFocused: true, value: "This is pretty awesome" })
     .formElements__dropdownDefault
-      +heading({title: "dropdown"})
-      +textField({value: "Сколько гостей"})
+      +heading({ title: "dropdown" })
+      +textField({ value: "Сколько гостей" })
+    .formElements__maskedTextField
+      +heading({ title: "masked text field" })
+      +textField({ type: "date", isUppercase: true })
+    .formElements__dateDropdowns 
+      .formElements__dateDropdownDefault
+        +heading({ title: "date dropdown" })
+        +textField({ type: "date", isUppercase: true })
+      .formElements__dateDropdown
+        +heading({ title: "date dropdown" })
+        +textField({ type: "date", isUppercase: true })
+    .formElements__filterDateDropdown
+      +heading({ title: "filter date dropdown" })
+      +textField({ type: "date", isUppercase: true })
+    .formElements__subscriptionTextField
+      +heading({ title: "subscription text field" })
+      +textField({ type: "email", placeholder: "Email", buttonSubscribed: true, inputWithButton: true, withButton: true })
+  section.formElements__checkboxRadioButtons
+    .formElements__checkbox
+      +heading({ title: "checkbox buttons" })
+      +checkbox({})
 
   
+
+
+
+
+
+
+
   //- .formElements__textFieldDefault
   //-   .textField__default default
   //-   include ./commonBlocks/textField/textField
