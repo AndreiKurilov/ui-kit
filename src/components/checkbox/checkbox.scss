@@ -2,33 +2,24 @@
 
 .checkbox {
 
-  &__list {
-    margin: 16.56px 0 0 0;
-    padding: 0px;
-    list-style: none;
-  }
-
   &__label {
     margin-bottom: 10px;
     display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 
   &__input {
-    // display: none;
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-
+    display: none;
+    
     &:checked + .checkbox__box::after {
-      position: absolute;
-      top: 4px;
-      left: 6px;
+      display: inline-block;
+      margin-top: 4px;
       width: 6px;
       height: 8px;
       border-style: solid;
       border-width: 0 2px 2px 0;
+      box-sizing: border-box;
       -webkit-border-image: $primaryGradient;
       -moz-border-image: $primaryGradient;
       border-image: $primaryGradient;
@@ -38,22 +29,24 @@
       transform: rotate(45deg);
       content: '';
     }
+
+    &:checked + .checkbox__box {
+      border: 1px solid $color--designMain;
+    }
   }
 
   &__box {
-    // position: absolute;
     width: 20px;
     height: 20px;
     background: #FFFFFF;
     border: 1px solid $color--darkShade25;
     box-sizing: border-box;
     border-radius: 4px;
-    display: inline-block;
-
+    display: flex;
+    justify-content: center;
   }
 
   &__title {
-    // position: absolute;
     font-family: $mainFont;
     font-size: $mainFont--size;
     color: $color--darkShade50;
