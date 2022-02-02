@@ -3,7 +3,6 @@
 .checkbox {
 
   &__label {
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -20,13 +19,13 @@
       border-style: solid;
       border-width: 0 2px 2px 0;
       box-sizing: border-box;
+      border-image: $primaryGradient;
       -webkit-border-image: $primaryGradient;
       -moz-border-image: $primaryGradient;
-      border-image: $primaryGradient;
-      border-image-slice: 1;
+      transform: rotate(45deg);
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
+      border-image-slice: 1;
       content: '';
     }
 
@@ -53,5 +52,20 @@
     line-height: 18px;
     color: $color--darkShade50;
     margin-left: 10px;
+    width: 200px;
+    
+    &_fontBold {
+      font-family: $mainFontBold;
+      color: $color--darkShade75;
+    }
+  }
+  
+  &__description {
+    display: block;
+    font-family: $mainFont;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color--darkShade50;
+    margin: 5px 0 10px 30px;
   }
 }
