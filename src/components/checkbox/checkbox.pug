@@ -1,17 +1,16 @@
-mixin checkbox({ checked=false })
+mixin checkbox({ title="", description="", checked=false, isRich=false } = {})
+  -
+    const titleFontBold = isRich ? "checkbox__title_fontBold" : "";
 
-
-  label.checkbox__label
-    input&attributes({
-      class: "checkbox__input",
-      type: "checkbox",
-      checked: checked,
-    })
-    span.checkbox__box
-    span.checkbox__title optionsList
-
-
-
-//- const optionsList = ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"];
-
-
+  .checkbox
+    label.checkbox__label
+      input&attributes({
+        class: "checkbox__input",
+        type: "checkbox",
+        checked: checked,
+      })
+      span.checkbox__box
+      span&attributes({
+        class: ["checkbox__title", titleFontBold]}) #{title}
+    if (isRich)
+      span.checkbox__description #{description}
