@@ -4,7 +4,7 @@
 
   &__label {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
   }
 
@@ -12,7 +12,6 @@
     display: none;
     
     &:checked + .checkbox__box::after {
-      display: inline-block;
       margin-top: 4px;
       width: 6px;
       height: 8px;
@@ -44,7 +43,7 @@
     display: flex;
     justify-content: center;
   }
-
+  
   &__title {
     font-family: $mainFont;
     font-size: $mainFont--size;
@@ -52,7 +51,10 @@
     line-height: 18px;
     color: $color--darkShade50;
     margin-left: 10px;
+    padding-top: 1.5px;
     width: 200px;
+    user-select: none;
+    // width: 100%;
     
     &_fontBold {
       font-family: $mainFontBold;
@@ -67,5 +69,6 @@
     line-height: 14px;
     color: $color--darkShade50;
     margin: 5px 0 10px 30px;
+    user-select: none;
   }
 }
