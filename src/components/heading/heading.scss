@@ -1,0 +1,44 @@
+@import '../../scss/variables.scss';
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+  &__title {
+    font-family: $mainFontBold;
+    color: $color--main;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin: 0px;
+    display: flex;
+
+    &_expand-more::after {
+      content: '\e905';
+      font-family: $materialIcons;
+      color: $color--darkShade50;
+      font-size: 8px;
+      cursor: pointer;
+      margin-left: 40px;
+    }
+    
+    &.active > .heading__title_expand-more::after {
+      content: '\e900';
+      font-family: $materialIcons;
+      color: $color--darkShade50;
+      font-size: 8px;
+      cursor: pointer;
+      margin-left: 40px;
+    }
+  }
+  
+  &__state {
+    font-family: $mainFont;
+    color: $color--darkShade50;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+}
