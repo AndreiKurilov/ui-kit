@@ -1,9 +1,9 @@
 mixin heading ({ title="", state="", isExpanded=false })
   -
-    const expandMore = isExpanded ? "heading__title_expand-more" : ""
+    const expandMore = isExpanded ? "heading_expand-more" : ""
 
-  .heading
+  .heading(class=expandMore)
     h3&attributes({
-      class: ["heading__title", expandMore] }) #{title}
+      class: "heading__title" }) #{title}
     if (state)
       span.heading__state #{state}
