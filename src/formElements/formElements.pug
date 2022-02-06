@@ -1,25 +1,32 @@
 include ../components/logo/logo
 include ../components/heading/heading
 include ../components/textField/textField
-include ../components/checkbox/checkbox
+include ../components/checkboxList/checkboxList
 
 
 .formElements
-  .formElements__logo
-    +logo('colorless')
+
+  //- .formElements__logo
+  //-   +logo('colorless')
+
   section.formElements__textFields
+
     .formElements__textFieldDefault
       +heading({ title: "text field", state: "default" })
       +textField({ type: "email", placeholder: "Email" })
+
     .formElements__textFieldHover
       +heading({ title: "text field", state: "hover/focus" })
       +textField({ type: "email", isFocused: true, value: "This is pretty awesome" })
+
     .formElements__dropdownDefault
       +heading({ title: "dropdown" })
       +textField({ value: "Сколько гостей" })
+
     .formElements__maskedTextField
       +heading({ title: "masked text field" })
       +textField({ type: "date", isUppercase: true })
+
     .formElements__dateDropdowns 
       .formElements__dateDropdownDefault
         +heading({ title: "date dropdown" })
@@ -27,18 +34,65 @@ include ../components/checkbox/checkbox
       .formElements__dateDropdown
         +heading({ title: "date dropdown" })
         +textField({ type: "date", isUppercase: true })
+
     .formElements__filterDateDropdown
       +heading({ title: "filter date dropdown" })
       +textField({ type: "date", isUppercase: true })
+
     .formElements__subscriptionTextField
       +heading({ title: "subscription text field" })
       +textField({ type: "email", placeholder: "Email", buttonSubscribed: true, inputWithButton: true, withButton: true })
+
+
+    .formElements__checkboxExpandable
+      +heading({ title: "expandable checkbox list", isExpanded: true})
+      +checkboxList({ 
+        checkboxList: [
+          { title: "Завтрак" },
+          { title: "Письменный стол", checked: true },
+          { title: "Стул для кормления", checked: true },
+          { title: "Кроватка", checked: true },
+          { title: "Телевизор" },
+          { title: "Шампунь" },
+        ]
+      })
+
+    .formElements__checkboxExpandable
+      +heading({ title: "expandable checkbox list", isExpanded: true})
+      +checkboxList({ 
+        checkboxList: [
+          { title: "Завтрак" },
+          { title: "Письменный стол", checked: true },
+          { title: "Стул для кормления", checked: true },
+          { title: "Кроватка", checked: true },
+          { title: "Телевизор" },
+          { title: "Шампунь" },
+        ]
+      })
+
   section.formElements__checkboxRadioButtons
+
     .formElements__checkbox
       +heading({ title: "checkbox buttons" })
-      +checkbox({})
+      +checkboxList({
+        checkboxList: [
+          { title: "Можно курить" },
+          { title: "Можно с питомцами", checked: true },
+          { title: "Можно пригласить гостей (до\u00A010\u00A0человек)", checked: true },
+        ]
+      })
 
-  
+    .formElements__checkboxRich
+      +heading({ title: " rich checkbox buttons" })
+      +checkboxList({
+        checkboxList: [
+          { title: "Широкий коридор", isRich: true,
+            description: "Ширина коридоров в номере не\u00A0менее\u00A091\u00A0см." },
+          { title: "Помощник для инвалидов", isRich: true,
+            description: "На 1 этаже вас встретит специалист и\u00A0проводит до номера."},
+        ]
+      })
+
 
 
 
