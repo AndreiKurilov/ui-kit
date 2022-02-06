@@ -1,14 +1,18 @@
 
 
 .formElements {
-  // display: flex;
+  margin-left: 141px;
+  margin-top: 62px;
 
-  &__logo {
-    margin: 30px 0 62px 30px
-  }
+  display: grid;
+  grid-template-areas:
+    "textFields checkboxes buttons"
+    "textFields feedback feedback";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 158px;
 
   &__textFields {
-    margin-left: 141px;
+    grid-area: "textFields";
     width: 320px;
   }
 
@@ -44,11 +48,20 @@
   }
   
   &__checkboxRadioButtons {
+    grid-area: "checkboxes";
     margin-left: 126px;
     width: 260px;
   }
 
   &__checkbox {
-    margin-bottom: 200px;
+    margin-bottom: 50px;
+  }
+
+  &__checkboxRich {
+    margin-bottom: 50px;
+  }
+
+  &__checkboxExpandable {
+    margin-bottom: 20px;
   }
 }
