@@ -1,3 +1,5 @@
+include src/components/logo/logo
+
 <!DOCTYPE html>
 html(lang="en")
   head
@@ -7,7 +9,9 @@ html(lang="en")
     title Document
   body
     .page-wrapper
+      .page-wrapper__logo
+        +logo('colorless')
       //- include src/setColorsType/setColorsType
       //- include src/cards/cards
-      include src/headersFooters/headersFooters
-      //- include src/formElements/formElements
+      //- include src/headersFooters/headersFooters
+      include src/formElements/formElements
