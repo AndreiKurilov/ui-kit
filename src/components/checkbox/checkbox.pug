@@ -7,6 +7,7 @@ mixin checkbox({ title="", description="", checked=false, isRich=false } = {})
       input&attributes({
         class: "checkbox__input",
         type: "checkbox",
+        name: "checkbox",
         checked: checked,
       })
       span.checkbox__box
