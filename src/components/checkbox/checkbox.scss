@@ -34,7 +34,7 @@
   }
 
   &__box {
-    width: 20px;
+    min-width: 20px;
     height: 20px;
     background: #FFFFFF;
     border: 1px solid $color--darkShade25;
@@ -47,14 +47,11 @@
   &__title {
     font-family: $mainFont;
     font-size: $mainFont--size;
-    color: $color--darkShade50;
     line-height: 18px;
     color: $color--darkShade50;
     margin-left: 10px;
     padding-top: 1.5px;
-    width: 200px;
     user-select: none;
-    // width: 100%;
     
     &_fontBold {
       font-family: $mainFontBold;
