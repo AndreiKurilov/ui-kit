@@ -2,12 +2,12 @@ include ../components/logo/logo
 include ../components/heading/heading
 include ../components/textField/textField
 include ../components/checkboxList/checkboxList
+include ../components/radio/radio
+include ../components/toggle/toggle
+include ../components/like/like
 
 
 .formElements
-
-  //- .formElements__logo
-  //-   +logo('colorless')
 
   section.formElements__textFields
 
@@ -82,6 +82,25 @@ include ../components/checkboxList/checkboxList
         ]
       })
 
+    .formElements__radioButtons
+      +heading({ title: "radio buttons" })
+      .formElements__radioButtons-wrapper
+        +radio({ title: "Мужчина", name: "gender", value: "man", checked: true })
+        +radio({title: "Женщина", name: "gender", value: "woman", checked: false })
+
+    .formElements__toggle
+      +heading({ title: "toggle" })
+      .formElements__toggle-wrapper
+        +toggle({ title: "Получать спецпредложения", checked: true })
+        +toggle({ title: "Получать спецпредложения", checked: false })
+
+    .formElements__like
+      +heading({ title: "like button" })
+      .formElements__like-wrapper
+        +like({ value: "2" })
+        +like({ value: "12", isGradient: true, isColored: true })
+
+    
     .formElements__checkboxRich
       +heading({ title: " rich checkbox buttons" })
       +checkboxList({
