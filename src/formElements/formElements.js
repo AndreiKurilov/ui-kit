@@ -2,10 +2,9 @@ import '../components/heading/heading.js';
 import '../components/dropdown/dropdown.js';
 import '../components/textField/textField.js';
 import '../components/checkboxList/checkboxList.js';
-import '../components/radioButtons/radioButtons.js';
+import '../components/radio/radio.js';
 import '../components/toggle/toggle.js';
-import '../components/likeButton/likeButtonColor/likeButtonColor.js';
-import '../components/likeButton/likeButtonGrey/likeButtonGrey.js'
+import '../components/like/like.js';
 import '../components/rateButton/rateButton.js';
 import '../components/richCheckboxButtons/richCheckboxButtons.js';
 import '../components/pagination/pagination.js';
