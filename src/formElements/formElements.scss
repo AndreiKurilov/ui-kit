@@ -46,6 +46,10 @@
   &__subscriptionTextField {
     margin-bottom: 100px;
   }
+
+  &__checkboxExpandable {
+    margin-bottom: 20px;
+  }
   
   &__checkboxRadioButtons {
     grid-area: "checkboxes";
@@ -61,7 +65,37 @@
     margin-bottom: 50px;
   }
 
-  &__checkboxExpandable {
-    margin-bottom: 20px;
+  &__radioButtons {
+    margin-bottom: 36.56px;
+  }
+
+  &__radioButtons-wrapper {
+    display: flex;
+    width: 220px;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  &__toggle {
+    margin-bottom: 40.44px;
+  
+    &-wrapper {
+      margin-top: 16px;
+      height: 54px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__like {
+    margin-bottom: 40px;
+  
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 170px;
+      margin-top: 16px;
+    }
   }
 }
