@@ -1,18 +1,10 @@
-mixin like({ value=0, isGradient=false, isColored=false })
+mixin like({ value="0", isGradient=false, isColored=false })
   -
-    const iconColorGradient = isGradient ? "like__icon_gradient" : "";
-    const borderColored = isColored ? "like_borderColored" : "";
+    const iconGradient = isGradient ? "like_gradient" : "";
+    const borderColored = isColored ? "like__button_borderColored" : "";
     const numberColored = isColored ? "like__number_color" : "";
 
-  button&attributes({
-    class: [ "like", borderColored ]
-    //- name: "toggle",
-    //- type: "checkbox",
-    //- checked: checked,
-  })
-    span&attributes({
-      class: [ "like__icon", iconColorGradient ]
-    })
-    span&attributes({
-      class: [ "like__number", numberColored ]
+  .like( class=iconGradient )
+    button&attributes({
+      class: [ "like__button", borderColored, "like__number", numberColored ],
     }) #{value}
