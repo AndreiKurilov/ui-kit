@@ -1,52 +1,53 @@
 @import '../../scss/variables.scss';
 
 .like {
-  width: 40px;
-  height: 20px;
-  background: #FFFFFF;
-  border: 1px solid $color--darkShade25;
-  box-sizing: border-box;
-  border-radius: 10px;
   display: flex;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  padding: 0px;
-
-  &_borderColored {
-    border: 1px solid $color--designMain;
-  }
-
-  &__icon {
-    display: flex;
-    align-items: center;
-    margin-left: 3px;
-    
-    &::before {
-      content: "\e907";
-      font-family: $materialIcons;
-      font-size: 8px;
-      line-height: 9px;
-      color: $color--darkShade25;
-      cursor: pointer;
-    }
-    
-    &_gradient::before {
-      content: '\e906';
-      background: $primaryGradient;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  
+  &::before {
+    content: "\e907";
+    font-family: $materialIcons;
+    font-size: 8px;
+    color: $color--darkShade25;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 6px;
   }
   
+  &_gradient::before,
+  &:focus-within::before {
+    content: '\e906';
+    background: $primaryGradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  &__button {
+    width: 40px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid $color--darkShade25;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    padding: 0px;
+
+    &_borderColored,
+    &:focus {
+      border: 1px solid $color--designMain;
+      color: $color--designMain;
+    }
+  }
+
   &__number {
     font-family: $mainFont;
     font-size: 10px;
     color: $color--darkShade25;
     line-height: 12px;
-    margin-left: 6px;
-
+    padding-left: 12px;
+    
     &_color {
       color: $color--designMain;
     }
