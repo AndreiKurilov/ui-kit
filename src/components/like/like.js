@@ -8,12 +8,18 @@ class LikeCounter {
   
   addListener() {
     this.selector.addEventListener('click', function(e) {
-      e.target.innerText++;
+      let numberLikes = e.target.innerText;
+      numberLikes++;
+      e.target.innerText = numberLikes;
+      if (numberLikes > 9) {
+        e.target.classList.add("like_colored");
+        e.target.classList.add("like_gradient");
+      }
     })
   }
 }
 
-const likeButton = document.querySelectorAll('.like__button');
+const likeButton = document.querySelectorAll('.like');
 
 if (likeButton.length > 0) {
   likeButton.forEach((selector) => new LikeCounter(selector));
