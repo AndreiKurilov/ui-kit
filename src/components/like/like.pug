@@ -1,10 +1,8 @@
 mixin like({ value="0", isGradient=false, isColored=false })
   -
+    const buttonColored = isColored ? "like_colored" : "";
     const iconGradient = isGradient ? "like_gradient" : "";
-    const borderColored = isColored ? "like__button_borderColored" : "";
-    const numberColored = isColored ? "like__number_color" : "";
 
-  .like( class=iconGradient )
-    button&attributes({
-      class: [ "like__button", borderColored, "like__number", numberColored ],
+  button&attributes({
+    class: [ "like", buttonColored, iconGradient ]
     }) #{value}
