@@ -11,7 +11,7 @@ class LikeCounter {
       let numberLikes = e.target.innerText;
       numberLikes++;
       e.target.innerText = numberLikes;
-      if (numberLikes > 9) {
+      if (numberLikes > 5) {
         e.target.classList.add("like_colored");
         e.target.classList.add("like_gradient");
       }
