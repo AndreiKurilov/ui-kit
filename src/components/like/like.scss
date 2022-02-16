@@ -33,8 +33,8 @@
     padding-right: 6px;
   }
 
-  &:focus::before,
-  &_gradient::before {
+  &_gradient::before,
+  &:focus::before {
     content: '\e906';
     background: $primaryGradient;
     -webkit-background-clip: text;
