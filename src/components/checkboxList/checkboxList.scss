@@ -1,0 +1,14 @@
+@import '../../scss/variables.scss';
+
+.checkboxList {
+
+  &__list {
+    list-style: none;
+    margin: 17px 0 0;
+    padding: 0px;
+  }
+  
+  &__item {
+    margin-bottom: 10px;
+  }
+}
