@@ -1,0 +1,9 @@
+include ../checkbox/checkbox
+
+mixin checkboxList({ checked=false, checkboxList=[]} = {})
+
+  .checkboxList
+    ul.checkboxList__list
+      each item in checkboxList
+        li.checkboxList__item
+          +checkbox({title: item.title, checked: item.checked, description: item.description, isRich: item.isRich })
