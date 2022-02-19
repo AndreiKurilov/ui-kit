@@ -1,6 +1,6 @@
 import './heading.scss';
 
-class expandableСheckbox {
+class ExpandableСheckbox {
   constructor(selector) {
     this.selector = selector;
     this.addListener();
@@ -16,7 +16,7 @@ const headingExpandMore = document.querySelectorAll('.heading_expand-more');
 
 
 if (headingExpandMore.length > 0) {
-  headingExpandMore.forEach((selector) => new expandableСheckbox(selector));
+  headingExpandMore.forEach((selector) => new ExpandableСheckbox(selector));
 }
 
 
