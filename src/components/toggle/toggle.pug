@@ -1,8 +1,10 @@
-.toggle__nameBlock Toggle
-mixin toggle(options)
-  label.toggle__labelStyle
-    input(type="checkbox" checked).toggle__inputStyle
-    .toggle__customToggle= options.nameOption
-  label.toggle__labelStyle
-    input(type="checkbox").toggle__inputStyle
-    .toggle__customToggle= options.nameOption
+mixin toggle({ title="", checked=false } = {})
+  label.toggle__label
+    input&attributes({
+      class: "toggle__input",
+      name: "toggle",
+      type: "checkbox",
+      checked: checked,
+    })
+    span.toggle__box
+    span.toggle__title #{title}
