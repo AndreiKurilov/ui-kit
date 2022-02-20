@@ -1,0 +1,11 @@
+mixin radio({ title="", name="", value="", checked=false } = {})
+  label.radio__label
+    input&attributes({
+      class: "radio__input",
+      type: "radio",
+      name: name,
+      value: value,
+      checked: checked,
+    })
+    span.radio__box
+    span.radio__title #{title}
