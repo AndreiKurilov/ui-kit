@@ -1,5 +1,4 @@
-mixin bulletList
-  .bulletList__naneBlock Bullet list
-  .bulletList__style Нельзя с питомцами
-  .bulletList__style Без вечеринок и мероприятий
-  .bulletList__style Время прибытия — после 13:00, а выезд до 12:00
+mixin bulletList( listItems=[] )
+  ul.bulletList
+    each item in listItems
+      li.bulletList__item #{item}
