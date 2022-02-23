@@ -1,0 +1,39 @@
+@import '../../scss/variables.scss';
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  font-family: $mainFont;
+  font-size: $mainFont--size;
+  line-height: 24px;
+  color: $color--darkShade75;
+
+
+  &__header,
+  &__body {
+    display: flex;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+  }
+  &__avatar img{
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+  }
+
+  &__guest {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__guestName {
+    font-family: $mainFontBold;
+  }
+
+  &__likeButton {
+    margin-right: 14px;
+  }
+}
