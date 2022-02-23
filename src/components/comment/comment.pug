@@ -1,0 +1,14 @@
+include ../like/like
+
+mixin comment({ guestName="", date="", text="" })
+  .comment
+    .comment__header
+      .comment__avatar
+        img(src="./img/murad_sarafanov.jpg" alt="avatar")
+      .comment__guest
+        .comment__guestName #{guestName}
+        .comment__date #{date}
+    .comment__body
+      .comment__likeButton
+        +like({ value: "12", isGradient: true, isColored: true })
+      .comment__text #{text}
