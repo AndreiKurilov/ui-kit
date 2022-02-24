@@ -1,0 +1,10 @@
+mixin roomFeatures({ icon="", title="", description="", hasBorder=false })
+  -
+    const iconFeatures = `roomFeatures__icon_${icon}`;
+    const borderBottom = hasBorder ? "roomFeatures_border" : "";
+    
+  .roomFeatures(class = borderBottom)
+    .roomFeatures__icon(class = iconFeatures)
+    .roomFeatures__wrapper
+      span.roomFeatures__title #{title}
+      span.roomFeatures__description #{description}
