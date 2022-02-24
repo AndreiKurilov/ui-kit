@@ -1,0 +1,53 @@
+@import '../../scss/variables.scss';
+
+.roomFeatures {
+  display: flex;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  
+  &_border {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    max-width: 280px;
+  }
+
+  &__icon {
+    font-size: 44px;
+    font-family: $materialIcons;
+    background: $primaryGradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    &_emoticon::before {
+      content: '\e909';
+    }
+    
+    &_location-city::before {
+      content: '\e90a';
+    }
+
+    &_whatshot::before {
+      content: '\e90e';
+    }
+  }
+  
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: $mainFont;
+    font-size: $mainFont--size;
+    line-height: 24px;
+    color: $color--darkShade75;
+    margin-left: 10px;
+    user-select: none;
+  }
+
+  &__title {
+    font-family: $mainFontBold;
+    margin-top: -3px;
+  }
+  
+  &__description {
+    padding-top: 5px;
+  }
+}
