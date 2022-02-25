@@ -1,16 +1,18 @@
-mixin button(options)
+mixin button({ isButton=true, title="", isDefault=false, isWhite=false })
   -
-    let btnMainClass = 'button';
-    btnMainClass += options.btnModifier ? ' button_modifier' : '';
-    let btnSpanClass = 'btnSpanClass';
-    btnSpanClass += options.isDefault ? ' btnSpanClass__default' : '';
-    btnSpanClass += options.isWhite ? ' btnSpanClass__white' : '';
+    const buttonWhite = isWhite ? ' button_white' : '';
+    const buttonInsideSpan = 'button__insideSpan';
+    const spanDefault = isDefault ? ' button__insideSpan_default' : '';
+    const spanWhite = isWhite ? ' button__insideSpan_white' : '';
 
 
-  button(class = btnMainClass)
-    if options.isDefault
-      span(class = btnSpanClass)= options.btnTitle
-    if options.isWhite
-      span(class = btnSpanClass)= options.btnTitle
-    if options.arrow
-      span.button__arrow
+  button&attributes({
+    class: [ "button", buttonWhite ] })
+    if isButton
+      span&attributes({
+        class: [ "button__insideSpan", spanDefault, spanWhite ]
+       }) #{title}
+    else 
+      span.button__insideSpan #{title}
+    //- if options.arrow
+    //-   span.button__arrow
