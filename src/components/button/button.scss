@@ -17,33 +17,20 @@
     padding: 2px;
   }
   
-  &:hover {
-    background: $primaryGradient_50;
-    border-radius: 50px;
-  }
-  
-  .button__insideSpan_default:hover {
-    background: $primaryGradient_50;
-  }
-  
   &__insideSpan {
     font-family: $mainFontBold;
     color: $color--designMain;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    
+
     &_default {
       background: $primaryGradient;
       border-radius: 22px;
       padding: 14.5px 19px;
       color: #FFFFFF;
-      
-      // &:hover {
-      //   background: $primaryGradient_50;
-      // }
     }
-        
+    
     &_white {
       color: $color--designMain;
       border-radius: 50px;
@@ -51,15 +38,36 @@
       padding: 12.5px 17px;
       // padding: 7.5px 18.5px;
     }
-  }
-  
-  &__arrow {
-    padding-right: 8px;
     
-    &::before {
+    &_arrow::after{
       color: #fff;
       font-family: $materialIcons;
-      content: '\e901';
+      content: '\e904';
+      font-size: 12px;
+      // padding-left: 20px;
     }
   }
+
+  &__insideSpan.button__insideSpan_default:hover,
+  .button__insideSpan_default_hover {
+    background: $primaryGradient_50;
+  }
+  
+  &_white:hover,
+  &_white_hover {
+    background: $primaryGradient_50;
+    border-radius: 50px;
+  }
+  
+
+  // &::after {
+  //   // padding-right: 8px;
+  //   left: 20px;
+  //   position: absolute;
+  //   // color: #fff;
+  //   color: rgb(114, 16, 16);
+  //   font-family: $materialIcons;
+  //   content: '\e904';
+  //   font-size: 12px;
+  // }
 }
