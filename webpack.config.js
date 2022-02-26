@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const CopyPlugin = require("copy-webpack-plugin");
 
 // window.$ = require('jquery')(window);
 // var $ = require("jquery")(window);
@@ -31,6 +32,18 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/images'),
+          to:   path.resolve(__dirname, 'dist/images')
+        },
+        {
+          from: path.resolve(__dirname, 'src/favicons'),
+          to:   path.resolve(__dirname, 'dist/images')
+        }
+      ],
     })
   ],
   module: {
@@ -73,9 +86,10 @@ module.exports = {
         loader: 'file-loader',
         options: {
           outputPath: 'img',
-          // name: '[name].[ext]',
+          name: '[name].[ext]'
           }
         },
+       
         {
         test: /\.(eot|svg|ttf|woff)$/,
         loader: 'file-loader',
