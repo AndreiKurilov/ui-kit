@@ -1,18 +1,21 @@
-mixin button({ isButton=true, title="", isDefault=false, isWhite=false })
+mixin button({ title="", isDefault=false, isWhite=false, isHover=false, btnHover=false, withArrow=false })
   -
     const buttonWhite = isWhite ? ' button_white' : '';
-    const buttonInsideSpan = 'button__insideSpan';
+    const buttonWhiteHover = btnHover ? ' button_white_hover' : '';
     const spanDefault = isDefault ? ' button__insideSpan_default' : '';
+    const btnArrow = wuthArrow ? ' button__insideSpan_arrow' : '';
+    const spanDefaultHover = isHover ? ' button__insideSpan_default_hover' : '';
     const spanWhite = isWhite ? ' button__insideSpan_white' : '';
 
-
   button&attributes({
-    class: [ "button", buttonWhite ] })
-    if isButton
+    class: [ "button", buttonWhite, buttonWhiteHover ] })
+    if isDefault
       span&attributes({
-        class: [ "button__insideSpan", spanDefault, spanWhite ]
-       }) #{title}
-    else 
-      span.button__insideSpan #{title}
-    //- if options.arrow
+        class: [ "button__insideSpan", spanDefault, spanDefaultHover, btnArrow ]
+      }) #{title}
+    if isWhite
+      span&attributes({
+        class: [ "button__insideSpan", spanWhite ] 
+      }) #{title}
+    //- if arrow
     //-   span.button__arrow
