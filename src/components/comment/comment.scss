@@ -2,13 +2,13 @@
 
 .comment {
   display: flex;
+  max-width: 711px;
   flex-direction: column;
   user-select: none;
   font-family: $mainFont;
   font-size: $mainFont--size;
   line-height: 24px;
   color: $color--darkShade75;
-
 
   &__header,
   &__body {
@@ -18,10 +18,15 @@
   &__header {
     margin-bottom: 10px;
   }
-  &__avatar img{
-    width: 48px;
+
+  &__avatar {
+    width: 47.5px;
     height: 48px;
     margin-right: 10px;
+    border: 2px solid #FFFFFF;
+    border-radius: 32px;
+    box-shadow: 0px 10px 20px 0px rgba(31, 32, 65, 0.1);
+    box-sizing: border-box;
   }
 
   &__guest {
@@ -34,6 +39,7 @@
   }
 
   &__likeButton {
-    margin-right: 14px;
+    margin-left: 5px;
+    margin-right: 16px;
   }
 }
