@@ -1,10 +1,9 @@
 include ../like/like
 
-mixin comment({ guestName="", date="", text="" })
+mixin comment({ avatarName="", guestName="", date="", text="" })
   .comment
     .comment__header
-      .comment__avatar
-        img(src="./img/murad_sarafanov.jpg" alt="avatar")
+      img.comment__avatar(src=`./images/${avatarName}.png` alt="avatar")
       .comment__guest
         .comment__guestName #{guestName}
         .comment__date #{date}
