@@ -1,2 +1,7 @@
-mixin iconLink(options)
-  a.iconLink=options.iconTitle
+mixin iconLink({ title="", isHover=false })
+  -
+    const iconLinkHover = isHover ? ' iconLink_hover' : '';
+
+  button&attributes({
+    class: [ "iconLink", iconLinkHover ] 
+  }) #{title}
