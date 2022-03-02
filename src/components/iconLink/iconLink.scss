@@ -1,14 +1,23 @@
 @import '../../scss/variables.scss';
 
 .iconLink {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+  background: transparent;
+
   font-family: $mainFontBold;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
   color: $color--designMain;
-  background: transparent;
+
+  &_hover {
+    color: $color--darkShade50;
+  }
+
   &:hover {
-    // opacity: 1;
     color: $color--darkShade50;
   };
 }
