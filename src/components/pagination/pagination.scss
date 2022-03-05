@@ -1,44 +1,61 @@
 @import '../../scss/variables.scss';
 
 .pagination {
-
   font-family: $mainFont;
-  color: $color--darkShade50;
   font-size: 12px;
   line-height: 15px;
   
-  &__pages {
-    display: flex;
-    padding: 0;
-    cursor: pointer;
-    margin-bottom: 10.56px;
-    
-    & > li {
-      list-style-type: none;
-      margin-right: 10px;
-      
-    }
-  }
-
-  
-  // border-radius: 50px;
-
-  // &__arrow::after {
-  //   content: '\e904';
-  //   font-family: $materialIcons;
-  //   color: #fff;
-  //   font-size: 17px;
-  // }
-  
-  // &:hover,
-  // &_hover {
-  //   background: $primaryGradient_50;
-  // }
-
   &__text {
     color: $color--darkShade75;
     line-height: 24px;
   }
+  
+  &__pages {
+    display: flex;
+    padding: 0;
+  }
+  
+  &__pages li{
+    color: $color--darkShade50;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    // transition: all 0.3s ease;
+  }
 
+  &__pages li.numb{
+    list-style: none;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 22px;
+  }
+  
+  &__pages li.numb.first{
+    margin: 0px 3px 0 -5px;
+  }
+  
+  &__pages li.numb.last{
+    margin: 0px -5px 0 3px;
+  }
+  
+  &__pages li.dots{
+    font-size: 22px;
+    cursor: default;
+  }
 
+  &__pages li.btn{
+    padding: 0 10px;
+    border-radius: 50px;
+  }
+  
+  & li.active,
+  &__pages li.numb:hover,
+  &__pages li:first-child:hover,
+  &__pages li:last-child:hover{
+    color: #fff;
+    background: $primaryGradient;
+    font-family: $mainFontBold;
+  }
 }
