@@ -43,13 +43,25 @@
   &__pages li.dots{
     font-size: 22px;
     cursor: default;
+    line-height: 40px;
   }
 
   &__pages li.btn{
-    padding: 0 10px;
-    border-radius: 50px;
+    // height: 100%;
+    // width: 100%;
+    // padding: 0 10px;
+    border-radius: 22px;
   }
   
+  &__pages li.btn::after{
+    content: '\e904';
+    font-family: $materialIcons;
+    color: #fff;
+    font-size: 17px;
+    background: $secondGradient;
+    line-height: 40px;
+  }
+
   & li.active,
   &__pages li.numb:hover,
   &__pages li:first-child:hover,
