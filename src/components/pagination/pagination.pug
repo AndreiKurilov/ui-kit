@@ -9,7 +9,6 @@ mixin pagination()
     let totalPages = 15;
     let page = 1;
 
-    //calling function with passing parameters and adding inside pagination which is ul tag
     pagination.innerHTML = createPagination(totalPages, page);
 
     function createPagination(totalPages, page){
@@ -18,12 +17,13 @@ mixin pagination()
       let beforePage = page - 1;
       let afterPage = page + 1;
 
-      if(page > 1){ //show the next button if the page value is greater than 1
+      //show the prev button if the page value is greater than 3
+      if(page > 3) { 
         liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${page - 1})"></li>`;
       }
 
       if(page > 2){ //if page value is less than 2 then add 1 after the previous button
-        liTag += `<li class="first numb" onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
+        liTag += `<li onclick="createPagination(totalPages, 1)"><span>1</span></li>`;
         if(page > 3){ //if page value is greater than 3 then add this (...) after the first li or page
           liTag += `<li class="dots"><span>...</span></li>`;
         }
@@ -31,13 +31,13 @@ mixin pagination()
 
       // how many pages or li show before the current li
       if (page == totalPages) {
-        beforePage = beforePage - 2;
-      } else if (page == totalPages - 1) {
         beforePage = beforePage - 1;
+      } else if (page == totalPages - 1) {
+        beforePage = beforePage;
       }
       // how many pages or li show after the current li
       if (page == 1) {
-        afterPage = afterPage + 2;
+        afterPage = afterPage + 1;
       } else if (page == 2) {
         afterPage  = afterPage + 1;
       }
@@ -61,10 +61,10 @@ mixin pagination()
         if(page < totalPages - 2){ //if page value is less than totalPage value by -2 then add this (...) before the last li or page
           liTag += `<li class="dots"><span>...</span></li>`;
         }
-        liTag += `<li class="last numb" onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
+        liTag += `<li onclick="createPagination(totalPages, ${totalPages})"><span>${totalPages}</span></li>`;
       }
 
-      if (page < totalPages) { //show the next button if the page value is less than totalPage(20)
+      if (page < totalPages - 2) { //show the next button if the page value is less than totalPage(20)
         liTag += `<li class="btn next" onclick="createPagination(totalPages, ${page + 1})"></li>`;
       }
 
