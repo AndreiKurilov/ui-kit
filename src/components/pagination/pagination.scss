@@ -16,56 +16,53 @@
   }
   
   &__pages li{
+    height: 40px;
+    width: 40px;
     color: $color--darkShade50;
     list-style: none;
     text-align: center;
     cursor: pointer;
     user-select: none;
     // transition: all 0.3s ease;
-  }
-
-  &__pages li.numb{
     list-style: none;
-    height: 40px;
-    width: 40px;
     line-height: 40px;
     border-radius: 22px;
+
   }
-  
-  &__pages li.numb.first{
-    margin: 0px 3px 0 -5px;
-  }
-  
-  &__pages li.numb.last{
-    margin: 0px -5px 0 3px;
-  }
-  
+
   &__pages li.dots{
-    font-size: 22px;
+    font-size: 12px;
     cursor: default;
     line-height: 40px;
   }
 
   &__pages li.btn{
-    // height: 100%;
-    // width: 100%;
-    // padding: 0 10px;
-    border-radius: 22px;
+    background: $secondGradient;
   }
   
-  &__pages li.btn::after{
+  &__pages li.btn.next::after{
     content: '\e904';
     font-family: $materialIcons;
     color: #fff;
     font-size: 17px;
-    background: $secondGradient;
-    line-height: 40px;
   }
+  
+  &__pages li.btn.prev::after {
+    content: '\e904';
+    font-family: $materialIcons;
+    color: #fff;
+    font-size: 17px;
+    transform: rotate(180deg);
+
+  }
+  // &__pages li.btn.prev {
+  //   background: $secondGradient;
+
+  // }
+
 
   & li.active,
-  &__pages li.numb:hover,
-  &__pages li:first-child:hover,
-  &__pages li:last-child:hover{
+  &__pages li.numb:hover {
     color: #fff;
     background: $primaryGradient;
     font-family: $mainFontBold;
