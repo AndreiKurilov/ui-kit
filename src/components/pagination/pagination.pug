@@ -1,13 +1,15 @@
 mixin pagination()
   .pagination
     ul.pagination__pages
-    .pagination__text из 100+ вариантов аренды
+    .pagination__text
 
-      
   script.
     const pagination = document.querySelector(".pagination__pages");
     let totalPages = 15;
+    let notesOnPage = 12;
     let page = 1;
+
+    const paginationText = document.querySelector(".pagination__text");
 
     pagination.innerHTML = createPagination(totalPages, page);
 
@@ -17,9 +19,20 @@ mixin pagination()
       let beforePage = page - 1;
       let afterPage = page + 1;
 
+      let startRange;
+      let endRange;
+      if (page == 1) {
+        startRange = page;
+        endRange = page * notesOnPage;
+      } else {
+        endRange = page * notesOnPage + (page - 1);
+        startRange = endRange - 12;
+      }
+      paginationText.innerText = `${startRange} - ${endRange} из 100+ вариантов аренды`;
+
       //show the prev button if the page value is greater than 3
       if(page > 3) { 
-        liTag += `<li class="btn prev" onclick="createPagination(totalPages, ${page - 1})"></li>`;
+        liTag += `<li class="arrowBack" onclick="createPagination(totalPages, ${page - 1})"></li>`;
       }
 
       if(page > 2){ //if page value is less than 2 then add 1 after the previous button
@@ -65,10 +78,10 @@ mixin pagination()
       }
 
       if (page < totalPages - 2) { //show the next button if the page value is less than totalPage(20)
-        liTag += `<li class="btn next" onclick="createPagination(totalPages, ${page + 1})"></li>`;
+        liTag += `<li class="arrowForward" onclick="createPagination(totalPages, ${page + 1})"></li>`;
       }
 
       pagination.innerHTML = liTag; //add li tag inside ul tag
 
-      return liTag; //reurn the li tag
+      return liTag; //return the li tag
     }
