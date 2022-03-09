@@ -23,46 +23,38 @@
     text-align: center;
     cursor: pointer;
     user-select: none;
-    // transition: all 0.3s ease;
     list-style: none;
     line-height: 40px;
     border-radius: 22px;
-
   }
 
-  &__pages li.dots{
+  &__pages .dots{
     font-size: 12px;
     cursor: default;
     line-height: 40px;
   }
 
-  &__pages li.btn{
+  &__pages .arrowForward, 
+  &__pages .arrowBack {
     background: $secondGradient;
   }
+
+  &__pages .arrowBack::before {
+    content: '\e900';
+    font-family: $materialIconArrow;
+    color: #fff;
+    font-size: 25px;
+  }
   
-  &__pages li.btn.next::after{
+  &__pages .arrowForward::after{
     content: '\e904';
     font-family: $materialIcons;
     color: #fff;
-    font-size: 17px;
+    font-size: 20px;
   }
-  
-  &__pages li.btn.prev::after {
-    content: '\e904';
-    font-family: $materialIcons;
-    color: #fff;
-    font-size: 17px;
-    transform: rotate(180deg);
 
-  }
-  // &__pages li.btn.prev {
-  //   background: $secondGradient;
-
-  // }
-
-
-  & li.active,
-  &__pages li.numb:hover {
+  & .active,
+  &__pages .numb:hover {
     color: #fff;
     background: $primaryGradient;
     font-family: $mainFontBold;
