@@ -30,3 +30,12 @@
     url('./materialIcons/Material-Icons.woff?77jne') format('woff'),
     url('./materialIcons/Material-Icons.svg?77jne#Material-Icons') format('svg');
 }
+
+@font-face {
+  font-family: 'Material-Icon-Arrow';
+  src:  url('./materialIconsArrow/Material-Icon.eot?19hpv5');
+  src:  url('./materialIconsArrow/Material-Icon.eot?19hpv5#iefix') format('embedded-opentype'),
+    url('./materialIconsArrow/Material-Icon.ttf?19hpv5') format('truetype'),
+    url('./materialIconsArrow/Material-Icon.woff?19hpv5') format('woff'),
+    url('./materialIconsArrow/Material-Icon.svg?19hpv5#Material-Icons') format('svg');
+}
