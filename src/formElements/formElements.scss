@@ -12,7 +12,7 @@
   grid-template-rows: 1fr 158px;
 
   &__textFields {
-    grid-area: "textFields";
+    grid-area: textFields;
     width: 320px;
   }
 
@@ -47,13 +47,20 @@
     margin-bottom: 100px;
   }
 
-  &__checkboxExpandable {
+  &__dropdownBedroomDefault {
     margin-bottom: 20px;
+    max-width: 266px;
   }
   
+  &__checkboxExpandable {
+    margin-bottom: 100px;
+    max-width: 266px;
+  }
+
   &__checkboxRadioButtons {
-    grid-area: "checkboxes";
+    grid-area: checkboxes;
     margin-left: 126px;
+    margin-right: 72px;
     width: 260px;
   }
 
@@ -97,5 +104,64 @@
       margin-right: 170px;
       margin-top: 16px;
     }
+  }
+
+  &__rate {
+    margin-bottom: 196px;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+  }
+
+  &__sliderButtons {
+    grid-area: buttons;
+    width: 320px;
+  }
+
+  &__buttons {
+    margin-bottom: 40px;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 16px;
+    }
+
+    &-container {
+      display: flex;
+      gap: 20px;
+      width: 218px;
+      height: 44px;
+      margin-bottom: 30px;
+    }
+    
+    &-iconLinks {
+      display: flex;
+      justify-content: space-between;
+      width: 142px;
+      margin-bottom: 30px;
+    }
+
+    &-large {
+      width: 320px;
+      height: 44px;
+    }
+  }
+
+  &__pagination {
+    margin-bottom: 230px;
+    width: 350px;
+  }
+  
+  &__bulletList {
+    margin-bottom: 30px;
+  }
+  
+  &__feedback {
+    grid-area: feedback;
+    margin-left: 126px;
   }
 }
