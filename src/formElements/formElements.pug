@@ -2,9 +2,17 @@ include ../components/logo/logo
 include ../components/heading/heading
 include ../components/textField/textField
 include ../components/checkboxList/checkboxList
+include ../components/dropdown/dropdown
+include ../components/roomFeatures/roomFeatures
 include ../components/radio/radio
 include ../components/toggle/toggle
 include ../components/like/like
+include ../components/rate/rate
+include ../components/bulletList/bulletList
+include ../components/comment/comment
+include ../components/button/button
+include ../components/pagination/pagination
+include ../components/iconLink/iconLink
 
 
 .formElements
@@ -43,6 +51,9 @@ include ../components/like/like
       +heading({ title: "subscription text field" })
       +textField({ type: "email", placeholder: "Email", buttonSubscribed: true, inputWithButton: true, withButton: true })
 
+    .formElements__dropdownBedroomDefault
+      +heading({ title: "dropdown", state: "default" })
+      +dropdown({ })
 
     .formElements__checkboxExpandable
       +heading({ title: "expandable checkbox list", isExpanded: true})
@@ -69,6 +80,11 @@ include ../components/like/like
           { title: "Шампунь" },
         ]
       })
+
+    .formElements__roomFeatures
+      +roomFeatures({ icon: "emoticon", title: "Комфорт", description: "Шумопоглощающие стены", hasBorder: true }) 
+      +roomFeatures({ icon: "location-city", title: "Удобство", description: "Окно в каждой из спален", hasBorder: true }) 
+
 
   section.formElements__checkboxRadioButtons
 
@@ -100,7 +116,12 @@ include ../components/like/like
         +like({ value: "2" })
         +like({ value: "12", isGradient: true, isColored: true })
 
-    
+    .formElements__rate
+      +heading({ title: "rate button" })
+      .formElements__rate-wrapper
+        +rate({ rating: 5 })
+        +rate({ rating: 5, isChecked: true })
+
     .formElements__checkboxRich
       +heading({ title: " rich checkbox buttons" })
       +checkboxList({
@@ -112,113 +133,32 @@ include ../components/like/like
         ]
       })
 
+  section.formElements__sliderButtons
+    .formElements__buttons
+      +heading({ title: "buttons" })
+      .formElements__buttons-wrapper
+        .formElements__buttons-container
+          +button({ btnTitle: 'click me' })
+          +button({ btnTitle: 'click me', btnHover: true })
+        .formElements__buttons-container
+          +button({ spanTitle: 'click me', isWhite: true })
+          +button({ spanTitle: 'click me', isWhite: true, btnHover: true })
+        .formElements__buttons-iconLinks
+          +iconLink({ title: 'click me'})
+          +iconLink({ title: 'click me', isHover: true})
+        .formElements__buttons-large
+          +button({ btnTitle: 'перейти к оплате', withArrow: true })
 
+    .formElements__pagination
+      +heading({ title: "pagination" })
+      +pagination({})
+        
+    .formElements__bulletList
+      +heading({ title: "bullet list" })
+      +bulletList([ "Нельзя с питомцами", 
+        "Без вечеринок и мероприятий",
+        "Время прибытия — после 13:00, а\u00A0выезд\u00A0до\u00A012:00" ])
 
-
-
-
-
-
-  //- .formElements__textFieldDefault
-  //-   .textField__default default
-  //-   include ./commonBlocks/textField/textField
-  //-   +textField({label: 'text field', idInput: 'email', typeInput: 'email', placeholderInput: 'Email'})
-  //- .formElements__textFieldHover
-  //-   .textField__hover hover/focus
-  //-   include ./commonBlocks/textField/textField
-  //-   +textField({label: 'text field', idInput: 'text', typeInput: 'text', placeholderInput: 'This is pretty awesome', borderDark: true})
-  //- .formElements__dropdownGuestsDefault
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({label: 'dropdown'})
-
-
-  //- .formElements__textFieldMasked
-  //-   include ./commonBlocks/textField/textField
-  //-   +textField({label: 'masked text field', idInput: "date", typeInput: "date", placeholderInput: 'дд.мм.гггг'})
-  //- .formElements__dropdownDateDefault
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({label: ' date dropdown'})
-  //- .formElements__dropdownDate
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({label: 'date dropdown'})
-  //- .formElements__dropdownFilterDate
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({label: 'filter date dropdown'})
-
-  //- .formElements__textFieldSubscription
-  //-   include ./commonBlocks/textField/textField
-  //-   +textField({label: 'subscription text field', idInput: 'emailSub', typeInput: 'email', placeholderInput: 'Email', button: true})
-  //- .formElements__dropdownBedsDefault
-  //-   .dropdown__defaultState default 
-  //-   include ../components/dropdown/dropdown
-  //-   +dropdown({idDropdown: 'dropdown', label: 'dropdown', titleDefault: '2 спальни, 2 кровати...'})
-  //- .formElements__dropdownBedsExpanded
-  //-   .dropdown__expanded expanded
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({idDropdown: 'dropdown', label: 'dropdown'})
-
-  //- .formElements__dropdownGuests
-  //-   .dropdown__default default 
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({title: 'dropdown'})
-
-  
-  //- .formElements__checkboxButtons 
-  //-   include ./commonBlocks/checkboxButtons/checkboxButtons
-  //-   +checkboxButtons
-
-  //- .formElements__radioButtons 
-  //-   include ./commonBlocks/radioButtons/radioButtons
-  //-   +radioButtons({nameOptionOne: 'Мужчина', nameOptionTwo: 'Женщина'})
-
-  //- .formElements__toggle 
-  //-   include ./commonBlocks/toggle/toggle
-  //-   +toggle({nameOption: 'Получать спецпредложения'})
-  
-  //- .formElements__likeButton
-  //-   .formElements__likeButtonNameBlock Like button
-  //-   include ./commonBlocks/likeButton/likeButtonGrey/likeButtonGrey
-  //-   +likeButtonGrey
-  //-   include ./commonBlocks/likeButton/likeButtonColor/likeButtonColor
-  //-   +likeButtonColor
-
-  //-   .formElements__rateButton
-  //-   include ./commonBlocks/rateButton/rateButton
-  //-   +rateButton
-  //-   +rateButton
-
-  //- .formElements__dropdownHover
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({leftWord: 'text field', rightWord: 'hover / focus', title: 'This is pretty awesome', borderDark: true, colorDark: true})
-  //- .formElements__dropdownDefault
-  //-   include ./commonBlocks/dropdown/dropdown
-  //-   +dropdown({leftWord: 'dropdown', rightWord: 'default', title: 'Сколько гостей', colorDark: true, arrow: true})
-
-  //- .formElements__richCheckboxButtons 
-  //-   include ./commonBlocks/richCheckboxButtons/richCheckboxButtons
-  //-   +richCheckboxButtons
-
-  //- .formElements__buttons
-  //-   .formElements__buttonsTitle Buttons
-  //-   include ./commonBlocks/buttons/button/button
-  //-   +button({title: 'Click me'})
-  //-   +button({title: 'Click me', hover: true})
-  //-   +button({title: 'Click me', colorWhite: true})
-  //-   +button({title: 'Click me', colorWhite: true, hover: true})
-  //-   +button({title: 'Click me', link: true})
-  //-   +button({title: 'Click me', hoverLink: true})
-  //-   +button({title: 'Перейти к оплате', default: true})
-    
-  //- .formElements__pagination
-  //-   .formElements__paginationTitle Pagination
-  //-   include ./commonBlocks/pagination/pagination
-  //-   +pagination({})
-
-  
-  //- .formElements__guestRecall
-  //-   include ./commonBlocks/guestRecall/guestRecall
-  //-   +guestRecall
-
-  //- .formElements__bulletList
-  //-   include ./commonBlocks/bulletList/bulletList
-  //-   +bulletList
+  section.formElements__feedback
+    .formElements__comment
+      +comment({ avatarName: "murad_sarafanov", guestName: "Мурад Сарафанов", date: "5 дней назад", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." })
