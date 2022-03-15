@@ -1,68 +1,15 @@
 @import '../../scss/variables';
-@import '../../scss/mixins';
 
-// .dropdown__label {
-//   @include font-montserrat-bold;
-//   margin-bottom: 5px;
-// }
+.dropdown {
 
-// .dropdown__default {
-//   @include block-default;
-//   border-radius: 4px 4px 0 0;
-//   @include font-montserrat-regular;
-// }
+  &__block {
+    border: $border__dark;
 
-.dropdown__default_border-dark {
-   border: $border__dark;
-}
+  }
 
-// .dropdown__expand {
-//   @include block-expand;
-//   @include font-montserrat-bold;
-// }
-
-.dropdown__expand_visible {
-  display: block;
-  border-top: transparent;
-}
-
-.item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 5.56px;
-}
-
-.item__title {
-  margin-left: 15px;
-}
-
-.item__btns {
-  display: flex;
-  margin-right: 7px;
-}
-
-.item__btn-minus,
-.item__btn-plus {
-  @include dropdown-btn;
-}
-
-.item__btn-minus::before {
-  content: '-';
-  margin-top: -2px;
-}
-
-.item__number {
-  width: 32px;
-  text-align: center;
-  line-height: 30px;
-  user-select: none;
-}
-
-.item__btn-plus::before {
-  content: '+';
-}
-
-.dropdown__disabled {
-  cursor: auto;
+  &__expand_visible {
+    display: block;
+    border-top: transparent;
+  }
+  
 }
