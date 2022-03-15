@@ -1,4 +1,14 @@
-mixin dropdown()
+mixin dropdown({ title="", isExpanded=false, name="" })
+  -
+    const dropdownExpand = isExpanded ? "dropdown__expand_visible" : ""
+
   .dropdown
     .dropdown__block
-    .dropdown__expand
+      .dropdown__title #{title}
+    .dropdown__expand( class=dropdownExpand )
+      .dropdown__item
+        .dropdown__itemName #{name}
+        .dropdown__itemButtons
+          button.dropdown__itemBtnMinus -
+          span.dropdown__itemNumber
+          button.dropdown__itemBtnPlus +
