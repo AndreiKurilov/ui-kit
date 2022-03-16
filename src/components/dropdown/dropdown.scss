@@ -1,15 +1,72 @@
 @import '../../scss/variables';
 
 .dropdown {
+  cursor: pointer;
 
   &__block {
-    border: $border__dark;
-
-  }
-
-  &__expand_visible {
-    display: block;
-    border-top: transparent;
+    display: flex;
+    height: 44px;
+    border: $border__light;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    align-items: center;
   }
   
+  &__title {
+    padding-left: 15px;
+    font-family: $mainFont;
+    font-size: $mainFont--size;
+    line-height: 24px;
+    color: $color--darkShade75;
+  }
+
+  &__block::after {
+    content: '\e905';
+    font-family: $materialIcons;
+    color: $color--darkShade75;
+    font-size: 8px;
+    position: absolute;
+    right: 0;
+    padding-right: 16px;
+  }
+
+  &__block.active::after {
+    content: '\e900';
+  }
+
+  &__expand {
+    height: 119px;
+    border: $border__dark;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  &__block + .dropdown__expand {
+    display: none;
+  }
+
+  &__block.active {
+    border: $border__dark;
+    border-bottom: transparent;
+  }
+
+  &__block.active + .dropdown__expand {
+    display: block;
+  }
 }
+
+.dropdown__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown__itemName {
+  font-family: $mainFontBold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color--main;
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+
