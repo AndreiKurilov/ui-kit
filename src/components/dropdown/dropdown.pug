@@ -1,61 +1,19 @@
-mixin dropdown({ title="", isExpanded=false, name="" })
+include ../dropdownItem/dropdownItem
+
+mixin dropdown({ isExpanded=false })
   -
     const dropdownExpand = isExpanded ? "dropdown__expand_visible" : ""
 
   .dropdown
     .dropdown__block
-      .dropdown__title #{title}
+      .dropdown__total
     .dropdown__expand( class=dropdownExpand )
-      .dropdown__item
-        .dropdown__itemName #{name}
-        .dropdown__itemButtons
-          button.dropdown__itemBtnMinus -
-          span.dropdown__itemNumber
-          button.dropdown__itemBtnPlus +
-
+      +dropdownItem({name: "спальни"})
+      +dropdownItem({name: "кровати"})
+      +dropdownItem({name: "ванные комнаты"})
+     
 
     script.
-      const dropdownBtns = document.querySelector('.dropdown__itemButtons');
-      const btnMinus = document.querySelector('.dropdown__itemBtnMinus');
-      const btnPlus = document.querySelector('.dropdown__itemBtnPlus');
-      let itemNumber = document.querySelector('.dropdown__itemNumber');
-      let numberDefault = 2;
-      itemNumber.innerText = numberDefault;
-
-      function isDisabled (btn) {
-        btn.setAttribute("disabled", '');
-        btn.classList.add('dropdown__itemBtn_disabled');
-      }
-
-      function isActivated (btn) {
-        btn.removeAttribute("disabled", '');
-        btn.classList.remove('dropdown__itemBtn_disabled');
-      }
-
-
-      dropdownBtns.addEventListener('click', function(e) {
-        if ( e.target == btnMinus ) {
-          numberDefault--;
-          if ( numberDefault == 0) {
-            isDisabled(btnMinus);
-            isActivated(btnPlus);
-          } 
-          if ( numberDefault > 0 ) {
-            isActivated(btnMinus);
-          }
-
-        }
-        if ( e.target == btnPlus ) {
-          numberDefault++;
-          if ( numberDefault > 3 ) {
-            isActivated(btnMinus);
-          }
-          if ( numberDefault == 3 ) {
-            isDisabled(btnPlus);
-            isActivated(btnMinus);
-          }
-        }
-        
-        itemNumber.innerText = numberDefault;
-      })
-    
+      
+      let itemsTotal = document.querySelector('.dropdown__total');
+      itemsTotal.innerText = `${numberDefault} спальни`
