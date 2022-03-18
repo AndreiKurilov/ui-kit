@@ -1,0 +1,8 @@
+mixin dropdownItem({ name="", number="" })
+ 
+  .dropdownItem 
+    .dropdownItem__name #{name}
+    .dropdownItem__buttons
+      button.dropdownItem__btnMinus -
+      span.dropdownItem__number #{number}
+      button.dropdownItem__btnPlus +
