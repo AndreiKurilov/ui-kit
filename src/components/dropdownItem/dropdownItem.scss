@@ -1,0 +1,43 @@
+@import '../../scss/variables';
+
+.dropdownItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7px;
+  font-family: $mainFontBold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color--main;
+
+  &__name {
+    text-transform: uppercase;
+    margin-left: 15px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 7px;
+    width: 92px;
+    align-items: center;
+  }
+
+  &__btnMinus,
+  &__btnPlus {
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 22px;
+    border: 1px solid $color--darkShade25;
+    font-family: $mainFont;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color--darkShade50;
+  }
+
+  &__btn_disabled {
+    border: 1px solid $color--darkShade1;
+    color: $color--darkShade1;
+  }
+}
