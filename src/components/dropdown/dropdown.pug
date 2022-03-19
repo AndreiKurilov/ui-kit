@@ -8,12 +8,6 @@ mixin dropdown({ isExpanded=false })
     .dropdown__block
       .dropdown__total
     .dropdown__expand( class=dropdownExpand )
-      +dropdownItem({name: "спальни"})
-      +dropdownItem({name: "кровати"})
-      +dropdownItem({name: "ванные комнаты"})
-     
-
-    script.
-      
-      let itemsTotal = document.querySelector('.dropdown__total');
-      itemsTotal.innerText = `${numberDefault} спальни`
+      +dropdownItem({name: "спальни", number: 2 })
+      +dropdownItem({name: "кровати", number: 2 })
+      +dropdownItem({name: "ванные комнаты", number: 0 })
