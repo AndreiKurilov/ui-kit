@@ -6,16 +6,27 @@ class DropdownOptions {
   constructor( selector ) {
     this.mainSelector = selector;
     this.addListener();
+    this.findElements();
+
   }
   
+  // this.mainNode.addEventListener('click', this.handleDropdownClick.bind(this));
+
+  findElements() {
+    this.btnMinus = this.mainSelector.querySelector('.dropdownItem__btnMinus');
+    this.btnPlus = this.mainSelector.querySelector('.dropdownItem__btnPlus');
+    this.itemNumber = this.mainSelector.querySelector('.dropdownItem__number');
+    console.log(this.btnMinus)
+    console.log(this.btnPlus)
+    console.log(this.itemNumber)
+  }
+
   addListener() {
     this.mainSelector.addEventListener('click', function(e) {
+
       
-      let btnMinus = this.mainSelector.childNodes['.dropdownItem__btnMinus'];
-      let btnPlus = this.mainSelector.childNodes['.dropdownItem__btnMinus'];
-      let itemNumber = this.mainSelector.childNodes['.dropdownItem__number'];
-      
-      let numberDefault = this.itemNumber.innerText;
+      this.itemNumber = 2;
+      let numberDefault = this.itemNumber;
       
       function isDisabled (btn) {
         btn.setAttribute("disabled", '');
@@ -27,26 +38,26 @@ class DropdownOptions {
         btn.classList.remove('dropdownItem__btn_disabled');
       }
       
-      if ( e.target == btnMinus ) {
+      if ( e.target == this.btnMinus ) {
         if ( numberDefault > 0 ) {
           numberDefault--;
-          isActivated(btnMinus);
-          isActivated(btnPlus);
+          isActivated(this.btnMinus);
+          isActivated(this.btnPlus);
         }
         if ( numberDefault == 0) {
-          isDisabled(btnMinus);
+          isDisabled(this.btnMinus);
         } 
       }
-      if ( e.target == btnPlus ) {
+      if ( e.target == this.btnPlus ) {
         if ( numberDefault < 3 ) {
           numberDefault++;
-          isActivated(btnMinus);
+          isActivated(this.btnMinus);
         }
         if ( numberDefault == 3 ) {
-          isDisabled(btnPlus);
+          isDisabled(this.btnPlus);
         }
       }
-      itemNumber.innerText = numberDefault;
+      this.itemNumber = numberDefault;
 
     });
   }
