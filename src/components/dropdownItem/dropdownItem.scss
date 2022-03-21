@@ -4,11 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 7px;
   font-family: $mainFontBold;
   font-size: 12px;
   line-height: 15px;
   color: $color--main;
+  margin-top: 7px;
 
   &__name {
     text-transform: uppercase;
@@ -17,10 +17,10 @@
 
   &__buttons {
     display: flex;
-    justify-content: space-between;
-    margin-right: 7px;
-    width: 92px;
     align-items: center;
+    justify-content: space-between;
+    width: 92px;
+    margin-right: 7px;
   }
 
   &__btnMinus,
@@ -37,7 +37,7 @@
   }
 
   &__btn_disabled {
-    border: 1px solid $color--darkShade1;
     color: $color--darkShade1;
+    border: 1px solid $color--darkShade1;
   }
 }
