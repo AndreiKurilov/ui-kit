@@ -29,8 +29,10 @@ class DropdownOptions {
 
 
   addListener() {
-    this.mainSelector.addEventListener('click', function(e) {
+    this.mainSelector.addEventListener('click', this.handleClick.bind(this));
+  }
 
+  handleClick(e) {
       this.itemNumber = 2;
       let numberDefault = this.itemNumber;
       
@@ -54,10 +56,8 @@ class DropdownOptions {
         }
       }
       this.itemNumber = numberDefault;
-
-    });
-  }
-}
+  };
+} 
 
 const dropdownItem = document.querySelectorAll('.dropdownItem__buttons');
 
