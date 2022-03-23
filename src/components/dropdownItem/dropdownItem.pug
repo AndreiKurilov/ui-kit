@@ -1,8 +1,19 @@
-mixin dropdownItem({ name="", number="" })
+mixin dropdownItem({ title="", count="" })
  
   .dropdownItem 
-    .dropdownItem__name #{name}
+    .dropdownItem__name #{title}
     .dropdownItem__buttons
-      button.dropdownItem__btnMinus -
-      span.dropdownItem__number #{number}
-      button.dropdownItem__btnPlus +
+      button&attributes({
+        class: "dropdownItem__btnMinus",
+        type: "button"
+      })
+      input&attributes({
+        class: "dropdownItem__number", 
+        type: "text", 
+        readonly: "readonly",
+        value: count
+      })
+      button&attributes({
+        class: "dropdownItem__btnPlus",
+        type: "button"
+      })
