@@ -54,7 +54,13 @@ include ../components/iconLink/iconLink
     .formElements__dropdownBedroomDefault
       +heading({ title: "dropdown", state: "default" })
       //- +dropdown({ isExpanded: true })
-      +dropdown({ })
+      +dropdown({ 
+        options: [
+          { title: "спальни", id: "bedrooms", count: 2 }, 
+          { title: "кровати", id: "beds", count: 2 }, 
+          { title: "ванные комнаты", id: "bathrooms", count: 0 }
+        ]
+      })
 
     .formElements__checkboxExpandable
       +heading({ title: "expandable checkbox list", isExpanded: true})
