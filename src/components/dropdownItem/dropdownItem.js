@@ -1,15 +1,14 @@
 import './dropdownItem.scss';
 
-// this = dropdownItem
-
-class DropdownOptions {
+export class DropdownOptions {
   constructor( selector ) {
     this.mainSelector = selector;
-    this.addListener();
     this.findElements();
+    this.addListener();
+    this.numberDefault = this.itemNumber.value;
+    this.setInitialStateBtn();
     console.log(this)
   }
-  
 
   findElements() {
     this.btnMinus = this.mainSelector.querySelector('.dropdownItem__btnMinus');
@@ -27,40 +26,44 @@ class DropdownOptions {
     btn.classList.remove('dropdownItem__btn_disabled');
   }
 
+  setInitialStateBtn() {
+    if ( this.itemNumber.value == 0 ) {
+      this.isDisabled(this.btnMinus);
+    }
+  }
 
   addListener() {
     this.mainSelector.addEventListener('click', this.handleClick.bind(this));
   }
 
   handleClick(e) {
-      this.itemNumber = 2;
-      let numberDefault = this.itemNumber;
-      
-      if ( e.target == this.btnMinus ) {
-        if ( numberDefault > 0 ) {
-          numberDefault--;
-          this.isActivated(this.btnMinus);
-          this.isActivated(this.btnPlus);
-        }
-        if ( numberDefault == 0) {
-          this.isDisabled(this.btnMinus);
-        } 
+    if ( e.target == this.btnMinus ) {
+      if ( this.numberDefault > 0 ) {
+        this.numberDefault--;
+        this.isActivated(this.btnMinus);
+        this.isActivated(this.btnPlus);
       }
-      if ( e.target == this.btnPlus ) {
-        if ( numberDefault < 3 ) {
-          numberDefault++;
-          this.isActivated(this.btnMinus);
-        }
-        if ( numberDefault == 3 ) {
-          this.isDisabled(this.btnPlus);
-        }
+      if ( this.numberDefault == 0) {
+        this.isDisabled(this.btnMinus);
+      } 
+    }
+    if ( e.target == this.btnPlus ) {
+      if ( this.numberDefault < 3 ) {
+        this.numberDefault++;
+        this.isActivated(this.btnMinus);
       }
-      this.itemNumber = numberDefault;
+      if ( this.numberDefault == 3 ) {
+        this.isDisabled(this.btnPlus);
+      }
+    }
+    this.itemNumber.value = this.numberDefault;
   };
 } 
 
-const dropdownItem = document.querySelectorAll('.dropdownItem__buttons');
+// let itemResult = 
 
-if (dropdownItem.length > 0) {
-  dropdownItem.forEach(( selector ) => new DropdownOptions( selector ));
+const dropdownItems = document.querySelectorAll('.dropdownItem');
+
+if (dropdownItems.length > 0) {
+  dropdownItems.forEach(( selector ) => new DropdownOptions( selector ));
 }
