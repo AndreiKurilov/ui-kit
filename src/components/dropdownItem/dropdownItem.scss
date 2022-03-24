@@ -25,6 +25,9 @@
 
   &__btnMinus,
   &__btnPlus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
     width: 30px;
     height: 30px;
@@ -34,6 +37,27 @@
     font-size: 18px;
     line-height: 22px;
     color: $color--darkShade50;
+  }
+
+  &__btnMinus::after {
+    content: "-";
+  }
+  
+  &__btnPlus::after {
+    content: "+";
+  }
+
+  &__number {
+    background: transparent;
+    padding: 0;
+    width: 20px;
+    border: none;
+    outline: none;
+    font-family: $mainFontBold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color--main;
+    text-align: center;
   }
 
   &__btn_disabled {
