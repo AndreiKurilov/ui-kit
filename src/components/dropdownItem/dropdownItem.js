@@ -1,11 +1,10 @@
 import './dropdownItem.scss';
 
-export class DropdownOptions {
+class DropdownOptions {
   constructor( selector ) {
     this.mainSelector = selector;
     this.findElements();
     this.addListener();
-    this.numberDefault = this.itemNumber.value;
     this.setInitialStateBtn();
     console.log(this)
   }
@@ -38,29 +37,27 @@ export class DropdownOptions {
 
   handleClick(e) {
     if ( e.target == this.btnMinus ) {
-      if ( this.numberDefault > 0 ) {
-        this.numberDefault--;
+      if ( this.itemNumber.value > 0 ) {
+        this.itemNumber.value--;
         this.isActivated(this.btnMinus);
         this.isActivated(this.btnPlus);
       }
-      if ( this.numberDefault == 0) {
+      if ( this.itemNumber.value == 0) {
         this.isDisabled(this.btnMinus);
       } 
     }
     if ( e.target == this.btnPlus ) {
-      if ( this.numberDefault < 3 ) {
-        this.numberDefault++;
+      if ( this.itemNumber.value < 3 ) {
+        this.itemNumber.value++;
         this.isActivated(this.btnMinus);
       }
-      if ( this.numberDefault == 3 ) {
+      if ( this.itemNumber.value == 3 ) {
         this.isDisabled(this.btnPlus);
       }
     }
-    this.itemNumber.value = this.numberDefault;
   };
 } 
 
-// let itemResult = 
 
 const dropdownItems = document.querySelectorAll('.dropdownItem');
 
