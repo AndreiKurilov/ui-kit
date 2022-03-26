@@ -14,11 +14,11 @@
   }
   
   &__total {
-    padding-left: 15px;
     font-family: $mainFont;
     font-size: $mainFont--size;
     line-height: 24px;
     color: $color--darkShade75;
+    padding-left: 15px;
   }
 
   &__block::after {
