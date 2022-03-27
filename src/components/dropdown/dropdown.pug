@@ -1,13 +1,33 @@
-include ../dropdownItem/dropdownItem
+//- include ../dropdownItem/dropdownItem
 
-mixin dropdown({ isExpanded=false })
+mixin dropdown({ isExpanded=false, options=[]})
   -
     const dropdownExpand = isExpanded ? "dropdown__expand_visible" : ""
 
   .dropdown
     .dropdown__block
-      .dropdown__total
+      input&attributes({
+        class: "dropdown__total", 
+        type: "text", 
+        readonly: "readonly",
+      })
     .dropdown__expand( class=dropdownExpand )
-      +dropdownItem({name: "спальни", number: 2 })
-      +dropdownItem({name: "кровати", number: 2 })
-      +dropdownItem({name: "ванные комнаты", number: 0 })
+      each item in options
+        .dropdownItem 
+          .dropdownItem__name #{item.title}
+          .dropdownItem__buttons
+            button&attributes({
+              class: "dropdownItem__btnMinus",
+              type: "button"
+            })
+            input&attributes({
+              class: "dropdownItem__number", 
+              type: "text", 
+              readonly: "readonly",
+              value: item.count,
+              id: item.id
+            })
+            button&attributes({
+              class: "dropdownItem__btnPlus",
+              type: "button"
+            })
