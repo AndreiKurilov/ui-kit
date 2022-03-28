@@ -14,6 +14,9 @@
   }
   
   &__total {
+    border: none;
+    outline: none;
+    padding: 0;
     font-family: $mainFont;
     font-size: $mainFont--size;
     line-height: 24px;
@@ -56,3 +59,70 @@
     display: block;
   }
 }
+
+.dropdownItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $mainFontBold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color--main;
+  margin-top: 7px;
+
+  &__name {
+    text-transform: uppercase;
+    margin-left: 15px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92px;
+    margin-right: 7px;
+  }
+
+  &__btnMinus,
+  &__btnPlus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 22px;
+    border: 1px solid $color--darkShade25;
+    font-family: $mainFont;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color--darkShade50;
+  }
+
+  &__btnMinus::after {
+    content: "-";
+  }
+  
+  &__btnPlus::after {
+    content: "+";
+  }
+
+  &__number {
+    background: transparent;
+    padding: 0;
+    width: 20px;
+    border: none;
+    outline: none;
+    font-family: $mainFontBold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color--main;
+    text-align: center;
+  }
+
+  &__btn_disabled {
+    color: $color--darkShade1;
+    border: 1px solid $color--darkShade1;
+  }
+}
+
