@@ -63,20 +63,15 @@ class Dropdown {
     }
 
     this.dropdownTotal.value = `${this.bedroomsInput.value} спальни, ${this.bedsInput.value} кровати`;
-
   };
 
 } 
-
 
 const dropdown = document.querySelectorAll('.dropdown');
 
 if (dropdown.length > 0) {
   dropdown.forEach(( selector ) => new Dropdown( selector ));
 }
-
-
-
 
 class ExpandableDropdown {
   constructor(selector) {
