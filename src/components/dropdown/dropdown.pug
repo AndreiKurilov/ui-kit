@@ -1,4 +1,4 @@
-//- include ../dropdownItem/dropdownItem
+include ../dropdownItem/dropdownItem
 
 mixin dropdown({ isExpanded=false, options=[]})
   -
@@ -13,21 +13,22 @@ mixin dropdown({ isExpanded=false, options=[]})
       })
     .dropdown__expand( class=dropdownExpand )
       each item in options
-        .dropdownItem 
-          .dropdownItem__name #{item.title}
-          .dropdownItem__buttons
-            button&attributes({
-              class: "dropdownItem__btnMinus",
-              type: "button"
-            })
-            input&attributes({
-              class: "dropdownItem__number", 
-              type: "text", 
-              readonly: "readonly",
-              value: item.count,
-              id: item.id
-            })
-            button&attributes({
-              class: "dropdownItem__btnPlus",
-              type: "button"
-            })
+        +dropdownItem({ title: item.title, count: item.count, id: item.id })
+        //- .dropdownItem 
+        //-   .dropdownItem__name #{item.title}
+        //-   .dropdownItem__buttons
+        //-     button&attributes({
+        //-       class: "dropdownItem__btnMinus",
+        //-       type: "button"
+        //-     })
+        //-     input&attributes({
+        //-       class: "dropdownItem__number", 
+        //-       type: "text", 
+        //-       readonly: "readonly",
+        //-       value: item.count,
+        //-       id: item.id
+        //-     })
+        //-     button&attributes({
+        //-       class: "dropdownItem__btnPlus",
+        //-       type: "button"
+        //-     })
