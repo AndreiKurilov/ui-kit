@@ -1,11 +1,12 @@
 import '../dropdownItem/dropdownItem.js';
 import './dropdown.scss';
-// import {DropdownOptions} from '../dropdownItem/dropdownItem.js';
+import {DropdownOptions} from '../dropdownItem/dropdownItem.js';
 
 class Dropdown {
   constructor( selector ) {
     this.mainSelector = selector;
     this.findElements();
+    this.createDropdownItems();
     this.setTotalValue();
     console.log(this)
   }
@@ -15,6 +16,13 @@ class Dropdown {
     this.bedroomsInput = this.mainSelector.querySelector("#bedrooms");
     this.bedsInput = this.mainSelector.querySelector("#beds");
     this.bathroomsInput = this.mainSelector.querySelector("bathrooms");
+  }
+
+  createDropdownItems() {
+    const dropdownItems = document.querySelectorAll('.dropdownItem');
+    if (dropdownItems.length > 0) {
+      dropdownItems.forEach(( selector ) => new DropdownOptions( selector ));
+    }
   }
   
   setTotalValue() {
