@@ -1,6 +1,6 @@
 import './dropdownItem.scss';
 
-class DropdownOptions {
+export class DropdownOptions {
   constructor( selector ) {
     this.mainSelector = selector;
     this.findElements();
@@ -58,9 +58,3 @@ class DropdownOptions {
   };
 } 
 
-
-const dropdownItems = document.querySelectorAll('.dropdownItem');
-
-if (dropdownItems.length > 0) {
-  dropdownItems.forEach(( selector ) => new DropdownOptions( selector ));
-}
