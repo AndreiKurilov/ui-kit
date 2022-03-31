@@ -10,7 +10,7 @@ mixin dropdownItem({ title="", count="", id="" })
       input&attributes({
         class: "dropdownItem__number", 
         type: "text", 
-        readonly: "readonly",
+        readonly: true,
         value: count,
         id: id
       })
