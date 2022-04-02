@@ -9,26 +9,8 @@ mixin dropdown({ isExpanded=false, options=[]})
       input&attributes({
         class: "dropdown__total", 
         type: "text", 
-        readonly: "readonly",
+        readonly: true,
       })
     .dropdown__expand( class=dropdownExpand )
       each item in options
         +dropdownItem({ title: item.title, count: item.count, id: item.id })
-        //- .dropdownItem 
-        //-   .dropdownItem__name #{item.title}
-        //-   .dropdownItem__buttons
-        //-     button&attributes({
-        //-       class: "dropdownItem__btnMinus",
-        //-       type: "button"
-        //-     })
-        //-     input&attributes({
-        //-       class: "dropdownItem__number", 
-        //-       type: "text", 
-        //-       readonly: "readonly",
-        //-       value: item.count,
-        //-       id: item.id
-        //-     })
-        //-     button&attributes({
-        //-       class: "dropdownItem__btnPlus",
-        //-       type: "button"
-        //-     })
