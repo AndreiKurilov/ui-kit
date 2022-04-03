@@ -6,7 +6,7 @@ export class DropdownOptions {
     this.findElements();
     this.addListener();
     this.setInitialStateBtn();
-    console.log(this)
+    console.log(this.itemNumber.shadowRoot)
   }
 
   findElements() {
@@ -37,12 +37,12 @@ export class DropdownOptions {
 
   handleClick(e) {
     if ( e.target == this.btnMinus ) {
-      if ( this.itemNumber.value > 0 ) {
+      if ( this.itemNumber.value > 1 ) {
         this.itemNumber.value--;
         this.isActivated(this.btnMinus);
         this.isActivated(this.btnPlus);
       }
-      if ( this.itemNumber.value == 0) {
+      if ( this.itemNumber.value == 1) {
         this.isDisabled(this.btnMinus);
       } 
     }
