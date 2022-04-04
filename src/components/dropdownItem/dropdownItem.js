@@ -47,11 +47,11 @@ export class DropdownOptions {
       } 
     }
     if ( e.target == this.btnPlus ) {
-      if ( this.itemNumber.value < 3 ) {
+      if ( this.itemNumber.value < 4 ) {
         this.itemNumber.value++;
         this.isActivated(this.btnMinus);
       }
-      if ( this.itemNumber.value == 3 ) {
+      if ( this.itemNumber.value == 4 ) {
         this.isDisabled(this.btnPlus);
       }
     }
