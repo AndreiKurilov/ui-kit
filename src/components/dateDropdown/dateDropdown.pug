@@ -1,7 +1,6 @@
+include ../textField/textField
+
 mixin dateDropdown({})
-  
   .dateDropdown
-    .dateDropdown__block
-      input&attributes({
-      })
-    .dateDropdown__expand
+    +textField({  type: "text", isUppercase: true, placeholder: "ДД.ММ.ГГГГ", inputmode: numeric })
+    //- .dateDropdown__expand
