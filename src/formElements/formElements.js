@@ -1,5 +1,6 @@
 import '../components/heading/heading.js';
 import '../components/dropdown/dropdown.js';
+import '../components/dateDropdown/dateDropdown.js';
 import '../components/textField/textField.js';
 import '../components/checkboxList/checkboxList.js';
 import '../components/roomFeatures/roomFeatures.js';
