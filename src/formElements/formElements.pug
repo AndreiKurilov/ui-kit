@@ -3,6 +3,7 @@ include ../components/heading/heading
 include ../components/textField/textField
 include ../components/checkboxList/checkboxList
 include ../components/dropdown/dropdown
+include ../components/dateDropdown/dateDropdown
 include ../components/roomFeatures/roomFeatures
 include ../components/radio/radio
 include ../components/toggle/toggle
@@ -38,7 +39,8 @@ include ../components/iconLink/iconLink
     .formElements__dateDropdowns 
       .formElements__dateDropdownDefault
         +heading({ title: "date dropdown" })
-        +textField({ type: "date", isUppercase: true })
+        +dateDropdown({})
+        //- +textField({ type: "date", isUppercase: true })
       .formElements__dateDropdown
         +heading({ title: "date dropdown" })
         +textField({ type: "date", isUppercase: true })
