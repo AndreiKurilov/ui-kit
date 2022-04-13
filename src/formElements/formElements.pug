@@ -20,21 +20,21 @@ include ../components/iconLink/iconLink
 
   section.formElements__textFields
 
-    .formElements__textFieldDefault
-      +heading({ title: "text field", state: "default" })
-      +textField({ type: "email", placeholder: "Email" })
+    //- .formElements__textFieldDefault
+    //-   +heading({ title: "text field", state: "default" })
+    //-   +textField({ type: "email", placeholder: "Email" })
 
-    .formElements__textFieldHover
-      +heading({ title: "text field", state: "hover/focus" })
-      +textField({ type: "email", isFocused: true, value: "This is pretty awesome" })
+    //- .formElements__textFieldHover
+    //-   +heading({ title: "text field", state: "hover/focus" })
+    //-   +textField({ type: "email", isFocused: true, value: "This is pretty awesome" })
 
-    .formElements__dropdownDefault
-      +heading({ title: "dropdown" })
-      +textField({ value: "Сколько гостей" })
+    //- .formElements__dropdownDefault
+    //-   +heading({ title: "dropdown" })
+    //-   +textField({ value: "Сколько гостей" })
 
-    .formElements__maskedTextField
-      +heading({ title: "masked text field" })
-      +textField({ type: "date", isUppercase: true })
+    //- .formElements__maskedTextField
+    //-   +heading({ title: "masked text field" })
+    //-   +textField({ type: "date", isUppercase: true })
 
     .formElements__dateDropdowns 
       .formElements__dateDropdownDefault
@@ -55,8 +55,17 @@ include ../components/iconLink/iconLink
 
     .formElements__dropdownBedroomDefault
       +heading({ title: "dropdown", state: "default" })
-      //- +dropdown({ isExpanded: true })
       +dropdown({ 
+        options: [
+          { title: "спальни", count: 2, id: "bedrooms" }, 
+          { title: "кровати", count: 2, id: "beds" }, 
+          { title: "ванные комнаты", count: 0, id: "bathrooms" }
+        ]
+      })
+
+    .formElements__dropdownBedroomDefault
+      +heading({ title: "dropdown", state: "expanded" })
+      +dropdown({ isExpanded: true,
         options: [
           { title: "спальни", count: 2, id: "bedrooms" }, 
           { title: "кровати", count: 2, id: "beds" }, 
