@@ -2,15 +2,15 @@ include ../dropdownItem/dropdownItem
 
 mixin dropdown({ isExpanded=false, options=[]})
   -
-    const dropdownExpand = isExpanded ? "dropdown__expand_visible" : ""
+    const dropdownExpand = isExpanded ? "active" : "";
 
   .dropdown
-    .dropdown__block
+    .dropdown__block( class = dropdownExpand )
       input&attributes({
-        class: "dropdown__total", 
+        class: "dropdown__total",
         type: "text", 
-        readonly: true,
+        readonly: true
       })
-    .dropdown__expand( class=dropdownExpand )
+    .dropdown__expand
       each item in options
         +dropdownItem({ title: item.title, count: item.count, id: item.id })
