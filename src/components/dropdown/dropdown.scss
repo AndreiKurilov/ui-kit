@@ -55,9 +55,8 @@
     border: $border__dark;
     border-bottom: transparent;
   }
-
-  &__block.active + .dropdown__expand, 
-  .dropdown__expand_visible {
+  
+  &__block.active + .dropdown__expand {
     display: block;
   }
 }
