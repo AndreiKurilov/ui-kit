@@ -1,4 +1,5 @@
 import './dateDropdown.scss';
+import Inputmask from "inputmask";
 
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
