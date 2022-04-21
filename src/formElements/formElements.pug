@@ -11,6 +11,7 @@ include ../components/like/like
 include ../components/rate/rate
 include ../components/bulletList/bulletList
 include ../components/comment/comment
+include ../components/rangeSlider/rangeSlider
 include ../components/button/button
 include ../components/pagination/pagination
 include ../components/iconLink/iconLink
@@ -153,6 +154,11 @@ include ../components/iconLink/iconLink
       })
 
   section.formElements__sliderButtons
+
+    .formElements__rangeSlider
+      +heading({ title: "range slider" })
+      +rangeSlider({})
+
     .formElements__buttons
       +heading({ title: "buttons" })
       .formElements__buttons-wrapper
