@@ -11,6 +11,7 @@ import '../components/rate/rate.js';
 import '../components/pagination/pagination.js';
 import '../components/bulletList/bulletList.js';
 import '../components/comment/comment.js';
+import '../components/rangeSlider/rangeSlider.js';
 import '../components/button/button.js';
 import '../components/iconLink/iconLink.js';
 import './formElements.scss';
