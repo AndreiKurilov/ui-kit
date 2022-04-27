@@ -1,11 +1,12 @@
 import '../dropdownItem/dropdownItem.js';
 import './dropdown.scss';
-import {DropdownOptions} from '../dropdownItem/dropdownItem.js';
+import {DropdownItem} from '../dropdownItem/dropdownItem.js';
 
 class Dropdown {
   constructor( selector ) {
     this.mainSelector = selector;
     this.findElements();
+    this._state = {};
     this.createDropdownItems();
     this.setTotalValue();
     console.log(this)
@@ -13,29 +14,49 @@ class Dropdown {
 
   findElements() {
     this.dropdownTotal = this.mainSelector.querySelector('.dropdown__total');
-    this.bedroomsInput = this.mainSelector.querySelector("#bedrooms");
-    this.bedsInput = this.mainSelector.querySelector("#beds");
-    this.bathroomsInput = this.mainSelector.querySelector("bathrooms");
+  }
+
+  onItemChange(id, value) {
+    this._state[id] = value;
+    this.setTotalValue();
   }
 
   createDropdownItems() {
-    const dropdownItems = document.querySelectorAll('.dropdownItem');
+    const dropdownItems = this.mainSelector.querySelectorAll('.dropdownItem');
     if (dropdownItems.length > 0) {
-      dropdownItems.forEach(( selector ) => new DropdownOptions( selector ));
+      dropdownItems.forEach(( selector ) => {
+        const dropdownOptions = new DropdownItem( selector, this.onItemChange.bind(this) );
+        this._state[dropdownOptions.getId()] = dropdownOptions.getValue();
+      })
     }
   }
   
   setTotalValue() {
-    this.dropdownTotal.value = `${this.bedroomsInput.value} спальни, ${this.bedsInput.value} кровати`;
+    const propsMap = {
+      bedrooms: "спальни",
+      beds: "кровати",
+      bathrooms: "ванные комнаты"
+    }
+
+    const ddTotal = Object.entries(this._state).slice(0, 2).map((entry) => {
+      const key = entry[0];
+      const value = entry[1];
+      return `${value} ${propsMap[key]}`;
+    })
+
+    const ddTotalValue = ddTotal.join(', ').concat('...');
+
+    this.dropdownTotal.value = ddTotalValue;
   }
 };
 
-const dropdown = document.querySelectorAll('.dropdown');
+const dropdowns = document.querySelectorAll('.dropdown');
 
-if (dropdown.length > 0) {
-  dropdown.forEach(( selector ) => new Dropdown( selector ));
+if (dropdowns.length > 0) {
+  dropdowns.forEach(( selector ) => {
+    const dropDown = new Dropdown( selector );
+  })
 }
-
 
 
 class ExpandableDropdown {
