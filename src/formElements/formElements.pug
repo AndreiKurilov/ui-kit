@@ -65,15 +65,15 @@ include ../components/iconLink/iconLink
         ]
       })
 
-    //- .formElements__dropdownBedroomDefault
-    //-   +heading({ title: "dropdown", state: "expanded" })
-    //-   +dropdown({ isExpanded: true,
-    //-     options: [
-    //-       { title: "спальни", count: 2, id: "bedrooms" }, 
-    //-       { title: "кровати", count: 2, id: "beds" }, 
-    //-       { title: "ванные комнаты", count: 0, id: "bathrooms" }
-    //-     ]
-    //-   })
+    .formElements__dropdownBedroomDefault
+      +heading({ title: "dropdown", state: "expanded" })
+      +dropdown({ isExpanded: true,
+        options: [
+          { title: "спальни", count: 2, id: "bedrooms" }, 
+          { title: "кровати", count: 2, id: "beds" }, 
+          { title: "ванные комнаты", count: 0, id: "bathrooms" }
+        ]
+      })
 
     .formElements__checkboxExpandable
       +heading({ title: "expandable checkbox list", isExpanded: true})
