@@ -1,1 +1,0 @@
-import './iconLink.scss';
