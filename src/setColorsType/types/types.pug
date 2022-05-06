@@ -1,9 +1,0 @@
-mixin types( typeSamples=[] )
-  ul.types
-    each typeSample in typeSamples
-      -const typeClass = 'types__' + typeSample.typeTitle;
-      li&attributes({
-          class: ["types__wrap", typeClass]
-        })
-        .types__title #{typeSample.typeTitle}
-        .types__textExample #{typeSample.typeExample}
