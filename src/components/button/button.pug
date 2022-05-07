@@ -1,10 +1,16 @@
-mixin button({ btnTitle="", spanTitle="", withArrow=false, isWhite=false, btnHover=false })
+mixin button({ button=true, btnTitle="", spanTitle="", withArrow=false, isWhite=false, btnHover=false, btnLinkHover=fallse })
   -
     const buttonAroow = withArrow ? " button__arrow" : "";
-    const buttonHover = btnHover ? ' button_hover' : '';
+    const buttonHover = btnHover ? ' button_colored_hover' : '';
+    const buttonLinkHover = btnLinkHover ? ' button_hover' : '';
 
-  button&attributes({
-      class: [ "button", buttonAroow, buttonHover ] 
+  if button
+    button&attributes({
+      class: [ "button", "button_colored", buttonAroow, buttonHover ] 
     }) #{btnTitle}
-    if isWhite 
-      span.button_white #{spanTitle}
+      if isWhite 
+        span.button_white #{spanTitle}
+  else
+    a&attributes({
+      class: [ "button", buttonLinkHover ] 
+    }) #{btnTitle}
