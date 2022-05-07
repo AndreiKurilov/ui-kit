@@ -4,19 +4,34 @@
   border: none;
   outline: none;
   cursor: pointer;
-  background: $primaryGradient;
   position: relative;
-  
   font-family: $mainFontBold;
-  color: #FFFFFF;
+  color: $color--designMain;
   font-size: 12px;
   line-height: 15px;
+  background: transparent;
   text-transform: uppercase;
-  
-  padding: 2px;
-  border-radius: 50px;
-  height: 100%;
-  width: 100%;
+  padding: 0;
+
+  &:hover,
+  &_hover {
+    color: $color--darkShade50;
+  }
+
+  &_colored {
+    color: #FFFFFF;
+    background: $primaryGradient;
+    padding: 2px;
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    
+    &:hover,
+    &_hover {
+      background: $primaryGradient_50;
+      color: #FFFFFF;
+    }
+  }
 
   &__arrow::after {
     content: '\e904';
@@ -28,11 +43,6 @@
     padding-right: 15px;
   }
   
-  &:hover,
-  &_hover {
-    background: $primaryGradient_50;
-  }
-
   &_white {
     color: $color--designMain;
     border-radius: 50px;
