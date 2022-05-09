@@ -1,8 +1,9 @@
 include ../dropdownItem/dropdownItem
 
-mixin dropdown({ isExpanded=false, options=[]})
+mixin dropdown({ isExpanded=false, options=[], dropdownGuests=false })
   -
     const dropdownExpand = isExpanded ? "active" : "";
+    const dropdownExpandGuests = dropdownGuests ? "dropdown__expand_guests" : "";
 
   .dropdown
     .dropdown__block( class = dropdownExpand )
@@ -11,6 +12,10 @@ mixin dropdown({ isExpanded=false, options=[]})
         type: "text", 
         readonly: true
       })
-    .dropdown__expand
+    .dropdown__expand( class = dropdownExpandGuests )
       each item in options
-        +dropdownItem({ title: item.title, count: item.count, id: item.id })
+        +dropdownItem({ title: item.title, count: item.count })
+      if ( dropdownGuests ) 
+        .dropdown__links
+          +button({ button: false, btnTitle: "очистить"})
+          +button({ button: false, btnTitle: "применить"})
