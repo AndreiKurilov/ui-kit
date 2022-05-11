@@ -1,4 +1,4 @@
-mixin dropdownItem({ title="", count="", id="" })
+mixin dropdownItem({ title="", count="" })
  
   .dropdownItem 
     .dropdownItem__name #{title}
@@ -12,7 +12,7 @@ mixin dropdownItem({ title="", count="", id="" })
         type: "text", 
         readonly: true,
         value: count,
-        id: id
+        id: title
       })
       button&attributes({
         class: "dropdownItem__btnPlus",
