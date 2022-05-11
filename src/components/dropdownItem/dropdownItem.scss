@@ -8,19 +8,19 @@
   font-size: 12px;
   line-height: 15px;
   color: $color--main;
-  margin-top: 7px;
+  
+  &:not(:last-child) {
+    margin-bottom: 7px;
+  }
 
   &__name {
     text-transform: uppercase;
-    margin-left: 15px;
   }
 
   &__buttons {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 92px;
-    margin-right: 7px;
   }
 
   &__btnMinus,
@@ -50,7 +50,7 @@
   &__number {
     background: transparent;
     padding: 0;
-    width: 20px;
+    width: 32px;
     border: none;
     outline: none;
     font-family: $mainFontBold;
