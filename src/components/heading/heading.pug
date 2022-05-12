@@ -1,8 +1,11 @@
-mixin heading ({ title="", state="", isExpanded=false })
+mixin heading ({ title="", state="", expandable=false, isExpanded=false })
   -
-    const expandMore = isExpanded ? "heading_expand-more" : ""
+    const expandMore = expandable ? "heading_expand-more" : "";
 
-  .heading(class=expandMore)
+    const headingExpanded = isExpanded ? "active" : "";
+
+  .heading&attributes({
+    class: [expandMore, headingExpanded] })
     h3&attributes({
       class: "heading__title" }) #{title}
     if (state)
