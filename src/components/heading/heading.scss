@@ -23,17 +23,12 @@
     color: $color--darkShade50;
     font-size: 8px;
     cursor: pointer;
-    margin-left: 40px;
+    padding-right: 16px;
     margin-top: 3px;
   }
   
   &_expand-more.active::after {
     content: '\e900';
-    font-family: $materialIcons;
-    color: $color--darkShade50;
-    font-size: 8px;
-    cursor: pointer;
-    margin-left: 40px;
   }
   
   &_expand-more + .checkboxList {
