@@ -7,7 +7,6 @@ export class DropdownItem {
     this.addListener();
     this.setInitialStateBtn();
     this.onChange = onChange;
-    console.log(this)
   }
 
   findElements() {
@@ -38,12 +37,12 @@ export class DropdownItem {
   
   handleClick(e) {
     if ( e.target == this.btnMinus ) {
-      if ( this.itemNumber.value > 1 ) {
+      if ( this.itemNumber.value > 0 ) {
         this.itemNumber.value--;
         this.isActivated(this.btnMinus);
         this.isActivated(this.btnPlus);
       }
-      if ( this.itemNumber.value == 1) {
+      if ( this.itemNumber.value == 0) {
         this.isDisabled(this.btnMinus);
       } 
     }
