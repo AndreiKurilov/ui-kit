@@ -1,0 +1,11 @@
+mixin linksPages({ column=false, listLinks=[] })
+
+  - const directionColumn = column ? "linksPages__wrapper_column" : "";
+
+  .linksPages
+    .linksPages__wrapper(class = directionColumn)
+      each listLink in listLinks
+        a&attributes({
+          class: 'linksPages__link',
+          href: `./${listLink.link}.html`
+        }) #{listLink.title}
