@@ -1,22 +1,8 @@
 @import '../../scss/variables.scss';
 
-::-webkit-input-placeholder {
-  color: $color--darkShade25;
-}
-
 input[type=date]::-webkit-calendar-picker-indicator {
   opacity: 0;
   margin: 0;
-}
-
-input[type=date] {
-  text-transform: uppercase;
-  // color: $color--darkShade25;
-  
-  &:hover,
-  &:focus {
-    color: $color--darkShade75;
-  }
 }
 
 .textField {
@@ -46,14 +32,18 @@ input[type=date] {
     font-family: $mainFont;
     font-size: 14px;
     line-height: 18px;
-    color: $color--darkShade75;
+    color: $color--darkShade50;
     text-overflow: ellipsis;
+
+    &_isUppercase {
+      text-transform: uppercase;
+    }
     
     &_withButton {
       width: 221px;
     }
   }
-
+  
   &__buttonSubscribed {
     border: none;
     outline: none;
