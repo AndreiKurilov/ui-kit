@@ -1,0 +1,11 @@
+mixin colors( colorSamples=[] )
+  ul.colors
+    each colorSample in colorSamples
+      li.colors__wrap
+        - const sampleClass = 'colors__' + colorSample.color;
+        div&attributes({
+          class: ["colors__sample", sampleClass]
+        })
+        .colors__description
+          .colors__title #{colorSample.colorTitle}
+          .colors__code #{colorSample.colorCode}
