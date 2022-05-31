@@ -1,0 +1,21 @@
+@import '../../scss/variables.scss';
+
+.setColorsType {
+  margin-left: 80px;
+  margin-top: 67px;
+  
+  display: grid;
+  grid-template-areas: "colors types";
+  grid-template-columns: 1fr 1fr;
+  
+  &__colors {
+    grid-area: colors;
+    margin-right: 415px;
+    width: 290px;
+  }
+
+  &__types {
+    grid-area: types;
+    width: 440px;
+  }
+}
