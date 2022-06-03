@@ -1,4 +1,4 @@
-mixin textField({ type="", placeholder="", value="", isFocused=false, isUppercase=false, withButton=false, buttonSubscribed=false, inputmode="", dropdownDateId="" })
+mixin textField({ type="", placeholder="", value="", isFocused=false, isUppercase=false, withButton=false, buttonSubscribed=false, inputmode="", dropdownDateId="", isReadonly=true })
   -
     const focused = isFocused ? "textField_isFocused" : "";
     const textUppercase = isUppercase ? "textField__input_isUppercase" : "";
@@ -11,7 +11,8 @@ mixin textField({ type="", placeholder="", value="", isFocused=false, isUppercas
       value: value,
       inputmode: inputmode,
       max: "2030-01-01",
-      "data-id": dropdownDateId
+      "data-id": dropdownDateId,
+      readonly: isReadonly
     }
 
     const buttonAttributes = {
