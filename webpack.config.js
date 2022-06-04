@@ -4,34 +4,61 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
 
-// window.$ = require('jquery')(window);
-// var $ = require("jquery")(window);
-// var $ = jQuery = require('jquery')(window);
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+  dist: path.join(__dirname, 'dist'),
+}
 
 module.exports = {
-  entry: './index.js',
+  entry: {
+    pageStart: PATHS.src + '/pages/pageStart/pageStart.js',
+    setColorsType: PATHS.src + '/pages/setColorsType/setColorsType.js',
+    headersFooters: PATHS.src + '/pages/headersFooters/headersFooters.js',
+    cards: PATHS.src + '/pages/cards/cards.js',
+    formElements: PATHS.src + '/pages/formElements/formElements.js',
+  },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: PATHS.dist,
+    filename: '[name].js'
   },
   watch: true,
   watchOptions: {
-      aggregateTimeout: 100
+      aggregateTimeout: 100,
+      ignored: [/node_modules/]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-        filename: 'index.html',
-        // chunks: ['index'],
-        // template: PATHS.src + '/index.pug'
-        template: 'index.pug',
-    }),
+    new HtmlWebpackPlugin(
+      {
+        filename: 'pageStart.html',
+        template: PATHS.src + '/pages/pageStart/pageStart.pug'
+      }
+    ),
+    new HtmlWebpackPlugin(
+      {
+        filename: 'setColorsType.html',
+        template: PATHS.src + '/pages/setColorsType/setColorsType.pug'
+      }
+    ),
+    new HtmlWebpackPlugin(
+      {
+        filename: 'headersFooters.html',
+        template: PATHS.src + '/pages/headersFooters/headersFooters.pug'
+      }
+    ),
+    new HtmlWebpackPlugin(
+      {
+        filename: 'formElements.html',
+        template: PATHS.src + '/pages/formElements/formElements.pug'
+      },
+    ),
+    new HtmlWebpackPlugin(
+      {
+        filename: 'cards.html',
+        template: PATHS.src + '/pages/cards/cards.pug'
+      },
+    ),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery'
+      filename: '[name].css'
     }),
     new CopyPlugin({
       patterns: [
@@ -68,7 +95,7 @@ module.exports = {
               loader: 'sass-loader',
               options: { sourceMap: true }
             }
-            ]
+          ]
         },
         {
           test: /\.css$/,
