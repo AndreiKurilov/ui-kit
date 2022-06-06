@@ -1,5 +1,145 @@
 @import '../../scss/variables';
 
-.dateDropdown {
+.air-datepicker {
   cursor: pointer;
+  border: 1px solid $color--darkShade25 !important;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05) !important;
+  border-radius: 4px !important;
+  
+  &_big {
+    min-width: 320px !important;
+  }
+
+  &_small {
+    min-width: 266 !important;
+  }
+
+  &__arrow {
+    color: $color--designMain;
+    font-family: $materialIconArrow;
+    font-size: 24px;
+    
+    &_back::before {
+      content: '\e900';
+    }
+    
+    &_forward::before {
+      display: flex;
+      content: '\e904';
+      font-family: $materialIcons;
+      font-size: 18px;
+      align-items: center;
+    }
+  }
+  
+  &-nav {
+    padding: 20px 20px 30px !important;
+    border-bottom: none !important;
+    min-height: 24px !important;
+    
+    &--title {
+      font-family: $mainFontBold;
+      font-size: 19px;
+      line-height: 23px;
+      color: $color--main;
+    }
+  }
+  
+  &--content {
+    padding: 0 20px !important;
+  }
+  
+  &-body--day-names {
+    margin: 0 !important;
+    font-family: $mainFontBold;
+    font-size: 12px;
+    line-height: 15px;
+    height: 40px;
+  }
+  
+  &-body--day-name {
+    color: $color--designMain !important;
+  }
+  
+  &-body--cells.-days- {
+    grid-auto-rows: 40px !important;
+    font-family: $mainFont;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color--darkShade50;
+  }
+  
+  &--buttons {
+    border-top: none !important;
+    padding: 20px !important;
+  }
+  
+  &-buttons :first-child span {
+    justify-content: flex-start !important;
+  }
+
+  &-buttons :last-child span {
+    justify-content: flex-end !important;
+  }
+
+  &-button {
+    font-family: $mainFontBold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $color--designMain !important;
+    padding: 0 !important;
+
+    &:hover {
+      background: none !important;
+      color: $color--darkShade50 !important;
+    }
+  }
+
+  &-cell:hover {
+    border-radius: 25px;
+  }
+
+  &-cell.-current- {
+    color: #FFFFFF !important;
+    background: $secondGradient;
+    border-radius: 25px;
+    font-family: $mainFontBold;
+  }
+
+  &-cell.-selected-,
+  &-cell.-selected-.-range-from-,
+  &-cell.-selected-.-range-to,
+  &-cell.-range-from-,
+  &-cell.-range-to- {
+    color: #FFFFFF !important;
+    background: $primaryGradient !important;
+    border-radius: 25px !important;
+    font-family: $mainFontBold;
+    border: none !important;
+  }
+  
+  &-cell.-range-from-:before,
+  &-cell.-range-to-:before {
+    content: "";
+    background: $linearGradient !important;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  &-cell.-range-from-:before {
+    border-radius: 50% 0 0 50% !important;
+  }
+
+  &-cell.-range-to-:before {
+    border-radius: 0 50% 50% 0 !important;
+  }
+  
+  &-cell.-in-range- {
+    background: $linearGradient !important;
+  }
 }
