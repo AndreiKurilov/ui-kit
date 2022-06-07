@@ -1,0 +1,20 @@
+extends ../../layouts/uikitLayout.pug
+include ../../components/linksPages/linksPages.pug
+
+block titles
+  - const title = "Start"
+
+block content
+  .pageStart
+    .pageStart__uikit UI-kit
+      +linksPages({ column: true,
+          listLinks: [
+            { link: "setColorsType", title: "Colors & Type" },
+            { link: "headersFooters", title: "Headers & Footers" },
+            { link: "formElements", title: "Form Elements" },
+            { link: "cards", title: "Cards" },
+          ]
+        })
+    .pageStart__pagesHotel Website Pages
+
+block footer 
