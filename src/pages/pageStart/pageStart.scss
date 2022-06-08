@@ -1,0 +1,26 @@
+@import '../../scss/variables.scss';
+
+.pageStart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $mainFontBold;
+  color: $color--darkShade75;
+  font-size: 20px;
+  
+  &__uikit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &:focus,
+    &:hover {
+      color: $color--darkShade75;
+      outline: none;
+    }
+  }
+
+  &__pagesHotel {
+    margin-top: 40px;
+  }
+}
