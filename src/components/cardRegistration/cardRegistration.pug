@@ -4,44 +4,66 @@ include ../heading/heading
 include ../toggle/toggle
 include ../button/button
 
+mixin cardRegistration({ cardTitle="", cardType="" })
 
-
-mixin cardRegistration({ cardTitle="" })
-  //- -
-    //- const buttonAroow = withArrow ? " button__arrow" : "";
-    //- const buttonHover = btnHover ? ' button_colored_hover' : '';
-    //- const buttonLinkHover = btnLinkHover ? ' button_hover' : '';
-
-  form(action="").cardRegistration
-    .cardRegistration__wrapper
-      .cardRegistration__title #{cardTitle}
-    .cardRegistration__nameSurname
-      .cardRegistration__name
-        +textField({ type: "text", placeholder: "Имя" })
-      .cardRegistration__surname
-        +textField({ type: "text", placeholder: "Фамилия" })
-    .cardRegistration__manWoman
-      +radio({ title: "Мужчина", name: "gender", value: "man", checked: true })
-      +radio({title: "Женщина", name: "gender", value: "woman", checked: false })
-    .cardRegistration__dateOfBirth
-      +heading({ title: "дата рождения" })
-      +textField({ type: "date", placeholder: "ДД.ММ.ГГГГ", isUppercase: true, inputmode: numeric })
-    .cardRegistration__data 
-      +heading({ title: "данные для входа в сервис" })
+  if ( cardType == "account" )
+    form(action="").cardRegistration
+      .cardRegistration__wrapper
+        .cardRegistration__title #{cardTitle}
+      
+      .cardRegistration__nameSurname
+        .cardRegistration__name
+          +textField({ type: "text", placeholder: "Имя" })
+        .cardRegistration__surname
+          +textField({ type: "text", placeholder: "Фамилия" })
+      
+      .cardRegistration__manWoman
+        +radio({ title: "Мужчина", name: "gender", value: "man", checked: true })
+        +radio({title: "Женщина", name: "gender", value: "woman", checked: false })
+      
+      .cardRegistration__dateOfBirth
+        +heading({ title: "дата рождения" })
+        +textField({ type: "date", placeholder: "ДД.ММ.ГГГГ", isUppercase: true, inputmode: numeric })
+        
+      .cardRegistration__data 
+        +heading({ title: "данные для входа в сервис" })
+      
       .cardRegistration__emailPassword 
         .cardRegistration__email 
           +textField({ type: "email", placeholder: "Email" })
         .cardRegistration__password 
           +textField({ type: "text", placeholder: "Пароль" })
-    .cardRegistration__toggle 
-      +toggle({ title: "Получать спецпредложения", checked: false })
-    .cardRegistration__buttonPay
-      +button({ button: true, btnTitle: 'перейти к оплате', withArrow: true })
-    .cardRegistration__isEnter 
-      .cardRegistration__account
-        a Уже есть аккаунт на Toxin 
-      .cardRegistration__buttonEnter
-        +button({ spanTitle: 'click me', isWhite: true })
+      
+      .cardRegistration__toggle 
+        +toggle({ title: "Получать спецпредложения", checked: false })
+    
+      .cardRegistration__buttonPay
+        +button({ button: true, btnTitle: 'перейти к оплате', withArrow: true })
+      
+      .cardRegistration__isEnter 
+        .cardRegistration__account Уже есть аккаунт на Toxin 
+        .cardRegistration__buttonEnter
+          +button({ spanTitle: "войти", isWhite: true })
+
+  else
+    form(action="").cardRegistration
+      .cardRegistration__wrapper
+        .cardRegistration__title #{cardTitle}
+
+      .cardRegistration__emailPassword 
+        .cardRegistration__email 
+          +textField({ type: "email", placeholder: "Email" })
+        .cardRegistration__password 
+          +textField({ type: "text", placeholder: "Пароль" })
+      
+      .cardRegistration__buttonPay
+        +button({ button: true, btnTitle: 'Войти', withArrow: true })
+
+      .cardRegistration__isEnter 
+        .cardRegistration__account Нет аккаунта на Toxin?
+        .cardRegistration__buttonEnter
+          +button({ spanTitle: "Создать", isWhite: true })
+
 
 
  
