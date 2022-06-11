@@ -1,5 +1,5 @@
 include ../textField/textField
 
-mixin dateDropdown({ dropdownDateId="", isUppercase="", placeholder="" })
+mixin dateDropdown({ dropdownDateId="", isUppercase="", placeholder="", isReadonly="" })
   .dateDropdown
-    +textField({ type: "text", isUppercase: isUppercase, placeholder: placeholder, inputmode: numeric, dropdownDateId: dropdownDateId })
+    +textField({ type: "text", isUppercase: isUppercase, placeholder: placeholder, inputmode: numeric, dropdownDateId: dropdownDateId, isReadonly: isReadonly })
