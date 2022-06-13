@@ -15,21 +15,21 @@ mixin header ({ isLogged=false, userName="" })
             +navigation({
               listStyleNone: true,
               navList: [
-                {name: 'О нас', url: "./error-page.html", isActived: true}, 
+                {name: 'О нас', url: "./pageError.html", isActived: true}, 
                 {name: 'Услуги', dropdown: true,
                 optionsList: [
-                  {name: 'Работа или отдых', url: "./error-page.html"},
-                  {name: 'Развлечения', url: "./error-page.html"},
-                  {name: 'Условия отмены', url: "./error-page.html"}
+                  {name: 'Работа или отдых', url: "./pageError.html"},
+                  {name: 'Развлечения', url: "./pageError.html"},
+                  {name: 'Условия отмены', url: "./pageError.html"}
                 ]
                 }, 
-                {name: 'Вакансии', url: "./error-page.html"}, 
-                {name: 'Новости', url: "./error-page.html"}, 
+                {name: 'Вакансии', url: "./pageError.html"}, 
+                {name: 'Новости', url: "./pageError.html"}, 
                 {name: 'Соглашения', dropdown: true,
                 optionsList: [
-                  {name: 'Общие положения', url: "./error-page.html"},
-                  {name: 'Правила и условия', url: "./error-page.html"},
-                  {name: 'Разрешение споров', url: "./error-page.html"}
+                  {name: 'Общие положения', url: "./pageError.html"},
+                  {name: 'Правила и условия', url: "./pageError.html"},
+                  {name: 'Разрешение споров', url: "./pageError.html"}
                 ]
                 } 
               ]
@@ -42,4 +42,3 @@ mixin header ({ isLogged=false, userName="" })
                 +button({ isWhite: true, spanTitle: 'войти' })
               .header__buttonRegister
                 +button({ isDefault: true, btnTitle: 'зарегистрироваться' })
-
