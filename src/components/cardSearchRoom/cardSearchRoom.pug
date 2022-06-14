@@ -1,0 +1,97 @@
+include ../textField/textField
+include ../heading/heading
+include ../button/button
+include ../dateDropdown/dateDropdown
+include ../dropdown/dropdown
+
+mixin cardSearchRoom({ cardTitle="", cardType="" })
+  if ( cardType == "totalPrice" )
+    form(action="").cardSearchRoom
+      .cardSearchRoom__wrapper
+        .cardSearchRoom__room
+          span.cardSearchRoom__numberSymbol № 
+          span.cardSearchRoom__roomNumber 888
+          span.cardSearchRoom__roomLux люкс
+        .cardSearchRoom__priceRoom
+          span.cardSearchRoom__price 9 990₽
+          span.cardSearchRoom__perDay за сутки
+      
+      .cardSearchRoom__dates
+        .cardSearchRoom__arrival
+          +heading({ title: "прибытие" })
+          +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+        .cardSearchRoom__departure
+          +heading({ title: "выезд" })
+          +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+
+      .cardSearchRoom____dropdownGuests
+        +heading({ title: "гости" })
+        +dropdown({ dropdownId: "guests",
+          options: [
+            { title: "взрослые", count: 2 }, 
+            { title: "дети", count: 1 }, 
+            { title: "младенцы", count: 0 }
+          ]
+        })
+
+      .cardSearchRoom__details
+        .cardSearchRoom__priceForPeriod
+          span.cardSearchRoom__priceDetails 9 990₽ х 4 суток
+          span.cardSearchRoom__priceTotal 39 960₽
+
+        .cardSearchRoom__serviceFee
+          .cardSearchRoom__feeWrapper
+            .cardSearchRoom__feeDetails Сбор за услуги: скидка 2 179₽
+            .cardSearchRoom__feeInform i
+          span.cardSearchRoom__feePrice 0₽
+
+        .cardSearchRoom__addServiceFee
+          .cardSearchRoom__addFeeWrapper
+            span.cardSearchRoom__addFeeDetails Сбор за дополнительные услуги
+            .cardSearchRoom__addFeeInform i
+          span.cardSearchRoom__addFeePrice 300₽
+
+        .cardSearchRoom__feeTotal
+          span.cardSearchRoom__totalTitle Итого
+          .cardSearchRoom__totalLine
+          span.cardSearchRoom__totalPrice 38 081₽
+      
+      .cardSearchRoom__buttonPay
+        +button({ button: true, btnTitle: 'забронировать', withArrow: true })
+    
+  else
+    form(action="").cardSearchRoom
+      .cardSearchRoom__wrapper
+        .cardSearchRoom__title #{cardTitle}
+
+      .cardSearchRoom__dates
+        .cardSearchRoom__arrival
+          +heading({ title: "прибытие" })
+          +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+        .cardSearchRoom__departure
+          +heading({ title: "выезд" })
+          +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+
+      .cardSearchRoom____dropdownGuests
+        +heading({ title: "гости" })
+        +dropdown({ dropdownId: "guests",
+          options: [
+            { title: "взрослые", count: 0 }, 
+            { title: "дети", count: 0 }, 
+            { title: "младенцы", count: 0 }
+          ]
+        })
+
+      .cardSearchRoom__buttonPay.cardSearchRoom__buttonPay_marginTop
+        +button({ button: true, btnTitle: 'подобрать номер', withArrow: true })
+
+
+
+ 
+
+
+
+
+
+    
+    
