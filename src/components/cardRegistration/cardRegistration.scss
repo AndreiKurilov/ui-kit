@@ -43,6 +43,10 @@
     margin-bottom: 10px;
   }
 
+  &__toggle {
+    margin-top: 10px;
+  }
+
   &__buttonPay {
     height: 44px;
     margin-top: 20px;
@@ -54,6 +58,14 @@
     justify-content: space-between;
     align-items: center;
     height: 44px;
+  }
+
+  &__account {
+    font-family: $mainFont;
+    color: $color--main;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
   }
 
   &__buttonEnter {
