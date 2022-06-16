@@ -3,18 +3,19 @@ include ../heading/heading
 include ../button/button
 include ../dateDropdown/dateDropdown
 include ../dropdown/dropdown
+include ../roomNumber/roomNumber
+include ../roomPrice/roomPrice
+include ../roomPriceDetails/roomPriceDetails
 
 mixin cardSearchRoom({ cardTitle="", cardType="" })
   if ( cardType == "totalPrice" )
+    
     form(action="").cardSearchRoom
       .cardSearchRoom__wrapper
         .cardSearchRoom__room
-          span.cardSearchRoom__numberSymbol № 
-          span.cardSearchRoom__roomNumber 888
-          span.cardSearchRoom__roomLux люкс
+          +roomNumber({ symbol: "№", number: "888", isLux: "люкс", isBigSize: true })
         .cardSearchRoom__priceRoom
-          span.cardSearchRoom__price 9 990₽
-          span.cardSearchRoom__perDay за сутки
+          +roomPrice({ price: "9 990", currency: "₽", perDay: "в сутки" })
       
       .cardSearchRoom__dates
         .cardSearchRoom__arrival
@@ -35,26 +36,7 @@ mixin cardSearchRoom({ cardTitle="", cardType="" })
         })
 
       .cardSearchRoom__details
-        .cardSearchRoom__priceForPeriod
-          span.cardSearchRoom__priceDetails 9 990₽ х 4 суток
-          span.cardSearchRoom__priceTotal 39 960₽
-
-        .cardSearchRoom__serviceFee
-          .cardSearchRoom__feeWrapper
-            .cardSearchRoom__feeDetails Сбор за услуги: скидка 2 179₽
-            .cardSearchRoom__feeInform i
-          span.cardSearchRoom__feePrice 0₽
-
-        .cardSearchRoom__addServiceFee
-          .cardSearchRoom__addFeeWrapper
-            span.cardSearchRoom__addFeeDetails Сбор за дополнительные услуги
-            .cardSearchRoom__addFeeInform i
-          span.cardSearchRoom__addFeePrice 300₽
-
-        .cardSearchRoom__feeTotal
-          span.cardSearchRoom__totalTitle Итого
-          .cardSearchRoom__totalLine
-          span.cardSearchRoom__totalPrice 38 081₽
+        +roomPriceDetails({})
       
       .cardSearchRoom__buttonPay
         +button({ button: true, btnTitle: 'забронировать', withArrow: true })
