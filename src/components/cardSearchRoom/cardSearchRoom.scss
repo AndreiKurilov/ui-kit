@@ -1,0 +1,51 @@
+@import '../../scss/variables.scss';
+
+.cardSearchRoom {
+  padding: 40px 30px 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+
+  &__wrapper {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  
+  &__title {
+    color: $color--main;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: $mainFontBold;
+  }
+
+  &__dates  {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__arrival,
+  &__departure {
+    width: 150px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  &__buttonPay {
+    height: 44px;
+
+    &_marginTop {
+      margin-top: 30px;
+    }
+  }
+}
