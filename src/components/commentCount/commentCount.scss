@@ -1,0 +1,17 @@
+@import '../../scss/variables.scss';
+
+.commentCount {
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color--darkShade50;
+  
+  &__number {
+    font-family: $mainFontBold;
+  }
+  
+  &__text {
+    font-family: $mainFont;
+    padding-left: 5px;
+  }
+}
