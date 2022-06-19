@@ -1,0 +1,8 @@
+mixin roomNumber({ symbol="", number="", isLux="", isBigSize=false })
+  -
+    const bigSize = isBigSize ? " roomNumber__number_big" : "";
+
+  .roomNumber
+    span.roomNumber__symbol #{symbol}
+    span.roomNumber__number(class = bigSize) #{number}
+    span.roomNumber__text #{isLux}
