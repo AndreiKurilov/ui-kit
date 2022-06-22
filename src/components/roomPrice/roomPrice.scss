@@ -1,0 +1,19 @@
+@import '../../scss/variables.scss';
+
+.roomPrice {
+  display: flex;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color--darkShade50;
+  
+  &__price, 
+  &__currency {
+    font-family: $mainFontBold;
+  }
+  
+  &__text {
+    font-family: $mainFont;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+}
