@@ -1,0 +1,32 @@
+include ../roomNumber/roomNumber
+include ../roomPrice/roomPrice
+include ../rate/rate
+include ../commentCount/commentCount
+
+mixin roomWidget({ number="", isLux="", price="", numberComments="", review="", roomPhoto="" })
+  .roomWidget
+    .roomWidget__carousel
+      .roomWidget__slides
+        img.roomWidget__img(src="./images/rooms/roomOne.jpg" alt="roomPhoto")
+        img.roomWidget__img(src="./images/rooms/roomTwo.jpg" alt="roomPhoto")
+        img.roomWidget__img(src="./images/rooms/roomThree.jpg" alt="roomPhoto")
+        img.roomWidget__img(src="./images/rooms/roomFour.jpg" alt="roomPhoto")
+      .roomWidget__buttonPrev
+      .roomWidget__buttonNext
+      ul.roomWidget__slideDots
+        //- .roomWidget__dot
+        //- .roomWidget__dot
+        //- .roomWidget__dot
+        //- .roomWidget__dot
+    .roomWidget__wrapper
+      .roomWidget__info
+        .roomWidget__number
+          +roomNumber({ symbol: "№", number: number, isLux: isLux })
+        .roomWidget__price
+          +roomPrice({ price: price, currency: "₽", perDay: "в сутки" })
+      .roomWidget__border
+      .roomWidget__rating
+        .roomWidget__rate
+          +rate({ rating: 5, isChecked: true })
+        .roomWidget__commentCount
+          +commentCount({ numberComments: numberComments, review: review })
