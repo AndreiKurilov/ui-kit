@@ -1,0 +1,16 @@
+extends ../../layouts/uikitLayout.pug
+include ../../components/linksPages/linksPages.pug
+
+block titles
+  - const title = "Error page"
+
+block content
+  .pageError К сожалению, данная страница находится в разработке...
+    .pageError__links 
+      +linksPages({ column: true,
+          listLinks: [
+            { link: "pageStart", title: "Перейти на стартовую страницу" },
+          ]
+        })
+
+block footer 
