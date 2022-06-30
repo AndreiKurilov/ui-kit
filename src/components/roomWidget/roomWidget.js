@@ -4,74 +4,65 @@ import '../rate/rate.js';
 import '../commentCount/commentCount.js';
 import './roomWidget.scss';
 
-const widget = document.querySelector(".roomWidget")
-const btnPrev = widget.querySelector(".roomWidget__buttonPrev");
-const btnNext = widget.querySelector(".roomWidget__buttonNext");
-const carouselSlides = widget.querySelectorAll(".roomWidget__img");
-const dots = widget.querySelector(".roomWidget__slideDots");
+class Carousel {
+  constructor(selector) {
+    this.selector = selector;
+    this.findButtons();
+    this.makeDots();
+    this.addListeners();
+  }
 
-function makeDots() {
-  let dotsFragment = new DocumentFragment();
-  for (let i = 0; i < carouselSlides.length; i++) {
-    let dot = document.createElement("li");
-    dot.classList.add("roomWidget__dot");
-    dotsFragment.appendChild(dot);
-    if ( i == 0) {
-      dot.classList.add("roomWidget__dot_current");
-    }
+  findButtons() {
+    this.btnPrev = this.selector.querySelector(".roomWidget__buttonPrev");
+    this.btnNext = this.selector.querySelector(".roomWidget__buttonNext");
+    this.carouselSlides = this.selector.querySelectorAll(".roomWidget__img");
+    this.dots = this.selector.querySelector(".roomWidget__slideDots");
   }
   
-  dots.append(dotsFragment)
+  makeDots() {
+    let dotsFragment = new DocumentFragment();
+      for (let i = 0; i < this.carouselSlides.length; i++) {
+        let dot = document.createElement("li");
+        dot.classList.add("roomWidget__dot");
+        dotsFragment.appendChild(dot);
+        if ( i == 0) {
+          dot.classList.add("roomWidget__dot_current");
+        }
+      }
+    this.dots.append(dotsFragment)
+  }
+  
+  addListeners() {
+    let slideIndex = 0;
+    this.dotsTotal = this.selector.querySelectorAll(".roomWidget__dot");
+
+    this.selector.addEventListener("click", (function(event) {
+      this.carouselSlides[slideIndex].style.display = "none";
+      this.dotsTotal[slideIndex].classList.toggle("roomWidget__dot_current");
+      let btnClick = event.target;
+      
+      if (btnClick == this.btnPrev) {
+        slideIndex--;
+        if ( slideIndex < 0)  {
+          slideIndex = this.carouselSlides.length - 1;
+        }
+      }
+      
+      if (btnClick == this.btnNext) {
+        slideIndex++;
+        if ( slideIndex > (this.carouselSlides.length - 1) ) {
+          slideIndex = 0;
+        }
+      }
+      
+      this.carouselSlides[slideIndex].style.display = "block";
+      this.dotsTotal[slideIndex].classList.toggle("roomWidget__dot_current");
+    }).bind(this));
+  }
 }
-makeDots();
 
-let i = 0;
-btnNext.addEventListener("click", function() {
-  carouselSlides[i].style.display = "none";
-  i += 1;
-  if ( i > (carouselSlides.length - 1) ) {
-    i = 0
-  }
-  carouselSlides[i].style.display = "block";
-})
+const roomWidgets = document.querySelectorAll('.roomWidget');
 
-btnPrev.addEventListener("click", function() {
-  carouselSlides[i].style.display = "none";
-  i -= 1;
-  if ( i < 0)  {
-    i = carouselSlides.length - 1;
-  }
-  carouselSlides[i].style.display = "block";
-})
-
-
-
-
-// var slideIndex = 1;
-// showSlides(slideIndex);
-
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   if (n > slides.length) {slideIndex = 1}    
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";  
-//   }
-//   slides[slideIndex-1].style.display = "block";
-  
-  
-//   // var dots = document.getElementsByClassName("dot");
-//   // for (i = 0; i < dots.length; i++) {
-//   //     dots[i].className = dots[i].className.replace(" active", "");
-//   // }
-//   // dots[slideIndex-1].className += " active";
-// }
+if (roomWidgets.length > 0) {
+  roomWidgets.forEach(( selector ) => {new Carousel( selector )});
+}
