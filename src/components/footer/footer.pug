@@ -1,52 +1,54 @@
 include ../logo/logo
 include ../nav/nav
 include ../socialIcons/socialIcons
-
+include ../textField/textField
 
 mixin footer ({footerPromo=''}) 
   footer.footer
-    .footer__body
-      section.footer__logo
-        +logo('colorWithText')
-        p.footer__promo #{footerPromo}
-      section.footer__wrapper
-        .footer__nav
-           +navigation({
-            navList: [
-            {name: 'навигация', url: "./pageError.html", isActived: true, isHeading: true}, 
-            {name: 'О нас', url: "./pageError.html"}, 
-            {name: 'Новости', url: "./pageError.html"}, 
-            {name: 'Служба поддержки', url: "./pageError.html"}, 
-            {name: 'Услуги', url: "./pageError.html"} 
-           ]})
-        .footer__aboutUs
-          +navigation({
-            navList: [
-            {name: 'o нас', url: "./pageError.html", isActived: true, isHeading: true}, 
-            {name: 'О сервисе', url: "./pageError.html"}, 
-            {name: 'Наша команда', url: "./pageError.html"}, 
-            {name: 'Вакансии', url: "./pageError.html"}, 
-            {name: 'Инвесторы', url: "./pageError.html"} 
-           ]})
-        .footer__support
-          +navigation({
-            navList: [
-            {name: 'служба поддержки', url: "./pageError.html", isActived: true, isHeading: true}, 
-            {name: 'Соглашения', url: "./pageError.html"}, 
-            {name: 'Сообщества', url: "./pageError.html"}, 
-            {name: 'Связь с нами', url: "./pageError.html"} 
-           ]})
-        .footer__subscribe
-          p.footer__subscribeHeading Подписка
-          p.footer__subscribeText Получайте специальные предложения и новости сервиса
-          .footer__subscribeEmail
-    .footer__copyrightBar
-      .footer__container
-        .footer__copyright Copyright © 2018 Toxin отель. Все&nbsp;права&nbsp;защищены.
-        .footer__social
-          +socialIcons({
-            socialIcons: [
-            { title: "twitter", link: "https://twitter.com" },
-            { title: "facebook", link: "https://facebook.com" },
-            { title: "instagram", link: "https://instagram.com" }
-          ]})
+    .footer__wrap
+      .footer__body
+        section.footer__logo
+          +logo('colorWithText')
+          p.footer__promo #{footerPromo}
+        section.footer__wrapper
+          .footer__nav
+            +navigation({
+              navList: [
+              {name: 'навигация', url: "./pageError.html", isActived: true, isHeading: true}, 
+              {name: 'О нас', url: "./pageError.html"}, 
+              {name: 'Новости', url: "./pageError.html"}, 
+              {name: 'Служба поддержки', url: "./pageError.html"}, 
+              {name: 'Услуги', url: "./pageError.html"} 
+            ]})
+          .footer__aboutUs
+            +navigation({
+              navList: [
+              {name: 'o нас', url: "./pageError.html", isActived: true, isHeading: true}, 
+              {name: 'О сервисе', url: "./pageError.html"}, 
+              {name: 'Наша команда', url: "./pageError.html"}, 
+              {name: 'Вакансии', url: "./pageError.html"}, 
+              {name: 'Инвесторы', url: "./pageError.html"} 
+            ]})
+          .footer__support
+            +navigation({
+              navList: [
+              {name: 'служба поддержки', url: "./pageError.html", isActived: true, isHeading: true}, 
+              {name: 'Соглашения', url: "./pageError.html"}, 
+              {name: 'Сообщества', url: "./pageError.html"}, 
+              {name: 'Связь с нами', url: "./pageError.html"} 
+            ]})
+          .footer__subscribe
+            p.footer__subscribeHeading Подписка
+            p.footer__subscribeText Получайте специальные предложения и новости сервиса
+            .footer__subscribeEmail
+              +textField({ type: "email", placeholder: "Email", buttonSubscribed: true, inputWithButton: true, withButton: true })
+      .footer__copyrightBar
+        .footer__container
+          .footer__copyright Copyright © 2018 Toxin отель. Все&nbsp;права&nbsp;защищены.
+          .footer__social
+            +socialIcons({
+              socialIcons: [
+              { title: "twitter", link: "https://twitter.com" },
+              { title: "facebook", link: "https://facebook.com" },
+              { title: "instagram", link: "https://instagram.com" }
+            ]})
