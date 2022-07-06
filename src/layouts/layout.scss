@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    min-height: 100%;
   }
 
   &__wrapper_grayBackground {
@@ -19,7 +20,8 @@ body {
   }
 
   &__content {
-    margin: 72px auto 140px;
+    margin-top: 72px;
+    margin-bottom: 90px;
   }
 
   &__footer {
