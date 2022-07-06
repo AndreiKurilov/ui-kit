@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link href="pageStart.css" rel="stylesheet"><link href="pageError.css" rel="stylesheet"><link href="setColorsType.css" rel="stylesheet"><link href="headersFooters.css" rel="stylesheet"><link href="cards.css" rel="stylesheet"><link href="formElements.css" rel="stylesheet"></head>
+  <body>
+    <div class="page__wrapper  page__wrapper_grayBackground">
+      <div class="page__logo">
+        <div class="logo"><a class="logo__link" href="./main-page.html">
+            <svg class="logo__colorless" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" role="img">
+              <path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"></path>
+              <path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"></path>
+              <path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"></path>
+            </svg></a></div>
+      </div>
+      <div class="page__content">
+        <div class="cards">
+          <div class="cards__container">
+            <form class="cardSearchRoom" action="">
+              <div class="cardSearchRoom__wrapper">
+                <div class="cardSearchRoom__title">Найдём номера под ваши пожелания</div>
+              </div>
+              <div class="cardSearchRoom__dates">
+                <div class="cardSearchRoom__arrival">
+                  <div class="heading">
+                    <h3 class="heading__title">прибытие</h3>
+                  </div>
+                  <div class="dateDropdown">
+                    <div class="textField">
+                      <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
+                    </div>
+                  </div>
+                </div>
+                <div class="cardSearchRoom__departure">
+                  <div class="heading">
+                    <h3 class="heading__title">выезд</h3>
+                  </div>
+                  <div class="dateDropdown">
+                    <div class="textField">
+                      <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardSearchRoom____dropdownGuests">
+                <div class="heading">
+                  <h3 class="heading__title">гости</h3>
+                </div>
+                <div class="dropdown" data-id="guests">
+                  <div class="dropdown__block">
+                    <input class="dropdown__total" type="text" readonly>
+                  </div>
+                  <div class="dropdown__expand dropdown__expand_guests">
+                    <div class="dropdownItem"> 
+                      <div class="dropdownItem__name">взрослые</div>
+                      <div class="dropdownItem__buttons">
+                        <button class="dropdownItem__btnMinus" type="button"></button>
+                        <input class="dropdownItem__number" type="text" readonly value="0" id="взрослые">
+                        <button class="dropdownItem__btnPlus" type="button"></button>
+                      </div>
+                    </div>
+                    <div class="dropdownItem"> 
+                      <div class="dropdownItem__name">дети</div>
+                      <div class="dropdownItem__buttons">
+                        <button class="dropdownItem__btnMinus" type="button"></button>
+                        <input class="dropdownItem__number" type="text" readonly value="0" id="дети">
+                        <button class="dropdownItem__btnPlus" type="button"></button>
+                      </div>
+                    </div>
+                    <div class="dropdownItem"> 
+                      <div class="dropdownItem__name">младенцы</div>
+                      <div class="dropdownItem__buttons">
+                        <button class="dropdownItem__btnMinus" type="button"></button>
+                        <input class="dropdownItem__number" type="text" readonly value="0" id="младенцы">
+                        <button class="dropdownItem__btnPlus" type="button"></button>
+                      </div>
+                    </div>
+                    <div class="dropdown__links"><a class="button" data-btn="clear">очистить</a><a class="button" data-btn="apply">применить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardSearchRoom__buttonPay cardSearchRoom__buttonPay_marginTop">
+                <button class="button button_colored  button__arrow" data-btn="">подобрать номер
+                </button>
+              </div>
+            </form>
+            <form class="cardRegistration" action="">
+              <div class="cardRegistration__wrapper">
+                <div class="cardRegistration__title">Регистрация аккаунта</div>
+              </div>
+              <div class="cardRegistration__nameSurname">
+                <div class="cardRegistration__name">
+                  <div class="textField">
+                    <input class="textField__input" type="text" placeholder="Имя" value="" inputmode="" max="2030-01-01" data-id="">
+                  </div>
+                </div>
+                <div class="cardRegistration__surname">
+                  <div class="textField">
+                    <input class="textField__input" type="text" placeholder="Фамилия" value="" inputmode="" max="2030-01-01" data-id="">
+                  </div>
+                </div>
+              </div>
+              <div class="cardRegistration__manWoman">
+                <label class="radio__label">
+                  <input class="radio__input" type="radio" name="gender" value="man" checked><span class="radio__box"></span><span class="radio__title">Мужчина</span>
+                </label>
+                <label class="radio__label">
+                  <input class="radio__input" type="radio" name="gender" value="woman"><span class="radio__box"></span><span class="radio__title">Женщина</span>
+                </label>
+              </div>
+              <div class="cardRegistration__dateOfBirth">
+                <div class="heading">
+                  <h3 class="heading__title">дата рождения</h3>
+                </div>
+                <div class="textField">
+                  <input class="textField__input textField__input_isUppercase" type="date" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="">
+                </div>
+              </div>
+              <div class="cardRegistration__data"> 
+                <div class="heading">
+                  <h3 class="heading__title">данные для входа в сервис</h3>
+                </div>
+              </div>
+              <div class="cardRegistration__emailPassword"> 
+                <div class="cardRegistration__email"> 
+                  <div class="textField">
+                    <input class="textField__input" type="email" placeholder="Email" value="" inputmode="" max="2030-01-01" data-id="">
+                  </div>
+                </div>
+                <div class="cardRegistration__password"> 
+                  <div class="textField">
+                    <input class="textField__input" type="text" placeholder="Пароль" value="" inputmode="" max="2030-01-01" data-id="">
+                  </div>
+                </div>
+              </div>
+              <div class="cardRegistration__toggle"> 
+                <label class="toggle__label">
+                  <input class="toggle__input" name="toggle" type="checkbox"><span class="toggle__box"></span><span class="toggle__title">Получать спецпредложения</span>
+                </label>
+              </div>
+              <div class="cardRegistration__buttonPay">
+                <button class="button button_colored  button__arrow" data-btn="">перейти к оплате
+                </button>
+              </div>
+              <div class="cardRegistration__isEnter"> 
+                <div class="cardRegistration__account">Уже есть аккаунт на Toxin </div>
+                <div class="cardRegistration__buttonEnter">
+                  <button class="button button_colored" data-btn=""><span class="button_white">войти</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="cards__container">
+            <form class="cardSearchRoom" action="">
+              <div class="cardSearchRoom__wrapper">
+                <div class="cardSearchRoom__room">
+                  <div class="roomNumber"><span class="roomNumber__symbol">№</span><span class="roomNumber__number  roomNumber__number_big">888</span><span class="roomNumber__text">люкс</span></div>
+                </div>
+                <div class="cardSearchRoom__priceRoom">
+                  <div class="roomPrice"><span class="roomPrice__price">9 990</span><span class="roomPrice__currency">₽</span><span class="roomPrice__text">в сутки</span></div>
+                </div>
+              </div>
+              <div class="cardSearchRoom__dates">
+                <div class="cardSearchRoom__arrival">
+                  <div class="heading">
+                    <h3 class="heading__title">прибытие</h3>
+                  </div>
+                  <div class="dateDropdown">
+                    <div class="textField">
+                      <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
+                    </div>
+                  </div>
+                </div>
+                <div class="cardSearchRoom__departure">
+                  <div class="heading">
+                    <h3 class="heading__title">выезд</h3>
+                  </div>
+                  <div class="dateDropdown">
+                    <div class="textField">
+                      <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardSearchRoom____dropdownGuests">
+                <div class="heading">
+                  <h3 class="heading__title">гости</h3>
+                </div>
+                <div class="dropdown" data-id="guests">
+                  <div class="dropdown__block">
+                    <input class="dropdown__total" type="text" readonly>
+                  </div>
+                  <div class="dropdown__expand dropdown__expand_guests">
+                    <div class="dropdownItem"> 
+                      <div class="dropdownItem__name">взрослые</div>
+                      <div class="dropdownItem__buttons">
+                        <button class="dropdownItem__btnMinus" type="button"></button>
+                        <input class="dropdownItem__number" type="text" readonly value="2" id="взрослые">
+                        <button class="dropdownItem__btnPlus" type="button"></button>
+                      </div>
+                    </div>
+                    <div class="dropdownItem"> 
+                      <div class="dropdownItem__name">дети</div>
+                      <div class="dropdownItem__buttons">
+                        <button class="dropdownItem__btnMinus" type="button"></button>
+                        <input class="dropdownItem__number" type="text" readonly value="1" id="дети">
+                        <button class="dropdownItem__btnPlus" type="button"></button>
+                      </div>
+                    </div>
+                    <div class="dropdownItem"> 
+                      <div class="dropdownItem__name">младенцы</div>
+                      <div class="dropdownItem__buttons">
+                        <button class="dropdownItem__btnMinus" type="button"></button>
+                        <input class="dropdownItem__number" type="text" readonly value="0" id="младенцы">
+                        <button class="dropdownItem__btnPlus" type="button"></button>
+                      </div>
+                    </div>
+                    <div class="dropdown__links"><a class="button" data-btn="clear">очистить</a><a class="button" data-btn="apply">применить</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cardSearchRoom__details">
+                <div class="roomPriceDetails">
+                  <div class="roomPriceDetails__priceForPeriod"><span class="roomPriceDetails__priceDetails">9 990₽ х 4 суток</span><span class="roomPriceDetails__priceTotal">39 960₽</span></div>
+                  <div class="roomPriceDetails__serviceFee">
+                    <div class="roomPriceDetails__feeWrapper">
+                      <div class="roomPriceDetails__feeDetails">Сбор за услуги: скидка 2 179₽</div>
+                      <div class="roomPriceDetails__feeInform">i</div>
+                    </div><span class="roomPriceDetails__feePrice">0₽</span>
+                  </div>
+                  <div class="roomPriceDetails__addServiceFee">
+                    <div class="roomPriceDetails__addFeeWrapper"><span class="roomPriceDetails__addFeeDetails">Сбор за дополнительные услуги</span>
+                      <div class="roomPriceDetails__addFeeInform">i</div>
+                    </div><span class="roomPriceDetails__addFeePrice">300₽</span>
+                  </div>
+                  <div class="roomPriceDetails__feeTotal"><span class="roomPriceDetails__totalTitle">Итого</span>
+                    <div class="roomPriceDetails__totalLine"></div><span class="roomPriceDetails__totalPrice">38 081₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="cardSearchRoom__buttonPay">
+                <button class="button button_colored  button__arrow" data-btn="">забронировать
+                </button>
+              </div>
+            </form>
+            <form class="cardRegistration" action="">
+              <div class="cardRegistration__wrapper">
+                <div class="cardRegistration__title">Войти</div>
+              </div>
+              <div class="cardRegistration__emailPassword"> 
+                <div class="cardRegistration__email"> 
+                  <div class="textField">
+                    <input class="textField__input" type="email" placeholder="Email" value="" inputmode="" max="2030-01-01" data-id="">
+                  </div>
+                </div>
+                <div class="cardRegistration__password"> 
+                  <div class="textField">
+                    <input class="textField__input" type="text" placeholder="Пароль" value="" inputmode="" max="2030-01-01" data-id="">
+                  </div>
+                </div>
+              </div>
+              <div class="cardRegistration__buttonPay">
+                <button class="button button_colored  button__arrow" data-btn="">Войти
+                </button>
+              </div>
+              <div class="cardRegistration__isEnter"> 
+                <div class="cardRegistration__account">Нет аккаунта на Toxin?</div>
+                <div class="cardRegistration__buttonEnter">
+                  <button class="button button_colored" data-btn=""><span class="button_white">Создать</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="cards__container">
+            <div class="cards__airDatepicker"></div>
+            <div class="cards__roomWidget">
+              <div class="roomWidget">
+                <div class="roomWidget__carousel">
+                  <div class="roomWidget__slides"><img class="roomWidget__img" src="./images/rooms/roomOne.jpg" alt="roomPhoto"><img class="roomWidget__img" src="./images/rooms/roomTwo.jpg" alt="roomPhoto"><img class="roomWidget__img" src="./images/rooms/roomThree.jpg" alt="roomPhoto"><img class="roomWidget__img" src="./images/rooms/roomFour.jpg" alt="roomPhoto"></div>
+                  <div class="roomWidget__buttonPrev"></div>
+                  <div class="roomWidget__buttonNext"></div>
+                  <ul class="roomWidget__slideDots"></ul>
+                </div>
+                <div class="roomWidget__wrapper">
+                  <div class="roomWidget__info">
+                    <div class="roomWidget__number">
+                      <div class="roomNumber"><span class="roomNumber__symbol">№</span><span class="roomNumber__number">888</span><span class="roomNumber__text">люкс</span></div>
+                    </div>
+                    <div class="roomWidget__price">
+                      <div class="roomPrice"><span class="roomPrice__price">9 990</span><span class="roomPrice__currency">₽</span><span class="roomPrice__text">в сутки</span></div>
+                    </div>
+                  </div>
+                  <div class="roomWidget__border"></div>
+                  <div class="roomWidget__rating">
+                    <div class="roomWidget__rate">
+                      <div class="rate">
+                        <input class="rate__input" type="radio" id="5stars" name="rate" value="5">
+                        <label class="rate__star rate__star_checked" for="5stars" title="5 out of 5 stars"></label>
+                        <input class="rate__input" type="radio" id="4stars" name="rate" value="4">
+                        <label class="rate__star rate__star_checked" for="4stars" title="4 out of 5 stars"></label>
+                        <input class="rate__input" type="radio" id="3stars" name="rate" value="3">
+                        <label class="rate__star rate__star_checked" for="3stars" title="3 out of 5 stars"></label>
+                        <input class="rate__input" type="radio" id="2stars" name="rate" value="2">
+                        <label class="rate__star rate__star_checked" for="2stars" title="2 out of 5 stars"></label>
+                        <input class="rate__input" type="radio" id="1stars" name="rate" value="1">
+                        <label class="rate__star rate__star_checked" for="1stars" title="1 out of 5 stars"></label>
+                      </div>
+                    </div>
+                    <div class="roomWidget__commentCount">
+                      <div class="commentCount"><span class="commentCount__number">145</span><span class="commentCount__text">Отзывов</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="roomWidget">
+                <div class="roomWidget__carousel">
+                  <div class="roomWidget__slides"><img class="roomWidget__img" src="./images/rooms/roomOne.jpg" alt="roomPhoto"><img class="roomWidget__img" src="./images/rooms/roomTwo.jpg" alt="roomPhoto"><img class="roomWidget__img" src="./images/rooms/roomThree.jpg" alt="roomPhoto"><img class="roomWidget__img" src="./images/rooms/roomFour.jpg" alt="roomPhoto"></div>
+                  <div class="roomWidget__buttonPrev"></div>
+                  <div class="roomWidget__buttonNext"></div>
+                  <ul class="roomWidget__slideDots"></ul>
+                </div>
+                <div class="roomWidget__wrapper">
+                  <div class="roomWidget__info">
+                    <div class="roomWidget__number">
+                      <div class="roomNumber"><span class="roomNumber__symbol">№</span><span class="roomNumber__number">840</span><span class="roomNumber__text"></span></div>
+                    </div>
+                    <div class="roomWidget__price">
+                      <div class="roomPrice"><span class="roomPrice__price">9 900</span><span class="roomPrice__currency">₽</span><span class="roomPrice__text">в сутки</span></div>
+                    </div>
+                  </div>
+                  <div class="roomWidget__border"></div>
+                  <div class="roomWidget__rating">
+                    <div class="roomWidget__rate">
+                      <div class="rate">
+                        <input class="rate__input" type="radio" id="5stars" name="rate" value="5">
+                        <label class="rate__star rate__star_checked" for="5stars" title="5 out of 5 stars"></label>
+                        <input class="rate__input" type="radio" id="4stars" name="rate" value="4">
+                        <label class="rate__star rate__star_checked" for="4stars" title="4 out of 5 stars"></label>
+                        <input class="rate__input" type="radio" id="3stars" name="rate" value="3">
+                        <label class="rate__star rate__star_checked" for="3stars" title="3 out of 5 stars"></label>
+                        <input class="rate__input" type="radio" id="2stars" name="rate" value="2">
+                        <label class="rate__star rate__star_checked" for="2stars" title="2 out of 5 stars"></label>
+                        <input class="rate__input" type="radio" id="1stars" name="rate" value="1">
+                        <label class="rate__star rate__star_checked" for="1stars" title="1 out of 5 stars"></label>
+                      </div>
+                    </div>
+                    <div class="roomWidget__commentCount">
+                      <div class="commentCount"><span class="commentCount__number">65</span><span class="commentCount__text">Отзывов</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__footer">
+        <div class="linksPages">
+          <div class="linksPages__wrapper"><a class="linksPages__link" href="./pageStart.html">Start Page</a><a class="linksPages__link" href="./setColorsType.html">Colors &amp; Type</a><a class="linksPages__link" href="./headersFooters.html">Headers &amp; Footers</a><a class="linksPages__link" href="./formElements.html">Form Elements</a><a class="linksPages__link" href="./cards.html">Cards</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="pageStart.js"></script><script type="text/javascript" src="pageError.js"></script><script type="text/javascript" src="setColorsType.js"></script><script type="text/javascript" src="headersFooters.js"></script><script type="text/javascript" src="cards.js"></script><script type="text/javascript" src="formElements.js"></script></body>
+</html>
