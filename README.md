@@ -1,4 +1,4 @@
-## Hotel website layout and UI Kit (MetaLamp 2 task)
+## Hotel website layout and UI Kit 
 
  Второе задание - практика верстки [макета](https://www.figma.com/file/MumYcKVk9RkKZEG6dR5E3A/FSD-frontend-education-program.-The-2nd-task?node-id=0%3A1) сайта по поиску номеров отеля из Figma.
 
