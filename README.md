@@ -10,3 +10,7 @@
  - [**Form & Elements**](https://andreikurilov.github.io/ui-kit/formElements.html)
  - [**Headers & Footers**](https://andreikurilov.github.io/ui-kit/headersFooters.html)
  - [**Cards**](https://andreikurilov.github.io/ui-kit/cards.html)
+
+<!-- А также макет сайта, который включает в себя 5 страниц:
+
+- [**Landing**](https://yarlykov.github.io/hotel_toxin/landing-page.html) -->
