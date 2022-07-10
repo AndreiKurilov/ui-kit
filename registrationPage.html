@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Registration Page</title>
   <link href="pageStart.css" rel="stylesheet"><link href="pageError.css" rel="stylesheet"><link href="setColorsType.css" rel="stylesheet"><link href="headersFooters.css" rel="stylesheet"><link href="formElements.css" rel="stylesheet"><link href="cards.css" rel="stylesheet"><link href="landingPage.css" rel="stylesheet"><link href="registrationPage.css" rel="stylesheet"></head>
   <body>
     <div class="page__wrapper">
@@ -86,79 +86,75 @@
         </header>
       </div>
       <div class="page__cont">
-        <main class="landingPage">
-          <div class="landingPage__card">
-            <form class="cardSearchRoom" action="">
-              <div class="cardSearchRoom__wrapper">
-                <div class="cardSearchRoom__title">Найдём номера под ваши пожелания</div>
+        <main class="registrationPage">
+          <div class="registrationPage__card">
+            <form class="cardRegistration" action="">
+              <div class="cardRegistration__wrapper">
+                <div class="cardRegistration__title">Регистрация аккаунта</div>
               </div>
-              <div class="cardSearchRoom__dates">
-                <div class="cardSearchRoom__arrival">
-                  <div class="heading">
-                    <h3 class="heading__title">прибытие</h3>
-                  </div>
-                  <div class="dateDropdown">
-                    <div class="textField">
-                      <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
-                    </div>
+              <div class="cardRegistration__nameSurname">
+                <div class="cardRegistration__name">
+                  <div class="textField">
+                    <input class="textField__input" type="text" placeholder="Имя" value="" inputmode="" max="2030-01-01" data-id="">
                   </div>
                 </div>
-                <div class="cardSearchRoom__departure">
-                  <div class="heading">
-                    <h3 class="heading__title">выезд</h3>
-                  </div>
-                  <div class="dateDropdown">
-                    <div class="textField">
-                      <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
-                    </div>
+                <div class="cardRegistration__surname">
+                  <div class="textField">
+                    <input class="textField__input" type="text" placeholder="Фамилия" value="" inputmode="" max="2030-01-01" data-id="">
                   </div>
                 </div>
               </div>
-              <div class="cardSearchRoom____dropdownGuests">
+              <div class="cardRegistration__manWoman">
+                <label class="radio__label">
+                  <input class="radio__input" type="radio" name="gender" value="man" checked><span class="radio__box"></span><span class="radio__title">Мужчина</span>
+                </label>
+                <label class="radio__label">
+                  <input class="radio__input" type="radio" name="gender" value="woman"><span class="radio__box"></span><span class="radio__title">Женщина</span>
+                </label>
+              </div>
+              <div class="cardRegistration__dateOfBirth">
                 <div class="heading">
-                  <h3 class="heading__title">гости</h3>
+                  <h3 class="heading__title">дата рождения</h3>
                 </div>
-                <div class="dropdown" data-id="guests">
-                  <div class="dropdown__block">
-                    <input class="dropdown__total" type="text" readonly>
+                <div class="textField">
+                  <input class="textField__input textField__input_isUppercase" type="date" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="">
+                </div>
+              </div>
+              <div class="cardRegistration__data"> 
+                <div class="heading">
+                  <h3 class="heading__title">данные для входа в сервис</h3>
+                </div>
+              </div>
+              <div class="cardRegistration__emailPassword"> 
+                <div class="cardRegistration__email"> 
+                  <div class="textField">
+                    <input class="textField__input" type="email" placeholder="Email" value="" inputmode="" max="2030-01-01" data-id="">
                   </div>
-                  <div class="dropdown__expand dropdown__expand_guests">
-                    <div class="dropdownItem"> 
-                      <div class="dropdownItem__name">взрослые</div>
-                      <div class="dropdownItem__buttons">
-                        <button class="dropdownItem__btnMinus" type="button"></button>
-                        <input class="dropdownItem__number" type="text" readonly value="0" id="взрослые">
-                        <button class="dropdownItem__btnPlus" type="button"></button>
-                      </div>
-                    </div>
-                    <div class="dropdownItem"> 
-                      <div class="dropdownItem__name">дети</div>
-                      <div class="dropdownItem__buttons">
-                        <button class="dropdownItem__btnMinus" type="button"></button>
-                        <input class="dropdownItem__number" type="text" readonly value="0" id="дети">
-                        <button class="dropdownItem__btnPlus" type="button"></button>
-                      </div>
-                    </div>
-                    <div class="dropdownItem"> 
-                      <div class="dropdownItem__name">младенцы</div>
-                      <div class="dropdownItem__buttons">
-                        <button class="dropdownItem__btnMinus" type="button"></button>
-                        <input class="dropdownItem__number" type="text" readonly value="0" id="младенцы">
-                        <button class="dropdownItem__btnPlus" type="button"></button>
-                      </div>
-                    </div>
-                    <div class="dropdown__links"><a class="button" data-btn="clear">очистить</a><a class="button" data-btn="apply">применить</a>
-                    </div>
+                </div>
+                <div class="cardRegistration__password"> 
+                  <div class="textField">
+                    <input class="textField__input" type="text" placeholder="Пароль" value="" inputmode="" max="2030-01-01" data-id="">
                   </div>
                 </div>
               </div>
-              <div class="cardSearchRoom__buttonPay cardSearchRoom__buttonPay_marginTop">
-                <button class="button button_colored  button__arrow" data-btn="">подобрать номер
+              <div class="cardRegistration__toggle"> 
+                <label class="toggle__label">
+                  <input class="toggle__input" name="toggle" type="checkbox"><span class="toggle__box"></span><span class="toggle__title">Получать спецпредложения</span>
+                </label>
+              </div>
+              <div class="cardRegistration__buttonPay">
+                <button class="button button_colored  button__arrow" data-btn="">перейти к оплате
                 </button>
+              </div>
+              <div class="cardRegistration__isEnter"> 
+                <div class="cardRegistration__account">Уже есть аккаунт на Toxin </div>
+                <div class="cardRegistration__buttonEnter">
+                  <button class="button button_colored" data-btn=""><span class="button_white">войти</span>
+                  </button>
+                </div>
               </div>
             </form>
           </div>
-          <div class="landingPage__promo">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
         </main>
       </div>
       <div class="page__foot">
