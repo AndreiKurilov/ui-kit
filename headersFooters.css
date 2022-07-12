@@ -326,6 +326,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
         margin: 120px auto 20px; } }
   .footer__promo {
     margin-top: 20px;
+    min-width: 260px;
     max-width: 260px;
     font-family: "Montserrat-regular";
     font-size: 14px;
@@ -341,7 +342,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
         display: none; } }
     @media (max-width: 1250px) {
       .footer__wrapper {
-        margin-right: 140px; } }
+        margin: 104px auto 100px; } }
   .footer__nav {
     min-width: 143px; }
     @media (max-width: 1250px) {

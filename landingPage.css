@@ -467,7 +467,7 @@ body {
   justify-content: center; }
 
 .landingPage {
-  background: url(images/landing.jpg) no-repeat;
+  background: 50% 70%/100% url(images/landing.jpg) no-repeat;
   min-height: 900px;
   position: relative;
   background-size: cover; }
