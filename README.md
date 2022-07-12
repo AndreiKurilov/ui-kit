@@ -4,7 +4,7 @@
 
  [**Ссылка на стартовую страницу проекта**](https://andreikurilov.github.io/ui-kit/pageStart.html)
 
- В проекте выполнен [**Ui Kit**](https://andreikurilov.github.io/ui-kit/pageStart.html), который состоит из четырех отдельных страниц:
+ В проекте выполнен **UI Kit**, который состоит из четырех отдельных страниц:
  
  - [**Colors & Types**](https://andreikurilov.github.io/ui-kit/setColorsType.html)
  - [**Form & Elements**](https://andreikurilov.github.io/ui-kit/formElements.html)
