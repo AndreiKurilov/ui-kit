@@ -1,0 +1,11 @@
+extends ../../layouts/pageLayout.pug
+include ../../components/cardSearchRoom/cardSearchRoom.pug
+
+block titles
+  - const title = "Landing Page"
+
+block content
+  main.landingPage
+    .landingPage__card
+      +cardSearchRoom({ cardTitle: "Найдём номера под ваши пожелания"})
+    .landingPage__promo Лучшие номера для вашей работы, отдыха и просто вдохновения
