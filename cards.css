@@ -650,4 +650,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .cards__container {
     width: 380px;
     margin-right: 40px; }
+  .cards__airDatepicker {
+    margin-bottom: 40px; }
+  .cards__roomWidget:nth-child(odd) {
+    margin-bottom: 40px; }
 
