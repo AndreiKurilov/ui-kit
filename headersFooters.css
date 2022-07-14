@@ -311,7 +311,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
     @media (max-width: 1280px) {
       .footer__body {
-        padding: 104px 60px 100px; } }
+        justify-content: space-between; } }
     @media (max-width: 768px) {
       .footer__body {
         border-bottom: none;
@@ -326,7 +326,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
         margin: 120px auto 20px; } }
   .footer__promo {
     margin-top: 20px;
-    min-width: 260px;
+    min-width: 170px;
     max-width: 260px;
     font-family: "Montserrat-regular";
     font-size: 14px;
@@ -341,24 +341,21 @@ input[type=date]::-webkit-calendar-picker-indicator {
       .footer__wrapper {
         display: none;
         margin: 0; } }
-    @media (max-width: 1250px) {
-      .footer__wrapper {
-        margin: 104px auto 100px; } }
   .footer__nav {
     min-width: 143px; }
-    @media (max-width: 1250px) {
+    @media (max-width: 1280px) {
       .footer__nav {
         display: none; } }
   .footer__aboutUs {
     min-width: 108px;
     margin-left: 57px;
     margin-right: 92px; }
-    @media (max-width: 1250px) {
+    @media (max-width: 1280px) {
       .footer__aboutUs {
         display: none; } }
   .footer__support {
     min-width: 149px; }
-    @media (max-width: 1250px) {
+    @media (max-width: 1280px) {
       .footer__support {
         display: none; } }
   .footer__subscribe {
@@ -384,15 +381,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .footer__subscribeEmail {
     width: 260px;
     height: 44px; }
-  .footer__copyrightBar {
-    min-width: 320px;
-    max-width: 1440px;
-    margin: 0 auto; }
   .footer__container {
-    display: flex;
-    align-items: center;
+    margin: 0 auto;
+    padding: 23px 140px;
     justify-content: space-between;
-    padding: 23px 140px; }
+    display: flex;
+    align-items: center; }
+    @media (max-width: 1280px) {
+      .footer__container {
+        justify-content: space-around; } }
     @media (max-width: 768px) {
       .footer__container {
         flex-direction: column;
@@ -402,16 +399,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-size: 14px;
     line-height: 17px;
     color: rgba(31, 32, 65, 0.75); }
-    @media (max-width: 768px) {
-      .footer__copyright {
-        text-align: center; } }
-    @media (max-width: 470px) {
-      .footer__copyright {
-        text-align: center;
-        padding: 0 20px; } }
-  @media (max-width: 768px) {
-    .footer__social {
-      margin: 25px auto 120px; } }
 
 .footerMobile {
   background: #FFFFFF;
@@ -471,7 +458,6 @@ body {
 .page__wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   min-height: 100%; }
 
 .page__wrapper_grayBackground {
