@@ -1,8 +1,13 @@
-mixin rate({ rating=0, isChecked=false })
-  -
-    const starChecked = isChecked ? "rate__star_checked" : "";
+mixin rate({ starsChecked=0, isChecked=false })
+  
+  - const starChecked = isChecked ? "rate__star_checked" : "";
 
   .rate
-    - for(let i = rating; i > 0; i--)
-        input.rate__input( type="radio" id=`${i}stars` name="rate" value=`${i}` )
-        label.rate__star( for=`${i}stars` title=`${i} out of ${rating} stars` class = starChecked )
+    if starsChecked < 5
+    - const starsNotChecked = 5 - starsChecked;
+    - for(let i = starsNotChecked; i > 0; i--)
+      input.rate__input( type="radio" id=`${i}stars` name="rate" value=`${i}` )
+      label.rate__star( for=`${i}stars` )
+    - for(let i = starsChecked; i > 0; i--)
+      input.rate__input( type="radio" id=`${i}stars` name="rate" value=`${i}` )
+      label.rate__star( for=`${i}stars`  class = starChecked )
