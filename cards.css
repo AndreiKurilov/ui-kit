@@ -551,80 +551,91 @@ input[type=date]::-webkit-calendar-picker-indicator {
     font-family: "Montserrat-regular";
     padding-left: 5px; }
 
+.carousel__img {
+  height: 151px;
+  width: 270px;
+  font-size: 0;
+  user-select: none; }
+
+.carousel .carousel__img {
+  display: none; }
+  .carousel .carousel__img:first-child {
+    display: block; }
+
+.carousel__buttonPrev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 4px 0 0 0;
+  opacity: 0; }
+
+.carousel__buttonNext {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 4px 0 0 0;
+  opacity: 0; }
+
+.carousel__buttonPrev::before, .carousel__buttonNext::before {
+  content: '\e905';
+  font-family: "Material-Icons";
+  font-size: 10px;
+  line-height: 14px;
+  color: #FFFFFF;
+  transform: rotate(90deg);
+  padding-bottom: 20px; }
+
+.carousel__buttonNext::before {
+  content: '\e900';
+  transform: rotate(-90deg);
+  padding-bottom: 20px; }
+
+.carousel:hover .carousel__buttonPrev,
+.carousel:hover .carousel__buttonNext {
+  opacity: 1; }
+
+.carousel__slideDots {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.carousel__dot {
+  width: 7.5px;
+  height: 7.5px;
+  border: 1px solid #FFFFFF;
+  filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: transparent; }
+  .carousel__dot:not(:last-child) {
+    margin-right: 3.75px; }
+  .carousel__dot_current {
+    background-color: #FFFFFF; }
+
 .roomWidget {
   width: 270px;
-  background: #FFFFFF; }
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px; }
   .roomWidget__carousel {
     position: relative; }
-  .roomWidget__img {
-    height: 151px;
-    width: 270px;
-    display: block;
-    font-size: 0; }
-  .roomWidget__slides .roomWidget__img {
-    display: none; }
-    .roomWidget__slides .roomWidget__img:first-child {
-      display: block; }
-  .roomWidget__buttonPrev {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 42px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 4px 0 0 0;
-    opacity: 0; }
-  .roomWidget__buttonNext {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 42px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-radius: 4px 0 0 0;
-    opacity: 0; }
-  .roomWidget__buttonPrev::before, .roomWidget__buttonNext::before {
-    content: '\e905';
-    font-family: "Material-Icons";
-    font-size: 10px;
-    line-height: 14px;
-    color: #FFFFFF;
-    transform: rotate(90deg);
-    padding-bottom: 20px; }
-  .roomWidget__buttonNext::before {
-    content: '\e900';
-    transform: rotate(-90deg);
-    padding-bottom: 20px; }
-  .roomWidget__carousel:hover .roomWidget__buttonPrev,
-  .roomWidget__carousel:hover .roomWidget__buttonNext {
-    opacity: 1; }
-  .roomWidget__slideDots {
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-  .roomWidget__dot {
-    width: 7.5px;
-    height: 7.5px;
-    border: 1px solid #FFFFFF;
-    filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
-    box-sizing: border-box;
-    border-radius: 50%;
-    background-color: transparent; }
-    .roomWidget__dot:not(:last-child) {
-      margin-right: 3.75px; }
-    .roomWidget__dot_current {
-      background-color: #FFFFFF; }
   .roomWidget__wrapper {
     padding: 20px 17px 19px 20px; }
   .roomWidget__info {
@@ -644,14 +655,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
     padding-right: 3px; }
 
 .cards {
-  margin: 72px auto 140px;
   display: flex;
-  margin-left: 120px; }
+  margin: 72px auto 50px;
+  justify-content: center; }
   .cards__container {
-    width: 380px;
-    margin-right: 40px; }
+    width: 380px; }
+    .cards__container:last-child {
+      width: 320px; }
+    .cards__container:not(:last-child) {
+      margin-right: 40px; }
   .cards__airDatepicker {
     margin-bottom: 40px; }
-  .cards__roomWidget:nth-child(odd) {
+  .cards__roomWidgetFirst {
     margin-bottom: 40px; }
 

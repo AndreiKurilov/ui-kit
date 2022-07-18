@@ -87,78 +87,80 @@
       </div>
       <div class="page__cont">
         <main class="landingPage">
-          <div class="landingPage__card">
-            <form class="cardSearchRoom" action="">
-              <div class="cardSearchRoom__wrapper">
-                <div class="cardSearchRoom__title">Найдём номера под ваши пожелания</div>
-              </div>
-              <div class="cardSearchRoom__dates">
-                <div class="cardSearchRoom__arrival">
+          <div class="landingPage__container">
+            <div class="landingPage__card">
+              <form class="cardSearchRoom" action="">
+                <div class="cardSearchRoom__wrapper">
+                  <div class="cardSearchRoom__title">Найдём номера под ваши пожелания</div>
+                </div>
+                <div class="cardSearchRoom__dates">
+                  <div class="cardSearchRoom__arrival">
+                    <div class="heading">
+                      <h3 class="heading__title">прибытие</h3>
+                    </div>
+                    <div class="dateDropdown">
+                      <div class="textField">
+                        <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardSearchRoom__departure">
+                    <div class="heading">
+                      <h3 class="heading__title">выезд</h3>
+                    </div>
+                    <div class="dateDropdown">
+                      <div class="textField">
+                        <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardSearchRoom____dropdownGuests">
                   <div class="heading">
-                    <h3 class="heading__title">прибытие</h3>
+                    <h3 class="heading__title">гости</h3>
                   </div>
-                  <div class="dateDropdown">
-                    <div class="textField">
-                      <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
+                  <div class="dropdown" data-id="guests">
+                    <div class="dropdown__block">
+                      <input class="dropdown__total" type="text" readonly>
                     </div>
-                  </div>
-                </div>
-                <div class="cardSearchRoom__departure">
-                  <div class="heading">
-                    <h3 class="heading__title">выезд</h3>
-                  </div>
-                  <div class="dateDropdown">
-                    <div class="textField">
-                      <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="cardSearchRoom____dropdownGuests">
-                <div class="heading">
-                  <h3 class="heading__title">гости</h3>
-                </div>
-                <div class="dropdown" data-id="guests">
-                  <div class="dropdown__block">
-                    <input class="dropdown__total" type="text" readonly>
-                  </div>
-                  <div class="dropdown__expand dropdown__expand_guests">
-                    <div class="dropdownItem"> 
-                      <div class="dropdownItem__name">взрослые</div>
-                      <div class="dropdownItem__buttons">
-                        <button class="dropdownItem__btnMinus" type="button"></button>
-                        <input class="dropdownItem__number" type="text" readonly value="0" id="взрослые">
-                        <button class="dropdownItem__btnPlus" type="button"></button>
+                    <div class="dropdown__expand dropdown__expand_guests">
+                      <div class="dropdownItem"> 
+                        <div class="dropdownItem__name">взрослые</div>
+                        <div class="dropdownItem__buttons">
+                          <button class="dropdownItem__btnMinus" type="button"></button>
+                          <input class="dropdownItem__number" type="text" readonly value="0" id="взрослые">
+                          <button class="dropdownItem__btnPlus" type="button"></button>
+                        </div>
+                      </div>
+                      <div class="dropdownItem"> 
+                        <div class="dropdownItem__name">дети</div>
+                        <div class="dropdownItem__buttons">
+                          <button class="dropdownItem__btnMinus" type="button"></button>
+                          <input class="dropdownItem__number" type="text" readonly value="0" id="дети">
+                          <button class="dropdownItem__btnPlus" type="button"></button>
+                        </div>
+                      </div>
+                      <div class="dropdownItem"> 
+                        <div class="dropdownItem__name">младенцы</div>
+                        <div class="dropdownItem__buttons">
+                          <button class="dropdownItem__btnMinus" type="button"></button>
+                          <input class="dropdownItem__number" type="text" readonly value="0" id="младенцы">
+                          <button class="dropdownItem__btnPlus" type="button"></button>
+                        </div>
+                      </div>
+                      <div class="dropdown__links"><a class="button" data-btn="clear">очистить</a><a class="button" data-btn="apply">применить</a>
                       </div>
                     </div>
-                    <div class="dropdownItem"> 
-                      <div class="dropdownItem__name">дети</div>
-                      <div class="dropdownItem__buttons">
-                        <button class="dropdownItem__btnMinus" type="button"></button>
-                        <input class="dropdownItem__number" type="text" readonly value="0" id="дети">
-                        <button class="dropdownItem__btnPlus" type="button"></button>
-                      </div>
-                    </div>
-                    <div class="dropdownItem"> 
-                      <div class="dropdownItem__name">младенцы</div>
-                      <div class="dropdownItem__buttons">
-                        <button class="dropdownItem__btnMinus" type="button"></button>
-                        <input class="dropdownItem__number" type="text" readonly value="0" id="младенцы">
-                        <button class="dropdownItem__btnPlus" type="button"></button>
-                      </div>
-                    </div>
-                    <div class="dropdown__links"><a class="button" data-btn="clear">очистить</a><a class="button" data-btn="apply">применить</a>
-                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="cardSearchRoom__buttonPay cardSearchRoom__buttonPay_marginTop">
-                <button class="button button_colored  button__arrow" data-btn="">подобрать номер
-                </button>
-              </div>
-            </form>
+                <div class="cardSearchRoom__buttonPay cardSearchRoom__buttonPay_marginTop">
+                  <button class="button button_colored  button__arrow" data-btn="">подобрать номер
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="landingPage__promo">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
           </div>
-          <div class="landingPage__promo">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
         </main>
       </div>
       <div class="page__foot">

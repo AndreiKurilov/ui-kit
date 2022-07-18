@@ -468,24 +468,36 @@ body {
   justify-content: center; }
 
 .landingPage {
-  background: 50% 70%/100% url(images/landing.jpg) no-repeat;
-  min-height: 900px;
-  position: relative;
-  background-size: cover; }
+  background: 50% 70%/100% url(images/landing.jpg) no-repeat; }
+  @media (max-width: 1280px) {
+    .landingPage {
+      background-size: cover; } }
+  .landingPage__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 320px;
+    padding: 70px 0 0 140px; }
+    @media (max-width: 940px) {
+      .landingPage__container {
+        flex-direction: row;
+        justify-content: center;
+        padding: 100px 0; } }
   .landingPage__card {
-    position: absolute;
-    top: 70px;
-    left: 140px;
-    width: 380px;
+    min-width: 380px;
     height: 374px; }
   .landingPage__promo {
-    position: absolute;
-    right: 134px;
-    bottom: 18px;
     font-family: "Montserrat-regular";
     color: rgba(31, 32, 65, 0.75);
     font-size: 14px;
     line-height: 24px;
     width: 297px;
-    text-align: right; }
+    padding: 320px 134px 18px 0;
+    align-self: flex-end;
+    text-align: end; }
+    @media (max-width: 940px) {
+      .landingPage__promo {
+        display: none; } }
 
