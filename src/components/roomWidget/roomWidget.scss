@@ -3,104 +3,11 @@
 .roomWidget {
   width: 270px;
   background: #FFFFFF;
+  box-shadow: 0px 10px 20px $color--darkShade5;
+  border-radius: 4px;
   
   &__carousel {
     position: relative;
-  }
-
-  &__img {
-    height: 151px;
-    width: 270px;
-    display: block;
-    font-size: 0;
-  }
-
-  &__slides .roomWidget__img {
-    display: none;
-  
-    &:first-child {
-      display: block;
-    }
-  }
-  
-
-  &__buttonPrev {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 42px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 4px 0 0 0;
-    opacity: 0;
-  }
-  
-  &__buttonNext {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 42px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-radius: 4px 0 0 0;
-    opacity: 0;
-  }
-  
-  &__buttonPrev::before,
-  &__buttonNext::before {
-    content: '\e905';
-    font-family: $materialIcons;
-    font-size: 10px;
-    line-height: 14px;
-    color: #FFFFFF;
-    transform: rotate(90deg);
-    padding-bottom: 20px;
-  }
-  
-  &__buttonNext::before {
-    content: '\e900';
-    transform: rotate(-90deg);
-    padding-bottom: 20px;
-  }
-  
-  &__carousel:hover .roomWidget__buttonPrev,
-  &__carousel:hover .roomWidget__buttonNext {
-    opacity: 1;
-  }
-  
-  &__slideDots {
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__dot {
-    width: 7.5px;
-    height: 7.5px;
-    border: 1px solid #FFFFFF;
-    filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
-    box-sizing: border-box;
-    border-radius: 50%;
-    background-color: transparent;
-
-    &:not(:last-child) {
-      margin-right: 3.75px;
-    }
-
-    &_current {
-      background-color: #FFFFFF;
-    }
   }
 
   &__wrapper {
