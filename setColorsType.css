@@ -231,6 +231,9 @@ body {
   display: flex;
   justify-content: center; }
 
+.page__cont {
+  flex: 1 0 auto; }
+
 .setColorsType {
   margin-left: 150px;
   display: grid;

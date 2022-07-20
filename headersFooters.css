@@ -325,6 +325,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
       .footer__logo {
         flex-direction: column;
         margin: 120px auto 20px; } }
+    @media (max-width: 480px) {
+      .footer__logo {
+        margin-top: 80px; } }
   .footer__promo {
     margin-top: 20px;
     min-width: 211px;
@@ -396,10 +399,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
     color: rgba(31, 32, 65, 0.75); }
     @media (max-width: 480px) {
       .footer__copyright {
-        margin: 25px auto 20px; } }
+        margin: 0 auto 0;
+        text-align: center; } }
   @media (max-width: 768px) {
     .footer__social {
       margin: 25px auto 120px; } }
+  @media (max-width: 480px) {
+    .footer__social {
+      margin-bottom: 80px; } }
 
 .footerMobile {
   background: #FFFFFF;
@@ -477,6 +484,9 @@ body {
   padding: 50px 0;
   display: flex;
   justify-content: center; }
+
+.page__cont {
+  flex: 1 0 auto; }
 
 .headersFooters {
   width: 100%; }

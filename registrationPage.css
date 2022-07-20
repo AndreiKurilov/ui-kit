@@ -110,6 +110,9 @@ body {
   display: flex;
   justify-content: center; }
 
+.page__cont {
+  flex: 1 0 auto; }
+
 .registrationPage {
   background: url(images/registration.jpg) no-repeat;
   min-height: 684px;

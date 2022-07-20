@@ -739,6 +739,9 @@ body {
   display: flex;
   justify-content: center; }
 
+.page__cont {
+  flex: 1 0 auto; }
+
 .formElements {
   margin-left: 80px;
   margin-top: 62px;
