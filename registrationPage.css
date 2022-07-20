@@ -40,6 +40,14 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   box-sizing: border-box; }
+  @media (max-width: 480px) {
+    .cardRegistration {
+      min-width: 200px;
+      padding: 10px; } }
+  @media (max-width: 480px) {
+    .cardRegistration__container {
+      max-width: 280px;
+      padding: 10px; } }
   .cardRegistration__title {
     font-family: "Montserrat-Bold";
     font-size: 24px;
@@ -115,11 +123,15 @@ body {
 
 .registrationPage {
   background: url(images/registration.jpg) no-repeat;
-  min-height: 684px;
   background-size: cover;
   display: flex; }
   .registrationPage__card {
     margin: 19px auto;
-    width: 380px;
-    height: 646px; }
+    min-width: 380px;
+    max-width: 380px; }
+    @media (max-width: 480px) {
+      .registrationPage__card {
+        min-width: 200px;
+        margin-top: 60px;
+        margin-bottom: 60px; } }
 

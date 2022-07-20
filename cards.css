@@ -69,6 +69,14 @@ body {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   box-sizing: border-box; }
+  @media (max-width: 480px) {
+    .cardRegistration {
+      min-width: 200px;
+      padding: 10px; } }
+  @media (max-width: 480px) {
+    .cardRegistration__container {
+      max-width: 280px;
+      padding: 10px; } }
   .cardRegistration__title {
     font-family: "Montserrat-Bold";
     font-size: 24px;
@@ -363,13 +371,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
     border: 1px solid rgba(31, 32, 65, 0.1); }
 
 .dropdown {
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
   .dropdown__block {
     display: flex;
     height: 44px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
-    position: relative;
     align-items: center; }
   .dropdown__total {
     border: none;
@@ -396,17 +404,24 @@ input[type=date]::-webkit-calendar-picker-indicator {
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    padding: 6px 7.5px 5px 15px; }
+    padding: 6px 7.5px 5px 15px;
+    position: absolute;
+    background: #FFFFFF;
+    z-index: 3;
+    width: 100%;
+    box-sizing: border-box; }
     .dropdown__expand_guests {
       padding: 6px 7px 13px 15px; }
   .dropdown__block + .dropdown__expand {
     display: none; }
   .dropdown__block.active {
     border: 1px solid rgba(31, 32, 65, 0.5);
-    border-bottom: transparent; }
+    border-bottom: transparent;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
   .dropdown__block.active + .dropdown__expand {
     display: block; }
-  .dropdown__links {
+  .dropdown__buttons {
     display: flex;
     justify-content: space-between;
     padding-top: 20px; }
@@ -494,7 +509,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   box-sizing: border-box;
-  margin-bottom: 40px;
   max-width: 380px;
   min-width: 380px; }
   @media (max-width: 480px) {
@@ -680,6 +694,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
       width: 320px; }
     .cards__container:not(:last-child) {
       margin-right: 40px; }
+  .cards__containerFirst {
+    margin-bottom: 40px; }
   .cards__airDatepicker {
     margin-bottom: 40px; }
   .cards__roomWidgetFirst {

@@ -89,68 +89,70 @@
         <main class="registrationPage">
           <div class="registrationPage__card">
             <form class="cardRegistration" action="">
-              <div class="cardRegistration__wrapper">
-                <div class="cardRegistration__title">Регистрация аккаунта</div>
-              </div>
-              <div class="cardRegistration__nameSurname">
-                <div class="cardRegistration__name">
-                  <div class="textField">
-                    <input class="textField__input" type="text" placeholder="Имя" value="" inputmode="" max="2030-01-01" data-id="">
+              <div class="cardRegistration__container">
+                <div class="cardRegistration__wrapper">
+                  <div class="cardRegistration__title">Регистрация аккаунта</div>
+                </div>
+                <div class="cardRegistration__nameSurname">
+                  <div class="cardRegistration__name">
+                    <div class="textField">
+                      <input class="textField__input" type="text" placeholder="Имя" value="" inputmode="" max="2030-01-01" data-id="">
+                    </div>
+                  </div>
+                  <div class="cardRegistration__surname">
+                    <div class="textField">
+                      <input class="textField__input" type="text" placeholder="Фамилия" value="" inputmode="" max="2030-01-01" data-id="">
+                    </div>
                   </div>
                 </div>
-                <div class="cardRegistration__surname">
+                <div class="cardRegistration__manWoman">
+                  <label class="radio__label">
+                    <input class="radio__input" type="radio" name="gender" value="man" checked><span class="radio__box"></span><span class="radio__title">Мужчина</span>
+                  </label>
+                  <label class="radio__label">
+                    <input class="radio__input" type="radio" name="gender" value="woman"><span class="radio__box"></span><span class="radio__title">Женщина</span>
+                  </label>
+                </div>
+                <div class="cardRegistration__dateOfBirth">
+                  <div class="heading">
+                    <h3 class="heading__title">дата рождения</h3>
+                  </div>
                   <div class="textField">
-                    <input class="textField__input" type="text" placeholder="Фамилия" value="" inputmode="" max="2030-01-01" data-id="">
+                    <input class="textField__input textField__input_isUppercase" type="date" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="">
                   </div>
                 </div>
-              </div>
-              <div class="cardRegistration__manWoman">
-                <label class="radio__label">
-                  <input class="radio__input" type="radio" name="gender" value="man" checked><span class="radio__box"></span><span class="radio__title">Мужчина</span>
-                </label>
-                <label class="radio__label">
-                  <input class="radio__input" type="radio" name="gender" value="woman"><span class="radio__box"></span><span class="radio__title">Женщина</span>
-                </label>
-              </div>
-              <div class="cardRegistration__dateOfBirth">
-                <div class="heading">
-                  <h3 class="heading__title">дата рождения</h3>
-                </div>
-                <div class="textField">
-                  <input class="textField__input textField__input_isUppercase" type="date" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="">
-                </div>
-              </div>
-              <div class="cardRegistration__data"> 
-                <div class="heading">
-                  <h3 class="heading__title">данные для входа в сервис</h3>
-                </div>
-              </div>
-              <div class="cardRegistration__emailPassword"> 
-                <div class="cardRegistration__email"> 
-                  <div class="textField">
-                    <input class="textField__input" type="email" placeholder="Email" value="" inputmode="" max="2030-01-01" data-id="">
+                <div class="cardRegistration__data"> 
+                  <div class="heading">
+                    <h3 class="heading__title">данные для входа в сервис</h3>
                   </div>
                 </div>
-                <div class="cardRegistration__password"> 
-                  <div class="textField">
-                    <input class="textField__input" type="text" placeholder="Пароль" value="" inputmode="" max="2030-01-01" data-id="">
+                <div class="cardRegistration__emailPassword"> 
+                  <div class="cardRegistration__email"> 
+                    <div class="textField">
+                      <input class="textField__input" type="email" placeholder="Email" value="" inputmode="" max="2030-01-01" data-id="">
+                    </div>
+                  </div>
+                  <div class="cardRegistration__password"> 
+                    <div class="textField">
+                      <input class="textField__input" type="text" placeholder="Пароль" value="" inputmode="" max="2030-01-01" data-id="">
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="cardRegistration__toggle"> 
-                <label class="toggle__label">
-                  <input class="toggle__input" name="toggle" type="checkbox"><span class="toggle__box"></span><span class="toggle__title">Получать спецпредложения</span>
-                </label>
-              </div>
-              <div class="cardRegistration__buttonPay">
-                <button class="button button_colored  button__arrow" data-btn="">перейти к оплате
-                </button>
-              </div>
-              <div class="cardRegistration__isEnter"> 
-                <div class="cardRegistration__account">Уже есть аккаунт на Toxin </div>
-                <div class="cardRegistration__buttonEnter">
-                  <button class="button button_colored" data-btn=""><span class="button_white">войти</span>
+                <div class="cardRegistration__toggle"> 
+                  <label class="toggle__label">
+                    <input class="toggle__input" name="toggle" type="checkbox"><span class="toggle__box"></span><span class="toggle__title">Получать спецпредложения</span>
+                  </label>
+                </div>
+                <div class="cardRegistration__buttonPay">
+                  <button class="button button_colored  button__arrow" data-btn="">перейти к оплате
                   </button>
+                </div>
+                <div class="cardRegistration__isEnter"> 
+                  <div class="cardRegistration__account">Уже есть аккаунт на Toxin </div>
+                  <div class="cardRegistration__buttonEnter">
+                    <button class="button button_colored" data-btn=""><span class="button_white">войти</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </form>
