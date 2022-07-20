@@ -43,29 +43,30 @@ mixin cardSearchRoom({ cardTitle="", cardType="" })
     
   else
     form(action="").cardSearchRoom
-      .cardSearchRoom__wrapper
-        .cardSearchRoom__title #{cardTitle}
+      .cardSearchRoom__container
+        .cardSearchRoom__wrapper
+          .cardSearchRoom__title #{cardTitle}
 
-      .cardSearchRoom__dates
-        .cardSearchRoom__arrival
-          +heading({ title: "прибытие" })
-          +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
-        .cardSearchRoom__departure
-          +heading({ title: "выезд" })
-          +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+        .cardSearchRoom__dates
+          .cardSearchRoom__arrival
+            +heading({ title: "прибытие" })
+            +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+          .cardSearchRoom__departure
+            +heading({ title: "выезд" })
+            +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
 
-      .cardSearchRoom____dropdownGuests
-        +heading({ title: "гости" })
-        +dropdown({ dropdownId: "guests",
-          options: [
-            { title: "взрослые", count: 0 }, 
-            { title: "дети", count: 0 }, 
-            { title: "младенцы", count: 0 }
-          ]
-        })
+        .cardSearchRoom____dropdownGuests
+          +heading({ title: "гости" })
+          +dropdown({ dropdownId: "guests",
+            options: [
+              { title: "взрослые", count: 0 }, 
+              { title: "дети", count: 0 }, 
+              { title: "младенцы", count: 0 }
+            ]
+          })
 
-      .cardSearchRoom__buttonPay.cardSearchRoom__buttonPay_marginTop
-        +button({ button: true, btnTitle: 'подобрать номер', withArrow: true })
+        .cardSearchRoom__buttonPay.cardSearchRoom__buttonPay_marginTop
+          +button({ button: true, btnTitle: 'подобрать номер', withArrow: true })
 
 
 
