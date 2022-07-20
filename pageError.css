@@ -1,66 +1,6 @@
-.linksPages__wrapper {
-  display: flex; }
-  .linksPages__wrapper_column {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 25px; }
-    .linksPages__wrapper_column .linksPages__link:not(:first-child) {
-      padding-top: 15px;
-      padding-left: 0; }
+.linksPages__wrapper{display:flex}.linksPages__wrapper_column{flex-direction:column;align-items:center;padding-top:25px}.linksPages__wrapper_column .linksPages__link:not(:first-child){padding-top:15px;padding-left:0}.linksPages__link{color:rgba(31,32,65,0.5);font-family:"Montserrat-regular";font-size:18px;text-decoration:none;cursor:pointer}.linksPages__link:focus,.linksPages__link:hover{color:rgba(31,32,65,0.75);outline:none}.linksPages__link:not(:first-child){padding-left:45px}
 
-.linksPages__link {
-  color: rgba(31, 32, 65, 0.5);
-  font-family: "Montserrat-regular";
-  font-size: 18px;
-  text-decoration: none;
-  cursor: pointer; }
-  .linksPages__link:focus, .linksPages__link:hover {
-    color: rgba(31, 32, 65, 0.75);
-    outline: none; }
-  .linksPages__link:not(:first-child) {
-    padding-left: 45px; }
+body{height:100%;margin:0}.page__wrapper{display:flex;flex-direction:column;min-height:100%}.page__wrapper_grayBackground{background:#F4F4F6}.page__logo{padding:30px 0 0 30px}.page__content{margin-top:72px;margin-bottom:90px}.page__content_startPage{margin-top:20px}.page__footer{padding:50px 0;display:flex;justify-content:center}.page__cont{flex:1 0 auto}
 
-body {
-  height: 100%;
-  margin: 0; }
-
-.page__wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%; }
-
-.page__wrapper_grayBackground {
-  background: #F4F4F6; }
-
-.page__logo {
-  padding: 30px 0 0 30px; }
-
-.page__content {
-  margin-top: 72px;
-  margin-bottom: 90px; }
-  .page__content_startPage {
-    margin-top: 20px; }
-
-.page__footer {
-  padding: 50px 0;
-  display: flex;
-  justify-content: center; }
-
-.page__cont {
-  flex: 1 0 auto; }
-
-.pageError {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Montserrat-Bold";
-  color: rgba(31, 32, 65, 0.75);
-  font-size: 24px;
-  margin-top: 60px; }
-  .pageError:focus, .pageError:hover {
-    color: rgba(31, 32, 65, 0.75);
-    outline: none; }
-  .pageError__links {
-    font-size: 20px;
-    margin-top: 40px; }
+.pageError{display:flex;flex-direction:column;align-items:center;font-family:"Montserrat-Bold";color:rgba(31,32,65,0.75);font-size:24px;margin-top:60px}.pageError:focus,.pageError:hover{color:rgba(31,32,65,0.75);outline:none}.pageError__links{font-size:20px;margin-top:40px}
 
