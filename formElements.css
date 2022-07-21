@@ -779,7 +779,11 @@ body {
   .formElements__dropdownBedroomExpanded {
     margin-bottom: 56px;
     max-width: 266px; }
-  .formElements__checkboxExpandable {
+  .formElements__checkboxExpandableFirst {
+    margin-top: 180px;
+    margin-bottom: 50px;
+    max-width: 266px; }
+  .formElements__checkboxExpandableSecond {
     margin-bottom: 50px;
     max-width: 266px; }
   .formElements__roomFeatures {
@@ -814,7 +818,7 @@ body {
       margin-top: 16px;
       width: 90px; }
   .formElements__rate {
-    margin-bottom: 196px;
+    margin-bottom: 187px;
     width: 260px; }
     .formElements__rate-wrapper {
       display: flex;
@@ -822,7 +826,7 @@ body {
       margin-top: 16px; }
   .formElements__dropdownGuestsDefault {
     width: 320px;
-    margin-bottom: 98px; }
+    margin-bottom: 266px; }
   .formElements__checkboxRich {
     margin-bottom: 50px; }
   .formElements__sliderButtons {
@@ -852,15 +856,15 @@ body {
       width: 320px;
       height: 44px; }
   .formElements__pagination {
-    margin-bottom: 230px;
+    margin-bottom: 220px;
     width: 350px; }
   .formElements__dropdownGuests {
-    margin-bottom: 98px; }
+    margin-bottom: 267px; }
   .formElements__bulletList {
     margin-bottom: 30px; }
   .formElements__feedback {
     grid-area: feedback;
     margin-left: 126px;
-    margin-top: 100px;
+    margin-top: 127px;
     width: 730px; }
 
