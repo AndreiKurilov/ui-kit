@@ -15,3 +15,4 @@
 
 - [**Landing page**](https://andreikurilov.github.io/ui-kit/landingPage.html)
 - [**Registration**](https://andreikurilov.github.io/ui-kit/registrationPage.html)
+- [**Login**](https://andreikurilov.github.io/ui-kit/loginPage.html)
