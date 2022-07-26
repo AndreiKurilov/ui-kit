@@ -79,25 +79,38 @@
 .button {
   cursor: pointer;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 50px;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding: 2px; }
   .button:hover, .button_hover {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-    color: #FFFFFF; }
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
   .button__link {
     text-transform: uppercase;
     font-family: "Montserrat-Bold";
-    color: #BC9CFF;
     font-size: 12px;
     color: #FFFFFF;
-    text-decoration: none; }
-  .button:hover, .button_hover {
-    color: rgba(31, 32, 65, 0.5); }
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+    .button__link_white {
+      color: #BC9CFF;
+      background: #FFFFFF; }
+  .button__title {
+    text-transform: uppercase;
+    font-family: "Montserrat-Bold";
+    font-size: 12px;
+    color: #BC9CFF;
+    text-decoration: none;
+    cursor: pointer; }
+    .button__title:hover, .button__title_hover {
+      color: rgba(31, 32, 65, 0.5); }
   .button__arrow::after {
     content: '\e904';
     font-family: "Material-Icons";
@@ -106,14 +119,6 @@
     position: absolute;
     right: 0;
     padding-right: 15px; }
-  .button_white {
-    color: #BC9CFF;
-    border-radius: 50px;
-    background: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%; }
 
 .header {
   background: #FFFFFF;
@@ -328,7 +333,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
         margin-top: 80px; } }
   .footer__promo {
     margin-top: 20px;
-    min-width: 211px;
+    min-width: 260px;
     max-width: 260px;
     font-family: "Montserrat-regular";
     font-size: 14px;
