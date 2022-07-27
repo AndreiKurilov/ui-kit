@@ -1,9 +1,9 @@
-mixin button({ buttonLink=true, btnTitle="", withArrow=false, isWhite=false, btnHover=false, btnLinkHover=false, btnId="", href="" })
+mixin button({ buttonLink=true, btnTitle="", withArrow=false, isWhite=false, btnHover=false, linkHover=false, btnId="", href="" })
   -
     const buttonWhite = isWhite ? ' button__link_white' : '';
     const buttonHover = btnHover ? ' button_hover' : '';
     const buttonArrow = withArrow ? " button__arrow" : "";
-    const buttonLinkHover = btnLinkHover ? ' button_link_onlyTitle_hover' : '';
+    const hoverLink = linkHover ? ' button__title_hover' : '';
 
 
   if buttonLink
@@ -17,6 +17,6 @@ mixin button({ buttonLink=true, btnTitle="", withArrow=false, isWhite=false, btn
         }) #{btnTitle}
   else
     a&attributes({
-      class: [ "button__link", "button__link_onlyTitle", buttonLinkHover ], 
+      class: [ "button__title", hoverLink ],
       "data-btn": btnId,
     }) #{btnTitle}
