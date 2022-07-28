@@ -44,7 +44,7 @@ mixin cardRegistration({ cardTitle="", cardType="" })
         .cardRegistration__isEnter 
           .cardRegistration__account Уже есть аккаунт на Toxin 
           .cardRegistration__buttonEnter
-            +button({ spanTitle: "войти", isWhite: true })
+            +button({ btnTitle: "войти", isWhite: true, href: "./loginPage.html" })
 
   else
     form(action="").cardRegistration
@@ -64,7 +64,7 @@ mixin cardRegistration({ cardTitle="", cardType="" })
         .cardRegistration__isEnter 
           .cardRegistration__account Нет аккаунта на Toxin?
           .cardRegistration__buttonEnter
-            +button({ spanTitle: "Создать", isWhite: true })
+            +button({ btnTitle: "Создать", isWhite: true, href: "./registrationPage.html" })
 
 
 
