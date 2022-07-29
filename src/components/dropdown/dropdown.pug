@@ -17,5 +17,5 @@ mixin dropdown({ dropdownId="", isExpanded=false, options=[] })
         +dropdownItem({ title: item.title, count: item.count })
       if ( dropdownId == "guests" ) 
         .dropdown__buttons
-          +button({ button: false, btnTitle: "очистить", btnId: "clear"})
-          +button({ button: false, btnTitle: "применить", btnId: "apply"})
+          +button({ buttonLink: false, btnTitle: "очистить", btnId: "clear"})
+          +button({ buttonLink: false, btnTitle: "применить", btnId: "apply"})
