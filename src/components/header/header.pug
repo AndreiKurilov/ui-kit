@@ -39,6 +39,6 @@ mixin header ({ isLogged=false, userName="" })
           else
             .header__btns
               .header__buttonLogin
-                +button({ isWhite: true, spanTitle: 'войти' })
+                +button({ isWhite: true, btnTitle: 'войти', href: "./loginPage.html" })
               .header__buttonRegister
-                +button({ isDefault: true, btnTitle: 'зарегистрироваться' })
+                +button({ isDefault: true, btnTitle: 'зарегистрироваться', href: "./registrationPage.html" })
