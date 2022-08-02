@@ -7,7 +7,7 @@ body {
   &__wrapper {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    // margin: 0 auto;
     min-height: 100%;
   }
 
@@ -22,6 +22,10 @@ body {
   &__content {
     margin-top: 72px;
     margin-bottom: 90px;
+
+    &_startPage {
+      margin-top: 20px;
+    }
   }
 
   &__footer {
@@ -29,4 +33,16 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  // &__header {
+    
+  // }
+
+  &__cont {
+    flex: 1 0 auto;
+  }
+
+  // &__foot {
+
+  // }
 }
