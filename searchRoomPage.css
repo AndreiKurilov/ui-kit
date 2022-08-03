@@ -566,6 +566,7 @@ body {
 
 .searchRoomPage__filter {
   min-width: 266px;
+  max-width: 266px;
   margin-top: 30px;
   margin-right: 60px; }
 
