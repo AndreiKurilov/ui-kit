@@ -231,7 +231,7 @@ body {
   display: flex;
   justify-content: center; }
 
-.page__cont {
+.page__container {
   flex: 1 0 auto; }
 
 .setColorsType {

@@ -535,7 +535,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 15px; }
   .pagination__text {
     color: rgba(31, 32, 65, 0.75);
-    line-height: 24px; }
+    line-height: 24px;
+    padding-left: 8px; }
   .pagination__pages {
     display: flex;
     padding: 0; }
@@ -750,7 +751,7 @@ body {
   display: flex;
   justify-content: center; }
 
-.page__cont {
+.page__container {
   flex: 1 0 auto; }
 
 .formElements {
