@@ -3,8 +3,10 @@ include ../nav/nav
 include ../socialIcons/socialIcons
 include ../textField/textField
 
-mixin footer ({footerPromo=''}) 
-  footer.footer
+mixin footer ({footerPromo='', isBorderTop=false })
+  - const borderTop = isBorderTop ? " footer_borderTop" : "";
+
+  footer.footer(class = borderTop)
     .footer__wrapper
       .footer__body
         .footer__logo
