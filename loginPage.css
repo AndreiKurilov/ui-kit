@@ -1,8 +1,138 @@
-.heading{display:flex;justify-content:space-between;margin-bottom:5px;cursor:pointer}.heading__title{font-family:"Montserrat-Bold";color:#1F2041;font-size:12px;line-height:15px;text-transform:uppercase;margin:0px;display:flex;user-select:none}.heading_expand-more::after{content:'\e905';font-family:"Material-Icons";color:rgba(31,32,65,0.5);font-size:8px;cursor:pointer;padding-right:16px;margin-top:3px}.heading_expand-more.active::after{content:'\e900'}.heading_expand-more+.checkboxList{display:none}.heading_expand-more.active+.checkboxList{display:block}.heading__state{font-family:"Montserrat-regular";color:rgba(31,32,65,0.5);font-size:12px;line-height:15px;text-transform:uppercase}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  cursor: pointer; }
+  .heading__title {
+    font-family: "Montserrat-Bold";
+    color: #1F2041;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    margin: 0px;
+    display: flex;
+    user-select: none; }
+  .heading_expand-more::after {
+    content: '\e905';
+    font-family: "Material-Icons";
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 8px;
+    cursor: pointer;
+    padding-right: 16px;
+    margin-top: 3px; }
+  .heading_expand-more.active::after {
+    content: '\e900'; }
+  .heading_expand-more + .checkboxList {
+    display: none; }
+  .heading_expand-more.active + .checkboxList {
+    display: block; }
+  .heading__state {
+    font-family: "Montserrat-regular";
+    color: rgba(31, 32, 65, 0.5);
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase; }
 
-.cardRegistration{padding:40px 30px 30px;background:#FFFFFF;border:1px solid rgba(0,0,0,0.12);box-shadow:0px 0px 25px rgba(0,0,0,0.2);border-radius:4px;box-sizing:border-box}@media (max-width: 480px){.cardRegistration{min-width:200px;padding:10px}}@media (max-width: 480px){.cardRegistration__container{max-width:280px;padding:10px}}.cardRegistration__title{font-family:"Montserrat-Bold";font-size:24px;line-height:29px;color:#1F2041;padding-bottom:20px}.cardRegistration__nameSurname{display:flex;flex-direction:column;color:rgba(31,32,65,0.25)}.cardRegistration__name{margin-bottom:10px}.cardRegistration__manWoman{margin-top:10px;margin-bottom:20px;display:flex;width:221px;justify-content:space-between}.cardRegistration__data{margin-top:20px;margin-bottom:10px}.cardRegistration__email{margin-bottom:10px}.cardRegistration__toggle{margin-top:10px}.cardRegistration__buttonPay{height:44px;margin-top:20px;margin-bottom:30px}.cardRegistration__isEnter{display:flex;justify-content:space-between;align-items:center;height:44px}.cardRegistration__account{font-family:"Montserrat-regular";color:#1F2041;font-size:14px;line-height:18px;text-decoration:none;padding-right:10px}.cardRegistration__buttonEnter{width:99px;height:100%}
+.cardRegistration {
+  padding: 40px 30px 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  box-sizing: border-box; }
+  @media (max-width: 480px) {
+    .cardRegistration {
+      min-width: 200px;
+      padding: 10px; } }
+  @media (max-width: 480px) {
+    .cardRegistration__container {
+      max-width: 280px;
+      padding: 10px; } }
+  .cardRegistration__title {
+    font-family: "Montserrat-Bold";
+    font-size: 24px;
+    line-height: 29px;
+    color: #1F2041;
+    padding-bottom: 20px; }
+  .cardRegistration__nameSurname {
+    display: flex;
+    flex-direction: column;
+    color: rgba(31, 32, 65, 0.25); }
+  .cardRegistration__name {
+    margin-bottom: 10px; }
+  .cardRegistration__manWoman {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    width: 221px;
+    justify-content: space-between; }
+  .cardRegistration__data {
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  .cardRegistration__email {
+    margin-bottom: 10px; }
+  .cardRegistration__toggle {
+    margin-top: 10px; }
+  .cardRegistration__buttonPay {
+    height: 44px;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  .cardRegistration__isEnter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px; }
+  .cardRegistration__account {
+    font-family: "Montserrat-regular";
+    color: #1F2041;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    padding-right: 10px; }
+  .cardRegistration__buttonEnter {
+    width: 99px;
+    height: 100%; }
 
-body{height:100%;margin:0}.page__wrapper{display:flex;flex-direction:column;min-height:100%}.page__wrapper_grayBackground{background:#F4F4F6}.page__logo{padding:30px 0 0 30px}.page__content{margin-top:72px;margin-bottom:90px}.page__content_startPage{margin-top:20px}.page__footer{padding:50px 0;display:flex;justify-content:center}.page__container{flex:1 0 auto}
+body {
+  height: 100%;
+  margin: 0; }
 
-.loginPage{background:url(images/registration.jpg) no-repeat;background-size:cover;display:flex}.loginPage__card{margin:172px auto;min-width:380px;max-width:380px}@media (max-width: 480px){.loginPage__card{min-width:200px;margin-top:100px;margin-bottom:100px}}
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; }
+
+.page__wrapper_grayBackground {
+  background: #F4F4F6; }
+
+.page__logo {
+  padding: 30px 0 0 30px; }
+
+.page__content {
+  margin-top: 72px;
+  margin-bottom: 90px; }
+  .page__content_startPage {
+    margin-top: 20px; }
+
+.page__footer {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center; }
+
+.page__container {
+  flex: 1 0 auto; }
+
+.loginPage {
+  background: url(images/registration.jpg) no-repeat;
+  background-size: cover;
+  display: flex; }
+  .loginPage__card {
+    margin: 172px auto;
+    min-width: 380px;
+    max-width: 380px; }
+    @media (max-width: 480px) {
+      .loginPage__card {
+        min-width: 200px;
+        margin-top: 100px;
+        margin-bottom: 100px; } }
 
