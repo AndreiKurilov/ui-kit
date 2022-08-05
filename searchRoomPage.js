@@ -86,39 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/dropdown/dropdown.scss":
-/*!******************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/components/dropdown/dropdown.scss ***!
-  \******************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/dropdown/dropdown.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
-
-/***/ }),
-
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/dropdownItem/dropdownItem.scss":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/components/dropdownItem/dropdownItem.scss ***!
-  \**************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/dropdownItem/dropdownItem.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
-
-/***/ }),
-
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/layouts/layout.scss":
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/layouts/layout.scss ***!
-  \****************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/layouts/layout.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
-
-/***/ }),
-
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/pages/searchRoomPage/searchRoomPage.scss":
 /*!*************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/pages/searchRoomPage/searchRoomPage.scss ***!
@@ -142,75 +109,6 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
-/***/ "./src/components/dropdown/dropdown.js":
-/*!*********************************************!*\
-  !*** ./src/components/dropdown/dropdown.js ***!
-  \*********************************************/
-/*! exports provided: Dropdown */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Dropdown\", function() { return Dropdown; });\n/* harmony import */ var _dropdownItem_dropdownItem_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../dropdownItem/dropdownItem.js */ \"./src/components/dropdownItem/dropdownItem.js\");\n/* harmony import */ var _dropdown_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dropdown.scss */ \"./src/components/dropdown/dropdown.scss\");\n/* harmony import */ var _dropdown_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_dropdown_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _state_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./state.js */ \"./src/components/dropdown/state.js\");\n\r\n\r\n\r\n\r\n\r\nclass Dropdown {\r\n  constructor( selector ) {\r\n    this.mainSelector = selector;\r\n    this.expandDropdown();\r\n    this._state = {};\r\n    this.createDropdownItems();\r\n    this.setTotalValue();\r\n    this.clearValues();\r\n    this.applyResult();\r\n  }\r\n\r\n  expandDropdown() {\r\n    this.dropdownExpand = this.mainSelector.querySelector('.dropdown__block');\r\n    this.dropdownExpand.addEventListener('click', () =>\r\n      this.dropdownExpand.classList.toggle('active'));\r\n  }\r\n  \r\n  createDropdownItems() {\r\n    const dropdownItems = this.mainSelector.querySelectorAll('.dropdownItem');\r\n    if (dropdownItems.length > 0) {\r\n      dropdownItems.forEach(( selector ) => {\r\n        const dropdownOptions = new _dropdownItem_dropdownItem_js__WEBPACK_IMPORTED_MODULE_0__[\"DropdownItem\"]( selector, this.onItemChange.bind(this) );\r\n        this._state[dropdownOptions.getId()] = dropdownOptions.getValue();\r\n      })\r\n    }\r\n  }\r\n  \r\n  onItemChange(id, value) {\r\n    this._state[id] = value;\r\n    this.setTotalValue();\r\n  }\r\n  \r\n  setTotalValue() {\r\n    this.dropdownTotal = this.mainSelector.querySelector('.dropdown__total');\r\n    \r\n    const ddPlaceholder = Object.values(this._state).map(Number).reduce((sum, current) => sum + current);\r\n    \r\n    if ( this.mainSelector.dataset.id == \"comfort\" ) {\r\n      if ( ddPlaceholder === 0) {\r\n        this.dropdownTotal.value = _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsComfort\"].placeholder;\r\n      } else {\r\n        const entryFirst = Object.entries(this._state)[0];\r\n        const optionOne = `${entryFirst[1]} ${entryFirst[1] < 2 ? _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsComfort\"].bedrooms[0] : _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsComfort\"].bedrooms[1]}`;\r\n\r\n        const entrySecond = Object.entries(this._state)[1];\r\n        const optionTwo = `${entrySecond[1]} ${entrySecond[1] < 2 ? _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsComfort\"].beds[0] : _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsComfort\"].beds[1]}`;\r\n\r\n        const entryThird = Object.entries(this._state)[2];\r\n        const optionThree = `${entryThird[1]} ${entryThird[1] < 2 ? _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsComfort\"].bathrooms[0] : _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsComfort\"].bathrooms[1]}`;\r\n        \r\n        if ( entryFirst[1] == 0 ) {\r\n          this.dropdownTotal.value = `${optionTwo}`;\r\n          if ( entrySecond[1] == 0 && entryThird[1] > 0 ) {\r\n            this.dropdownTotal.value = _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsComfort\"].placeholder;\r\n          } \r\n        }\r\n\r\n        else if ( entrySecond[1] == 0 ) {\r\n          this.dropdownTotal.value = `${optionOne}`;\r\n        }\r\n\r\n        else {\r\n          this.dropdownTotal.value = `${optionOne}, ${optionTwo}...`;\r\n        }\r\n      }\r\n    }\r\n\r\n    if ( this.mainSelector.dataset.id == \"guests\" ) {\r\n      if ( ddPlaceholder === 0) {\r\n        this.dropdownTotal.value = _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsGuests\"].placeholder;\r\n      } else {\r\n        const entryFirst = Object.values(this._state).slice(0, 2).map(Number).reduce((sum, current) => sum + current);\r\n\r\n        const optionOne = `${entryFirst} ${entryFirst < 2 ? _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsGuests\"].guests[0] : entryFirst < 5 ? _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsGuests\"].guests[1] : _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsGuests\"].guests[2]}`;\r\n\r\n        const entrySecond = Object.entries(this._state)[2];\r\n        const optionTwo = `${entrySecond[1]} ${entrySecond[1] < 2 ? _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsGuests\"].babies[0] : _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsGuests\"].babies[1]}`;\r\n        \r\n        if ( entryFirst == 0 ) {\r\n          this.dropdownTotal.value = _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsGuests\"].placeholder;\r\n        }\r\n\r\n        else if ( entrySecond[1] == 0 ) {\r\n          this.dropdownTotal.value = `${optionOne}`;\r\n        }\r\n\r\n        else {\r\n          this.dropdownTotal.value = `${optionOne}, ${optionTwo}`;\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  clearValues() {\r\n    if ( this.mainSelector.dataset.id == \"guests\" ) {\r\n\r\n      this.buttonClear = this.mainSelector.querySelector('[data-btn=\"clear\"]');\r\n      this.dropdownItemNumbers = this.mainSelector.querySelectorAll(\".dropdownItem__number\");\r\n\r\n      this.buttonClear.addEventListener(\"click\", () => {\r\n        this.dropdownItemNumbers.forEach((item) => {\r\n          item.value = 0;\r\n        })\r\n        for (let key in this._state) {\r\n          if(this._state.hasOwnProperty(key)) {\r\n            this._state[key] = 0;\r\n          }\r\n        }\r\n        this.setTotalValue();\r\n      })\r\n    }\r\n  }\r\n\r\n  applyResult() {\r\n    if ( this.mainSelector.dataset.id == \"guests\" ) {\r\n      this.buttonApply = this.mainSelector.querySelector('[data-btn=\"apply\"]');\r\n      this.buttonApply.addEventListener(\"click\", () => {\r\n        if ( this.dropdownTotal.value != _state_js__WEBPACK_IMPORTED_MODULE_2__[\"optionsGuests\"].placeholder ) {\r\n          this.dropdownExpand.classList.toggle('active');\r\n        }\r\n      })\r\n    }\r\n  }\r\n};\r\n\r\nconst dropdowns = document.querySelectorAll('.dropdown');\r\n\r\nif (dropdowns.length > 0) {\r\n  dropdowns.forEach(( selector ) => { new Dropdown( selector )})\r\n}\r\n\n\n//# sourceURL=webpack:///./src/components/dropdown/dropdown.js?");
-
-/***/ }),
-
-/***/ "./src/components/dropdown/dropdown.scss":
-/*!***********************************************!*\
-  !*** ./src/components/dropdown/dropdown.scss ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./dropdown.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/dropdown/dropdown.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/components/dropdown/dropdown.scss?");
-
-/***/ }),
-
-/***/ "./src/components/dropdown/state.js":
-/*!******************************************!*\
-  !*** ./src/components/dropdown/state.js ***!
-  \******************************************/
-/*! exports provided: optionsComfort, optionsGuests */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"optionsComfort\", function() { return optionsComfort; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"optionsGuests\", function() { return optionsGuests; });\nconst optionsComfort = {\r\n  bedrooms: [\"спальня\", \"спальни\"],\r\n  beds: [\"кровать\", \"кровати\"],\r\n  bathrooms: [\"ванная комната\", \"ванные комнаты\"],\r\n  placeholder: \"Удобства номера\",\r\n}\r\n\r\nconst optionsGuests = {\r\n  guests: [\"гость\", \"гостя\", \"гостей\"],\r\n  babies: [\"младенец\", \"младенца\"],\r\n  placeholder: \"Сколько гостей\",\r\n}\r\n\n\n//# sourceURL=webpack:///./src/components/dropdown/state.js?");
-
-/***/ }),
-
-/***/ "./src/components/dropdownItem/dropdownItem.js":
-/*!*****************************************************!*\
-  !*** ./src/components/dropdownItem/dropdownItem.js ***!
-  \*****************************************************/
-/*! exports provided: DropdownItem */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"DropdownItem\", function() { return DropdownItem; });\n/* harmony import */ var _dropdownItem_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dropdownItem.scss */ \"./src/components/dropdownItem/dropdownItem.scss\");\n/* harmony import */ var _dropdownItem_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_dropdownItem_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nclass DropdownItem {\r\n  constructor( selector, onChange) {\r\n    this.mainSelector = selector;\r\n    this.findElements();\r\n    this.addListener();\r\n    this.setInitialStateBtn();\r\n    this.onChange = onChange;\r\n  }\r\n\r\n  findElements() {\r\n    this.btnMinus = this.mainSelector.querySelector('.dropdownItem__btnMinus');\r\n    this.btnPlus = this.mainSelector.querySelector('.dropdownItem__btnPlus');\r\n    this.itemNumber = this.mainSelector.querySelector('.dropdownItem__number');\r\n  }\r\n  \r\n  isDisabled (btn) {\r\n    btn.setAttribute(\"disabled\", '');\r\n    btn.classList.add('dropdownItem__btn_disabled');\r\n  }\r\n  \r\n  isActivated (btn) {\r\n    btn.removeAttribute(\"disabled\", '');\r\n    btn.classList.remove('dropdownItem__btn_disabled');\r\n  }\r\n\r\n  setInitialStateBtn() {\r\n    if ( this.itemNumber.value == 0 ) {\r\n      this.isDisabled(this.btnMinus);\r\n    }\r\n  }\r\n  \r\n  addListener() {\r\n    this.mainSelector.addEventListener('click', this.handleClick.bind(this));\r\n  }\r\n  \r\n  handleClick(e) {\r\n    if ( e.target == this.btnMinus ) {\r\n      if ( this.itemNumber.value > 0 ) {\r\n        this.itemNumber.value--;\r\n        this.isActivated(this.btnMinus);\r\n        this.isActivated(this.btnPlus);\r\n      }\r\n      if ( this.itemNumber.value == 0) {\r\n        this.isDisabled(this.btnMinus);\r\n      } \r\n    }\r\n\r\n    if ( e.target == this.btnPlus ) {\r\n      if ( this.itemNumber.value < 4 ) {\r\n        this.itemNumber.value++;\r\n        this.isActivated(this.btnMinus);\r\n      }\r\n      if ( this.itemNumber.value == 4 ) {\r\n        this.isDisabled(this.btnPlus);\r\n      }\r\n    }\r\n    \r\n    this.onChange(this.itemNumber.id, this.itemNumber.value);\r\n  }\r\n\r\n  getId() {\r\n    return this.itemNumber.id;\r\n  }\r\n\r\n  getValue() {\r\n    return this.itemNumber.value;\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack:///./src/components/dropdownItem/dropdownItem.js?");
-
-/***/ }),
-
-/***/ "./src/components/dropdownItem/dropdownItem.scss":
-/*!*******************************************************!*\
-  !*** ./src/components/dropdownItem/dropdownItem.scss ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./dropdownItem.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/dropdownItem/dropdownItem.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/components/dropdownItem/dropdownItem.scss?");
-
-/***/ }),
-
-/***/ "./src/layouts/layout.scss":
-/*!*********************************!*\
-  !*** ./src/layouts/layout.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/mini-css-extract-plugin/dist/loader.js!../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./layout.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/layouts/layout.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/layouts/layout.scss?");
-
-/***/ }),
-
 /***/ "./src/pages/searchRoomPage/searchRoomPage.js":
 /*!****************************************************!*\
   !*** ./src/pages/searchRoomPage/searchRoomPage.js ***!
@@ -219,7 +117,7 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _layouts_layout_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../layouts/layout.scss */ \"./src/layouts/layout.scss\");\n/* harmony import */ var _layouts_layout_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_layouts_layout_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_dropdown_dropdown_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/dropdown/dropdown.js */ \"./src/components/dropdown/dropdown.js\");\n/* harmony import */ var _searchRoomPage_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./searchRoomPage.scss */ \"./src/pages/searchRoomPage/searchRoomPage.scss\");\n/* harmony import */ var _searchRoomPage_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_searchRoomPage_scss__WEBPACK_IMPORTED_MODULE_2__);\n\r\n// import '../../components/dateDropdown/dateDropdown.js';\r\n\r\n// import '../../components/checkboxList/checkboxList.js';\r\n// import '../../components/rangeSlider/rangeSlider.js';\r\n// import '../../components/roomWidget/roomWidget.js';\r\n// import '../../components/pagination/pagination.js';\r\n\r\n// import { ExpandableСheckbox } from '../../components/heading/heading.js';\r\n\r\n\r\n\r\nconst dropdownList = document.querySelectorAll('.dropdown');\r\n\r\nif (dropdownList.length > 0) {\r\n  dropdownList.forEach(( selector ) => { new _components_dropdown_dropdown_js__WEBPACK_IMPORTED_MODULE_1__[\"Dropdown\"]( selector )})\r\n}\r\n\r\n// const headingExpand = document.querySelectorAll('.heading_expand-more');\r\n\r\n\r\n// if (headingExpand.length > 0) {\r\n//   headingExpand.forEach((selector) => new ExpandableСheckbox(selector));\r\n// }\r\n\n\n//# sourceURL=webpack:///./src/pages/searchRoomPage/searchRoomPage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _searchRoomPage_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./searchRoomPage.scss */ \"./src/pages/searchRoomPage/searchRoomPage.scss\");\n/* harmony import */ var _searchRoomPage_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_searchRoomPage_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/pages/searchRoomPage/searchRoomPage.js?");
 
 /***/ }),
 

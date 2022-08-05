@@ -86,28 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/fonts/fonts.scss":
-/*!*************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/fonts/fonts.scss ***!
-  \*************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/fonts/fonts.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
-
-/***/ }),
-
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/layouts/layout.scss":
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/layouts/layout.scss ***!
-  \****************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/layouts/layout.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
-
-/***/ }),
-
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/pages/setColorsType/colors/colors.scss":
 /*!***********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/pages/setColorsType/colors/colors.scss ***!
@@ -153,28 +131,6 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
-/***/ "./src/fonts/fonts.scss":
-/*!******************************!*\
-  !*** ./src/fonts/fonts.scss ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/mini-css-extract-plugin/dist/loader.js!../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./fonts.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/fonts/fonts.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/fonts/fonts.scss?");
-
-/***/ }),
-
-/***/ "./src/layouts/layout.scss":
-/*!*********************************!*\
-  !*** ./src/layouts/layout.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/mini-css-extract-plugin/dist/loader.js!../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./layout.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/layouts/layout.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/layouts/layout.scss?");
-
-/***/ }),
-
 /***/ "./src/pages/setColorsType/colors/colors.js":
 /*!**************************************************!*\
   !*** ./src/pages/setColorsType/colors/colors.js ***!
@@ -206,7 +162,7 @@ eval("var api = __webpack_require__(/*! ../../../../node_modules/style-loader/di
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _colors_colors_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./colors/colors.js */ \"./src/pages/setColorsType/colors/colors.js\");\n/* harmony import */ var _types_types_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types/types.js */ \"./src/pages/setColorsType/types/types.js\");\n/* harmony import */ var _fonts_fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../fonts/fonts.scss */ \"./src/fonts/fonts.scss\");\n/* harmony import */ var _fonts_fonts_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fonts_fonts_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _layouts_layout_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../layouts/layout.scss */ \"./src/layouts/layout.scss\");\n/* harmony import */ var _layouts_layout_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_layouts_layout_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _setColorsType_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./setColorsType.scss */ \"./src/pages/setColorsType/setColorsType.scss\");\n/* harmony import */ var _setColorsType_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_setColorsType_scss__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/setColorsType/setColorsType.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _colors_colors_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./colors/colors.js */ \"./src/pages/setColorsType/colors/colors.js\");\n/* harmony import */ var _types_types_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types/types.js */ \"./src/pages/setColorsType/types/types.js\");\n/* harmony import */ var _setColorsType_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./setColorsType.scss */ \"./src/pages/setColorsType/setColorsType.scss\");\n/* harmony import */ var _setColorsType_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_setColorsType_scss__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/setColorsType/setColorsType.js?");
 
 /***/ }),
 
