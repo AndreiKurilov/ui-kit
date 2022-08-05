@@ -1,9 +1,42 @@
 extends ../../layouts/uikitLayout.pug
+include ../../components/cardRegistration/cardRegistration
+include ../../components/cardSearchRoom/cardSearchRoom
+include ../../components/dateDropdown/dateDropdown
+include ../../components/roomWidget/roomWidget
+
 
 block titles
   - const title = "Cards"
 
+block backgroundColor
+  - const backgroundColor = " page__wrapper_grayBackground"
+
 block content
-
-
-
+  .cards
+    .cards__container
+      .cards__containerFirst
+        +cardSearchRoom({ cardTitle: "Найдём номера под ваши пожелания"})
+      +cardRegistration({ cardTitle: "Регистрация аккаунта", cardType: "account" })
+    .cards__container
+      .cards__containerFirst
+        +cardSearchRoom({  cardType: "totalPrice" })
+      +cardRegistration({ cardTitle: "Войти" })
+    .cards__container
+      .cards__airDatepicker
+      .cards__roomWidget
+        .cards__roomWidgetFirst
+          +roomWidget({ roomPhoto: "roomOne", number: 888, isLux: "люкс", price: "9 990", numberComments: "145", review: "Отзывов", starsChecked: 5,
+          images: [
+            "roomOne.jpg",
+            "roomTwo.jpg",
+            "roomThree.jpg",
+            "roomFour.jpg",
+          ] })
+        .cards__roomWidgetSecond
+          +roomWidget({ roomPhoto: "roomTwo", number: 840, price: "9 900", numberComments: "65", review: "Отзывов", starsChecked: 4,
+          images: [
+            "roomTwo.jpg",
+            "roomOne.jpg",
+            "roomFour.jpg",
+            "roomThree.jpg",
+          ] })
