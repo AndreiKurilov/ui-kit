@@ -1,9 +1,32 @@
+@import '../../scss/variables.scss';
+
+
 .cards {
-  position: absolute;
-  width: 1440px;
-  height: 1350px;
-  background: #F4F4F6;;
-  // background: rgb(52, 52, 150);
-  top: 50px;
-  left: 1540px;
+  display: flex;
+  margin: 72px auto 50px;
+  justify-content: center;
+  
+  &__container {
+    width: 380px;
+
+    &:last-child {
+      width: 320px;
+    }
+    
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__containerFirst {
+    margin-bottom: 40px;
+  }
+
+  &__airDatepicker {
+    margin-bottom: 40px;
+  }
+
+  &__roomWidgetFirst {
+    margin-bottom: 40px;
+  }
 }
