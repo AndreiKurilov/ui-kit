@@ -81,21 +81,10 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/loginPage/loginPage.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/roomDetailsPage/roomDetailsPage.js");
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/cardRegistration/cardRegistration.scss":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/components/cardRegistration/cardRegistration.scss ***!
-  \**********************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/cardRegistration/cardRegistration.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
-
-/***/ }),
 
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/layouts/layout.scss":
 /*!****************************************************************************************************************************************************************************************!*\
@@ -108,14 +97,14 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/pages/loginPage/loginPage.scss":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/pages/loginPage/loginPage.scss ***!
-  \***************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/pages/roomDetailsPage/roomDetailsPage.scss":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/pages/roomDetailsPage/roomDetailsPage.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/pages/loginPage/loginPage.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/pages/roomDetailsPage/roomDetailsPage.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
 
 /***/ }),
 
@@ -131,29 +120,6 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
-/***/ "./src/components/cardRegistration/cardRegistration.js":
-/*!*************************************************************!*\
-  !*** ./src/components/cardRegistration/cardRegistration.js ***!
-  \*************************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cardRegistration_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cardRegistration.scss */ \"./src/components/cardRegistration/cardRegistration.scss\");\n/* harmony import */ var _cardRegistration_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cardRegistration_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/cardRegistration/cardRegistration.js?");
-
-/***/ }),
-
-/***/ "./src/components/cardRegistration/cardRegistration.scss":
-/*!***************************************************************!*\
-  !*** ./src/components/cardRegistration/cardRegistration.scss ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./cardRegistration.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/cardRegistration/cardRegistration.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/components/cardRegistration/cardRegistration.scss?");
-
-/***/ }),
-
 /***/ "./src/layouts/layout.scss":
 /*!*********************************!*\
   !*** ./src/layouts/layout.scss ***!
@@ -165,26 +131,26 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 
 /***/ }),
 
-/***/ "./src/pages/loginPage/loginPage.js":
-/*!******************************************!*\
-  !*** ./src/pages/loginPage/loginPage.js ***!
-  \******************************************/
+/***/ "./src/pages/roomDetailsPage/roomDetailsPage.js":
+/*!******************************************************!*\
+  !*** ./src/pages/roomDetailsPage/roomDetailsPage.js ***!
+  \******************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_cardRegistration_cardRegistration_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/cardRegistration/cardRegistration.js */ \"./src/components/cardRegistration/cardRegistration.js\");\n/* harmony import */ var _layouts_layout_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../layouts/layout.scss */ \"./src/layouts/layout.scss\");\n/* harmony import */ var _layouts_layout_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_layouts_layout_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _loginPage_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./loginPage.scss */ \"./src/pages/loginPage/loginPage.scss\");\n/* harmony import */ var _loginPage_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_loginPage_scss__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/loginPage/loginPage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _layouts_layout_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../layouts/layout.scss */ \"./src/layouts/layout.scss\");\n/* harmony import */ var _layouts_layout_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_layouts_layout_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _roomDetailsPage_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./roomDetailsPage.scss */ \"./src/pages/roomDetailsPage/roomDetailsPage.scss\");\n/* harmony import */ var _roomDetailsPage_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_roomDetailsPage_scss__WEBPACK_IMPORTED_MODULE_1__);\n// import '../../components/cardRegistration/cardRegistration.js';\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/roomDetailsPage/roomDetailsPage.js?");
 
 /***/ }),
 
-/***/ "./src/pages/loginPage/loginPage.scss":
-/*!********************************************!*\
-  !*** ./src/pages/loginPage/loginPage.scss ***!
-  \********************************************/
+/***/ "./src/pages/roomDetailsPage/roomDetailsPage.scss":
+/*!********************************************************!*\
+  !*** ./src/pages/roomDetailsPage/roomDetailsPage.scss ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./loginPage.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/pages/loginPage/loginPage.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/pages/loginPage/loginPage.scss?");
+eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./roomDetailsPage.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/pages/roomDetailsPage/roomDetailsPage.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/pages/roomDetailsPage/roomDetailsPage.scss?");
 
 /***/ })
 

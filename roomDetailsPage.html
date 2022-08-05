@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Room details</title>
   <link href="cards.css" rel="stylesheet"><link href="formElements.css" rel="stylesheet"><link href="headersFooters.css" rel="stylesheet"><link href="landingPage.css" rel="stylesheet"><link href="loginPage.css" rel="stylesheet"><link href="pageError.css" rel="stylesheet"><link href="pageStart.css" rel="stylesheet"><link href="registrationPage.css" rel="stylesheet"><link href="roomDetailsPage.css" rel="stylesheet"><link href="searchRoomPage.css" rel="stylesheet"><link href="setColorsType.css" rel="stylesheet"></head>
   <body>
     <div class="page__wrapper">
@@ -84,36 +84,70 @@
         </header>
       </div>
       <div class="page__container">
-        <main class="loginPage">
-          <div class="loginPage__card">
-            <form class="cardRegistration" action="">
-              <div class="cardRegistration__container">
-                <div class="cardRegistration__wrapper">
-                  <div class="cardRegistration__title">Войти</div>
-                </div>
-                <div class="cardRegistration__emailPassword"> 
-                  <div class="cardRegistration__email"> 
-                    <div class="textField">
-                      <input class="textField__input" type="email" placeholder="Email" value="" inputmode="" max="2030-01-01" data-id="">
+        <main class="roomDetailsPage">
+          <div class="roomDetailsPage__images">
+            <div class="roomDetailsPage__mainPhoto"></div>
+            <div class="roomDetailsPage__wrapper">
+              <div class="roomDetailsPage__firstPhoto"></div>
+              <div class="roomDetailsPage__secondPhoto"></div>
+            </div>
+          </div>
+          <div class="roomDetailsPage__container"> 
+            <div class="roomDetailsPage__roomInfo">
+              <div class="roomDetailsPage__roomInfoTitle">
+                 Сведения о номере</div>
+              <div class="roomFeatures roomFeatures_border">
+                <div class="roomFeatures__icon roomFeatures__icon_emoticon"></div>
+                <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Комфорт</span><span class="roomFeatures__description">Шумопоглощающие стены</span></div>
+              </div>
+              <div class="roomFeatures roomFeatures_border">
+                <div class="roomFeatures__icon roomFeatures__icon_location-city"></div>
+                <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Удобство</span><span class="roomFeatures__description">Окно в каждой из спален</span></div>
+              </div>
+              <div class="roomFeatures">
+                <div class="roomFeatures__icon roomFeatures__icon_whatshot"></div>
+                <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Уют</span><span class="roomFeatures__description">Номер оснащён камином</span></div>
+              </div>
+            </div>
+            <div class="roomDetailsPage__chart"></div>
+            <div class="roomDetailsPage__comments">
+              <div class="roomDetailsPage__commentsHeading">
+                <div class="roomDetailsPage__commentsTitle">Отзывы посетителей номера</div>
+                <div class="roomDetailsPage__commentsTotal">2 отзыва</div>
+              </div>
+              <div class="roomDetailsPage__commentsText">
+                <div class="comment">
+                  <div class="comment__header"><img class="comment__avatar" src="./images/avatars/murad_sarafanov.png" alt="avatar">
+                    <div class="comment__guest">
+                      <div class="comment__guestName">Мурад Сарафанов</div>
+                      <div class="comment__date">5 дней назад</div>
                     </div>
                   </div>
-                  <div class="cardRegistration__password"> 
-                    <div class="textField">
-                      <input class="textField__input" type="text" placeholder="Пароль" value="" inputmode="" max="2030-01-01" data-id="">
+                  <div class="comment__body">
+                    <div class="comment__likeButton">
+                      <button class="like like_colored like_gradient">12</button>
                     </div>
+                    <div class="comment__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</div>
                   </div>
                 </div>
-                <div class="cardRegistration__buttonPay">
-                  <div class="button  button__arrow" data-btn=""> <a class="button__link  button__arrow" href="">Войти</a></div>
-                </div>
-                <div class="cardRegistration__isEnter"> 
-                  <div class="cardRegistration__account">Нет аккаунта на Toxin?</div>
-                  <div class="cardRegistration__buttonEnter">
-                    <div class="button" data-btn=""> <a class="button__link  button__link_white" href="./registrationPage.html">Создать</a></div>
+                <div class="comment">
+                  <div class="comment__header"><img class="comment__avatar" src="./images/avatars/patricia_steklyshkova.png" alt="avatar">
+                    <div class="comment__guest">
+                      <div class="comment__guestName">Патрисия Стёклышкова</div>
+                      <div class="comment__date">Неделю назад</div>
+                    </div>
+                  </div>
+                  <div class="comment__body">
+                    <div class="comment__likeButton">
+                      <button class="like like_colored like_gradient">12</button>
+                    </div>
+                    <div class="comment__text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.</div>
                   </div>
                 </div>
               </div>
-            </form>
+            </div>
+            <div class="roomDetailsPage__rules"> </div>
+            <div class="roomDetailsPage__cancel"> </div>
           </div>
         </main>
       </div>

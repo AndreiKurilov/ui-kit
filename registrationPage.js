@@ -97,17 +97,6 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/heading/heading.scss":
-/*!****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/components/heading/heading.scss ***!
-  \****************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/heading/heading.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
-
-/***/ }),
-
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/layouts/layout.scss":
 /*!****************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/layouts/layout.scss ***!
@@ -150,7 +139,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _heading_heading_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../heading/heading.js */ \"./src/components/heading/heading.js\");\n/* harmony import */ var _cardRegistration_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cardRegistration.scss */ \"./src/components/cardRegistration/cardRegistration.scss\");\n/* harmony import */ var _cardRegistration_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_cardRegistration_scss__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/components/cardRegistration/cardRegistration.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _cardRegistration_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./cardRegistration.scss */ \"./src/components/cardRegistration/cardRegistration.scss\");\n/* harmony import */ var _cardRegistration_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_cardRegistration_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/cardRegistration/cardRegistration.js?");
 
 /***/ }),
 
@@ -162,29 +151,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hea
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./cardRegistration.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/cardRegistration/cardRegistration.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/components/cardRegistration/cardRegistration.scss?");
-
-/***/ }),
-
-/***/ "./src/components/heading/heading.js":
-/*!*******************************************!*\
-  !*** ./src/components/heading/heading.js ***!
-  \*******************************************/
-/*! exports provided: ExpandableСheckbox */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"ExpandableСheckbox\", function() { return ExpandableСheckbox; });\n/* harmony import */ var _heading_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./heading.scss */ \"./src/components/heading/heading.scss\");\n/* harmony import */ var _heading_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_heading_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nclass ExpandableСheckbox {\r\n  constructor(selector) {\r\n    this.selector = selector;\r\n    this.addListener();\r\n  }\r\n  \r\n  addListener() {\r\n    this.selector.addEventListener('click', () =>\r\n    this.selector.classList.toggle('active'));\r\n  }\r\n}\r\n\r\nconst headingExpandMore = document.querySelectorAll('.heading_expand-more');\r\n\r\n\r\nif (headingExpandMore.length > 0) {\r\n  headingExpandMore.forEach((selector) => new ExpandableСheckbox(selector));\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// addListener() {\r\n//   this.selector.addEventListener('click', this.toggleActived.bind(this));\r\n// }\r\n  \r\n// toggleActived() {\r\n//   this.selector.classList.toggle('active');\r\n// }\r\n\n\n//# sourceURL=webpack:///./src/components/heading/heading.js?");
-
-/***/ }),
-
-/***/ "./src/components/heading/heading.scss":
-/*!*********************************************!*\
-  !*** ./src/components/heading/heading.scss ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./heading.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/heading/heading.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/components/heading/heading.scss?");
 
 /***/ }),
 

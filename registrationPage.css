@@ -1,38 +1,3 @@
-.heading {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-  cursor: pointer; }
-  .heading__title {
-    font-family: "Montserrat-Bold";
-    color: #1F2041;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    margin: 0px;
-    display: flex;
-    user-select: none; }
-  .heading_expand-more::after {
-    content: '\e905';
-    font-family: "Material-Icons";
-    color: rgba(31, 32, 65, 0.5);
-    font-size: 8px;
-    cursor: pointer;
-    padding-right: 16px;
-    margin-top: 3px; }
-  .heading_expand-more.active::after {
-    content: '\e900'; }
-  .heading_expand-more + .checkboxList {
-    display: none; }
-  .heading_expand-more.active + .checkboxList {
-    display: block; }
-  .heading__state {
-    font-family: "Montserrat-regular";
-    color: rgba(31, 32, 65, 0.5);
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase; }
-
 .cardRegistration {
   padding: 40px 30px 30px;
   background: #FFFFFF;
