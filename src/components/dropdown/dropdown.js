@@ -3,7 +3,7 @@ import './dropdown.scss';
 import {DropdownItem} from '../dropdownItem/dropdownItem.js';
 import {optionsComfort, optionsGuests} from './state.js';
 
-class Dropdown {
+export class Dropdown {
   constructor( selector ) {
     this.mainSelector = selector;
     this.expandDropdown();
@@ -131,7 +131,5 @@ class Dropdown {
 const dropdowns = document.querySelectorAll('.dropdown');
 
 if (dropdowns.length > 0) {
-  dropdowns.forEach(( selector ) => {
-    const dropDown = new Dropdown( selector );
-  })
+  dropdowns.forEach(( selector ) => { new Dropdown( selector )})
 }
