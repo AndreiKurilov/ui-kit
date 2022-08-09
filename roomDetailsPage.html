@@ -92,62 +92,199 @@
               <div class="roomDetailsPage__secondPhoto"></div>
             </div>
           </div>
-          <div class="roomDetailsPage__container"> 
-            <div class="roomDetailsPage__roomInfo">
-              <div class="roomDetailsPage__roomInfoTitle">
-                 Сведения о номере</div>
-              <div class="roomFeatures roomFeatures_border">
-                <div class="roomFeatures__icon roomFeatures__icon_emoticon"></div>
-                <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Комфорт</span><span class="roomFeatures__description">Шумопоглощающие стены</span></div>
-              </div>
-              <div class="roomFeatures roomFeatures_border">
-                <div class="roomFeatures__icon roomFeatures__icon_location-city"></div>
-                <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Удобство</span><span class="roomFeatures__description">Окно в каждой из спален</span></div>
-              </div>
-              <div class="roomFeatures">
-                <div class="roomFeatures__icon roomFeatures__icon_whatshot"></div>
-                <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Уют</span><span class="roomFeatures__description">Номер оснащён камином</span></div>
-              </div>
-            </div>
-            <div class="roomDetailsPage__chart"></div>
-            <div class="roomDetailsPage__comments">
-              <div class="roomDetailsPage__commentsHeading">
-                <div class="roomDetailsPage__commentsTitle">Отзывы посетителей номера</div>
-                <div class="roomDetailsPage__commentsTotal">2 отзыва</div>
-              </div>
-              <div class="roomDetailsPage__commentsText">
-                <div class="comment">
-                  <div class="comment__header"><img class="comment__avatar" src="./images/avatars/murad_sarafanov.png" alt="avatar">
-                    <div class="comment__guest">
-                      <div class="comment__guestName">Мурад Сарафанов</div>
-                      <div class="comment__date">5 дней назад</div>
-                    </div>
-                  </div>
-                  <div class="comment__body">
-                    <div class="comment__likeButton">
-                      <button class="like like_colored like_gradient">12</button>
-                    </div>
-                    <div class="comment__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</div>
+          <div class="roomDetailsPage__content">
+            <div class="roomDetailsPage__container"> 
+              <div class="roomDetailsPage__roomInfo">
+                <div class="roomDetailsPage__roomInfoTitle">
+                   Сведения о номере</div>
+                <div class="roomDetailsPage__roomInfoItem">
+                  <div class="roomFeatures roomFeatures_border">
+                    <div class="roomFeatures__icon roomFeatures__icon_emoticon"></div>
+                    <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Комфорт</span><span class="roomFeatures__description">Шумопоглощающие стены</span></div>
                   </div>
                 </div>
-                <div class="comment">
-                  <div class="comment__header"><img class="comment__avatar" src="./images/avatars/patricia_steklyshkova.png" alt="avatar">
-                    <div class="comment__guest">
-                      <div class="comment__guestName">Патрисия Стёклышкова</div>
-                      <div class="comment__date">Неделю назад</div>
-                    </div>
+                <div class="roomDetailsPage__roomInfoItem">
+                  <div class="roomFeatures roomFeatures_border">
+                    <div class="roomFeatures__icon roomFeatures__icon_location-city"></div>
+                    <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Удобство</span><span class="roomFeatures__description">Окно в каждой из спален</span></div>
                   </div>
-                  <div class="comment__body">
-                    <div class="comment__likeButton">
-                      <button class="like like_colored like_gradient">12</button>
-                    </div>
-                    <div class="comment__text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.</div>
+                </div>
+                <div class="roomDetailsPage__roomInfoItem">
+                  <div class="roomFeatures">
+                    <div class="roomFeatures__icon roomFeatures__icon_whatshot"></div>
+                    <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Уют</span><span class="roomFeatures__description">Номер оснащён камином</span></div>
                   </div>
                 </div>
               </div>
+              <div class="roomDetailsPage__chart">
+                <div class="roomDetailsPage__chartTitle">Впечатления от номера</div>
+                <div class="roomDetailsPage__chartData">
+                  <svg class="roomDetailsPage__doughnut" viewBox="0 0 34 34">
+                    <circle class="roomDetailsPage__circle" r="15.9" cx="50%" cy="50%"></circle>
+                    <circle class="roomDetailsPage__circle" r="15.9" cx="50%" cy="50%"></circle>
+                    <circle class="roomDetailsPage__circle" r="15.9" cx="50%" cy="50%"></circle>
+                    <circle class="roomDetailsPage__circle" r="15.9" cx="50%" cy="50%"></circle>
+                    <g class="roomDetailsPage__doughnutCount" fill="#919191">
+                      <text class="roomDetailsPage__number" text-anchor="middle" x="50%" y="47%">1040</text>
+                      <text class="roomDetailsPage__text" text-anchor="middle" x="50%" y="62%">голосов </text>
+                    </g>
+                  </svg>
+                  <ul class="roomDetailsPage__legend"> 
+                    <li class="roomDetailsPage__item">Великолепно</li>
+                    <li class="roomDetailsPage__item">Хорошо</li>
+                    <li class="roomDetailsPage__item">Удовлетворительно</li>
+                    <li class="roomDetailsPage__item">Разочарован</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="roomDetailsPage__comments">
+                <div class="roomDetailsPage__commentsHeading">
+                  <div class="roomDetailsPage__commentsTitle">Отзывы посетителей номера</div>
+                  <div class="roomDetailsPage__commentsTotal">2 отзыва</div>
+                </div>
+                <div class="roomDetailsPage__commentsItems">
+                  <div class="roomDetailsPage__commentsItem">
+                    <div class="comment">
+                      <div class="comment__header"><img class="comment__avatar" src="./images/avatars/murad_sarafanov.png" alt="avatar">
+                        <div class="comment__guest">
+                          <div class="comment__guestName">Мурад Сарафанов</div>
+                          <div class="comment__date">5 дней назад</div>
+                        </div>
+                      </div>
+                      <div class="comment__body">
+                        <div class="comment__likeButton">
+                          <button class="like like_colored like_gradient">12</button>
+                        </div>
+                        <div class="comment__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="roomDetailsPage__commentsItem">
+                    <div class="comment">
+                      <div class="comment__header"><img class="comment__avatar" src="./images/avatars/patricia_steklyshkova.png" alt="avatar">
+                        <div class="comment__guest">
+                          <div class="comment__guestName">Патрисия Стёклышкова</div>
+                          <div class="comment__date">Неделю назад</div>
+                        </div>
+                      </div>
+                      <div class="comment__body">
+                        <div class="comment__likeButton">
+                          <button class="like like_colored like_gradient">12</button>
+                        </div>
+                        <div class="comment__text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="roomDetailsPage__rules">
+                <div class="roomDetailsPage__rulesTitle">Правила</div>
+                <ul class="bulletList">
+                  <li class="bulletList__item">Нельзя с питомцами</li>
+                  <li class="bulletList__item">Без вечеринок и мероприятий</li>
+                  <li class="bulletList__item">Время прибытия — после 13:00, а выезд до 12:00</li>
+                </ul>
+              </div>
+              <div class="roomDetailsPage__cancel"> 
+                <div class="roomDetailsPage__cancelTitle">Отмена </div>
+                <div class="roomDetailsPage__cancelText">
+                   Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги. </div>
+              </div>
             </div>
-            <div class="roomDetailsPage__rules"> </div>
-            <div class="roomDetailsPage__cancel"> </div>
+            <div class="roomDetailsPage__card">
+              <form class="cardSearchRoom" action="">
+                <div class="cardSearchRoom__wrapper">
+                  <div class="cardSearchRoom__room">
+                    <div class="roomNumber"><span class="roomNumber__symbol">№</span><span class="roomNumber__number  roomNumber__number_big">888</span><span class="roomNumber__text">люкс</span></div>
+                  </div>
+                  <div class="cardSearchRoom__priceRoom">
+                    <div class="roomPrice"><span class="roomPrice__price">9 990</span><span class="roomPrice__currency">₽</span><span class="roomPrice__text">в сутки</span></div>
+                  </div>
+                </div>
+                <div class="cardSearchRoom__dates">
+                  <div class="cardSearchRoom__arrival">
+                    <div class="heading">
+                      <h3 class="heading__title">прибытие</h3>
+                    </div>
+                    <div class="dateDropdown">
+                      <div class="textField">
+                        <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardSearchRoom__departure">
+                    <div class="heading">
+                      <h3 class="heading__title">выезд</h3>
+                    </div>
+                    <div class="dateDropdown">
+                      <div class="textField">
+                        <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardSearchRoom____dropdownGuests">
+                  <div class="heading">
+                    <h3 class="heading__title">гости</h3>
+                  </div>
+                  <div class="dropdown" data-id="guests">
+                    <div class="dropdown__block">
+                      <input class="dropdown__total" type="text" readonly>
+                    </div>
+                    <div class="dropdown__expand dropdown__expand_guests">
+                      <div class="dropdownItem"> 
+                        <div class="dropdownItem__name">взрослые</div>
+                        <div class="dropdownItem__buttons">
+                          <button class="dropdownItem__btnMinus" type="button"></button>
+                          <input class="dropdownItem__number" type="text" readonly value="2" id="взрослые">
+                          <button class="dropdownItem__btnPlus" type="button"></button>
+                        </div>
+                      </div>
+                      <div class="dropdownItem"> 
+                        <div class="dropdownItem__name">дети</div>
+                        <div class="dropdownItem__buttons">
+                          <button class="dropdownItem__btnMinus" type="button"></button>
+                          <input class="dropdownItem__number" type="text" readonly value="1" id="дети">
+                          <button class="dropdownItem__btnPlus" type="button"></button>
+                        </div>
+                      </div>
+                      <div class="dropdownItem"> 
+                        <div class="dropdownItem__name">младенцы</div>
+                        <div class="dropdownItem__buttons">
+                          <button class="dropdownItem__btnMinus" type="button"></button>
+                          <input class="dropdownItem__number" type="text" readonly value="0" id="младенцы">
+                          <button class="dropdownItem__btnPlus" type="button"></button>
+                        </div>
+                      </div>
+                      <div class="dropdown__buttons"><a class="button__title" data-btn="clear">очистить</a><a class="button__title" data-btn="apply">применить</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardSearchRoom__details">
+                  <div class="roomPriceDetails">
+                    <div class="roomPriceDetails__priceForPeriod"><span class="roomPriceDetails__priceDetails">9 990₽ х 4 суток</span><span class="roomPriceDetails__priceTotal">39 960₽</span></div>
+                    <div class="roomPriceDetails__serviceFee">
+                      <div class="roomPriceDetails__feeWrapper">
+                        <div class="roomPriceDetails__feeDetails">Сбор за услуги: скидка 2 179₽</div>
+                        <div class="roomPriceDetails__feeInform">i</div>
+                      </div><span class="roomPriceDetails__feePrice">0₽</span>
+                    </div>
+                    <div class="roomPriceDetails__addServiceFee">
+                      <div class="roomPriceDetails__addFeeWrapper"><span class="roomPriceDetails__addFeeDetails">Сбор за дополнительные услуги</span>
+                        <div class="roomPriceDetails__addFeeInform">i</div>
+                      </div><span class="roomPriceDetails__addFeePrice">300₽</span>
+                    </div>
+                    <div class="roomPriceDetails__feeTotal"><span class="roomPriceDetails__totalTitle">Итого</span>
+                      <div class="roomPriceDetails__totalLine"></div><span class="roomPriceDetails__totalPrice">38 081₽</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cardSearchRoom__buttonPay">
+                  <div class="button  button__arrow" data-btn=""> <a class="button__link  button__arrow" href="">забронировать</a></div>
+                </div>
+              </form>
+            </div>
           </div>
         </main>
       </div>

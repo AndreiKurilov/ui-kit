@@ -1,34 +1,161 @@
-.roomDetailsPage {
+@keyframes render {
+  0% {
+    stroke-dasharray: 0 100; } }
+
+.roomDetailsPage__images {
+  max-width: 1440px;
+  max-height: 485px;
+  display: flex;
+  margin: 0 auto; }
+
+.roomDetailsPage__mainPhoto {
+  background: url(images/mainPhoto.jpg);
+  width: 981px;
+  height: 485px; }
+
+.roomDetailsPage__wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.roomDetailsPage__firstPhoto {
+  background: url(images/firstPhoto.jpg);
+  width: 461px;
+  height: 243px; }
+
+.roomDetailsPage__secondPhoto {
+  background: url(images/secondPhoto.jpg);
+  width: 461px;
+  height: 243px;
+  margin-top: -1px; }
+
+.roomDetailsPage__content {
+  display: flex;
+  max-width: 1160px;
+  margin: 70px auto; }
+
+.roomDetailsPage__container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 711px;
+  margin-right: 69px; }
+
+.roomDetailsPage__roomInfo {
+  min-width: 291px;
+  margin-right: 70px; }
+
+.roomDetailsPage__chartData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 311px;
+  min-width: 311px; }
+
+.roomDetailsPage__doughnut {
+  width: 120px;
+  height: 120px; }
+
+.roomDetailsPage__circle {
+  fill: none;
+  stroke-width: 1.5;
+  cursor: pointer;
+  animation-name: render;
+  transition-property: all; }
+  .roomDetailsPage__circle:hover, .roomDetailsPage__circle .hovered {
+    opacity: 0.8;
+    stroke-width: 2; }
+  .roomDetailsPage__circle:nth-child(1) {
+    stroke: yellow;
+    stroke-dasharray: 49 100;
+    stroke-dashoffset: -25; }
+  .roomDetailsPage__circle:nth-child(2) {
+    stroke: blue;
+    stroke-dasharray: 24 100;
+    stroke-dashoffset: -75; }
+  .roomDetailsPage__circle:nth-child(3) {
+    stroke: green;
+    stroke-dasharray: 24 100;
+    stroke-dashoffset: 0; }
+  .roomDetailsPage__circle:nth-child(4) {
+    stroke: #1e1a1a;
+    stroke-dasharray: 0 100;
+    stroke-dashoffset: 0; }
+
+.roomDetailsPage__number {
   font-family: "Montserrat-Bold";
+  font-size: .4643rem;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75); }
+
+.roomDetailsPage__text {
+  font-family: "Montserrat-Bold";
+  font-size: .25rem;
+  color: rgba(31, 32, 65, 0.75); }
+
+.roomDetailsPage__legend {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 20px; }
+
+.roomDetailsPage__item {
+  position: relative;
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
-  font-size: 24px; }
-  .roomDetailsPage__images {
-    max-width: 1440px;
-    max-height: 485px;
-    display: flex;
-    margin: 0 auto; }
-  .roomDetailsPage__mainPhoto {
-    background: url(images/mainPhoto.jpg);
-    width: 981px;
-    height: 485px; }
-  .roomDetailsPage__wrapper {
-    display: flex;
-    flex-direction: column; }
-  .roomDetailsPage__firstPhoto {
-    background: url(images/firstPhoto.jpg);
-    width: 461px;
-    height: 243px; }
-  .roomDetailsPage__secondPhoto {
-    background: url(images/secondPhoto.jpg);
-    width: 461px;
-    height: 243px;
-    margin-top: -1px; }
-  .roomDetailsPage__container {
-    margin-top: 70px;
-    margin-left: 140px;
-    display: flex;
-    flex-direction: column;
-    max-width: 712px; }
-  .roomDetailsPage__roomInfo {
-    min-width: 291px; }
+  display: flex;
+  align-items: center; }
+  .roomDetailsPage__item:hover {
+    opacity: 0.8; }
+  .roomDetailsPage__item::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-right: 5px; }
+  .roomDetailsPage__item:nth-child(1)::before {
+    background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%); }
+  .roomDetailsPage__item:nth-child(2)::before {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
+  .roomDetailsPage__item:nth-child(3)::before {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+  .roomDetailsPage__item:nth-child(4)::before {
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%); }
+
+.roomDetailsPage__comments {
+  margin-bottom: 30px; }
+
+.roomDetailsPage__roomInfoTitle, .roomDetailsPage__chartTitle, .roomDetailsPage__commentsHeading, .roomDetailsPage__rulesTitle, .roomDetailsPage__cancelTitle {
+  margin-bottom: 20px;
+  font-family: "Montserrat-Bold";
+  color: #1F2041;
+  font-size: 19px;
+  line-height: 23px; }
+
+.roomDetailsPage__commentsHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.roomDetailsPage__commentsTotal {
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(31, 32, 65, 0.5); }
+
+.roomDetailsPage__commentsItem:last-child {
+  margin-top: 22px; }
+
+.roomDetailsPage__rulesTitle {
+  padding-left: 21px; }
+
+.roomDetailsPage__cancel {
+  margin-left: 70px;
+  max-width: 341px; }
+
+.roomDetailsPage__cancelText {
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75); }
 

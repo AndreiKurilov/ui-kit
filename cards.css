@@ -278,7 +278,7 @@
     border: none !important; }
   .air-datepicker-cell.-range-from-:before, .air-datepicker-cell.-range-to-:before {
     content: "";
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25)) !important;
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%) !important;
     z-index: -1;
     position: absolute;
     top: 0;
@@ -290,7 +290,7 @@
   .air-datepicker-cell.-range-to-:before {
     border-radius: 0 50% 50% 0 !important; }
   .air-datepicker-cell.-in-range- {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25), rgba(139, 164, 249, 0.25)) !important; }
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%) !important; }
   .air-datepicker_range .air-datepicker-body--cells.-days- {
     grid-auto-rows: 32px !important; }
 
