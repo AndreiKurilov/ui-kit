@@ -1,6 +1,5 @@
 import '../logo/logo.js';
 import '../nav/nav.js';
-import '../button/button.js';
 import './header.scss';
 
 class burgerMenu {
@@ -13,14 +12,6 @@ class burgerMenu {
     this.selector.addEventListener('click', () =>
     this.selector.classList.toggle('active'));
   }
-
-  // addListener() {
-  //   this.selector.addEventListener('click', this.toggleActived.bind(this));
-  // }
-    
-  // toggleActived() {
-  //   this.selector.classList.toggle('active');
-  // }
 }
 
 const burgerMenuItems = document.querySelectorAll('.header__menu-burger');
