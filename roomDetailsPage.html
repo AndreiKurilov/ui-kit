@@ -119,22 +119,30 @@
               <div class="roomDetailsPage__chart">
                 <div class="roomDetailsPage__chartTitle">Впечатления от номера</div>
                 <div class="roomDetailsPage__chartData">
-                  <svg class="roomDetailsPage__doughnut" viewBox="0 0 34 34">
-                    <circle class="roomDetailsPage__circle" r="15.9" cx="50%" cy="50%"></circle>
-                    <circle class="roomDetailsPage__circle" r="15.9" cx="50%" cy="50%"></circle>
-                    <circle class="roomDetailsPage__circle" r="15.9" cx="50%" cy="50%"></circle>
-                    <circle class="roomDetailsPage__circle" r="15.9" cx="50%" cy="50%"></circle>
-                    <g class="roomDetailsPage__doughnutCount" fill="#919191">
-                      <text class="roomDetailsPage__number" text-anchor="middle" x="50%" y="47%">1040</text>
-                      <text class="roomDetailsPage__text" text-anchor="middle" x="50%" y="62%">голосов </text>
-                    </g>
-                  </svg>
-                  <ul class="roomDetailsPage__legend"> 
-                    <li class="roomDetailsPage__item">Великолепно</li>
-                    <li class="roomDetailsPage__item">Хорошо</li>
-                    <li class="roomDetailsPage__item">Удовлетворительно</li>
-                    <li class="roomDetailsPage__item">Разочарован</li>
-                  </ul>
+                  <div class="chart">
+                    <div class="chart__data">
+                      <svg class="chart__doughnut" viewBox="0 0 35 35">
+                        <circle class="chart__circle" r="15.9" cx="50%" cy="50%" stroke="url(#perfectly)"></circle>
+                        <circle class="chart__circle" r="15.9" cx="50%" cy="50%"></circle>
+                        <circle class="chart__circle" r="15.9" cx="50%" cy="50%"></circle>
+                        <circle class="chart__circle" r="15.9" cx="50%" cy="50%"></circle>
+                        <linearGradient id="perfectly" gradientTransform="rotate(90)">
+                          <stop offset="0" stop-color="rgba(255, 227, 156, 1)"></stop>
+                          <stop offset="1" stop-color="rgba(255, 186, 156, 1)"></stop>
+                        </linearGradient>
+                        <g class="chart__doughnutCount" fill="#919191">
+                          <text class="chart__number" text-anchor="middle" x="50%" y="47%">1040</text>
+                          <text class="chart__text" text-anchor="middle" x="50%" y="62%">голосов </text>
+                        </g>
+                      </svg>
+                      <ul class="chart__legend"> 
+                        <li class="chart__item">Великолепно</li>
+                        <li class="chart__item">Хорошо</li>
+                        <li class="chart__item">Удовлетворительно</li>
+                        <li class="chart__item">Разочарован</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="roomDetailsPage__comments">
