@@ -1,6 +1,6 @@
 import './heading.scss';
 
-class ExpandableСheckbox {
+export class ExpandableСheckbox {
   constructor(selector) {
     this.selector = selector;
     this.addListener();
