@@ -45,6 +45,10 @@
 
   &__text {
     min-width: 655px;
+
+    @media (max-width: 990px) {
+      min-width: 320px;
+    }
   }
 
 }
