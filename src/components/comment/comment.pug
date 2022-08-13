@@ -1,13 +1,13 @@
 include ../like/like
 
-mixin comment({ avatarName="", guestName="", date="", text="" })
+mixin comment({ avatarName="", guestName="", date="", text="", value="0", isGradient=false, isColored=false })
   .comment
-    .comment__header
+    .comment__heading
       img.comment__avatar(src=`./images/avatars/${avatarName}.png` alt="avatar")
       .comment__guest
         .comment__guestName #{guestName}
         .comment__date #{date}
     .comment__body
       .comment__likeButton
-        +like({ value: "12", isGradient: true, isColored: true })
+        +like({ value: value, isGradient: isGradient, isColored: isColored })
       .comment__text #{text}
