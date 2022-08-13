@@ -2,27 +2,21 @@
 
 .comment {
   display: flex;
-  max-width: 711px;
   flex-direction: column;
-  user-select: none;
   font-family: $mainFont;
   font-size: $mainFont--size;
   line-height: 24px;
   color: $color--darkShade75;
+  user-select: none;
 
-  &__header,
+  &__heading,
   &__body {
     display: flex;
-  }
-
-  &__header {
-    margin-bottom: 10px;
   }
 
   &__avatar {
     width: 47.5px;
     height: 48px;
-    margin-right: 10px;
     border: 2px solid #FFFFFF;
     border-radius: 32px;
     box-shadow: 0px 10px 20px 0px rgba(31, 32, 65, 0.1);
@@ -32,6 +26,7 @@
   &__guest {
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
   }
   
   &__guestName {
@@ -39,16 +34,10 @@
   }
 
   &__likeButton {
-    margin-left: 5px;
-    margin-right: 16px;
+    padding: 12px 0 0 3.5px;
   }
 
   &__text {
-    min-width: 655px;
-
-    @media (max-width: 990px) {
-      min-width: 320px;
-    }
+    padding: 10px 0 0 14px;
   }
-
 }
