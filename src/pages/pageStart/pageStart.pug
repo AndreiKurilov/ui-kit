@@ -10,11 +10,22 @@ block content
       +linksPages({ column: true,
           listLinks: [
             { link: "setColorsType", title: "Colors & Type" },
-            { link: "headersFooters", title: "Headers & Footers" },
             { link: "formElements", title: "Form Elements" },
+            { link: "headersFooters", title: "Headers & Footers" },
             { link: "cards", title: "Cards" },
           ]
         })
     .pageStart__pagesHotel Website Pages
+      +linksPages({ column: true,
+          listLinks: [
+            { link: "landingPage", title: "Landing page" },
+            { link: "registrationPage", title: "Registration" },
+            { link: "loginPage", title: "Login" },
+            { link: "searchRoomPage", title: "Search room" },
+            { link: "roomDetailsPage", title: "Room details" },
+          ]
+        })
 
 block footer 
+  .pageStart__footer
+    a(href='https://github.com/AndreiKurilov/ui-kit') GitHub
