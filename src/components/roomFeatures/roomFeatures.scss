@@ -1,16 +1,20 @@
 @import '../../scss/variables.scss';
 
 .roomFeatures {
-  display: flex;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  
+
+  &__item {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   &_border {
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
-    max-width: 280px;
   }
 
   &__icon {
+    padding-left: 4px;
+    padding-top: 4px;
     font-size: 44px;
     font-family: $materialIcons;
     background: $primaryGradient;
@@ -33,18 +37,18 @@
   
   &__wrapper {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     font-family: $mainFont;
     font-size: $mainFont--size;
     line-height: 24px;
     color: $color--darkShade75;
-    margin-left: 10px;
+    padding-left: 14px;
     user-select: none;
   }
 
   &__title {
     font-family: $mainFontBold;
-    margin-top: -3px;
   }
   
   &__description {
