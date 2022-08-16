@@ -4,7 +4,8 @@ mixin roomFeatures({ icon="", title="", description="", hasBorder=false })
     const borderBottom = hasBorder ? "roomFeatures_border" : "";
     
   .roomFeatures(class = borderBottom)
-    .roomFeatures__icon(class = iconFeatures)
-    .roomFeatures__wrapper
-      span.roomFeatures__title #{title}
-      span.roomFeatures__description #{description}
+    .roomFeatures__item
+      .roomFeatures__icon(class = iconFeatures)
+      .roomFeatures__wrapper
+        span.roomFeatures__title #{title}
+        span.roomFeatures__description #{description}
