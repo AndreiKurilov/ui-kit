@@ -1,8 +1,8 @@
 @import '../../scss/variables.scss';
 
 .setColorsType {
-  margin-left: 80px;
-  margin-top: 67px;
+  // margin-left: 80px;
+  margin-left: 150px;
   
   display: grid;
   grid-template-areas: "colors types";
@@ -10,7 +10,8 @@
   
   &__colors {
     grid-area: colors;
-    margin-right: 415px;
+    // margin-right: 415px;
+    margin-right: 300px;
     width: 290px;
   }
 
