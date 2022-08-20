@@ -1,0 +1,215 @@
+extends ../../layouts/uikitLayout.pug
+include ../../components/logo/logo
+include ../../components/heading/heading
+include ../../components/textField/textField
+include ../../components/checkboxList/checkboxList
+include ../../components/dropdown/dropdown
+include ../../components/dateDropdown/dateDropdown
+include ../../components/roomFeatures/roomFeatures
+include ../../components/radio/radio
+include ../../components/toggle/toggle
+include ../../components/like/like
+include ../../components/rate/rate
+include ../../components/bulletList/bulletList
+include ../../components/comment/comment
+include ../../components/rangeSlider/rangeSlider
+include ../../components/button/button
+include ../../components/pagination/pagination
+
+block titles
+  - const title = "Form & Elements"
+
+block content
+  .formElements
+
+    section.formElements__textFields
+
+      .formElements__textFieldDefault
+        +heading({ title: "text field", state: "default" })
+        +textField({ type: "email", placeholder: "Email" })
+
+      .formElements__textFieldHover
+        +heading({ title: "text field", state: "hover/focus" })
+        +textField({ type: "text", isFocused: true, value: "This is pretty awesome" })
+
+      .formElements__dropdownDefault
+        +heading({ title: "dropdown" })
+        +dropdown({ dropdownId: "guests",
+          options: [
+            { title: "взрослые", count: 0 }, 
+            { title: "дети", count: 0 }, 
+            { title: "младенцы", count: 0 }
+          ]
+        })
+
+      .formElements__maskedTextField
+        +heading({ title: "masked text field" })
+        +textField({ type: "date", placeholder: "ДД.ММ.ГГГГ", isUppercase: true, inputmode: numeric })
+
+      .formElements__dateDropdowns 
+        .formElements__dateDropdownDefault
+          +heading({ title: "date dropdown" })
+          +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+        .formElements__dateDropdown
+          +heading({ title: "date dropdown" })
+          +dateDropdown({ dropdownDateId: 'dropdownDateSelect', isUppercase: true, placeholder: "ДД.ММ.ГГГГ" })
+
+      .formElements__filterDateDropdown
+        +heading({ title: "filter date dropdown" })
+        +dateDropdown({ dropdownDateId: 'dropdownDateRange', placeholder: "ДД.мм - ДД.мм" })
+
+      .formElements__subscriptionTextField
+        +heading({ title: "subscription text field" })
+        +textField({ type: "email", placeholder: "Email", buttonSubscribed: true, inputWithButton: true, withButton: true })
+      
+      .formElements__dropdownBedroomDefault
+        +heading({ title: "dropdown", state: "default" })
+        +dropdown({ dropdownId: "comfort",
+          options: [
+            { title: "спальни", count: 2 }, 
+            { title: "кровати", count: 2 }, 
+            { title: "ванные комнаты", count: 0 }
+          ]
+        })
+      
+      .formElements__dropdownBedroomExpanded
+        +heading({ title: "dropdown", state: "expanded" })
+        +dropdown({ dropdownId: "comfort", isExpanded: true,
+          options: [
+            { title: "спальни", count: 2 }, 
+            { title: "кровати", count: 2 }, 
+            { title: "ванные комнаты", count: 0 }
+          ]
+        })
+
+      .formElements__checkboxExpandableFirst
+        +heading({ title: "expandable checkbox list", expandable: true })
+        +checkboxList({ 
+          checkboxList: [
+            { title: "Завтрак" },
+            { title: "Письменный стол", checked: true },
+            { title: "Стул для кормления", checked: true },
+            { title: "Кроватка", checked: true },
+            { title: "Телевизор" },
+            { title: "Шампунь" },
+          ]
+        })
+
+      .formElements__checkboxExpandableSecond
+        +heading({ title: "expandable checkbox list", expandable: true, isExpanded: true})
+        +checkboxList({ 
+          checkboxList: [
+            { title: "Завтрак" },
+            { title: "Письменный стол", checked: true },
+            { title: "Стул для кормления", checked: true },
+            { title: "Кроватка", checked: true },
+            { title: "Телевизор" },
+            { title: "Шампунь" },
+          ]
+        })
+
+      .formElements__roomFeatures
+        +roomFeatures({ icon: "emoticon", title: "Комфорт", description: "Шумопоглощающие стены", hasBorder: true }) 
+        +roomFeatures({ icon: "location-city", title: "Удобство", description: "Окно в каждой из спален", hasBorder: true }) 
+
+    section.formElements__checkboxRadioButtons
+
+      .formElements__checkbox
+        +heading({ title: "checkbox buttons" })
+        +checkboxList({
+          checkboxList: [
+            { title: "Можно курить" },
+            { title: "Можно с питомцами", checked: true },
+            { title: "Можно пригласить гостей (до\u00A010\u00A0человек)", checked: true },
+          ]
+        })
+
+      .formElements__radioButtons
+        +heading({ title: "radio buttons" })
+        .formElements__radioButtons-wrapper
+          +radio({ title: "Мужчина", name: "gender", value: "man", checked: true })
+          +radio({title: "Женщина", name: "gender", value: "woman", checked: false })
+
+      .formElements__toggle
+        +heading({ title: "toggle" })
+        .formElements__toggle-wrapper
+          +toggle({ title: "Получать спецпредложения", checked: true })
+          +toggle({ title: "Получать спецпредложения", checked: false })
+
+      .formElements__like
+        +heading({ title: "like button" })
+        .formElements__like-wrapper
+          +like({ value: "2" })
+          +like({ value: "12", isGradient: true, isColored: true })
+
+      .formElements__rate
+        +heading({ title: "rate button" })
+        .formElements__rate-wrapper
+          +rate({ starsChecked: 4, isChecked: true })
+          +rate({ starsChecked: 5, isChecked: true })
+
+      .formElements__dropdownGuestsDefault
+        +heading({ title: "dropdown" })
+        +dropdown({ dropdownId: "guests", isExpanded: true,
+          options: [
+            { title: "взрослые", count: 0 }, 
+            { title: "дети", count: 0 }, 
+            { title: "младенцы", count: 0 }
+          ]
+        })
+
+      .formElements__checkboxRich
+        +heading({ title: " rich checkbox buttons" })
+        +checkboxList({
+          checkboxList: [
+            { title: "Широкий коридор", isRich: true,
+              description: "Ширина коридоров в номере не\u00A0менее\u00A091\u00A0см." },
+            { title: "Помощник для инвалидов", isRich: true,
+              description: "На 1 этаже вас встретит специалист и\u00A0проводит до номера." }
+          ]
+        })
+
+    section.formElements__sliderButtons
+
+      .formElements__rangeSlider
+        +heading({ title: "range slider" })
+        +rangeSlider({})
+
+      .formElements__buttons
+        +heading({ title: "buttons" })
+        .formElements__buttons-wrapper
+          .formElements__buttons-container
+            +button({ btnTitle: 'click me' })
+            +button({ btnTitle: 'click me', btnHover: true })
+          .formElements__buttons-container
+            +button({ btnTitle: 'click me', isWhite: true })
+            +button({ btnTitle: 'click me', isWhite: true, btnHover: true })
+          .formElements__buttons-links
+            +button({ buttonLink: false, btnTitle: 'click me' })
+            +button({ buttonLink: false, btnTitle: 'click me', linkHover: true })
+          .formElements__buttons-large
+            +button({ btnTitle: 'перейти к оплате', withArrow: true })
+
+      .formElements__pagination
+        +heading({ title: "pagination" })
+        +pagination({})
+
+      .formElements__dropdownGuests
+        +heading({ title: "dropdown" })
+        +dropdown({ dropdownId: "guests", isExpanded: true,
+          options: [
+            { title: "взрослые", count: 2 }, 
+            { title: "дети", count: 1 }, 
+            { title: "младенцы", count: 0 }
+          ]
+        })
+          
+      .formElements__bulletList
+        +heading({ title: "bullet list" })
+        +bulletList([ "Нельзя с питомцами", 
+          "Без вечеринок и мероприятий",
+          "Время прибытия — после 13:00, а\u00A0выезд\u00A0до\u00A012:00" ])
+
+    section.formElements__feedback
+      .formElements__comment
+        +comment({ avatarName: "murad_sarafanov", guestName: "Мурад Сарафанов", date: "5 дней назад", text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." })
