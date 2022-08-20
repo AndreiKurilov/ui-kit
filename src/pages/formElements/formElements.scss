@@ -1,0 +1,202 @@
+@import '../../scss/variables.scss';
+
+.formElements {
+  margin-left: 80px;
+  margin-top: 62px;
+
+  display: grid;
+  grid-template-areas:
+    "textFields checkboxes buttons"
+    "textFields feedback feedback";
+  grid-template-columns: 1fr 1fr 1fr;
+
+  &__textFields {
+    grid-area: textFields;
+    width: 320px;
+  }
+
+  &__textFieldHover {
+    margin: 20px 0;
+  }
+
+  &__maskedTextField {
+    margin: 20px 0 40px 0;
+  }
+
+  &__dateDropdowns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__dateDropdownDefault,
+  &__dateDropdown {
+    width: 150px;
+  }
+
+  &__filterDateDropdown,
+  &__subscriptionTextField {
+    width: 266px;
+  }
+
+  &__filterDateDropdown {
+    margin: 40px 0;
+  }
+
+  &__subscriptionTextField {
+    margin-bottom: 100px;
+  }
+
+  &__dropdownBedroomDefault {
+    margin-bottom: 20px;
+    max-width: 266px;
+  }
+  
+  &__dropdownBedroomExpanded {
+    margin-bottom: 56px;
+    max-width: 266px;
+  }
+  
+  &__checkboxExpandableFirst {
+    margin-top: 180px;
+    margin-bottom: 50px;
+    max-width: 266px;
+  }
+
+  &__checkboxExpandableSecond {
+    margin-bottom: 50px;
+    max-width: 266px;
+  }
+
+  &__roomFeatures {
+    width: 280px;
+    margin-top: 100px;
+  }
+
+  &__checkboxRadioButtons {
+    grid-area: checkboxes;
+    margin-left: 126px;
+    margin-right: 72px;
+  }
+
+  &__checkbox {
+    margin-bottom: 50px;
+  }
+
+  &__radioButtons {
+    margin-bottom: 36.56px;
+
+    &-wrapper {
+      display: flex;
+      width: 220px;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+  }
+
+  &__toggle {
+    margin-bottom: 40.44px;
+  
+    &-wrapper {
+      margin-top: 16px;
+      height: 54px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__like {
+    margin-bottom: 40px;
+    
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 170px;
+      margin-top: 16px;
+      width: 90px;
+    }
+  }
+
+  &__rate {
+    margin-bottom: 187px;
+    width: 260px;
+    
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+  }
+  
+  &__dropdownGuestsDefault {
+    width: 320px;
+    margin-bottom: 266px;
+  }
+  
+  &__checkboxRich {
+    margin-bottom: 50px;
+  }
+  
+  &__sliderButtons {
+    grid-area: buttons;
+    width: 320px;
+    margin-right: 50px;
+  }
+
+  &__rangeSlider {
+    margin-bottom: 83.5px;
+  }
+
+  &__buttons {
+    margin-bottom: 40px;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 16px;
+    }
+
+    &-container {
+      display: flex;
+      gap: 20px;
+      width: 218px;
+      height: 44px;
+      margin-bottom: 30px;
+    }
+    
+    &-links {
+      display: flex;
+      justify-content: space-between;
+      width: 142px;
+      margin-bottom: 30px;
+    }
+
+    &-large {
+      width: 320px;
+      height: 44px;
+    }
+  }
+
+  &__pagination {
+    margin-bottom: 220px;
+    width: 350px;
+  }
+
+  &__dropdownGuests {
+    margin-bottom: 267px;
+  }
+  
+  &__bulletList {
+    margin-bottom: 30px;
+  }
+  
+  &__feedback {
+    grid-area: feedback;
+    margin-left: 126px;
+    margin-top: 127px;
+  }
+
+  &__comment {
+    width: 711px;
+  }
+}
