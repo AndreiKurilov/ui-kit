@@ -8,7 +8,7 @@ mixin button({ buttonLink=true, btnTitle="", withArrow=false, isWhite=false, btn
 
   if buttonLink
     div&attributes({
-      class: [ "button", buttonArrow, buttonHover ],
+      class: [ "button", buttonHover ],
       "data-btn": btnId,
     }) 
       a&attributes({
