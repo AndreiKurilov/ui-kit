@@ -45,7 +45,6 @@
   &__feeTotal {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
     color: $color--main;
     font-size: 19px;
     line-height: 23px;
@@ -53,12 +52,12 @@
     align-items: baseline;
   }
 
-  &__totalTitle {
-    padding-right: 5px;
-  }
-
   &__totalLine {
     border-bottom: 1px dashed $color--darkShade25;
-    width: 176px;
+    width: 100%;
+  }
+
+  &__totalPrice {
+    min-width: 77px;
   }
 }
