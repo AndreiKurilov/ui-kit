@@ -1,3 +1,14 @@
+.logo__link {
+  line-height: 0;
+  vertical-align: middle; }
+
+.logo__colorless {
+  min-width: 48px;
+  min-height: 48px; }
+
+.logo__colorWithText {
+  min-width: 106px; }
+
 .heading {
   display: flex;
   justify-content: space-between;
@@ -32,6 +43,116 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase; }
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  margin: 0; }
+
+.textField {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px; }
+  .textField_isFocused {
+    border: 1px solid rgba(31, 32, 65, 0.5); }
+  .textField:hover, .textField:focus {
+    border: 1px solid rgba(31, 32, 65, 0.5); }
+  .textField__input {
+    height: 42px;
+    padding: 0 0 0 15px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-family: "Montserrat-regular";
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+    text-overflow: ellipsis; }
+    .textField__input_isUppercase {
+      text-transform: uppercase; }
+    .textField__input_withButton {
+      width: 221px; }
+  .textField__buttonSubscribed {
+    border: none;
+    outline: none;
+    width: 43px;
+    padding: 0px;
+    border-radius: 0 4px 4px 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: transparent; }
+    .textField__buttonSubscribed::after {
+      content: "\e904";
+      font-family: "Material-Icons";
+      font-size: 16px;
+      cursor: pointer; }
+
+.checkbox__label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer; }
+
+.checkbox__input {
+  display: none; }
+  .checkbox__input:checked + .checkbox__box::after {
+    margin-top: 4px;
+    width: 6px;
+    height: 8px;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    box-sizing: border-box;
+    border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -moz-border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-image-slice: 1;
+    content: ''; }
+  .checkbox__input:checked + .checkbox__box {
+    border: 1px solid #BC9CFF; }
+
+.checkbox__box {
+  min-width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center; }
+
+.checkbox__title {
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+  margin-left: 10px;
+  padding-top: 1.5px;
+  user-select: none; }
+  .checkbox__title_fontBold {
+    font-family: "Montserrat-Bold";
+    color: rgba(31, 32, 65, 0.75); }
+
+.checkbox__description {
+  display: block;
+  font-family: "Montserrat-regular";
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(31, 32, 65, 0.5);
+  margin: 5px 0 10px 30px;
+  user-select: none; }
+
+.checkboxList__list {
+  list-style: none;
+  margin: 17px 0 0;
+  padding: 0px; }
+
+.checkboxList__item {
+  margin-bottom: 10px; }
 
 .dropdownItem {
   display: flex;
@@ -251,116 +372,6 @@
   .air-datepicker_range .air-datepicker-body--cells.-days- {
     grid-auto-rows: 32px !important; }
 
-input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  margin: 0; }
-
-.textField {
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px; }
-  .textField_isFocused {
-    border: 1px solid rgba(31, 32, 65, 0.5); }
-  .textField:hover, .textField:focus {
-    border: 1px solid rgba(31, 32, 65, 0.5); }
-  .textField__input {
-    height: 42px;
-    padding: 0 0 0 15px;
-    width: 100%;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    font-family: "Montserrat-regular";
-    font-size: 14px;
-    line-height: 18px;
-    color: rgba(31, 32, 65, 0.5);
-    text-overflow: ellipsis; }
-    .textField__input_isUppercase {
-      text-transform: uppercase; }
-    .textField__input_withButton {
-      width: 221px; }
-  .textField__buttonSubscribed {
-    border: none;
-    outline: none;
-    width: 43px;
-    padding: 0px;
-    border-radius: 0 4px 4px 0;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: transparent; }
-    .textField__buttonSubscribed::after {
-      content: "\e904";
-      font-family: "Material-Icons";
-      font-size: 16px;
-      cursor: pointer; }
-
-.checkbox__label {
-  display: flex;
-  align-items: flex-start;
-  cursor: pointer; }
-
-.checkbox__input {
-  display: none; }
-  .checkbox__input:checked + .checkbox__box::after {
-    margin-top: 4px;
-    width: 6px;
-    height: 8px;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    box-sizing: border-box;
-    border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    -webkit-border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    -moz-border-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    border-image-slice: 1;
-    content: ''; }
-  .checkbox__input:checked + .checkbox__box {
-    border: 1px solid #BC9CFF; }
-
-.checkbox__box {
-  min-width: 20px;
-  height: 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  box-sizing: border-box;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center; }
-
-.checkbox__title {
-  font-family: "Montserrat-regular";
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.5);
-  margin-left: 10px;
-  padding-top: 1.5px;
-  user-select: none; }
-  .checkbox__title_fontBold {
-    font-family: "Montserrat-Bold";
-    color: rgba(31, 32, 65, 0.75); }
-
-.checkbox__description {
-  display: block;
-  font-family: "Montserrat-regular";
-  font-size: 12px;
-  line-height: 14px;
-  color: rgba(31, 32, 65, 0.5);
-  margin: 5px 0 10px 30px;
-  user-select: none; }
-
-.checkboxList__list {
-  list-style: none;
-  margin: 17px 0 0;
-  padding: 0px; }
-
-.checkboxList__item {
-  margin-bottom: 10px; }
-
 .roomFeatures__item {
   display: flex;
   padding-top: 20px;
@@ -535,50 +546,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .rate__input:checked ~ .rate__star:before, .rate__star_checked::before {
     content: "\e90b"; }
 
-.pagination {
-  font-family: "Montserrat-regular";
-  font-size: 12px;
-  line-height: 15px; }
-  .pagination__text {
-    color: rgba(31, 32, 65, 0.75);
-    line-height: 24px; }
-  .pagination__pages {
-    display: flex;
-    padding: 0; }
-  .pagination__pages li {
-    height: 40px;
-    width: 40px;
-    color: rgba(31, 32, 65, 0.5);
-    list-style: none;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-    list-style: none;
-    line-height: 40px;
-    border-radius: 22px; }
-  .pagination__pages .dots {
-    font-size: 12px;
-    cursor: default;
-    line-height: 40px; }
-  .pagination__pages .arrowForward,
-  .pagination__pages .arrowBack {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
-  .pagination__pages .arrowBack::before {
-    content: '\e900';
-    font-family: "Material-Icon-Arrow";
-    color: #fff;
-    font-size: 25px; }
-  .pagination__pages .arrowForward::after {
-    content: '\e904';
-    font-family: "Material-Icons";
-    color: #fff;
-    font-size: 20px; }
-  .pagination .active,
-  .pagination__pages .numb:hover {
-    color: #fff;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    font-family: "Montserrat-Bold"; }
-
 .bulletList {
   margin: 0;
   padding: 0;
@@ -678,28 +645,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     right: 0;
     padding-right: 15px; }
 
-.linksPages__wrapper {
-  display: flex; }
-  .linksPages__wrapper_column {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 25px; }
-    .linksPages__wrapper_column .linksPages__link:not(:first-child) {
-      padding-top: 15px;
-      padding-left: 0; }
-
-.linksPages__link {
-  color: rgba(31, 32, 65, 0.5);
-  font-family: "Montserrat-regular";
-  font-size: 18px;
-  text-decoration: none;
-  cursor: pointer; }
-  .linksPages__link:focus, .linksPages__link:hover {
-    color: rgba(31, 32, 65, 0.75);
-    outline: none; }
-  .linksPages__link:not(:first-child) {
-    padding-left: 45px; }
-
 @font-face {
   font-family: 'Quicksand-Bold';
   src: url(fonts/Quicksand-Bold.eot);
@@ -757,6 +702,50 @@ body {
 
 .page__container {
   flex: 1 0 auto; }
+
+.pagination {
+  font-family: "Montserrat-regular";
+  font-size: 12px;
+  line-height: 15px; }
+  .pagination__text {
+    color: rgba(31, 32, 65, 0.75);
+    line-height: 24px; }
+  .pagination__pages {
+    display: flex;
+    padding: 0; }
+  .pagination__pages li {
+    height: 40px;
+    width: 40px;
+    color: rgba(31, 32, 65, 0.5);
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    line-height: 40px;
+    border-radius: 22px; }
+  .pagination__pages .dots {
+    font-size: 12px;
+    cursor: default;
+    line-height: 40px; }
+  .pagination__pages .arrowForward,
+  .pagination__pages .arrowBack {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
+  .pagination__pages .arrowBack::before {
+    content: '\e900';
+    font-family: "Material-Icon-Arrow";
+    color: #fff;
+    font-size: 25px; }
+  .pagination__pages .arrowForward::after {
+    content: '\e904';
+    font-family: "Material-Icons";
+    color: #fff;
+    font-size: 20px; }
+  .pagination .active,
+  .pagination__pages .numb:hover {
+    color: #fff;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    font-family: "Montserrat-Bold"; }
 
 .formElements {
   margin-left: 80px;

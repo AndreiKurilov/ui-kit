@@ -76,6 +76,51 @@
   .nav__optionsItem {
     padding: 8px 12px; }
 
+.button {
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  user-select: none; }
+  .button:hover, .button_hover {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%); }
+  .button__link {
+    text-transform: uppercase;
+    font-family: "Montserrat-Bold";
+    font-size: 12px;
+    color: #FFFFFF;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; }
+    .button__link_white {
+      color: #BC9CFF;
+      background: #FFFFFF; }
+  .button__title {
+    text-transform: uppercase;
+    font-family: "Montserrat-Bold";
+    font-size: 12px;
+    color: #BC9CFF;
+    text-decoration: none;
+    cursor: pointer; }
+    .button__title:hover, .button__title_hover {
+      color: rgba(31, 32, 65, 0.5); }
+  .button__arrow::after {
+    content: '\e904';
+    font-family: "Material-Icons";
+    color: #fff;
+    font-size: 17px;
+    position: absolute;
+    right: 0;
+    padding-right: 15px; }
+
 .header {
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05); }
