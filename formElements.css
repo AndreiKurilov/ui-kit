@@ -361,40 +361,46 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .checkboxList__item {
   margin-bottom: 10px; }
 
-.roomFeatures {
+.roomFeatures__item {
   display: flex;
-  padding-bottom: 20px;
-  margin-bottom: 20px; }
-  .roomFeatures_border {
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
-    max-width: 280px; }
-  .roomFeatures__icon {
-    font-size: 44px;
-    font-family: "Material-Icons";
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; }
-    .roomFeatures__icon_emoticon::before {
-      content: '\e909'; }
-    .roomFeatures__icon_location-city::before {
-      content: '\e90a'; }
-    .roomFeatures__icon_whatshot::before {
-      content: '\e90e'; }
-  .roomFeatures__wrapper {
-    display: flex;
-    flex-direction: column;
-    font-family: "Montserrat-regular";
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
-    margin-left: 10px;
-    user-select: none; }
-  .roomFeatures__title {
-    font-family: "Montserrat-Bold";
-    margin-top: -3px; }
-  .roomFeatures__description {
-    padding-top: 5px; }
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.roomFeatures_border {
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
+
+.roomFeatures__icon {
+  padding-left: 4px;
+  padding-top: 4px;
+  font-size: 44px;
+  font-family: "Material-Icons";
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; }
+  .roomFeatures__icon_emoticon::before {
+    content: '\e909'; }
+  .roomFeatures__icon_location-city::before {
+    content: '\e90a'; }
+  .roomFeatures__icon_whatshot::before {
+    content: '\e90e'; }
+
+.roomFeatures__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: "Montserrat-regular";
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  padding-left: 14px;
+  user-select: none; }
+
+.roomFeatures__title {
+  font-family: "Montserrat-Bold"; }
+
+.roomFeatures__description {
+  padding-top: 5px; }
 
 .radio__label {
   display: flex;
@@ -489,7 +495,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 10px;
   color: rgba(31, 32, 65, 0.25);
   line-height: 12px; }
-  .like_colored, .like:focus {
+  .like_colored {
     border: 1px solid #BC9CFF;
     color: #BC9CFF; }
   .like::before {
@@ -500,7 +506,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     padding-left: 4px;
     padding-right: 6px; }
-  .like_gradient::before, .like:focus::before {
+  .like_gradient::before {
     content: '\e906';
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     -webkit-background-clip: text;
@@ -597,35 +603,34 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .comment {
   display: flex;
-  max-width: 711px;
   flex-direction: column;
-  user-select: none;
   font-family: "Montserrat-regular";
   font-size: 14px;
   line-height: 24px;
-  color: rgba(31, 32, 65, 0.75); }
-  .comment__header, .comment__body {
+  color: rgba(31, 32, 65, 0.75);
+  user-select: none; }
+  .comment__heading, .comment__body {
     display: flex; }
-  .comment__header {
-    margin-bottom: 10px; }
   .comment__avatar {
     width: 47.5px;
     height: 48px;
-    margin-right: 10px;
     border: 2px solid #FFFFFF;
     border-radius: 32px;
     box-shadow: 0px 10px 20px 0px rgba(31, 32, 65, 0.1);
     box-sizing: border-box; }
   .comment__guest {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-left: 10px; }
   .comment__guestName {
     font-family: "Montserrat-Bold"; }
   .comment__likeButton {
-    margin-left: 5px;
-    margin-right: 16px; }
+    padding: 12px 0 0 3.5px; }
   .comment__text {
-    min-width: 655px; }
+    padding: 10px 0 0 14px; }
+    @media (max-width: 480px) {
+      .comment__text {
+        padding: 10px 12px 0 14px; } }
 
 
 .button {
@@ -791,6 +796,7 @@ body {
     margin-bottom: 50px;
     max-width: 266px; }
   .formElements__roomFeatures {
+    width: 280px;
     margin-top: 100px; }
   .formElements__checkboxRadioButtons {
     grid-area: checkboxes;
@@ -869,6 +875,7 @@ body {
   .formElements__feedback {
     grid-area: feedback;
     margin-left: 126px;
-    margin-top: 127px;
-    width: 730px; }
+    margin-top: 127px; }
+  .formElements__comment {
+    width: 711px; }
 

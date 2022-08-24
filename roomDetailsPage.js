@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/chart/chart.scss":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/components/chart/chart.scss ***!
+  \************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/chart/chart.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
+
+/***/ }),
+
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/pages/roomDetailsPage/roomDetailsPage.scss":
 /*!***************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/pages/roomDetailsPage/roomDetailsPage.scss ***!
@@ -109,6 +120,29 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
+/***/ "./src/components/chart/chart.js":
+/*!***************************************!*\
+  !*** ./src/components/chart/chart.js ***!
+  \***************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _chart_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chart.scss */ \"./src/components/chart/chart.scss\");\n/* harmony import */ var _chart_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_chart_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconst itemList = document.querySelectorAll('.chart__item');\r\nconst circleList = document.querySelectorAll('.chart__circle');\r\nconst chartNumber = document.querySelector('.chart__number');\r\nconst doughnutCount = document.querySelector('.chart__doughnutCount');\r\n\r\nconst votesNumber = [520, 260, 260, 0];\r\nconst colors = [\"#FFE39C\", \"#66D2EA\", \"#BC9CFF\", \"#919191\"];\r\n\r\nfunction showNumberOfVotes (item, index) {\r\n  item.addEventListener('mouseover', function () {\r\n    circleList[index].classList.add('chart__circle_hovered');\r\n    chartNumber.innerHTML = `${votesNumber[index]}`;\r\n    doughnutCount.setAttribute(\"fill\", `${colors[index]}`);\r\n  });\r\n  \r\n  item.addEventListener('mouseout', function () {\r\n    circleList[index].classList.remove('chart__circle_hovered');\r\n    chartNumber.innerHTML = \"1040\"\r\n    doughnutCount.setAttribute(\"fill\", \"#919191\" )\r\n  });\r\n};\r\n\r\nitemList.forEach((item, index) => showNumberOfVotes(item, index));\r\ncircleList.forEach((item, index) => showNumberOfVotes(item, index));\r\n\n\n//# sourceURL=webpack:///./src/components/chart/chart.js?");
+
+/***/ }),
+
+/***/ "./src/components/chart/chart.scss":
+/*!*****************************************!*\
+  !*** ./src/components/chart/chart.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./chart.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/chart/chart.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/components/chart/chart.scss?");
+
+/***/ }),
+
 /***/ "./src/pages/roomDetailsPage/roomDetailsPage.js":
 /*!******************************************************!*\
   !*** ./src/pages/roomDetailsPage/roomDetailsPage.js ***!
@@ -117,7 +151,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _roomDetailsPage_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./roomDetailsPage.scss */ \"./src/pages/roomDetailsPage/roomDetailsPage.scss\");\n/* harmony import */ var _roomDetailsPage_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_roomDetailsPage_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/pages/roomDetailsPage/roomDetailsPage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _roomDetailsPage_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./roomDetailsPage.scss */ \"./src/pages/roomDetailsPage/roomDetailsPage.scss\");\n/* harmony import */ var _roomDetailsPage_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_roomDetailsPage_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_chart_chart_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/chart/chart.js */ \"./src/components/chart/chart.js\");\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/roomDetailsPage/roomDetailsPage.js?");
 
 /***/ }),
 

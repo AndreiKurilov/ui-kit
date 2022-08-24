@@ -86,10 +86,10 @@
       <div class="page__container">
         <main class="roomDetailsPage">
           <div class="roomDetailsPage__images">
-            <div class="roomDetailsPage__mainPhoto"></div>
+            <div class="roomDetailsPage__mainPhoto"><img class="roomDetailsPage__photo" src="images/rooms/roomDetails/mainPhoto.jpg" alt="Room photo"></div>
             <div class="roomDetailsPage__wrapper">
-              <div class="roomDetailsPage__firstPhoto"></div>
-              <div class="roomDetailsPage__secondPhoto"></div>
+              <div class="roomDetailsPage__firstPhoto"><img src="images/rooms/roomDetails/firstPhoto.jpg" alt="Room photo"></div>
+              <div class="roomDetailsPage__secondPhoto"><img src="images/rooms/roomDetails/secondPhoto.jpg" alt="Room photo"></div>
             </div>
           </div>
           <div class="roomDetailsPage__content">
@@ -99,20 +99,26 @@
                    Сведения о номере</div>
                 <div class="roomDetailsPage__roomInfoItem">
                   <div class="roomFeatures roomFeatures_border">
-                    <div class="roomFeatures__icon roomFeatures__icon_emoticon"></div>
-                    <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Комфорт</span><span class="roomFeatures__description">Шумопоглощающие стены</span></div>
+                    <div class="roomFeatures__item">
+                      <div class="roomFeatures__icon roomFeatures__icon_emoticon"></div>
+                      <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Комфорт</span><span class="roomFeatures__description">Шумопоглощающие стены</span></div>
+                    </div>
                   </div>
                 </div>
                 <div class="roomDetailsPage__roomInfoItem">
                   <div class="roomFeatures roomFeatures_border">
-                    <div class="roomFeatures__icon roomFeatures__icon_location-city"></div>
-                    <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Удобство</span><span class="roomFeatures__description">Окно в каждой из спален</span></div>
+                    <div class="roomFeatures__item">
+                      <div class="roomFeatures__icon roomFeatures__icon_location-city"></div>
+                      <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Удобство</span><span class="roomFeatures__description">Окно в каждой из спален</span></div>
+                    </div>
                   </div>
                 </div>
                 <div class="roomDetailsPage__roomInfoItem">
                   <div class="roomFeatures">
-                    <div class="roomFeatures__icon roomFeatures__icon_whatshot"></div>
-                    <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Уют</span><span class="roomFeatures__description">Номер оснащён камином</span></div>
+                    <div class="roomFeatures__item">
+                      <div class="roomFeatures__icon roomFeatures__icon_whatshot"></div>
+                      <div class="roomFeatures__wrapper"><span class="roomFeatures__title">Уют</span><span class="roomFeatures__description">Номер оснащён камином</span></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -123,25 +129,37 @@
                     <div class="chart__data">
                       <svg class="chart__doughnut" viewBox="0 0 35 35">
                         <circle class="chart__circle" r="15.9" cx="50%" cy="50%" stroke="url(#perfectly)"></circle>
-                        <circle class="chart__circle" r="15.9" cx="50%" cy="50%"></circle>
-                        <circle class="chart__circle" r="15.9" cx="50%" cy="50%"></circle>
-                        <circle class="chart__circle" r="15.9" cx="50%" cy="50%"></circle>
+                        <circle class="chart__circle" r="15.9" cx="50%" cy="50%" stroke="url(#good)"></circle>
+                        <circle class="chart__circle" r="15.9" cx="50%" cy="50%" stroke="url(#satisfactorily)"></circle>
+                        <circle class="chart__circle" r="15.9" cx="50%" cy="50%" stroke="url(#disappointed)"></circle>
                         <linearGradient id="perfectly" gradientTransform="rotate(90)">
-                          <stop offset="0" stop-color="rgba(255, 227, 156, 1)"></stop>
-                          <stop offset="1" stop-color="rgba(255, 186, 156, 1)"></stop>
+                          <stop offset="0" stop-color="#FFE39C"></stop>
+                          <stop offset="1" stop-color="#FFE39C"></stop>
+                        </linearGradient>
+                        <linearGradient id="good" gradientTransform="rotate(90)">
+                          <stop offset="0" stop-color="#6FCF97"></stop>
+                          <stop offset="1" stop-color="#66D2EA"></stop>
+                        </linearGradient>
+                        <linearGradient id="satisfactorily" gradientTransform="rotate(90)">
+                          <stop offset="0" stop-color="#BC9CFF"></stop>
+                          <stop offset="1" stop-color="#8BA4F9"></stop>
+                        </linearGradient>
+                        <linearGradient id="disappointed" gradientTransform="rotate(90)">
+                          <stop offset="0" stop-color="#919191"></stop>
+                          <stop offset="1" stop-color="#919191"></stop>
                         </linearGradient>
                         <g class="chart__doughnutCount" fill="#919191">
                           <text class="chart__number" text-anchor="middle" x="50%" y="47%">1040</text>
                           <text class="chart__text" text-anchor="middle" x="50%" y="62%">голосов </text>
                         </g>
                       </svg>
-                      <ul class="chart__legend"> 
-                        <li class="chart__item">Великолепно</li>
-                        <li class="chart__item">Хорошо</li>
-                        <li class="chart__item">Удовлетворительно</li>
-                        <li class="chart__item">Разочарован</li>
-                      </ul>
                     </div>
+                    <ul class="chart__legend"> 
+                      <li class="chart__item">Великолепно</li>
+                      <li class="chart__item">Хорошо</li>
+                      <li class="chart__item">Удовлетворительно</li>
+                      <li class="chart__item">Разочарован</li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -153,7 +171,7 @@
                 <div class="roomDetailsPage__commentsItems">
                   <div class="roomDetailsPage__commentsItem">
                     <div class="comment">
-                      <div class="comment__header"><img class="comment__avatar" src="./images/avatars/murad_sarafanov.png" alt="avatar">
+                      <div class="comment__heading"><img class="comment__avatar" src="./images/avatars/murad_sarafanov.png" alt="avatar">
                         <div class="comment__guest">
                           <div class="comment__guestName">Мурад Сарафанов</div>
                           <div class="comment__date">5 дней назад</div>
@@ -169,7 +187,7 @@
                   </div>
                   <div class="roomDetailsPage__commentsItem">
                     <div class="comment">
-                      <div class="comment__header"><img class="comment__avatar" src="./images/avatars/patricia_steklyshkova.png" alt="avatar">
+                      <div class="comment__heading"><img class="comment__avatar" src="./images/avatars/patricia_steklyshkova.png" alt="avatar">
                         <div class="comment__guest">
                           <div class="comment__guestName">Патрисия Стёклышкова</div>
                           <div class="comment__date">Неделю назад</div>
@@ -177,7 +195,7 @@
                       </div>
                       <div class="comment__body">
                         <div class="comment__likeButton">
-                          <button class="like like_colored like_gradient">12</button>
+                          <button class="like">2</button>
                         </div>
                         <div class="comment__text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент.</div>
                       </div>
@@ -289,7 +307,7 @@
                   </div>
                 </div>
                 <div class="cardSearchRoom__buttonPay">
-                  <div class="button  button__arrow" data-btn=""> <a class="button__link  button__arrow" href="">забронировать</a></div>
+                  <div class="button" data-btn=""> <a class="button__link  button__arrow" href="">забронировать</a></div>
                 </div>
               </form>
             </div>

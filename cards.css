@@ -122,17 +122,16 @@
   .roomPriceDetails__feeTotal {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
     color: #1F2041;
     font-size: 19px;
     line-height: 23px;
     font-family: "Montserrat-Bold";
     align-items: baseline; }
-  .roomPriceDetails__totalTitle {
-    padding-right: 5px; }
   .roomPriceDetails__totalLine {
     border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
-    width: 176px; }
+    width: 100%; }
+  .roomPriceDetails__totalPrice {
+    min-width: 77px; }
 
 .cardSearchRoom {
   padding: 40px 30px 30px;
@@ -152,6 +151,9 @@
     margin-bottom: 20px;
     justify-content: space-between;
     align-items: baseline; }
+    @media (max-width: 480px) {
+      .cardSearchRoom__wrapper {
+        padding: 10px; } }
   @media (max-width: 480px) {
     .cardSearchRoom__container {
       max-width: 280px;
@@ -166,7 +168,7 @@
     justify-content: space-between;
     margin-bottom: 20px; }
   .cardSearchRoom__arrival, .cardSearchRoom__departure {
-    width: 150px; }
+    max-width: 150px; }
   .cardSearchRoom__details {
     display: flex;
     flex-direction: column;
@@ -305,15 +307,18 @@
     font-family: "Montserrat-regular";
     padding-left: 5px; }
 
+.carousel .carousel__link {
+  height: 151px; }
+
 .carousel__img {
-  height: 151px;
+  height: 100%;
   width: 270px;
   font-size: 0;
   user-select: none; }
 
-.carousel .carousel__img {
+.carousel .carousel__link {
   display: none; }
-  .carousel .carousel__img:first-child {
+  .carousel .carousel__link:first-child {
     display: block; }
 
 .carousel__buttonPrev {
