@@ -1,22 +1,27 @@
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 const CopyPlugin = require("copy-webpack-plugin");
+const ghpages = require('gh-pages');
+
+const PAGES_DIR = path.resolve(__dirname, 'src/pages');
+
+const PAGES = fs
+  .readdirSync(PAGES_DIR)
+  .map((item) => item.replace(/\.[^/.]+$/, ''));
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
   dist: path.join(__dirname, 'dist'),
 }
 
+const entryPoints = PAGES.map(page => ({ [page]: `${PAGES_DIR}/${page}/${page}.js`, }));
+const entryPointsTotal = Object.assign({}, ...entryPoints);
+
 module.exports = {
-  entry: {
-    pageStart: PATHS.src + '/pages/pageStart/pageStart.js',
-    setColorsType: PATHS.src + '/pages/setColorsType/setColorsType.js',
-    headersFooters: PATHS.src + '/pages/headersFooters/headersFooters.js',
-    cards: PATHS.src + '/pages/cards/cards.js',
-    formElements: PATHS.src + '/pages/formElements/formElements.js',
-  },
+  entry: entryPointsTotal,
   output: {
     path: PATHS.dist,
     filename: '[name].js'
@@ -27,35 +32,10 @@ module.exports = {
       ignored: [/node_modules/]
   },
   plugins: [
-    new HtmlWebpackPlugin(
-      {
-        filename: 'pageStart.html',
-        template: PATHS.src + '/pages/pageStart/pageStart.pug'
-      }
-    ),
-    new HtmlWebpackPlugin(
-      {
-        filename: 'setColorsType.html',
-        template: PATHS.src + '/pages/setColorsType/setColorsType.pug'
-      }
-    ),
-    new HtmlWebpackPlugin(
-      {
-        filename: 'headersFooters.html',
-        template: PATHS.src + '/pages/headersFooters/headersFooters.pug'
-      }
-    ),
-    new HtmlWebpackPlugin(
-      {
-        filename: 'formElements.html',
-        template: PATHS.src + '/pages/formElements/formElements.pug'
-      },
-    ),
-    new HtmlWebpackPlugin(
-      {
-        filename: 'cards.html',
-        template: PATHS.src + '/pages/cards/cards.pug'
-      },
+    ...PAGES.map(page => new HtmlWebpackPlugin({
+      filename: `${page}.html`,
+      template: `${PAGES_DIR}/${page}/${page}.pug`,
+    })
     ),
     new MiniCssExtractPlugin({
       filename: '[name].css'
@@ -79,7 +59,7 @@ module.exports = {
           test: /\.pug$/,
           loader: 'pug-loader',
           options: {
-              pretty: true
+            pretty: true
           }
         },
         {
@@ -102,7 +82,7 @@ module.exports = {
           use: [
             'style-loader',
             MiniCssExtractPlugin.loader,
-          {
+            {
             loader: 'css-loader',
             options: { sourceMap: true }
           },
@@ -112,11 +92,11 @@ module.exports = {
         test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
-          outputPath: 'img',
+          outputPath: 'images',
           name: '[name].[ext]'
           }
         },
-       
+        
         {
         test: /\.(eot|svg|ttf|woff)$/,
         loader: 'file-loader',
@@ -128,3 +108,4 @@ module.exports = {
     ]
   }
 };
+ghpages.publish('dist', function(err) {});
