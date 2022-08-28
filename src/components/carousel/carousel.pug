@@ -1,0 +1,9 @@
+mixin carousel( images=[] )
+  .carousel
+    .carousel__images
+      each img in images
+        a.carousel__link(href="./roomDetailsPage.html")
+          img(class="carousel__img" src=(`images/rooms/roomPhoto/${img}`) alt="roomPhoto")
+    .carousel__buttonPrev
+    .carousel__buttonNext
+    ul.carousel__slideDots
