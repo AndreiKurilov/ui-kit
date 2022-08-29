@@ -163,6 +163,28 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/textField/textField.scss":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/components/textField/textField.scss ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/textField/textField.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
+
+/***/ }),
+
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/fonts/fonts.scss":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/fonts/fonts.scss ***!
+  \*************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/fonts/fonts.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
+
+/***/ }),
+
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/pages/headersFooters/headersFooters.scss":
 /*!*************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/pages/headersFooters/headersFooters.scss ***!
@@ -217,7 +239,7 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _nav_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../nav/nav.js */ \"./src/components/nav/nav.js\");\n/* harmony import */ var _socialIcons_socialIcons_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../socialIcons/socialIcons.js */ \"./src/components/socialIcons/socialIcons.js\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer.scss */ \"./src/components/footer/footer.scss\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_footer_scss__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/components/footer/footer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _logo_logo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../logo/logo.js */ \"./src/components/logo/logo.js\");\n/* harmony import */ var _nav_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../nav/nav.js */ \"./src/components/nav/nav.js\");\n/* harmony import */ var _socialIcons_socialIcons_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../socialIcons/socialIcons.js */ \"./src/components/socialIcons/socialIcons.js\");\n/* harmony import */ var _textField_textField_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../textField/textField.js */ \"./src/components/textField/textField.js\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./footer.scss */ \"./src/components/footer/footer.scss\");\n/* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_footer_scss__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/components/footer/footer.js?");
 
 /***/ }),
 
@@ -347,6 +369,40 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 
 /***/ }),
 
+/***/ "./src/components/textField/textField.js":
+/*!***********************************************!*\
+  !*** ./src/components/textField/textField.js ***!
+  \***********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _textField_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./textField.scss */ \"./src/components/textField/textField.scss\");\n/* harmony import */ var _textField_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_textField_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/textField/textField.js?");
+
+/***/ }),
+
+/***/ "./src/components/textField/textField.scss":
+/*!*************************************************!*\
+  !*** ./src/components/textField/textField.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./textField.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/textField/textField.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/components/textField/textField.scss?");
+
+/***/ }),
+
+/***/ "./src/fonts/fonts.scss":
+/*!******************************!*\
+  !*** ./src/fonts/fonts.scss ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/mini-css-extract-plugin/dist/loader.js!../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./fonts.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/fonts/fonts.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/fonts/fonts.scss?");
+
+/***/ }),
+
 /***/ "./src/pages/headersFooters/headersFooters.js":
 /*!****************************************************!*\
   !*** ./src/pages/headersFooters/headersFooters.js ***!
@@ -355,7 +411,7 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_header_header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/header/header.js */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/footer/footer.js */ \"./src/components/footer/footer.js\");\n/* harmony import */ var _components_footerMobile_footerMobile_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/footerMobile/footerMobile.js */ \"./src/components/footerMobile/footerMobile.js\");\n/* harmony import */ var _headersFooters_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./headersFooters.scss */ \"./src/pages/headersFooters/headersFooters.scss\");\n/* harmony import */ var _headersFooters_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_headersFooters_scss__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/headersFooters/headersFooters.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_header_header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/header/header.js */ \"./src/components/header/header.js\");\n/* harmony import */ var _components_footer_footer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/footer/footer.js */ \"./src/components/footer/footer.js\");\n/* harmony import */ var _components_footerMobile_footerMobile_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/footerMobile/footerMobile.js */ \"./src/components/footerMobile/footerMobile.js\");\n/* harmony import */ var _fonts_fonts_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../fonts/fonts.scss */ \"./src/fonts/fonts.scss\");\n/* harmony import */ var _fonts_fonts_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fonts_fonts_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _headersFooters_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./headersFooters.scss */ \"./src/pages/headersFooters/headersFooters.scss\");\n/* harmony import */ var _headersFooters_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_headersFooters_scss__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/pages/headersFooters/headersFooters.js?");
 
 /***/ }),
 
