@@ -1,4 +1,11 @@
+import '../textField/textField.js';
+import '../heading/heading.js';
+import '../heading/heading.js';
+import '../button/button.js';
+import '../dateDropdown/dateDropdown.js';
+import '../dropdown/dropdown.js';
 import '../roomNumber/roomNumber.js';
 import '../roomPrice/roomPrice.js';
 import '../roomPriceDetails/roomPriceDetails.js';
+import '../../fonts/fonts.scss';
 import './cardSearchRoom.scss';
