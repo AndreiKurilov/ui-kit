@@ -599,6 +599,34 @@ input[type=date]::-webkit-calendar-picker-indicator {
       .comment__text {
         padding: 10px 12px 0 14px; } }
 
+.rangeSlider__scale {
+  padding-left: 72px;
+  display: flex;
+  align-items: center;
+  height: 6px;
+  width: 100%;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 3px;
+  box-sizing: border-box; }
+
+.rangeSlider__handleFirst, .rangeSlider__handleSecond {
+  position: relative;
+  z-index: 3;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px; }
+
+.rangeSlider__handleSecond {
+  margin-left: -4px; }
+
+.rangeSlider__coloredScale {
+  margin-left: -4px;
+  width: 96px;
+  height: 6px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 3px; }
 
 .button {
   cursor: pointer;
@@ -690,10 +718,8 @@ body {
   padding: 30px 0 0 30px; }
 
 .page__content {
-  margin-top: 72px;
-  margin-bottom: 90px; }
-  .page__content_startPage {
-    margin-top: 20px; }
+  margin-top: 30px;
+  margin-bottom: 40px; }
 
 .page__footer {
   padding: 50px 0;
@@ -747,9 +773,30 @@ body {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     font-family: "Montserrat-Bold"; }
 
+.linksPages__wrapper {
+  display: flex; }
+  .linksPages__wrapper_column {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px; }
+    .linksPages__wrapper_column .linksPages__link:not(:first-child) {
+      padding-top: 15px;
+      padding-left: 0; }
+
+.linksPages__link {
+  color: rgba(31, 32, 65, 0.5);
+  font-family: "Montserrat-regular";
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer; }
+  .linksPages__link:focus, .linksPages__link:hover {
+    color: rgba(31, 32, 65, 0.75);
+    outline: none; }
+  .linksPages__link:not(:first-child) {
+    padding-left: 45px; }
+
 .formElements {
   margin-left: 80px;
-  margin-top: 62px;
   display: grid;
   grid-template-areas: "textFields checkboxes buttons" "textFields feedback feedback";
   grid-template-columns: 1fr 1fr 1fr; }
@@ -833,7 +880,10 @@ body {
     width: 320px;
     margin-right: 50px; }
   .formElements__rangeSlider {
-    margin-bottom: 83.5px; }
+    width: 266px;
+    margin-bottom: 40.5px; }
+  .formElements__rangeSliderHeading {
+    margin-bottom: 20px; }
   .formElements__buttons {
     margin-bottom: 40px; }
     .formElements__buttons-wrapper {
@@ -855,8 +905,8 @@ body {
       width: 320px;
       height: 44px; }
   .formElements__pagination {
-    margin-bottom: 220px;
-    width: 350px; }
+    width: 350px;
+    margin-bottom: 236px; }
   .formElements__dropdownGuests {
     margin-bottom: 267px; }
   .formElements__bulletList {

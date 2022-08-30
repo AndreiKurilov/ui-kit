@@ -16,7 +16,7 @@
               <path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"></path>
             </svg></a></div>
       </div>
-      <div class="page__content page__content_startPage">
+      <div class="page__content">
         <div class="formElements">
           <section class="formElements__textFields">
             <div class="formElements__textFieldDefault">
@@ -472,10 +472,18 @@
           </section>
           <section class="formElements__sliderButtons">
             <div class="formElements__rangeSlider">
-              <div class="heading">
-                <h3 class="heading__title">range slider</h3>
+              <div class="formElements__rangeSliderHeading">
+                <div class="heading">
+                  <h3 class="heading__title">range slider</h3><span class="heading__state">5 000 - 10 000</span>
+                </div>
               </div>
-              <rangeSlider class="rangeSlider"></rangeSlider>
+              <div class="rangeSlider">
+                <div class="rangeSlider__scale">
+                  <div class="rangeSlider__handleFirst"></div>
+                  <div class="rangeSlider__coloredScale"></div>
+                  <div class="rangeSlider__handleSecond"></div>
+                </div>
+              </div>
             </div>
             <div class="formElements__buttons">
               <div class="heading">

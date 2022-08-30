@@ -230,6 +230,17 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/linksPages/linksPages.scss":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/components/linksPages/linksPages.scss ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/components/linksPages/linksPages.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
+
+/***/ }),
+
 /***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/radio/radio.scss":
 /*!************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/components/radio/radio.scss ***!
@@ -326,6 +337,17 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/fonts/fonts.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
+
+/***/ }),
+
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/layouts/layout.scss":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3!./src/layouts/layout.scss ***!
+  \****************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/layouts/layout.scss?./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js??ref--5-2!./node_modules/sass-loader/dist/cjs.js??ref--5-3");
 
 /***/ }),
 
@@ -571,6 +593,29 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 
 /***/ }),
 
+/***/ "./src/components/linksPages/linksPages.js":
+/*!*************************************************!*\
+  !*** ./src/components/linksPages/linksPages.js ***!
+  \*************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _linksPages_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./linksPages.scss */ \"./src/components/linksPages/linksPages.scss\");\n/* harmony import */ var _linksPages_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_linksPages_scss__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\n\n//# sourceURL=webpack:///./src/components/linksPages/linksPages.js?");
+
+/***/ }),
+
+/***/ "./src/components/linksPages/linksPages.scss":
+/*!***************************************************!*\
+  !*** ./src/components/linksPages/linksPages.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js!../../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./linksPages.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/components/linksPages/linksPages.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/components/linksPages/linksPages.scss?");
+
+/***/ }),
+
 /***/ "./src/components/radio/radio.js":
 /*!***************************************!*\
   !*** ./src/components/radio/radio.js ***!
@@ -766,6 +811,17 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 
 /***/ }),
 
+/***/ "./src/layouts/layout.scss":
+/*!*********************************!*\
+  !*** ./src/layouts/layout.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../node_modules/mini-css-extract-plugin/dist/loader.js!../../node_modules/css-loader/dist/cjs.js??ref--5-2!../../node_modules/sass-loader/dist/cjs.js??ref--5-3!./layout.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/layouts/layout.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./src/layouts/layout.scss?");
+
+/***/ }),
+
 /***/ "./src/pages/cards/cards.js":
 /*!**********************************!*\
   !*** ./src/pages/cards/cards.js ***!
@@ -774,7 +830,7 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_cardRegistration_cardRegistration_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/cardRegistration/cardRegistration.js */ \"./src/components/cardRegistration/cardRegistration.js\");\n/* harmony import */ var _components_cardSearchRoom_cardSearchRoom_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/cardSearchRoom/cardSearchRoom.js */ \"./src/components/cardSearchRoom/cardSearchRoom.js\");\n/* harmony import */ var _components_dateDropdown_dateDropdown_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/dateDropdown/dateDropdown.js */ \"./src/components/dateDropdown/dateDropdown.js\");\n/* harmony import */ var _components_roomWidget_roomWidget_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/roomWidget/roomWidget.js */ \"./src/components/roomWidget/roomWidget.js\");\n/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./cards.scss */ \"./src/pages/cards/cards.scss\");\n/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_cards_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! air-datepicker */ \"./node_modules/air-datepicker/index.es.js\");\n/* harmony import */ var air_datepicker_air_datepicker_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! air-datepicker/air-datepicker.css */ \"./node_modules/air-datepicker/air-datepicker.css\");\n/* harmony import */ var air_datepicker_air_datepicker_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(air_datepicker_air_datepicker_css__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _components_dateDropdown_dateDropdown_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/dateDropdown/dateDropdown.scss */ \"./src/components/dateDropdown/dateDropdown.scss\");\n/* harmony import */ var _components_dateDropdown_dateDropdown_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_dateDropdown_dateDropdown_scss__WEBPACK_IMPORTED_MODULE_7__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nlet buttonApply = {\r\n  content: 'Применить',\r\n  className: 'air-datepicker-button',\r\n  onClick: (dp) => {\r\n    dp.hide();\r\n  }\r\n}\r\n\r\nconst dateDropdownInline = new air_datepicker__WEBPACK_IMPORTED_MODULE_5__[\"default\"](\".cards__airDatepicker\", {\r\n  position: 'bottom center',\r\n  classes: \"air-datepicker\",\r\n  classes: \"air-datepicker_big\",\r\n  prevHtml: '<span class=\"air-datepicker__arrow air-datepicker__arrow_back\"></span>',\r\n  nextHtml: '<span class=\"air-datepicker__arrow air-datepicker__arrow_forward\"></span>',\r\n  navTitles: {\r\n    days: 'MMMM yyyy'\r\n  },\r\n  buttons: [ 'clear', buttonApply ],\r\n  range: true,\r\n  multipleDates: 2,\r\n  selectedDates: [ '2019-08-19', '2019-08-23' ],\r\n})\r\n\n\n//# sourceURL=webpack:///./src/pages/cards/cards.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_cardRegistration_cardRegistration_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/cardRegistration/cardRegistration.js */ \"./src/components/cardRegistration/cardRegistration.js\");\n/* harmony import */ var _components_cardSearchRoom_cardSearchRoom_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/cardSearchRoom/cardSearchRoom.js */ \"./src/components/cardSearchRoom/cardSearchRoom.js\");\n/* harmony import */ var _components_dateDropdown_dateDropdown_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/dateDropdown/dateDropdown.js */ \"./src/components/dateDropdown/dateDropdown.js\");\n/* harmony import */ var _components_roomWidget_roomWidget_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/roomWidget/roomWidget.js */ \"./src/components/roomWidget/roomWidget.js\");\n/* harmony import */ var _components_linksPages_linksPages_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/linksPages/linksPages.js */ \"./src/components/linksPages/linksPages.js\");\n/* harmony import */ var _layouts_layout_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../layouts/layout.scss */ \"./src/layouts/layout.scss\");\n/* harmony import */ var _layouts_layout_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_layouts_layout_scss__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cards.scss */ \"./src/pages/cards/cards.scss\");\n/* harmony import */ var _cards_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_cards_scss__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! air-datepicker */ \"./node_modules/air-datepicker/index.es.js\");\n/* harmony import */ var air_datepicker_air_datepicker_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! air-datepicker/air-datepicker.css */ \"./node_modules/air-datepicker/air-datepicker.css\");\n/* harmony import */ var air_datepicker_air_datepicker_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(air_datepicker_air_datepicker_css__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var _components_dateDropdown_dateDropdown_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/dateDropdown/dateDropdown.scss */ \"./src/components/dateDropdown/dateDropdown.scss\");\n/* harmony import */ var _components_dateDropdown_dateDropdown_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_dateDropdown_dateDropdown_scss__WEBPACK_IMPORTED_MODULE_9__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nlet buttonApply = {\r\n  content: 'Применить',\r\n  className: 'air-datepicker-button',\r\n  onClick: (dp) => {\r\n    dp.hide();\r\n  }\r\n}\r\n\r\nconst dateDropdownInline = new air_datepicker__WEBPACK_IMPORTED_MODULE_7__[\"default\"](\".cards__airDatepicker\", {\r\n  position: 'bottom center',\r\n  classes: \"air-datepicker\",\r\n  classes: \"air-datepicker_big\",\r\n  prevHtml: '<span class=\"air-datepicker__arrow air-datepicker__arrow_back\"></span>',\r\n  nextHtml: '<span class=\"air-datepicker__arrow air-datepicker__arrow_forward\"></span>',\r\n  navTitles: {\r\n    days: 'MMMM yyyy'\r\n  },\r\n  buttons: [ 'clear', buttonApply ],\r\n  range: true,\r\n  multipleDates: 2,\r\n  selectedDates: [ '2019-08-19', '2019-08-23' ],\r\n})\r\n\n\n//# sourceURL=webpack:///./src/pages/cards/cards.js?");
 
 /***/ }),
 
