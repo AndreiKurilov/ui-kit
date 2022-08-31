@@ -1,6 +1,8 @@
 import '../roomNumber/roomNumber.js';
 import '../roomPrice/roomPrice.js';
+import '../rate/rate.js';
 import '../commentCount/commentCount.js';
+import '../carousel/carousel.js';
 import { Carousel } from '../carousel/carousel.js';
 import './roomWidget.scss';
 
