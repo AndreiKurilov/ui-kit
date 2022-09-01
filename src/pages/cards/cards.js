@@ -2,6 +2,8 @@ import '../../components/cardRegistration/cardRegistration.js';
 import '../../components/cardSearchRoom/cardSearchRoom.js';
 import '../../components/dateDropdown/dateDropdown.js';
 import '../../components/roomWidget/roomWidget.js';
+import '../../components/linksPages/linksPages.js';
+import '../../layouts/layout.scss';
 import './cards.scss'
 
 import AirDatepicker from 'air-datepicker';
