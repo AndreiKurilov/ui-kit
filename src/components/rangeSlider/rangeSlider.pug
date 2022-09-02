@@ -1,6 +1,9 @@
-mixin rangeSlider({ })
+mixin rangeSlider({ text="" })
 
-  rangeSlider&attributes({
-      class: [ "rangeSlider" ] 
-    })
+  .rangeSlider
+    .rangeSlider__scale
+      .rangeSlider__handleFirst
+      .rangeSlider__coloredScale
+      .rangeSlider__handleSecond
+    .rangeSlider__text #{text}
     
