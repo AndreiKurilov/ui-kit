@@ -2,7 +2,8 @@
 
  Верстка [макета](https://www.figma.com/file/MumYcKVk9RkKZEG6dR5E3A/FSD-frontend-education-program.-The-2nd-task?node-id=0%3A1) сайта по поиску номеров отеля из Figma.
 
- [**Ссылка на стартовую страницу проекта**](https://andreikurilov.github.io/ui-kit/pageStart.html)
+ [**Ссылка на стартовую страницу проекта**](https://andreikurilov.github.io/ui-kit/pageStart.html)  
+ (возрат на стартовую страницу - клик на лого на любой странице)
 
  В проекте выполнен UI Kit, который состоит из четырех отдельных страниц:
  
