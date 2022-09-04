@@ -2,8 +2,6 @@
 
 .formElements {
   margin-left: 80px;
-  margin-top: 62px;
-
   display: grid;
   grid-template-areas:
     "textFields checkboxes buttons"
@@ -144,7 +142,12 @@
   }
 
   &__rangeSlider {
-    margin-bottom: 83.5px;
+    width: 266px;
+    margin-bottom: 40.5px;
+  }
+
+  &__rangeSliderHeading {
+    margin-bottom: 20px;
   }
 
   &__buttons {
@@ -178,8 +181,8 @@
   }
 
   &__pagination {
-    margin-bottom: 220px;
     width: 350px;
+    margin-bottom: 224px;
   }
 
   &__dropdownGuests {
