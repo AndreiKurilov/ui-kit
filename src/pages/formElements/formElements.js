@@ -16,4 +16,5 @@ import '../../components/button/button.js';
 import '../../fonts/fonts.scss';
 import '../../layouts/layout.scss';
 import '../../components/pagination/pagination.js';
+import '../../components/linksPages/linksPages.js';
 import './formElements.scss';
