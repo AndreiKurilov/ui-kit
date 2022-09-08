@@ -24,7 +24,7 @@
                 <h3 class="heading__title">text field</h3><span class="heading__state">default</span>
               </div>
               <div class="textField">
-                <input class="textField__input" type="email" placeholder="Email" value="" inputmode="" max="2030-01-01" data-id="">
+                <input class="textField__input" type="email" placeholder="Email" value="" inputmode="" max="2030-01-01" id="">
               </div>
             </div>
             <div class="formElements__textFieldHover">
@@ -32,7 +32,7 @@
                 <h3 class="heading__title">text field</h3><span class="heading__state">hover/focus</span>
               </div>
               <div class="textField textField_isFocused">
-                <input class="textField__input" type="text" placeholder="" value="This is pretty awesome" inputmode="" max="2030-01-01" data-id="">
+                <input class="textField__input" type="text" placeholder="" value="This is pretty awesome" inputmode="" max="2030-01-01" id="">
               </div>
             </div>
             <div class="formElements__dropdownDefault">
@@ -78,27 +78,29 @@
                 <h3 class="heading__title">masked text field</h3>
               </div>
               <div class="textField">
-                <input class="textField__input textField__input_isUppercase" type="date" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="">
+                <input class="textField__input textField__input_isUppercase" type="date" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" id="">
               </div>
             </div>
-            <div class="formElements__dateDropdowns"> 
-              <div class="formElements__dateDropdownDefault">
-                <div class="heading">
-                  <h3 class="heading__title">date dropdown</h3>
-                </div>
-                <div class="dateDropdown">
-                  <div class="textField">
-                    <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateDefault" readonly="">
+            <div class="formElements__dateDropdownsWrap" id="dDs">
+              <div class="formElements__dateDropdowns">
+                <div class="formElements__dateDropdownDefault">
+                  <div class="heading">
+                    <h3 class="heading__title">date dropdown</h3>
+                  </div>
+                  <div class="dateDropdown">
+                    <div class="textField">
+                      <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" id="dropdownDateDefault" readonly="">
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="formElements__dateDropdown">
-                <div class="heading">
-                  <h3 class="heading__title">date dropdown</h3>
-                </div>
-                <div class="dateDropdown">
-                  <div class="textField">
-                    <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" data-id="dropdownDateSelect" readonly="">
+                <div class="formElements__dateDropdown">
+                  <div class="heading">
+                    <h3 class="heading__title">date dropdown</h3>
+                  </div>
+                  <div class="dateDropdown">
+                    <div class="textField">
+                      <input class="textField__input textField__input_isUppercase" type="text" placeholder="ДД.ММ.ГГГГ" value="" inputmode="" max="2030-01-01" id="dropdownDateSelect" readonly="">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -109,7 +111,7 @@
               </div>
               <div class="dateDropdown">
                 <div class="textField">
-                  <input class="textField__input" type="text" placeholder="ДД.мм - ДД.мм" value="" inputmode="" max="2030-01-01" data-id="dropdownDateRange" readonly="">
+                  <input class="textField__input" type="text" placeholder="ДД.мм - ДД.мм" value="" inputmode="" max="2030-01-01" id="dropdownDateRange" readonly="">
                 </div>
               </div>
             </div>
@@ -118,7 +120,7 @@
                 <h3 class="heading__title">subscription text field</h3>
               </div>
               <div class="textField">
-                <input class="textField__input textField__input_withButton" type="email" placeholder="Email" value="" inputmode="" max="2030-01-01" data-id="">
+                <input class="textField__input textField__input_withButton" type="email" placeholder="Email" value="" inputmode="" max="2030-01-01" id="">
                 <button class="textField__buttonSubscribed" type="submit" name="subscribe"></button>
               </div>
             </div>
