@@ -318,8 +318,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     min-width: 320px !important; }
   .air-datepicker_range {
     min-width: 266 !important; }
-  .air-datepicker_locale {
-    width: inherit; }
   .air-datepicker__arrow {
     color: #BC9CFF;
     font-family: "Material-Icon-Arrow";
