@@ -225,7 +225,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .dropdown__block::after {
     content: '\e905';
     font-family: "Material-Icons";
-    color: rgba(31, 32, 65, 0.75);
+    color: rgba(31, 32, 65, 0.5);
     font-size: 8px;
     position: absolute;
     right: 0;
@@ -371,6 +371,19 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%) !important; }
   .air-datepicker_range .air-datepicker-body--cells.-days- {
     grid-auto-rows: 32px !important; }
+
+.dateDropdown {
+  position: relative; }
+
+.dateDropdown::after {
+  content: '\e905';
+  font-family: "Material-Icons";
+  color: rgba(31, 32, 65, 0.5);
+  font-size: 8px;
+  position: absolute;
+  right: 0;
+  padding-right: 16px;
+  margin-top: -24px; }
 
 .roomFeatures__item {
   display: flex;
