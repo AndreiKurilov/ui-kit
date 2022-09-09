@@ -20,10 +20,10 @@ mixin cardSearchRoom({ cardTitle="", cardType="" })
       .cardSearchRoom__dates
         .cardSearchRoom__arrival
           +heading({ title: "прибытие" })
-          +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+          +dateDropdown({ dropdownDateId: 'dropdownDateSelectStart', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
         .cardSearchRoom__departure
           +heading({ title: "выезд" })
-          +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+          +dateDropdown({ dropdownDateId: 'dropdownDateSelectEnd', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
 
       .cardSearchRoom____dropdownGuests
         +heading({ title: "гости" })
@@ -50,10 +50,10 @@ mixin cardSearchRoom({ cardTitle="", cardType="" })
         .cardSearchRoom__dates
           .cardSearchRoom__arrival
             +heading({ title: "прибытие" })
-            +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+            +dateDropdown({ dropdownDateId: 'dropdownDateStart', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
           .cardSearchRoom__departure
             +heading({ title: "выезд" })
-            +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+            +dateDropdown({ dropdownDateId: 'dropdownDateEnd', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
 
         .cardSearchRoom____dropdownGuests
           +heading({ title: "гости" })
