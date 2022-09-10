@@ -73,7 +73,7 @@
   
   &--buttons {
     border-top: none !important;
-    padding: 20px !important;
+    padding: 12px 20px !important;
   }
   
   &-buttons :first-child span {
@@ -124,7 +124,7 @@
   &-cell.-range-from-:before,
   &-cell.-range-to-:before {
     content: "";
-    background: $linearGradient !important;
+    background: $linearGradientRange !important;
     z-index: -1;
     position: absolute;
     top: 0;
@@ -142,10 +142,25 @@
   }
   
   &-cell.-in-range- {
-    background: $linearGradient !important;
+    background: $linearGradientRange !important;
   }
 
   &_range .air-datepicker-body--cells.-days- {
     grid-auto-rows: 32px !important;
   }
+}
+
+.dateDropdown {
+  position: relative;
+}
+
+.dateDropdown::after {
+  content: '\e905';
+  font-family: $materialIcons;
+  color: $color--darkShade50;
+  font-size: 8px;
+  position: absolute;
+  right: 0;
+  padding-right: 16px;
+  margin-top: -24px;
 }
