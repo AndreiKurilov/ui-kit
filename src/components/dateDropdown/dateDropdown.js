@@ -1,6 +1,6 @@
-import './dateDropdown.scss';
 import AirDatepicker from 'air-datepicker';
 import 'air-datepicker/air-datepicker.css';
+import './dateDropdown.scss';
 
 let buttonApply = {
   content: 'Применить',
@@ -10,8 +10,7 @@ let buttonApply = {
   }
 }
 
-
-const dateDropdownDefault = new AirDatepicker("[data-id='dropdownDateDefault']", {
+const dateDropdownStart = new AirDatepicker("#dropdownDateStart", {
   position: 'bottom left',
   classes: "air-datepicker",
   classes: "air-datepicker_big",
@@ -23,8 +22,8 @@ const dateDropdownDefault = new AirDatepicker("[data-id='dropdownDateDefault']",
   buttons: [ 'clear', buttonApply ],
 })
 
-const dateDropdownSelect = new AirDatepicker("[data-id='dropdownDateSelect']", {
-  position: 'bottom right',
+const dateDropdownSelectStart = new AirDatepicker("#dropdownDateSelectStart", {
+  position: 'bottom left',
   classes: "air-datepicker",
   classes: "air-datepicker_big",
   prevHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_back"></span>',
@@ -36,11 +35,37 @@ const dateDropdownSelect = new AirDatepicker("[data-id='dropdownDateSelect']", {
   selectedDates: ['2019-08-19'],
 })
 
-const dateDropdownRange = new AirDatepicker("[data-id='dropdownDateRange']", {
+
+const dateDropdownEnd = new AirDatepicker("#dropdownDateEnd", {
+  position: 'bottom right',
+  classes: "air-datepicker",
+  classes: "air-datepicker_big",
+  prevHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_back"></span>',
+  nextHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_forward"></span>',
+  navTitles: {
+    days: 'MMMM yyyy'
+  },
+  buttons: [ 'clear', buttonApply ],
+})
+
+const dateDropdownSelectEnd = new AirDatepicker("#dropdownDateSelectEnd", {
+  position: 'bottom right',
+  classes: "air-datepicker",
+  classes: "air-datepicker_big",
+  prevHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_back"></span>',
+  nextHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_forward"></span>',
+  navTitles: {
+    days: 'MMMM yyyy'
+  },
+  buttons: [ 'clear', buttonApply ],
+  selectedDates: ['2019-08-23'],
+})
+
+
+const dateDropdownRange = new AirDatepicker("#dropdownDateRange", {
   position: 'bottom center',
   classes: "air-datepicker",
   classes: "air-datepicker_range",
-  // inline: true,
   prevHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_back"></span>',
   nextHtml: '<span class="air-datepicker__arrow air-datepicker__arrow_forward"></span>',
   navTitles: {
@@ -49,7 +74,6 @@ const dateDropdownRange = new AirDatepicker("[data-id='dropdownDateRange']", {
   buttons: [ 'clear', buttonApply ],
   range: true,
   multipleDates: 2,
-  // multipleDatesSeparator: ' - ',
   dateFormat(date) {
     const dateString = date.toLocaleString('ru', {
       day: '2-digit',
