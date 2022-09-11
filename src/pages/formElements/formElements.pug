@@ -46,14 +46,13 @@ block content
         +heading({ title: "masked text field" })
         +textField({ type: "date", placeholder: "ДД.ММ.ГГГГ", isUppercase: true, inputmode: numeric })
 
-      .formElements__dateDropdownsWrap#dDs
-        .formElements__dateDropdowns
-          .formElements__dateDropdownDefault
-            +heading({ title: "date dropdown" })
-            +dateDropdown({ dropdownDateId: 'dropdownDateDefault', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
-          .formElements__dateDropdown
-            +heading({ title: "date dropdown" })
-            +dateDropdown({ dropdownDateId: 'dropdownDateSelect', isUppercase: true, placeholder: "ДД.ММ.ГГГГ" })
+      .formElements__dateDropdowns
+        .formElements__dateDropdownDefault
+          +heading({ title: "date dropdown" })
+          +dateDropdown({ dropdownDateId: 'dropdownDateStart', isUppercase: true, placeholder: "ДД.ММ.ГГГГ"})
+        .formElements__dateDropdown
+          +heading({ title: "date dropdown" })
+          +dateDropdown({ dropdownDateId: 'dropdownDateSelectStart', isUppercase: true, placeholder: "ДД.ММ.ГГГГ" })
 
       .formElements__filterDateDropdown
         +heading({ title: "filter date dropdown" })
