@@ -1,0 +1,16 @@
+mixin chart({ votesTotal=[] })
+  .chart
+    .chart__data
+      svg(viewBox="0 0 35 35").chart__doughnut
+        each item in votesTotal
+          circle(r="15.9" cx="50%" cy="50%" stroke=`url(#${item.id})`).chart__circle
+        each item in votesTotal
+          linearGradient(id=`${item.id}` gradientTransform="rotate(90)")
+            stop( offset="0" stop-color=`${item.stopColorFirst}`)
+            stop( offset="1" stop-color=`${item.stopColorSecond}`)
+        g(fill="#919191").chart__doughnutCount
+          text(text-anchor="middle" x="50%" y="47%").chart__number 1040
+          text(text-anchor="middle" x="50%" y="62%").chart__text голосов 
+    ul.chart__legend 
+      each item in votesTotal
+        li.chart__item #{item.title}
