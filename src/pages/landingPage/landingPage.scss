@@ -1,0 +1,49 @@
+@import '../../scss/variables.scss';
+
+.landingPage {
+  background: url(../../images/rooms/landing.jpg) no-repeat;
+  background-size: cover;
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 320px;
+    padding: 70px 0 0 140px;
+    
+    @media (max-width: 960px) {
+      flex-direction: row;
+      justify-content: center;
+      padding: 100px 0;
+    }
+  }
+  
+  &__card {
+    min-width: 380px;
+    
+    @media (max-width: 960px) {
+      align-items: center;
+    }
+    
+    @media (max-width: 480px) {
+      min-width: 320px;
+    }
+  }
+  
+  &__promo {
+    font-family: $mainFont;
+    color: $color--darkShade75;
+    font-size: 14px;
+    line-height: 24px;
+    width: 297px;
+    padding: 320px 134px 18px 0;
+    align-self: flex-end;
+    text-align: end;
+    
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+}
