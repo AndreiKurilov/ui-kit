@@ -1,0 +1,10 @@
+extends ../../layouts/pageLayout.pug
+include ../../components/cardRegistration/cardRegistration.pug
+
+block titles
+  - const title = "Registration"
+
+block content
+  main.registrationPage
+    .registrationPage__card
+      +cardRegistration({ cardTitle: "Регистрация аккаунта", cardType: "account" })
