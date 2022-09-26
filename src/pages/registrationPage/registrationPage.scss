@@ -1,0 +1,19 @@
+@import '../../scss/variables.scss';
+
+.registrationPage {
+  background: url(../../images/rooms/registration.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+
+  &__card {
+    margin: 19px auto;
+    min-width: 380px;
+    max-width: 380px;
+
+    @media (max-width: 480px) {
+      min-width: 200px;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+  }
+}
