@@ -1,0 +1,89 @@
+extends ../../layouts/pageLayout.pug
+include ../../components/roomFeatures/roomFeatures.pug
+include ../../components/chart/chart.pug
+include ../../components/comment/comment.pug
+include ../../components/bulletList/bulletList.pug
+include ../../components/cardSearchRoom/cardSearchRoom.pug
+
+block titles
+  - const title = "Room details"
+
+block content
+  main.roomDetailsPage
+
+    .roomDetailsPage__images
+      .roomDetailsPage__mainPhoto
+        img&attributes({
+          class: "roomDetailsPage__photo",
+          src: "images/rooms/roomDetails/mainPhoto.jpg",
+          alt: "Room photo",
+        })
+      .roomDetailsPage__wrapper
+        .roomDetailsPage__firstPhoto
+          img&attributes({
+            src: "images/rooms/roomDetails/firstPhoto.jpg",
+            alt: "Room photo",
+          })
+        .roomDetailsPage__secondPhoto
+          img&attributes({
+            src: "images/rooms/roomDetails/secondPhoto.jpg",
+            alt: "Room photo",
+          })
+
+    .roomDetailsPage__content
+      .roomDetailsPage__container 
+        
+        .roomDetailsPage__roomInfo
+          .roomDetailsPage__roomInfoTitle 
+            | Сведения о номере
+          .roomDetailsPage__roomInfoItem
+            +roomFeatures({ icon: "emoticon", title: "Комфорт", description: "Шумопоглощающие стены", hasBorder: true }) 
+          .roomDetailsPage__roomInfoItem
+            +roomFeatures({ icon: "location-city", title: "Удобство", description: "Окно в каждой из спален", hasBorder: true }) 
+          .roomDetailsPage__roomInfoItem
+            +roomFeatures({ icon: "whatshot", title: "Уют", description: "Номер оснащён камином" }) 
+        
+        .roomDetailsPage__chart
+          .roomDetailsPage__chartTitle
+            | Впечатления от номера
+          .roomDetailsPage__chartData
+            +chart({
+              votesTotal: [
+                { id: "perfectly", title: "Великолепно",
+                  stopColorFirst: "#FFE39C", stopColorSecond: "#FFE39C", },
+                { id: "good", title: "Хорошо",
+                  stopColorFirst: "#6FCF97", stopColorSecond: "#66D2EA", },
+                { id: "satisfactorily", title: "Удовлетворительно",
+                  stopColorFirst: "#BC9CFF", stopColorSecond: "#8BA4F9", },
+                { id: "disappointed", title: "Разочарован",
+                  stopColorFirst: "#919191", stopColorSecond: "#919191", },
+              ]
+            })
+        
+        .roomDetailsPage__comments
+          .roomDetailsPage__commentsHeading
+            .roomDetailsPage__commentsTitle
+              | Отзывы посетителей номера
+            .roomDetailsPage__commentsTotal
+              | 2 отзыва
+          .roomDetailsPage__commentsItems
+            .roomDetailsPage__commentsItem
+              +comment({ avatarName: "murad_sarafanov", guestName: "Мурад Сарафанов", date: "5 дней назад", value: 12, isGradient: true, isColored: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." })
+            .roomDetailsPage__commentsItem
+              +comment({ avatarName: "patricia_steklyshkova", guestName: "Патрисия Стёклышкова", date: "Неделю назад", value: 2, isGradient: false, isColored: false, text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент." })
+        
+        .roomDetailsPage__rules
+          .roomDetailsPage__rulesTitle
+            | Правила
+          +bulletList([ "Нельзя с питомцами", 
+            "Без вечеринок и мероприятий",
+            "Время прибытия — после 13:00, а\u00A0выезд\u00A0до\u00A012:00" ])
+        
+        .roomDetailsPage__cancel 
+          .roomDetailsPage__cancelTitle
+            | Отмена 
+          .roomDetailsPage__cancelText 
+            | Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги. 
+
+      .roomDetailsPage__card
+        +cardSearchRoom({ cardType: "totalPrice" })
