@@ -1,0 +1,184 @@
+@import '../../scss/variables.scss';
+
+.roomDetailsPage {
+  
+  &__images {
+    display: flex;
+    max-width: 1440px;
+    max-height: 485px;
+    margin: 0 auto;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__mainPhoto {
+    // flex: 1 0 981px;
+    min-width: 320px;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      // flex-grow: 0;
+      // flex-shrink: 1;
+    }
+  }
+  
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__firstPhoto,
+  &__secondPhoto {
+    height: 50%;
+  }
+  
+  &__content {
+    display: flex;
+    max-width: 1160px;
+    margin: 70px auto;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 480px) {
+      margin: 40px auto;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 711px;
+    margin-right: 69px;
+
+    @media (max-width: 1024px) {
+      margin-right: 0;
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+      padding-left: 50px;
+      padding-right: 30px;
+      max-width: 300px;
+    }
+  }
+
+  &__roomInfo {
+    min-width: 280px;
+    max-width: 280px;
+    margin-right: 70px;
+    margin-bottom: 30px;
+
+    @media (max-width: 480px) {
+      max-width: 280px;
+    }
+  }
+
+  &__chartData {
+    max-width: 311px;
+    min-width: 311px;
+
+    @media (max-width: 480px) {
+      max-width: 300px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  &__comments {
+    margin-bottom: 50px;
+  
+    @media (max-width: 480px) {
+      max-width: 300px;
+      padding: 5px 15px;
+    }
+  }
+
+  &__roomInfoTitle,
+  &__chartTitle,
+  &__commentsHeading,
+  &__rulesTitle,
+  &__cancelTitle {
+    margin-bottom: 20px;
+    font-family: $mainFontBold;
+    color: $color--main;
+    font-size: 19px;
+    line-height: 23px;
+  }
+  
+  &__roomInfoTitle {
+    @media (max-width: 480px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__commentsHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+  
+  &__commentsTotal {
+    font-family: $mainFont;
+    font-size: 14px;
+    line-height: 14px;
+    color: $color--darkShade50;
+  }
+
+  &__commentsItem:last-child {
+    margin-top: 22px;
+  }
+  
+  &__rules {
+    margin-right: 70px;
+
+    @media (max-width: 768px) {
+      margin-right: 40px;
+      padding-left: 30px;
+    }
+
+    @media (max-width: 480px) {
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  &__rulesTitle {
+    padding-left: 21px;
+    margin-right: 70px;
+  }
+  
+  &__cancel {
+    max-width: 341px;
+    
+    @media (max-width: 480px) {
+      padding: 0 35px 0 15px;
+    }
+  }
+    
+  &__cancelText {
+    font-family: $mainFont;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color--darkShade75;
+  }
+
+  &__card {
+    @media (max-width: 1024px) {
+      margin-top: 50px;
+    }
+  }
+}
