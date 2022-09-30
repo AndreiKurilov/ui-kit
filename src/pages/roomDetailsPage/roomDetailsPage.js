@@ -1,0 +1,9 @@
+import '../../components/header/header.js';
+import '../../components/footer/footer.js';
+import "../../components/roomFeatures/roomFeatures.js";
+import "../../components/chart/chart.js";
+import "../../components/comment/comment.js";
+import "../../components/bulletList/bulletList.js";
+import "../../components/cardSearchRoom/cardSearchRoom.js";
+import '../../layouts/layout.scss';
+import './roomDetailsPage.scss';
