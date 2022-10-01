@@ -1,0 +1,170 @@
+extends ../../layouts/pageLayout.pug
+include ../../components/heading/heading
+include ../../components/dateDropdown/dateDropdown
+include ../../components/dropdown/dropdown
+include ../../components/checkboxList/checkboxList
+include ../../components/rangeSlider/rangeSlider
+include ../../components/roomWidget/roomWidget
+include ../../components/pagination/pagination
+
+block titles
+  - const title = "Search room"
+
+block content
+  main.searchRoomPage
+    .searchRoomPage__container
+
+      aside.searchRoomPage__filter
+        .searchRoomPage__dateDropdown
+          +heading({ title: "даты пребывания в отеле" })
+          +dateDropdown({ dropdownDateId: 'dropdownDateRange', placeholder: "ДД.мм - ДД.мм" })
+    
+        .searchRoomPage__dropdownGuests
+          +heading({ title: "гости" })
+          +dropdown({ dropdownId: "guests",
+            options: [
+              { title: "взрослые", count: 2 }, 
+              { title: "дети", count: 1 }, 
+              { title: "младенцы", count: 0 }
+            ]
+          })
+    
+        .searchRoomPage__priceRange
+          .searchRoomPage__priceRangeHeading
+            +heading({ title: "диапазон цены", state: "5 000₽ - 10 000₽" })
+          +rangeSlider({ text: "Стоимость за сутки пребывания в номере" })
+
+        .searchRoomPage__rules
+          +heading({ title: "правила дома" })
+          +checkboxList({
+            checkboxList: [
+              { title: "Можно курить" },
+              { title: "Можно с питомцами", checked: true },
+              { title: "Можно пригласить гостей (до\u00A010\u00A0человек)", checked: true },
+            ]
+          })
+    
+        .searchRoomPage__availability
+          +heading({ title: "доступность" })
+          +checkboxList({
+            checkboxList: [
+              { title: "Широкий коридор", isRich: true,
+                description: "Ширина коридоров в номере не\u00A0менее\u00A091\u00A0см." },
+              { title: "Помощник для инвалидов", isRich: true,
+                description: "На 1 этаже вас встретит специалист и\u00A0проводит до номера." }
+            ]
+          })
+    
+        .searchRoomPage__dropdownBedrooms
+          +heading({ title: "комфорт" })
+          +dropdown({ dropdownId: "comfort",
+            options: [
+              { title: "спальни", count: 2 }, 
+              { title: "кровати", count: 2 }, 
+              { title: "ванные комнаты", count: 0 }
+            ]
+          })
+    
+        .searchRoomPage__extraComfort
+          +heading({ title: "дополнительные удобства", expandable: true })
+          +checkboxList({ 
+            checkboxList: [
+              { title: "Завтрак" },
+              { title: "Письменный стол", checked: true },
+              { title: "Стул для кормления", checked: true },
+              { title: "Кроватка", checked: true },
+              { title: "Телевизор" },
+              { title: "Шампунь" },
+            ]
+          })
+
+      .searchRoomPage__rooms
+        .searchRoomPage__title
+          | Номера, которые мы для вас подобрали
+    
+        .searchRoomPage__listRooms
+          +roomWidget({ roomPhoto: "roomOne", number: 888, isLux: "люкс", price: "9 990", numberComments: "145", review: "Отзывов", starsChecked: 5,
+          images: [ "roomOne.jpg", 
+            "roomTwo.jpg",
+            "roomThree.jpg",
+            "roomFour.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomTwo", number: 840, price: "9 900", numberComments: "65", review: "Отзывов", starsChecked: 5,
+          images: [
+            "roomTwo.jpg",
+            "roomOne.jpg",
+            "roomThree.jpg",
+            "roomFour.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomThree", number: 980, isLux: "люкс", price: "8 500", numberComments: "35", review: "Отзывов", starsChecked: 3,
+          images: [
+            "roomThree.jpg",
+            "roomOne.jpg",
+            "roomTwo.jpg",
+            "roomFour.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomFour", number: 856, price: "7 300", numberComments: "19", review: "Отзывов", starsChecked: 5,
+          images: [
+            "roomFour.jpg",
+            "roomOne.jpg",
+            "roomTwo.jpg",
+            "roomThree.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomOne", number: 740, price: "6 000", numberComments: "44", review: "Отзывов", starsChecked: 4,
+          images: [
+            "roomOne.jpg",
+            "roomTwo.jpg",
+            "roomThree.jpg",
+            "roomFour.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomTwo", number: 982, price: "5 800", numberComments: "56", review: "Отзывов", starsChecked: 3,
+          images: [
+            "roomTwo.jpg",
+            "roomOne.jpg",
+            "roomThree.jpg",
+            "roomFour.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomThree", number: 678, price: "5 500", numberComments: "45", review: "Отзывов", starsChecked: 5,
+          images: [
+            "roomThree.jpg",
+            "roomOne.jpg",
+            "roomTwo.jpg",
+            "roomFour.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomFour", number: 450, price: "5 300", numberComments: "39", review: "Отзывов", starsChecked: 4,
+          images: [
+            "roomFour.jpg",
+            "roomOne.jpg",
+            "roomTwo.jpg",
+            "roomThree.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomOne", number: 350, price: "5 000", numberComments: "77", review: "Отзывов", starsChecked: 3,
+          images: [
+            "roomOne.jpg",
+            "roomTwo.jpg",
+            "roomThree.jpg",
+            "roomFour.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomTwo", number: 666, price: "5 000", numberComments: "25", review: "Отзывов", starsChecked: 5,
+          images: [
+            "roomTwo.jpg",
+            "roomOne.jpg",
+            "roomThree.jpg",
+            "roomFour.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomThree", number: 444, price: "5 000", numberComments: "15", review: "Отзывов", starsChecked: 3,
+          images: [
+            "roomThree.jpg",
+            "roomOne.jpg",
+            "roomTwo.jpg",
+            "roomFour.jpg",
+          ] })
+          +roomWidget({ roomPhoto: "roomFour", number: 352, price: "5 000", numberComments: "55", review: "Отзывов", starsChecked: 3,
+          images: [
+            "roomFour.jpg",
+            "roomOne.jpg",
+            "roomTwo.jpg",
+            "roomThree.jpg",
+          ] })
+        .searchRoomPage__pagination
+          +pagination()
