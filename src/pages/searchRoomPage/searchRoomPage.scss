@@ -1,0 +1,100 @@
+@import '../../scss/variables.scss';
+
+.searchRoomPage {
+  
+  &__container {
+    margin: 0 auto 69px;
+    display: flex;
+    max-width: 1160px;
+  }
+
+  &__filter {
+    min-width: 266px;
+    max-width: 266px;
+    margin-top: 30px;
+    margin-right: 60px;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__dropdownGuests {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__priceRangeHeading {
+    margin-bottom: 20px;
+  }
+
+  &__rules {
+    margin-top: 30px;
+    margin-bottom: 31px;
+  }
+
+  &__dropdownBedrooms {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__rooms {
+    margin-top: 30px;
+
+    @media (max-width: 1024px) {
+      max-width: 834px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 552px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 480px) {
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  &__title {
+    font-family: $mainFontBold;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color--main;
+    margin-bottom: 20px;
+
+    @media (max-width: 480px) {
+      text-align: center;
+    }
+  }
+  
+  &__listRooms {
+    min-width: 834px;
+    min-height: 1088px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    
+    @media (max-width: 768px) {
+      min-width: 552px;
+      min-height: 1648px;
+    }
+
+    @media (max-width: 480px) {
+      min-width: 320px;
+      justify-content: center;
+      min-height: 3316px;
+    }
+  }
+
+  &__pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+}
