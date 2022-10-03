@@ -1,0 +1,12 @@
+import '../../components/header/header.js';
+import '../../components/footer/footer.js';
+import '../../components/heading/heading.js';
+import '../../components/dateDropdown/dateDropdown.js';
+import '../../components/dropdown/dropdown.js';
+import '../../components/checkboxList/checkboxList.js';
+import '../../components/rangeSlider/rangeSlider.js';
+import '../../components/roomWidget/roomWidget.js';
+import '../../components/pagination/pagination.js';
+import '../../layouts/layout.scss';
+import '../../fonts/fonts.scss';
+import './searchRoomPage.scss';
