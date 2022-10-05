@@ -35,6 +35,7 @@ module.exports = {
     ...PAGES.map(page => new HtmlWebpackPlugin({
       filename: `${page}.html`,
       template: `${PAGES_DIR}/${page}/${page}.pug`,
+      chunks: [page],
     })
     ),
     new MiniCssExtractPlugin({
