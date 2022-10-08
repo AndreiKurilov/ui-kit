@@ -16,13 +16,10 @@
   }
 
   &__mainPhoto {
-    // flex: 1 0 981px;
     min-width: 320px;
 
     @media (max-width: 1024px) {
       width: 100%;
-      // flex-grow: 0;
-      // flex-shrink: 1;
     }
   }
   
