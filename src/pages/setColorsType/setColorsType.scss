@@ -1,7 +1,6 @@
 @import '../../scss/variables.scss';
 
 .setColorsType {
-  // margin-left: 80px;
   margin-left: 150px;
   
   display: grid;
@@ -10,7 +9,6 @@
   
   &__colors {
     grid-area: colors;
-    // margin-right: 415px;
     margin-right: 300px;
     width: 290px;
   }
