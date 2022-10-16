@@ -13,13 +13,14 @@
   &__star::before {
     content: '\e90c';
     font-family: $materialIcons;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 20px;
     background: $primaryGradient;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
+    letter-spacing: 3px;
   }
 
   &__star:hover::before,
