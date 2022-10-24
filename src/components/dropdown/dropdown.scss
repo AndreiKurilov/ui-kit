@@ -10,6 +10,7 @@
     border: $border__light;
     border-radius: 4px;
     align-items: center;
+    box-sizing: border-box;
   }
   
   &__total {
@@ -20,7 +21,8 @@
     font-size: $mainFont--size;
     line-height: 24px;
     color: $color--darkShade75;
-    padding-left: 15px;
+    padding-left: 13px;
+    padding-bottom: 1px;
     cursor: pointer;
     user-select: none;
   }
@@ -43,7 +45,7 @@
     border: $border__dark;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    padding: 6px 7.5px 5px 15px;
+    padding: 6px 6.5px 7px 14px;
     position: absolute;
     background: #FFFFFF;
     z-index: 3;
@@ -64,6 +66,7 @@
     border-bottom: transparent;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    height: 42px;
   }
   
   &__block.active + .dropdown__expand {
