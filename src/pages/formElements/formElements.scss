@@ -129,12 +129,19 @@
   
   &__dropdownGuestsDefault {
     width: 320px;
-    margin-bottom: 258px;
+    margin-bottom: 259px;
   }
   
   &__checkboxRich {
     margin-bottom: 50px;
+    max-width: 260px;
   }
+
+  &__checkboxRichList {
+    margin-top: -3px;
+  }
+
+
   
   &__sliderButtons {
     grid-area: buttons;
