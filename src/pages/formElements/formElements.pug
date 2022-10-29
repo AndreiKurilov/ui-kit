@@ -160,14 +160,15 @@ block content
 
       .formElements__checkboxRich
         +heading({ title: " rich checkbox buttons" })
-        +checkboxList({
-          checkboxList: [
-            { title: "Широкий коридор", isRich: true,
-              description: "Ширина коридоров в номере не\u00A0менее\u00A091\u00A0см." },
-            { title: "Помощник для инвалидов", isRich: true,
-              description: "На 1 этаже вас встретит специалист и\u00A0проводит до номера." }
-          ]
-        })
+        .formElements__checkboxRichList
+          +checkboxList({
+            checkboxList: [
+              { title: "Широкий коридор", isRich: true,
+                description: "Ширина коридоров в номере не\u00A0менее\u00A091\u00A0см." },
+              { title: "Помощник для инвалидов", isRich: true,
+                description: "На 1 этаже вас встретит специалист и\u00A0проводит до номера." }
+            ]
+          })
 
     section.formElements__sliderButtons
 
@@ -193,7 +194,8 @@ block content
 
       .formElements__pagination
         +heading({ title: "pagination" })
-        +pagination({})
+        .formElements__paginationWrap
+          +pagination({})
 
       .formElements__dropdownGuests
         +heading({ title: "dropdown" })
