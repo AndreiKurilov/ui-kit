@@ -15,7 +15,7 @@
   &__icon {
     padding-left: 4px;
     padding-top: 4px;
-    font-size: 44px;
+    font-size: 40px;
     font-family: $materialIcons;
     background: $primaryGradient;
     -webkit-background-clip: text;
@@ -49,9 +49,5 @@
 
   &__title {
     font-family: $mainFontBold;
-  }
-  
-  &__description {
-    padding-top: 5px;
   }
 }
