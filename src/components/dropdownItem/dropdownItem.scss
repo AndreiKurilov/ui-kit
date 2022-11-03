@@ -15,6 +15,7 @@
 
   &__name {
     text-transform: uppercase;
+    padding-bottom: 1px;
   }
 
   &__buttons {
@@ -58,6 +59,7 @@
     line-height: 15px;
     color: $color--main;
     text-align: center;
+    padding-bottom: 1px;
   }
 
   &__btn_disabled {
