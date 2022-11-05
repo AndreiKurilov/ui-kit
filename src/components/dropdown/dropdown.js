@@ -1,7 +1,7 @@
 import '../dropdownItem/dropdownItem.js';
 import './dropdown.scss';
 import {DropdownItem} from '../dropdownItem/dropdownItem.js';
-import {optionsComfort, optionsGuests} from './state.js';
+import {optionsComfort, optionsGuests} from './dropdownOptions.js';
 
 export class Dropdown {
   constructor( selector ) {
