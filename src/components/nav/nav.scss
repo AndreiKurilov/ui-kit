@@ -14,6 +14,7 @@
   
   &__list_style-none {
     display: flex;
+    align-items: center;
   }
   
   &__item {
@@ -50,7 +51,7 @@
   &__link_active {
     font-family: $mainFontBold;
     color: $color--darkShade75;
-    font-size: 12px;
+    font-size: 14px;
     
     &:hover{
       color: $color--main;
