@@ -17,7 +17,7 @@
     padding: 15px 140px;
 
     @media (max-width: 1280px) {
-      padding: 15px 60px;
+      padding: 15px 48px 15px 60px;
     }
     
     @media (max-width: 480px) {
@@ -118,6 +118,7 @@
   &__nav {
     display: flex;
     align-items: center;
+    margin-right: 25px;
 
     @media (max-width: 1050px) {
       margin: 20px auto;
@@ -128,6 +129,7 @@
   &__btns {
     display: flex;
     align-items: center;
+    margin-top: -1px;
 
     @media (max-width: 1050px) {
       flex-direction: column;
@@ -151,9 +153,9 @@
   }
 
   &__buttonLogin {
-    width: 87px;
-    height: 34px;
-    margin-right: 20px;
+    width: 83px;
+    height: 30px;
+    margin-right: 25px;
 
     @media (max-width: 1050px) {
       margin: 20px auto;
@@ -161,7 +163,7 @@
   }
 
   &__buttonRegister {
-    width: 196px;
-    height: 34px;
+    width: 190px;
+    height: 30px;
   }
 }
