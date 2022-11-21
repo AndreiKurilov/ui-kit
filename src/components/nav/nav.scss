@@ -2,6 +2,7 @@
 
 .nav {
   display: flex;
+  padding-top: 1px;
  
   &__list {
     margin: 0;
@@ -22,10 +23,10 @@
     display: flex;
     position: relative;
     margin-bottom: 20px;
-
+    
     &_margin-bottom {
-      margin-right: 20px;
       margin-bottom: 0;
+      margin-right: 20px;
     }
     
     @media (max-width: 1050px) {
