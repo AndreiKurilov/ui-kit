@@ -160,7 +160,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 12px;
   line-height: 14px;
   color: rgba(31, 32, 65, 0.5);
-  margin: 5px 0 10px 30px;
+  margin: 6px 0 0 30px;
   user-select: none;
 }
 .checkboxList__list {
@@ -185,6 +185,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .dropdownItem__name {
   text-transform: uppercase;
+  padding-bottom: 1px;
 }
 .dropdownItem__buttons {
   display: flex;
@@ -222,6 +223,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 15px;
   color: #1F2041;
   text-align: center;
+  padding-bottom: 1px;
 }
 .dropdownItem__btn_disabled {
   color: rgba(31, 32, 65, 0.1);
@@ -237,6 +239,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   align-items: center;
+  box-sizing: border-box;
 }
 .dropdown__total {
   border: none;
@@ -246,7 +249,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
-  padding-left: 15px;
+  padding-left: 13px;
+  padding-bottom: 1px;
   cursor: pointer;
   user-select: none;
 }
@@ -266,7 +270,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  padding: 6px 7.5px 5px 15px;
+  padding: 6px 6.5px 7px 14px;
   position: absolute;
   background: #FFFFFF;
   z-index: 3;
@@ -274,7 +278,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   box-sizing: border-box;
 }
 .dropdown__expand_guests {
-  padding: 6px 7px 13px 15px;
+  padding: 6px 7px 11px 15px;
 }
 .dropdown__block + .dropdown__expand {
   display: none;
@@ -284,6 +288,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-bottom: transparent;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  height: 42px;
 }
 .dropdown__block.active + .dropdown__expand {
   display: block;
@@ -291,7 +296,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .dropdown__buttons {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 14px;
 }
 .air-datepicker-cell.-day-.-other-month-,.air-datepicker-cell.-year-.-other-decade-{color:var(--adp-color-other-month)}.air-datepicker-cell.-day-.-other-month-:hover,.air-datepicker-cell.-year-.-other-decade-:hover{color:var(--adp-color-other-month-hover)}.-disabled-.-focus-.air-datepicker-cell.-day-.-other-month-,.-disabled-.-focus-.air-datepicker-cell.-year-.-other-decade-{color:var(--adp-color-other-month)}.-selected-.air-datepicker-cell.-day-.-other-month-,.-selected-.air-datepicker-cell.-year-.-other-decade-{color:#fff;background:var(--adp-background-color-selected-other-month)}.-selected-.-focus-.air-datepicker-cell.-day-.-other-month-,.-selected-.-focus-.air-datepicker-cell.-year-.-other-decade-{background:var(--adp-background-color-selected-other-month-focused)}.-in-range-.air-datepicker-cell.-day-.-other-month-,.-in-range-.air-datepicker-cell.-year-.-other-decade-{background-color:var(--adp-background-color-in-range);color:var(--adp-color)}.-in-range-.-focus-.air-datepicker-cell.-day-.-other-month-,.-in-range-.-focus-.air-datepicker-cell.-year-.-other-decade-{background-color:var(--adp-background-color-in-range-focused)}.air-datepicker-cell.-day-.-other-month-:empty,.air-datepicker-cell.-year-.-other-decade-:empty{background:none;border:none}.air-datepicker-cell{border-radius:var(--adp-cell-border-radius);box-sizing:border-box;cursor:pointer;display:flex;position:relative;align-items:center;justify-content:center;z-index:1}.air-datepicker-cell.-focus-{background:var(--adp-background-color-hover)}.air-datepicker-cell.-current-{color:var(--adp-color-current-date)}.air-datepicker-cell.-current-.-focus-{color:var(--adp-color)}.air-datepicker-cell.-current-.-in-range-{color:var(--adp-color-current-date)}.air-datepicker-cell.-disabled-{cursor:default;color:var(--adp-color-disabled)}.air-datepicker-cell.-disabled-.-focus-{color:var(--adp-color-disabled)}.air-datepicker-cell.-disabled-.-in-range-{color:var(--adp-color-disabled-in-range)}.air-datepicker-cell.-disabled-.-current-.-focus-{color:var(--adp-color-disabled)}.air-datepicker-cell.-in-range-{background:var(--adp-cell-background-color-in-range);border-radius:0}.air-datepicker-cell.-in-range-:hover{background:var(--adp-cell-background-color-in-range-hover)}.air-datepicker-cell.-range-from-{border:1px solid var(--adp-cell-border-color-in-range);background-color:var(--adp-cell-background-color-in-range);border-radius:var(--adp-cell-border-radius) 0 0 var(--adp-cell-border-radius)}.air-datepicker-cell.-range-to-{border:1px solid var(--adp-cell-border-color-in-range);background-color:var(--adp-cell-background-color-in-range);border-radius:0 var(--adp-cell-border-radius) var(--adp-cell-border-radius) 0}.air-datepicker-cell.-range-to-.-range-from-{border-radius:var(--adp-cell-border-radius)}.air-datepicker-cell.-selected-{color:#fff;border:none;background:var(--adp-cell-background-color-selected)}.air-datepicker-cell.-selected-.-current-{color:#fff;background:var(--adp-cell-background-color-selected)}.air-datepicker-cell.-selected-.-focus-{background:var(--adp-cell-background-color-selected-hover)}
 
@@ -457,7 +462,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .roomFeatures__icon {
   padding-left: 4px;
   padding-top: 4px;
-  font-size: 44px;
+  font-size: 40px;
   font-family: "Material-Icons";
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   -webkit-background-clip: text;
@@ -486,9 +491,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .roomFeatures__title {
   font-family: "Montserrat-Bold";
-}
-.roomFeatures__description {
-  padding-top: 5px;
 }
 .radio__label {
   display: flex;
@@ -622,13 +624,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .rate__star::before {
   content: "\e90c";
   font-family: "Material-Icons";
-  font-size: 24px;
+  font-size: 20px;
   line-height: 20px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
+  letter-spacing: 3px;
 }
 .rate__star:hover::before, .rate__star:hover ~ .rate__star::before, .rate__input:checked ~ .rate__star:before, .rate__star_checked::before {
   content: "\e90b";
@@ -636,7 +639,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .bulletList {
   margin: 0;
   padding: 0;
-  margin-top: 16px;
+  margin-top: 13px;
   max-width: 266px;
   user-select: none;
 }
@@ -684,6 +687,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .comment__guestName {
   font-family: "Montserrat-Bold";
+  padding-top: 1px;
 }
 .comment__likeButton {
   padding: 12px 0 0 3.5px;
@@ -781,7 +785,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 17px;
   position: absolute;
   right: 0;
-  padding-right: 15px;
+  padding-right: 14px;
 }
 @font-face {
   font-family: "Quicksand-Bold";
@@ -844,10 +848,15 @@ body {
 .pagination__text {
   color: rgba(31, 32, 65, 0.75);
   line-height: 24px;
+  font-size: 14px;
+  padding-left: 6px;
+  letter-spacing: 0.1px;
 }
 .pagination__pages {
   display: flex;
   padding: 0;
+  margin: 0;
+  margin-bottom: 7px;
 }
 .pagination__pages li {
   height: 40px;
@@ -879,7 +888,7 @@ body {
   content: "\e904";
   font-family: "Material-Icons";
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
 }
 .pagination .active, .pagination__pages .numb:hover {
   color: #fff;
@@ -923,10 +932,10 @@ body {
   width: 320px;
 }
 .formElements__textFieldHover {
-  margin: 20px 0;
+  margin: 21px 0 20px 0;
 }
 .formElements__maskedTextField {
-  margin: 20px 0 40px 0;
+  margin: 21px 0 40px 0;
 }
 .formElements__dateDropdowns {
   display: flex;
@@ -939,7 +948,7 @@ body {
   width: 266px;
 }
 .formElements__filterDateDropdown {
-  margin: 40px 0;
+  margin: 41px 0 41px 0;
 }
 .formElements__subscriptionTextField {
   margin-bottom: 100px;
@@ -953,8 +962,8 @@ body {
   max-width: 266px;
 }
 .formElements__checkboxExpandableFirst {
-  margin-top: 180px;
-  margin-bottom: 50px;
+  margin-top: 174.5px;
+  margin-bottom: 49px;
   max-width: 266px;
 }
 .formElements__checkboxExpandableSecond {
@@ -963,7 +972,7 @@ body {
 }
 .formElements__roomFeatures {
   width: 280px;
-  margin-top: 100px;
+  margin-top: 82px;
 }
 .formElements__checkboxRadioButtons {
   grid-area: checkboxes;
@@ -971,52 +980,60 @@ body {
   margin-right: 72px;
 }
 .formElements__checkbox {
-  margin-bottom: 50px;
+  margin-bottom: 41px;
 }
 .formElements__radioButtons {
-  margin-bottom: 36.56px;
+  margin-bottom: 40px;
 }
 .formElements__radioButtons-wrapper {
   display: flex;
   width: 220px;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: 13px;
 }
 .formElements__toggle {
-  margin-bottom: 40.44px;
+  margin-bottom: 43.5px;
 }
 .formElements__toggle-wrapper {
-  margin-top: 16px;
-  height: 54px;
+  margin-top: 13px;
+  height: 58px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .formElements__like {
-  margin-bottom: 40px;
+  margin-bottom: 40.5px;
 }
 .formElements__like-wrapper {
   display: flex;
   justify-content: space-between;
   margin-right: 170px;
-  margin-top: 16px;
+  margin-top: 15px;
   width: 90px;
 }
 .formElements__rate {
-  margin-bottom: 187px;
-  width: 260px;
+  margin-bottom: 195px;
+  width: 262px;
 }
 .formElements__rate-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: 17px;
+  padding-left: 2px;
 }
 .formElements__dropdownGuestsDefault {
   width: 320px;
-  margin-bottom: 266px;
+  margin-bottom: 260px;
 }
 .formElements__checkboxRich {
   margin-bottom: 50px;
+  max-width: 260px;
+}
+.formElements__checkboxRichList {
+  margin-top: -3px;
+}
+.formElements__checkboxRichList .checkboxList__item:first-child {
+  margin-bottom: 8px;
 }
 .formElements__sliderButtons {
   grid-area: buttons;
@@ -1025,42 +1042,47 @@ body {
 }
 .formElements__rangeSlider {
   width: 266px;
-  margin-bottom: 40.5px;
+  margin-bottom: 31px;
+  margin-top: 1px;
 }
 .formElements__rangeSliderHeading {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .formElements__buttons {
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 .formElements__buttons-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
+  margin-top: 15px;
 }
 .formElements__buttons-container {
   display: flex;
   gap: 20px;
   width: 218px;
-  height: 44px;
-  margin-bottom: 30px;
+  height: 40px;
+  margin-bottom: 34px;
 }
 .formElements__buttons-links {
   display: flex;
   justify-content: space-between;
   width: 142px;
+  margin-top: 1px;
   margin-bottom: 30px;
 }
 .formElements__buttons-large {
-  width: 320px;
-  height: 44px;
+  width: 316px;
+  height: 40px;
 }
 .formElements__pagination {
   width: 350px;
-  margin-bottom: 224px;
+  margin-bottom: 232px;
+}
+.formElements__paginationWrap {
+  margin-top: 16px;
 }
 .formElements__dropdownGuests {
-  margin-bottom: 267px;
+  margin-bottom: 259px;
 }
 .formElements__bulletList {
   margin-bottom: 30px;
@@ -1068,7 +1090,7 @@ body {
 .formElements__feedback {
   grid-area: feedback;
   margin-left: 126px;
-  margin-top: 127px;
+  margin-top: 162px;
 }
 .formElements__comment {
   width: 711px;

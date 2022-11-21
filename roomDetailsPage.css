@@ -11,6 +11,7 @@
 }
 .nav {
   display: flex;
+  padding-top: 1px;
 }
 .nav__list {
   margin: 0;
@@ -23,6 +24,7 @@
 }
 .nav__list_style-none {
   display: flex;
+  align-items: center;
 }
 .nav__item {
   cursor: pointer;
@@ -30,8 +32,10 @@
   position: relative;
   margin-bottom: 20px;
 }
+.nav__item:not(:first-child) {
+  margin-left: 20px;
+}
 .nav__item_margin-bottom {
-  margin-right: 20px;
   margin-bottom: 0;
 }
 @media (max-width: 1050px) {
@@ -54,7 +58,7 @@
 .nav__link_active {
   font-family: "Montserrat-Bold";
   color: rgba(31, 32, 65, 0.75);
-  font-size: 12px;
+  font-size: 14px;
 }
 .nav__link_active:hover {
   color: #1F2041;
@@ -143,7 +147,7 @@
   font-size: 17px;
   position: absolute;
   right: 0;
-  padding-right: 15px;
+  padding-right: 14px;
 }
 .header {
   background: #FFFFFF;
@@ -162,7 +166,7 @@
 }
 @media (max-width: 1280px) {
   .header__body {
-    padding: 15px 60px;
+    padding: 15px 48px 15px 60px;
   }
 }
 @media (max-width: 480px) {
@@ -252,6 +256,7 @@
 .header__nav {
   display: flex;
   align-items: center;
+  margin-right: 25px;
 }
 @media (max-width: 1050px) {
   .header__nav {
@@ -262,6 +267,7 @@
 .header__btns {
   display: flex;
   align-items: center;
+  margin-top: -1px;
 }
 @media (max-width: 1050px) {
   .header__btns {
@@ -285,9 +291,9 @@
   }
 }
 .header__buttonLogin {
-  width: 87px;
-  height: 34px;
-  margin-right: 20px;
+  width: 83px;
+  height: 30px;
+  margin-right: 25px;
 }
 @media (max-width: 1050px) {
   .header__buttonLogin {
@@ -295,8 +301,8 @@
   }
 }
 .header__buttonRegister {
-  width: 196px;
-  height: 34px;
+  width: 190px;
+  height: 30px;
 }
 .socialIcons__link {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -538,7 +544,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .roomFeatures__icon {
   padding-left: 4px;
   padding-top: 4px;
-  font-size: 44px;
+  font-size: 40px;
   font-family: "Material-Icons";
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   -webkit-background-clip: text;
@@ -567,9 +573,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .roomFeatures__title {
   font-family: "Montserrat-Bold";
-}
-.roomFeatures__description {
-  padding-top: 5px;
 }
 @keyframes render {
   0% {
@@ -731,6 +734,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .comment__guestName {
   font-family: "Montserrat-Bold";
+  padding-top: 1px;
 }
 .comment__likeButton {
   padding: 12px 0 0 3.5px;
@@ -746,7 +750,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .bulletList {
   margin: 0;
   padding: 0;
-  margin-top: 16px;
+  margin-top: 13px;
   max-width: 266px;
   user-select: none;
 }
@@ -975,6 +979,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .dropdownItem__name {
   text-transform: uppercase;
+  padding-bottom: 1px;
 }
 .dropdownItem__buttons {
   display: flex;
@@ -1012,6 +1017,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 15px;
   color: #1F2041;
   text-align: center;
+  padding-bottom: 1px;
 }
 .dropdownItem__btn_disabled {
   color: rgba(31, 32, 65, 0.1);
@@ -1027,6 +1033,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   align-items: center;
+  box-sizing: border-box;
 }
 .dropdown__total {
   border: none;
@@ -1036,7 +1043,8 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
-  padding-left: 15px;
+  padding-left: 13px;
+  padding-bottom: 1px;
   cursor: pointer;
   user-select: none;
 }
@@ -1056,7 +1064,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  padding: 6px 7.5px 5px 15px;
+  padding: 6px 6.5px 7px 14px;
   position: absolute;
   background: #FFFFFF;
   z-index: 3;
@@ -1064,7 +1072,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   box-sizing: border-box;
 }
 .dropdown__expand_guests {
-  padding: 6px 7px 13px 15px;
+  padding: 6px 7px 11px 15px;
 }
 .dropdown__block + .dropdown__expand {
   display: none;
@@ -1074,6 +1082,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-bottom: transparent;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  height: 42px;
 }
 .dropdown__block.active + .dropdown__expand {
   display: block;
@@ -1081,7 +1090,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .dropdown__buttons {
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 14px;
 }
 .roomNumber {
   display: flex;
